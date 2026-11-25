@@ -11,6 +11,10 @@ const read = async (p) => JSON.parse(await readFile(new URL(p, root), 'utf8'));
 const list = async (dir) => (await readdir(new URL(dir, root)).catch(() => [])).filter((f) => f.endsWith('.json'));
 
 const artworks = await read('artworks.json');
+// Where and when each manuscript was made (data/manuscripts.json, kept by hand): its catalogue
+// name replaces the label guessed from a title, and the workshops map reads it
+const catalogue = await read('manuscripts.json').catch(() => ({ manuscripts: [], items: {} }));
+const msById = new Map(catalogue.manuscripts.map((m) => [m.id, m]));
 
 // Poems in the order Nizami wrote the Khamsa, then Fuzuli; an artwork with no poem goes last
 const POEMS = [
@@ -89,7 +93,10 @@ const items = artworks.map((x) => ({
   when: when(x),
   artists: x.artists,
   medium: x.medium,
-  manuscript: manuscript(x),
+  manuscript: (() => { const m = msById.get(catalogue.items[x.id]); return m && !m.single && !m.kind ? m.label : manuscript(x); })(),
+  ms: catalogue.items[x.id] ?? null,
+  // Where it was painted, for the viewer: "Təbriz, 1539–1543"
+  place: (() => { const m = msById.get(catalogue.items[x.id]); return m?.place ? { city: m.place, dynasty: m.dynasty ?? null } : null; })(),
   museum: x.museum,
   license: x.license,
   // Free to reuse for anything; CC BY asks for the credit line, shown with the picture

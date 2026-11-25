@@ -133,7 +133,7 @@
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a>
-    <nav><a href="/xerite/">Xəritə</a><a href="https://kitabxana.az">Kitabxana</a></nav>
+    <nav><a href="emalatxana/">Emalatxanalar</a><a href="/xerite/">Xəritə</a><a href="https://kitabxana.az">Kitabxana</a></nav>
   </header>
   <div class="hero">
     <h1>Qalereya</h1>
@@ -296,10 +296,12 @@ function show(id) {
   const read = x.chapter ? `${KX}/works/${x.chapter}` : scene?.chapters?.[0] ? `${KX}/works/${scene.chapters[0]}` : x.poem ? `${KX}/collections/${x.poem}` : null;
   const artists = x.artists && !/^(unknown|anonymous|unidentified)/i.test(x.artists) ? x.artists : null;
   const rows = [['Tarix', x.date], ['Rəssam', artists], ['Əlyazma', x.manuscript], ['Material', x.medium], ['Mənbə', x.museum], ['Kredit', x.credit]].filter(([, v]) => v);
+  // Where it was painted, linking to the workshops map
+  if (x.place) rows.splice(1, 0, ['Çəkilib', `<a href="emalatxana/">${esc(x.place.city)}</a>${x.place.dynasty ? ` · ${esc(x.place.dynasty)}` : ''}`]);
   document.getElementById('v-info').innerHTML = `
     <button type="button" class="close" id="v-close" autofocus>Bağla · Close ✕</button>
     <div>${scene ? `<p class="scene-name">${esc(scene.az)}</p>` : ''}<h2>${esc(x.title)}</h2>${poem ? `<p class="scene-name">${esc(poem.az)}</p>` : ''}</div>
-    <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}
+    <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${k === 'Çəkilib' ? v : esc(v)}</dd>`).join('')}
       <dt>Lisenziya</dt><dd><span class="badge${x.free ? '' : ' nc'}">${esc(x.license)}</span></dd></dl>
     <div class="links">
       ${read ? `<a href="${read}">${x.chapter || scene ? 'Bu səhnəni kitabxana.az-da oxu' : 'Poemanı kitabxana.az-da oxu'} →<span lang="en">Read ${x.chapter || scene ? 'this passage' : 'the poem'} on kitabxana.az</span></a>` : ''}
