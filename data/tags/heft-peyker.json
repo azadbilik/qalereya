@@ -754,5 +754,13 @@
  "commons-196979313": {
   "scene": "white-pavilion",
   "confidence": "high"
+ },
+ "europeana-1100-1871": {
+  "scene": "white-pavilion",
+  "confidence": "high"
+ },
+ "europeana-1100-1808": {
+  "scene": "sandalwood-pavilion",
+  "confidence": "high"
  }
 }

@@ -794,5 +794,25 @@
  "commons-159024418": {
   "scene": "khusraw-sees-shirin-bathing",
   "confidence": "high"
+ },
+ "europeana-90402-AK-MAK-1253": {
+  "scene": "khusraw-sees-shirin-bathing",
+  "confidence": "high"
+ },
+ "europeana-90402-AK-MAK-1254": {
+  "scene": "shapur-shows-portrait",
+  "confidence": "high"
+ },
+ "europeana-90402-AK-MAK-1256": {
+  "scene": "farhad-carries-shirin",
+  "confidence": "high"
+ },
+ "europeana-90402-AK-MAK-1255": {
+  "scene": "barbad-plays",
+  "confidence": "medium"
+ },
+ "europeana-90402-AK-MAK-1257": {
+  "scene": null,
+  "confidence": "low"
  }
 }

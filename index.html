@@ -147,7 +147,7 @@
     <div class="poems" id="poems" role="group" aria-label="Poema · Poem"></div>
     <div class="filters">
       <select id="ms" aria-label="Əlyazma · Manuscript"></select>
-      <label><input type="checkbox" id="free"> Yalnız açıq lisenziya <span lang="en">· CC0/PD only</span></label>
+      <label><input type="checkbox" id="free"> Yalnız sərbəst lisenziya <span lang="en">· Free to reuse only</span></label>
     </div>
   </div>
 </div>
@@ -295,7 +295,7 @@ function show(id) {
   const scene = poem?.scenes?.find((s) => s.id === x.scene);
   const read = x.chapter ? `${KX}/works/${x.chapter}` : scene?.chapters?.[0] ? `${KX}/works/${scene.chapters[0]}` : x.poem ? `${KX}/collections/${x.poem}` : null;
   const artists = x.artists && !/^(unknown|anonymous|unidentified)/i.test(x.artists) ? x.artists : null;
-  const rows = [['Tarix', x.date], ['Rəssam', artists], ['Əlyazma', x.manuscript], ['Material', x.medium], ['Mənbə', x.museum]].filter(([, v]) => v);
+  const rows = [['Tarix', x.date], ['Rəssam', artists], ['Əlyazma', x.manuscript], ['Material', x.medium], ['Mənbə', x.museum], ['Kredit', x.credit]].filter(([, v]) => v);
   document.getElementById('v-info').innerHTML = `
     <button type="button" class="close" id="v-close" autofocus>Bağla · Close ✕</button>
     <div>${scene ? `<p class="scene-name">${esc(scene.az)}</p>` : ''}<h2>${esc(x.title)}</h2>${poem ? `<p class="scene-name">${esc(poem.az)}</p>` : ''}</div>

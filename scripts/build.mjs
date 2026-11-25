@@ -92,7 +92,9 @@ const items = artworks.map((x) => ({
   manuscript: manuscript(x),
   museum: x.museum,
   license: x.license,
-  free: /^(CC0|Public domain)$/i.test(x.license),
+  // Free to reuse for anything; CC BY asks for the credit line, shown with the picture
+  free: /^(CC0|Public domain|CC BY [\d.]+)$/i.test(x.license),
+  credit: /^CC BY/.test(x.license) ? x.credit : undefined,
   source: x.source,
   image: x.image.replace(/\?.*$/, ''),
   thumb: thumb(x),
@@ -117,4 +119,4 @@ const poems = POEMS.map(([slug, az, en]) => ({
 
 await writeFile(new URL('gallery.json', root), JSON.stringify({ poems, items }) + '\n');
 const n = (f) => items.filter(f).length;
-console.log(`${items.length} artworks · ${n((x) => x.poem)} in a poem · ${n((x) => x.scene)} with a scene · ${n((x) => x.manuscript)} with a manuscript · ${n((x) => x.free)} CC0/PD`);
+console.log(`${items.length} artworks · ${n((x) => x.poem)} in a poem · ${n((x) => x.scene)} with a scene · ${n((x) => x.manuscript)} with a manuscript · ${n((x) => x.free)} free to reuse`);
