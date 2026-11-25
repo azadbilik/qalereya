@@ -71,6 +71,8 @@ const thumb = (x) => {
   if (/images\.metmuseum\.org/.test(x.thumb)) return x.thumb;
   return x.thumb ?? x.image;
 };
+const PLACE_AZ = { Tabriz: 'Təbriz', Shiraz: 'Şiraz', Baghdad: 'Bağdad', Isfahan: 'İsfahan', Bukhara: 'Buxara', Kabul: 'Kabil', Qazvin: 'Qəzvin', Kashan: 'Kaşan', Kerman: 'Kirman', Istanbul: 'İstanbul', Lahore: 'Lahor', Abarkuh: 'Əbərkuh', Hyderabad: 'Heydərabad', Golconda: 'Qolkonda', Ahmedabad: 'Əhmədabad', Gaur: 'Qaur' };
+const DYNASTY_AZ = { 'Aq Qoyunlu': 'Ağqoyunlu', 'Qara Qoyunlu': 'Qaraqoyunlu', Safavid: 'Səfəvi', Timurid: 'Teymuri', Jalayirid: 'Cəlairi', Muzaffarid: 'Müzəffəri', Shaybanid: 'Şeybani', Ashtarkhanid: 'Həştərxani', Mughal: 'Böyük Moğol', Ottoman: 'Osmanlı', Qajar: 'Qacar', Zand: 'Zənd', 'Qutb Shahi': 'Qütbşahi', 'Husain Shahi (Bengal Sultanate)': 'Benqal sultanlığı' };
 const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX', 'XXI'];
 // A short Common-era date: "1481", "1539–1543", or "XVI əsr" for a whole-century estimate
 const when = (x) => {
@@ -96,7 +98,7 @@ const items = artworks.map((x) => ({
   manuscript: (() => { const m = msById.get(catalogue.items[x.id]); return m && !m.single && !m.kind ? m.label : manuscript(x); })(),
   ms: catalogue.items[x.id] ?? null,
   // Where it was painted, for the viewer: "Təbriz, 1539–1543"
-  place: (() => { const m = msById.get(catalogue.items[x.id]); return m?.place ? { city: m.place, dynasty: m.dynasty ?? null } : null; })(),
+  place: (() => { const m = msById.get(catalogue.items[x.id]); return m?.place ? { city: PLACE_AZ[m.place] ?? m.place, dynasty: DYNASTY_AZ[m.dynasty] ?? m.dynasty ?? null } : null; })(),
   museum: x.museum,
   license: x.license,
   // Free to reuse for anything; CC BY asks for the credit line, shown with the picture
