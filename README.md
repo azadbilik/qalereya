@@ -13,6 +13,6 @@ A poem with a scene catalogue reads in story order: each scene (Khusraw sees Shi
 
 ## Images and licences
 
-Images are shown from the museums' and Wikimedia Commons' own servers, never copied here. Each one's source and licence are on its page: the Metropolitan Museum's are CC0, Wikimedia Commons' public domain, the Walters Art Museum's CC BY-NC-SA 3.0 (non-commercial use, with credit).
+Images are shown from the museums' and Wikimedia Commons' own servers, never copied here. Each one's source and licence are on its page: the Metropolitan Museum's and the Walters Art Museum's are CC0, Wikimedia Commons' public domain. Sources under a non-commercial licence (the Bodleian, the BnF) will be labelled as such.
 
 The code is MIT. The scene catalogues and tags are CC0.

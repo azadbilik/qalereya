@@ -151,8 +151,8 @@
 
 <footer>
   <div class="wrap">
-    <p>Şəkillər muzeylərin və Wikimedia Commons-un öz serverlərindən göstərilir; hər birinin mənbəyi və lisenziyası yanındadır. Walters Art Museum-un şəkilləri CC BY-NC-SA lisenziyalıdır: qeyri-kommersiya məqsədilə, mənbə göstərilməklə. <a href="https://github.com/azadbilik/qalereya">GitHub</a></p>
-    <p lang="en">Images load from the museums' and Wikimedia Commons' own servers, each with its source and licence. The Walters Art Museum's are CC BY-NC-SA: non-commercial use, with credit.</p>
+    <p>Şəkillər muzeylərin və Wikimedia Commons-un öz serverlərindən göstərilir; hər birinin mənbəyi və lisenziyası yanındadır. <a href="https://github.com/azadbilik/qalereya">GitHub</a></p>
+    <p lang="en">Images load from the museums' and Wikimedia Commons' own servers, each with its source and licence.</p>
   </div>
 </footer>
 
@@ -211,6 +211,8 @@ function drawFilters() {
   sel.hidden = ms.length === 0;
   sel.onchange = () => { state.ms = sel.value; render(true); };
   const free = document.getElementById('free');
+  // Only worth offering when some images are under a restrictive licence
+  free.closest('label').hidden = data.items.every((x) => x.free);
   free.checked = state.free;
   free.onchange = () => { state.free = free.checked; render(true); };
 }
