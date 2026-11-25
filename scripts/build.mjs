@@ -4,6 +4,7 @@
 //
 //   node scripts/build.mjs
 import { readFile, readdir, writeFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 
 const root = new URL('../data/', import.meta.url);
 const read = async (p) => JSON.parse(await readFile(new URL(p, root), 'utf8'));
@@ -57,7 +58,11 @@ const manuscript = (x) => {
 
 // Commons originals are large: the grid takes a 500px thumbnail, the viewer the original
 const commonsThumb = (url, w) => url.replace(/\?.*$/, '').replace(/\/commons\/(.\/..\/)([^/]+)$/, `/commons/thumb/$1$2/${w}px-$2`);
+// The Walters serves only full scans (~600 KB) and 117px thumbnails: those are resized once into
+// thumbs/<id>.jpg (CC0, scripts/thumbs.sh) and served from here
+const local = (x) => existsSync(new URL(`../thumbs/${x.id}.jpg`, import.meta.url)) ? `thumbs/${x.id}.jpg` : null;
 const thumb = (x) => {
+  if (local(x)) return local(x);
   if (/upload\.wikimedia\.org\/wikipedia\/commons\/(?!thumb)/.test(x.image)) return commonsThumb(x.image, 500);
   if (/images\.metmuseum\.org/.test(x.thumb)) return x.thumb;
   return x.thumb ?? x.image;

@@ -1,0 +1,276 @@
+[
+  {
+    "id": "miraj",
+    "az": "Peyğəmbərin meracı",
+    "en": "The Prophet's Night Journey (Mi'raj)",
+    "chapters": [
+      "nizami-sirler-xezinesi-5"
+    ],
+    "evidence": "Qanad saldı önündə göy quşları — mələklər,",
+    "aliases": [
+      "Ascent of the Prophet",
+      "The Prophet Muhammad's ascension",
+      "Ascent of the Prophet over the Ka'bah guided by Jibra'il"
+    ]
+  },
+  {
+    "id": "despairing-king-forgiven",
+    "az": "Ədalətli padşah yuxuda bağışlanmış zalım şahı görür",
+    "en": "A just king dreams of a tyrant who was forgiven",
+    "chapters": [
+      "nizami-sirler-xezinesi-21"
+    ],
+    "evidence": "Zalım bir şahı gördü yuxusunda, yatınca.",
+    "aliases": [
+      "The despairing king forgiven",
+      "The unhappy king and his pardon"
+    ]
+  },
+  {
+    "id": "nushirvan-and-the-owls",
+    "az": "Nuşirəvan və vəzir xarabalıqda iki quşu dinləyirlər",
+    "en": "Nushirvan and his vizier listen to the owls in a ruined village",
+    "chapters": [
+      "nizami-sirler-xezinesi-23"
+    ],
+    "evidence": "Xarabalıqda iki quş oxuyub durardı,",
+    "aliases": [
+      "Nushirvan and the Owls",
+      "King Nushirvan hunting with Dastur, his vizier",
+      "Nushirvan and his prime minister",
+      "Just Nushirvan and the vizier"
+    ]
+  },
+  {
+    "id": "solomon-and-the-farmer",
+    "az": "Süleyman və qoca əkinçi",
+    "en": "Solomon and the old farmer",
+    "chapters": [
+      "nizami-sirler-xezinesi-25"
+    ],
+    "evidence": "Rast gəldi saf ürəkli bir adama Süleyman,",
+    "aliases": [
+      "Sulayman and the peasant",
+      "Solomon and the husbandman"
+    ]
+  },
+  {
+    "id": "sanjar-and-the-old-woman",
+    "az": "Sultan Səncər və qarı",
+    "en": "Sultan Sanjar and the old woman",
+    "chapters": [
+      "nizami-sirler-xezinesi-27"
+    ],
+    "evidence": "O da Sultan Səncərin tutaraq yaxasından,",
+    "aliases": [
+      "An old woman implores Sultan Sanjar for help",
+      "Sultan Sanjar and the old lady",
+      "Le sultan Sanjar interpellé par une vieille femme",
+      "Husayn Bayqara as Sultan Sanjar"
+    ]
+  },
+  {
+    "id": "old-brickmaker",
+    "az": "Qoca kərpickəsən",
+    "en": "The old brick-maker and the youth",
+    "chapters": [
+      "nizami-sirler-xezinesi-29"
+    ],
+    "evidence": "O, ruzi qazanardı hər gün kərpic kəsərək.",
+    "aliases": [
+      "The old brick-maker",
+      "The old man making bricks"
+    ]
+  },
+  {
+    "id": "hunter-dog-fox",
+    "az": "Ovçu, iti və tülkü",
+    "en": "The hunter, his dog and the fox",
+    "chapters": [
+      "nizami-sirler-xezinesi-31"
+    ],
+    "evidence": "O ovçunun var idi şir sifətli bir iti,",
+    "aliases": [
+      "The hunter, the dog and the fox"
+    ]
+  },
+  {
+    "id": "faridun-and-the-gazelle",
+    "az": "Fridun və maral",
+    "en": "Faridun and the gazelle",
+    "chapters": [
+      "nizami-sirler-xezinesi-33"
+    ],
+    "evidence": "Dəydi gözünə onu ovlayan bir şux maral.",
+    "aliases": [
+      "King Faridun hunting deer",
+      "Fereydun hunting a gazelle"
+    ]
+  },
+  {
+    "id": "fruit-seller-fox-thief",
+    "az": "Meyvəsatanın tülküsü və oğru",
+    "en": "The fruit-seller's fox and the thief",
+    "chapters": [
+      "nizami-sirler-xezinesi-35"
+    ],
+    "evidence": "Bir tülkücüyəz onun malını qoruyardı.",
+    "aliases": [
+      "A fox and a robber",
+      "The fruit-seller and the fox"
+    ]
+  },
+  {
+    "id": "repentant-ascetic",
+    "az": "Tövbəsini sındıran zahid",
+    "en": "The ascetic who broke his vow",
+    "chapters": [
+      "nizami-sirler-xezinesi-37"
+    ],
+    "evidence": "Meyxanələr küncündə özünə məskən saldı.",
+    "aliases": [
+      "The ascetic in the tavern"
+    ]
+  },
+  {
+    "id": "jesus-and-the-dead-dog",
+    "az": "İsa və ölü it",
+    "en": "Jesus and the dead dog",
+    "chapters": [
+      "nizami-sirler-xezinesi-39"
+    ],
+    "evidence": "Gördü ki, yol ağzına düşüb qurd boyda köpək,",
+    "aliases": [
+      "Jesus and the dog's carcass",
+      "Isa and the dead dog"
+    ]
+  },
+  {
+    "id": "mobad-and-the-garden",
+    "az": "Mö'bid və viran olmuş bağ",
+    "en": "The mobad visits a garden and finds it ruined",
+    "chapters": [
+      "nizami-sirler-xezinesi-41"
+    ],
+    "evidence": "Qoca behiştə bənzər bağı tərk edib getdi;",
+    "aliases": [
+      "The far-sighted mobad",
+      "The Indian sage and the garden"
+    ]
+  },
+  {
+    "id": "physicians-duel",
+    "az": "İki rəqib həkim",
+    "en": "The duel of the two physicians",
+    "chapters": [
+      "nizami-sirler-xezinesi-43"
+    ],
+    "evidence": "İki həkim qərəzlə gəldi, nəhayət, sözə.",
+    "aliases": [
+      "The Physicians' Duel",
+      "Two scholars quarreling",
+      "The two rival sages",
+      "İki rəqib alimin hekayəti"
+    ]
+  },
+  {
+    "id": "pilgrim-and-sufi",
+    "az": "Hacı və sofi",
+    "en": "The pilgrim and the sufi who kept his gold",
+    "chapters": [
+      "nizami-sirler-xezinesi-45"
+    ],
+    "evidence": "O sofiyə tapşırdı qızılını gizlicə.",
+    "aliases": [
+      "The hajji and the sufi"
+    ]
+  },
+  {
+    "id": "tyrant-and-truthful-man",
+    "az": "Zalım padşah və doğruçu qoca",
+    "en": "The unjust king and the truthful old man",
+    "chapters": [
+      "nizami-sirler-xezinesi-47"
+    ],
+    "evidence": "Rəiyyəti incidən bir zalım padşah vardı,",
+    "aliases": [
+      "An old man brought before a tyrant",
+      "The Unjust King and the Condemned Wise Man",
+      "The tyrant king and the truth-teller"
+    ]
+  },
+  {
+    "id": "prince-of-marv",
+    "az": "Mərv şahzadəsi və qoca düşmənlər",
+    "en": "The young prince of Marv and his old enemies",
+    "chapters": [
+      "nizami-sirler-xezinesi-49"
+    ],
+    "evidence": "Mən eşitdim ki, Mərvin kənarında bir cavan,",
+    "aliases": [
+      "The young prince and the old enemies"
+    ]
+  },
+  {
+    "id": "injured-child",
+    "az": "Ayağı sınan uşaq",
+    "en": "The injured boy and his playmates",
+    "chapters": [
+      "nizami-sirler-xezinesi-51"
+    ],
+    "evidence": "Yüyürərkən ayağı sürüşdü, dəydi yerə.",
+    "aliases": [
+      "The wounded child"
+    ]
+  },
+  {
+    "id": "pir-and-disciple",
+    "az": "Mürşid və mürid",
+    "en": "The master and the disciple who stayed",
+    "chapters": [
+      "nizami-sirler-xezinesi-53"
+    ],
+    "evidence": "Uzun bir yol gedirdi min nəfər mürid ilə.",
+    "aliases": [
+      "The pir and the murid"
+    ]
+  },
+  {
+    "id": "jamshid-and-his-confidant",
+    "az": "Cəmşidin sirdaşı və qoca qarı",
+    "en": "Jamshid's confidant and the old woman",
+    "chapters": [
+      "nizami-sirler-xezinesi-55"
+    ],
+    "evidence": "O cavana yol tapdı bir gün bir qoca qarı,",
+    "aliases": [
+      "An old woman speaking with a confidant of King Jamshid",
+      "The youth to whom Jamshid entrusted his secrets consults an old woman",
+      "An old man speaking with a king's confidant"
+    ]
+  },
+  {
+    "id": "harun-and-the-barber",
+    "az": "Harun ər-Rəşid və dəllək",
+    "en": "Harun al-Rashid and the barber",
+    "chapters": [
+      "nizami-sirler-xezinesi-57"
+    ],
+    "evidence": "Harun rahatlanmağa hamama oldu rəvan.",
+    "aliases": [
+      "Harun al-Rashid in the bathhouse"
+    ]
+  },
+  {
+    "id": "nightingale-and-falcon",
+    "az": "Bülbül və qızılquş",
+    "en": "The nightingale and the falcon",
+    "chapters": [
+      "nizami-sirler-xezinesi-59"
+    ],
+    "evidence": "Qızılquşla söhbətə başladı nazlı bülbül:",
+    "aliases": [
+      "The nightingale and the hawk"
+    ]
+  }
+]

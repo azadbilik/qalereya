@@ -1,0 +1,422 @@
+[
+  {
+    "id": "miraj",
+    "az": "Peyğəmbərin meracı",
+    "en": "The Prophet's Night Journey (Mi'raj)",
+    "chapters": [
+      "nizami-serefname-4"
+    ],
+    "evidence": "Altında şimşəktək şığıyan Büraq,",
+    "aliases": [
+      "Ascent of the Prophet on Buraq",
+      "Mi'raj"
+    ]
+  },
+  {
+    "id": "birth-of-iskandar",
+    "az": "İskəndərin doğulması",
+    "en": "The birth of Iskandar",
+    "chapters": [
+      "nizami-serefname-12"
+    ],
+    "evidence": "Padşah əmr etdi ki, münəccimlər",
+    "aliases": [
+      "The birth of Alexander the Great"
+    ]
+  },
+  {
+    "id": "iskandar-at-school",
+    "az": "İskəndər Ərəstu ilə birlikdə dərs alır",
+    "en": "Iskandar is taught with Aristotle by Nicomachus",
+    "chapters": [
+      "nizami-serefname-13"
+    ],
+    "evidence": "Həmdərsi Ərəstu, bir qardaş deyə,",
+    "aliases": [
+      "Iskandar and Aristotle at school",
+      "Iskandar taught by Nicomachus"
+    ]
+  },
+  {
+    "id": "iskandar-enthroned",
+    "az": "İskəndər taxta çıxır",
+    "en": "Iskandar enthroned",
+    "chapters": [
+      "nizami-serefname-14",
+      "nizami-serefname-27",
+      "nizami-serefname-30"
+    ],
+    "evidence": "Elə ki Rum şahı taxta oturdu,",
+    "aliases": [
+      "Alexander the Great enthroned",
+      "Accession of Iskandar"
+    ]
+  },
+  {
+    "id": "egyptians-plead",
+    "az": "Misirlilər zəncilərdən İskəndərə şikayət edir",
+    "en": "The Egyptians plead with Iskandar against the Zangis",
+    "chapters": [
+      "nizami-serefname-15"
+    ],
+    "evidence": "Zəncilər axınla gəlmiş bu səfər,",
+    "aliases": [
+      "The Ethiopians attack the castle of the Egyptians"
+    ]
+  },
+  {
+    "id": "war-with-zangis",
+    "az": "İskəndərin zəncilərlə döyüşü",
+    "en": "Iskandar battles the Zangis",
+    "chapters": [
+      "nizami-serefname-16",
+      "nizami-serefname-17"
+    ],
+    "evidence": "Meydanda rum, zənci təbil döyərək,",
+    "aliases": [
+      "Alexander the Great fights the Ethiopians",
+      "Alexander battling the Zangis",
+      "Alexander kills an Ethiopian warrior",
+      "Victory of Alexander over the Ethiopians"
+    ]
+  },
+  {
+    "id": "invention-of-mirror",
+    "az": "İskəndər güzgünü yaradır",
+    "en": "Iskandar invents the mirror",
+    "chapters": [
+      "nizami-serefname-19"
+    ],
+    "evidence": "Güzgünü yaratdı böyük İskəndər.",
+    "aliases": [
+      "The invention of the mirror"
+    ]
+  },
+  {
+    "id": "dara-demands-tribute",
+    "az": "Dara İskəndərdən xərac istəyir",
+    "en": "Dara demands tribute; Dara's letter",
+    "chapters": [
+      "nizami-serefname-20",
+      "nizami-serefname-23"
+    ],
+    "evidence": "Daradan bir elçi gəldi bu zaman,",
+    "aliases": [
+      "An official reads a letter to Alexander sent by Darius",
+      "Darius demands tribute"
+    ]
+  },
+  {
+    "id": "battle-with-dara",
+    "az": "İskəndərin Dara ilə döyüşü",
+    "en": "Iskandar battles Dara",
+    "chapters": [
+      "nizami-serefname-25"
+    ],
+    "evidence": "Hər iki tərəfdə ordu qaynaşır,",
+    "aliases": [
+      "Battle between Iskandar and Dara",
+      "Alexander fights the Persian king Darius"
+    ]
+  },
+  {
+    "id": "death-of-dara",
+    "az": "Dara İskəndərin qucağında ölür",
+    "en": "Dara dies in Iskandar's arms",
+    "chapters": [
+      "nizami-serefname-26"
+    ],
+    "evidence": "Başını şahanə dizinə qoydu,",
+    "aliases": [
+      "Death of King Darius",
+      "Alexander mourns the death of Darius",
+      "The tomb of Darius"
+    ]
+  },
+  {
+    "id": "fire-temples-destroyed",
+    "az": "İskəndər atəşkədələri dağıdır",
+    "en": "Iskandar destroys the fire temples",
+    "chapters": [
+      "nizami-serefname-28"
+    ],
+    "evidence": "Onları kökündən yıxdı İskəndər,",
+    "aliases": [
+      "Alexander destroys the temple of the fire worshippers"
+    ]
+  },
+  {
+    "id": "marriage-to-rawshanak",
+    "az": "İskəndər Rövşənəklə evlənir",
+    "en": "Iskandar marries Rawshanak",
+    "chapters": [
+      "nizami-serefname-29"
+    ],
+    "evidence": "Eylədi özünə Rövşənəyi yar.",
+    "aliases": [
+      "Rawshanak and Alexander in their bridal chamber"
+    ]
+  },
+  {
+    "id": "iskandar-at-kaaba",
+    "az": "İskəndər Kəbəni ziyarət edir",
+    "en": "Iskandar at the Ka'ba",
+    "chapters": [
+      "nizami-serefname-32"
+    ],
+    "evidence": "Yanaşdı Kəbəyə şən bir üz ilə,",
+    "aliases": [
+      "Iskandar visits the Ka'ba"
+    ]
+  },
+  {
+    "id": "iskandar-meets-nushaba",
+    "az": "İskəndər elçi libasında Bərdədə Nüşabənin sarayına gəlir",
+    "en": "Iskandar, disguised as his own envoy, meets Nushaba in Barda'a",
+    "chapters": [
+      "nizami-serefname-33"
+    ],
+    "evidence": "Elçi çox sürətlə girdi qapıdan,",
+    "aliases": [
+      "Iskandar's encounter with Nushaba, the Queen of Barda",
+      "Alexander in Nushaba's pavilion in Barda",
+      "Alexander meets Nushaba in her palace"
+    ]
+  },
+  {
+    "id": "nushaba-shows-portrait",
+    "az": "Nüşabə İskəndərə öz şəklini göstərir",
+    "en": "Nushaba shows Iskandar his own portrait",
+    "chapters": [
+      "nizami-serefname-33"
+    ],
+    "evidence": "Rəsmini tanıdı baxınca şəklə,",
+    "aliases": [
+      "Alexander admires his portrait ordered by Queen Nushaba"
+    ]
+  },
+  {
+    "id": "nushaba-jewel-banquet",
+    "az": "Nüşabə İskəndərin qabağına daş-qaş düzür",
+    "en": "Nushaba sets a tray of jewels before Iskandar",
+    "chapters": [
+      "nizami-serefname-33"
+    ],
+    "evidence": "Bir xonça qoyuldu Günəşdən parlaq, -",
+    "aliases": [
+      "Alexander is entertained by the ruler of Barda"
+    ]
+  },
+  {
+    "id": "nushaba-feast",
+    "az": "İskəndərin Nüşabə ilə bəzmi",
+    "en": "Iskandar feasts Nushaba",
+    "chapters": [
+      "nizami-serefname-34"
+    ],
+    "evidence": "Nüşabə naz ilə hey qədəh alar,",
+    "aliases": [
+      "Nushaba entertained by Alexander",
+      "Alexander enthroned during the New Year celebrations",
+      "Alexander sharing his throne with Queen Nushaba"
+    ]
+  },
+  {
+    "id": "siege-of-darband",
+    "az": "İskəndər Dərbənd qalasını mühasirəyə alır",
+    "en": "Iskandar besieges the fortress of Darband",
+    "chapters": [
+      "nizami-serefname-36"
+    ],
+    "evidence": "Qırx gün o hasarda çalışıb durdu,",
+    "aliases": [
+      "Alexander and his army attack a fortress"
+    ]
+  },
+  {
+    "id": "darband-hermit",
+    "az": "İskəndər köhüldə zahidin yanına gedir",
+    "en": "Iskandar visits the hermit in his cave",
+    "chapters": [
+      "nizami-serefname-36"
+    ],
+    "evidence": "Onunla bərabər köhülə girdi.",
+    "aliases": [
+      "Iskandar and the hermit",
+      "Iskandar visiting the wise man in a cave",
+      "Alexander, unable to destroy a fortress, consults a hermit"
+    ]
+  },
+  {
+    "id": "kay-khusraw-cave",
+    "az": "İskəndər Keyxosrovun köhülünə gedir",
+    "en": "Iskandar at the cave of Kay Khusraw",
+    "chapters": [
+      "nizami-serefname-38"
+    ],
+    "evidence": "Keyxosrov yatdığı köhül, bax, budur.",
+    "aliases": [
+      "Alexander at the cave where Kay Khusraw is buried"
+    ]
+  },
+  {
+    "id": "kayds-daughter",
+    "az": "Hind şahı Keyd qızını İskəndərə verir",
+    "en": "Kayd of India gives Iskandar his daughter",
+    "chapters": [
+      "nizami-serefname-41"
+    ],
+    "evidence": "Əqd etdi, başladı qızın toyuna,",
+    "aliases": [
+      "Alexander in bed with an Indian girl given to him by King Kayd"
+    ]
+  },
+  {
+    "id": "hunt-on-way-to-china",
+    "az": "İskəndər Çin yolunda ov edir",
+    "en": "Iskandar hunts on his way to China",
+    "chapters": [
+      "nizami-serefname-42"
+    ],
+    "evidence": "O qədər ov etdi rumlu İskəndər,",
+    "aliases": [
+      "Alexander the Great hunts on his way to China",
+      "Alexander hunting deer",
+      "Iskandar on a hunt"
+    ]
+  },
+  {
+    "id": "khaqan-comes-as-envoy",
+    "az": "Xaqan elçi libasında İskəndərin yanına gəlir",
+    "en": "The Khaqan of China comes to Iskandar as his own envoy",
+    "chapters": [
+      "nizami-serefname-43"
+    ],
+    "evidence": "Tədbirlə geyindi elçi paltarı.",
+    "aliases": [
+      "Alexander meets the king of China"
+    ]
+  },
+  {
+    "id": "painting-contest",
+    "az": "Rum və Çin nəqqaşlarının yarışı",
+    "en": "The contest of the Greek and Chinese painters",
+    "chapters": [
+      "nizami-serefname-44"
+    ],
+    "evidence": "Arada pərdədən çəkmişdi hasar.",
+    "aliases": [
+      "Separated by a curtain, a Chinese and a Roman artist compete"
+    ]
+  },
+  {
+    "id": "khaqan-feast",
+    "az": "Xaqan İskəndərə qonaqlıq verir",
+    "en": "The Khaqan feasts Iskandar",
+    "chapters": [
+      "nizami-serefname-45"
+    ],
+    "evidence": "Elə bir qonaqlıq düzəltdi xaqan,",
+    "aliases": [
+      "Alexander entertained at the court of the king of China",
+      "Alexander received by the Khaqan of China"
+    ]
+  },
+  {
+    "id": "war-with-rus",
+    "az": "İskəndərin ruslarla döyüşləri",
+    "en": "Iskandar's battles with the Rus",
+    "chapters": [
+      "nizami-serefname-49",
+      "nizami-serefname-50",
+      "nizami-serefname-51",
+      "nizami-serefname-52",
+      "nizami-serefname-53",
+      "nizami-serefname-54",
+      "nizami-serefname-55",
+      "nizami-serefname-56"
+    ],
+    "evidence": "Ruslardan kin ilə tökdülər çox qan,",
+    "aliases": [
+      "Alexander defeats the Russian army",
+      "Alexander fights the Russians",
+      "A Russian warrior pursues the Persian warrior Zarirvand"
+    ]
+  },
+  {
+    "id": "iskandar-lassoes-the-div",
+    "az": "İskəndər rusların divini kəməndlə tutur",
+    "en": "Iskandar lassoes the Rus giant",
+    "chapters": [
+      "nizami-serefname-55"
+    ],
+    "evidence": "Boynundan kəməndə keçincə düşmən,",
+    "aliases": [
+      "Alexander lassos a Russian warrior",
+      "Iskandar lassoes a demon"
+    ]
+  },
+  {
+    "id": "nushaba-freed",
+    "az": "Nüşabə əsirlikdən qurtarılır",
+    "en": "Nushaba is set free",
+    "chapters": [
+      "nizami-serefname-57"
+    ],
+    "evidence": "Ruslara əmr etdi: “Gəlsin Nüşabə!”",
+    "aliases": [
+      "Release of Nushaba"
+    ]
+  },
+  {
+    "id": "iskandar-and-chinese-girl",
+    "az": "İskəndər və çinli kəniz",
+    "en": "Iskandar and the Chinese slave girl",
+    "chapters": [
+      "nizami-serefname-58"
+    ],
+    "evidence": "İskəndər əmriylə aldı sazını,",
+    "aliases": [
+      "Alexander with a Chinese girl given to him by the King of China",
+      "Alexander drinks in the company of a girl playing the harp"
+    ]
+  },
+  {
+    "id": "khizr-at-fountain",
+    "az": "Xızır və İlyas dirilik suyunu tapır",
+    "en": "Khizr and Ilyas find the Water of Life",
+    "chapters": [
+      "nizami-serefname-60"
+    ],
+    "evidence": "Xızr, İlyas kam aldı həyat suyundan,",
+    "aliases": [
+      "Iskandar finds Khizr and Ilyas at the Fountain of Immortality",
+      "Khizr discovers the Fountain of Life",
+      "Alexander at the fountain of life with Khizr and Ilyas"
+    ]
+  },
+  {
+    "id": "weighing-the-stone",
+    "az": "Zülmətdən gətirilən daş tərəzidə çəkilir",
+    "en": "The stone from the Darkness is weighed",
+    "chapters": [
+      "nizami-serefname-61"
+    ],
+    "evidence": "Tərəzi istədi daşı çəkməyə,",
+    "aliases": [
+      "An official weighs the precious stone Alexander found in the darkness"
+    ]
+  },
+  {
+    "id": "city-without-death",
+    "az": "İskəndərə ölümsüz şəhərdən danışırlar",
+    "en": "Iskandar is told of the city without death",
+    "chapters": [
+      "nizami-serefname-61"
+    ],
+    "evidence": "Ölümsüz şəhərdə eyləyin məskən!”",
+    "aliases": [
+      "A man tells Alexander a story of a country in which there is no death"
+    ]
+  }
+]

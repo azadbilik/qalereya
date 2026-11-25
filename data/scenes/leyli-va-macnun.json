@@ -1,0 +1,321 @@
+[
+  {
+    "id": "nizami-advises-son",
+    "az": "Nizami oğlu Məhəmmədə nəsihət verir",
+    "en": "Nizami addresses his son Muhammad",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-9"
+    ],
+    "evidence": "Sən, ey on dörd yaşlım, hər elmə yetkin!",
+    "aliases": [
+      "Nezami addressing his son Mohammad",
+      "Nizami's advice to his son"
+    ]
+  },
+  {
+    "id": "school",
+    "az": "Leyli və Məcnun məktəbdə",
+    "en": "Layla and Majnun at school",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-11",
+      "nizami-leyli-ve-mecnun-12"
+    ],
+    "evidence": "Zülfü də \"leyl\" idi, adı da Leyli.",
+    "aliases": [
+      "Layla and Qays at school",
+      "Laila and Majnun in school",
+      "Lesson assembly"
+    ]
+  },
+  {
+    "id": "majnun-at-the-kaaba",
+    "az": "Atası Məcnunu Kəbəyə aparır",
+    "en": "Majnun's father takes him to the Kaaba",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-16"
+    ],
+    "evidence": "Kəbə halqasına əl atdı birdən,",
+    "aliases": [
+      "Majnun at the Kaaba",
+      "Majnun and his father visit the mosque in Mecca",
+      "Majnun brought to the Ka'ba in Mecca",
+      "Majnun at the Ka'bah with his father and other pilgrims"
+    ]
+  },
+  {
+    "id": "father-finds-majnun",
+    "az": "Atası Məcnunu xarabalıqda tapır",
+    "en": "Majnun's father finds him in the ruins and counsels him",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-16",
+      "nizami-leyli-ve-mecnun-17"
+    ],
+    "evidence": "Ata salam verdi yazıq oğluna,",
+    "aliases": [
+      "Majnun's father counsels him"
+    ]
+  },
+  {
+    "id": "layla-in-the-palm-grove",
+    "az": "Leyli qızlarla xurmalıqda",
+    "en": "Layla with her companions in the palm grove",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-19"
+    ],
+    "evidence": "Leylinin yanında bir bölük nigar",
+    "aliases": [
+      "Layla in a garden in the company of young women",
+      "Layla standing in the palm grove"
+    ]
+  },
+  {
+    "id": "nawfal-meets-majnun",
+    "az": "Nofəl Məcnunla tanış olur",
+    "en": "Nawfal meets Majnun in the desert",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-21"
+    ],
+    "evidence": "Nofəl adlanılan bir igid vardı,",
+    "aliases": [
+      "Nawfal visiting Majnun in the desert"
+    ]
+  },
+  {
+    "id": "nawfal-battle",
+    "az": "Nofəlin Leylinin qəbiləsi ilə döyüşü",
+    "en": "Nawfal battles Layla's tribe",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-22",
+      "nizami-leyli-ve-mecnun-24"
+    ],
+    "evidence": "Məcnunsa döyüşdən uzaq düşərək,",
+    "aliases": [
+      "Nawfal and his men attack Layla's tribe",
+      "Majnun watching the battle of the tribes",
+      "Battle of Nofel with Layla's tribe"
+    ]
+  },
+  {
+    "id": "majnun-frees-gazelles",
+    "az": "Məcnun ahuları azad edir",
+    "en": "Majnun frees the gazelles",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-25"
+    ],
+    "evidence": "Ahular başından götür tələni,",
+    "aliases": [
+      "Majnun frees the deer",
+      "Majnun buys the gazelles from the hunter"
+    ]
+  },
+  {
+    "id": "old-woman-leads-majnun",
+    "az": "Qarı zəncirli Məcnunu Leylinin çadırına gətirir",
+    "en": "The old woman leads Majnun in chains to Layla's tent",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-27"
+    ],
+    "evidence": "Boynu zəncirlini çəkib dartırdı.",
+    "aliases": [
+      "Majnun brought in chains by the old woman to Layla's tent",
+      "A widow leads Majnun in chains before Layla's pavilion"
+    ]
+  },
+  {
+    "id": "layla-strikes-ibn-salam",
+    "az": "Leyli İbn-Səlama sillə vurur",
+    "en": "Layla strikes Ibn Salam, who falls senseless",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-28"
+    ],
+    "evidence": "Qızın silləsindən o birdən-birə,",
+    "aliases": [
+      "Layla's husband, Ibn Salam, falls to the ground in the bridal chamber"
+    ]
+  },
+  {
+    "id": "father-visits-majnun",
+    "az": "Atası səhrada Məcnunun görüşünə gəlir",
+    "en": "Majnun's father visits him in the wilderness",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-30",
+      "nizami-leyli-ve-mecnun-31"
+    ],
+    "evidence": "Ata qucaqladı yazıq oğlunu,",
+    "aliases": [
+      "Majnun visited by his father",
+      "Majnun and his father embracing in the wilderness"
+    ]
+  },
+  {
+    "id": "majnun-at-fathers-grave",
+    "az": "Məcnun atasının qəbri üstündə",
+    "en": "Majnun weeps at his father's grave",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-32"
+    ],
+    "evidence": "Qaçdı atasının qəbrinə sarı.",
+    "aliases": [
+      "Majnun visiting his father's tomb",
+      "Majnun weeps at his father's tomb"
+    ]
+  },
+  {
+    "id": "majnun-with-animals",
+    "az": "Məcnun vəhşi heyvanlar arasında",
+    "en": "Majnun among the wild animals",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-33"
+    ],
+    "evidence": "Vəhşilər olmuşdu Məcnuna həmdəm:",
+    "aliases": [
+      "Majnun in the desert with the animals",
+      "Majnun playing with wild animals",
+      "Majnun in the wilderness",
+      "Məcnun heyvanlar arasında"
+    ]
+  },
+  {
+    "id": "salim-visits-majnun",
+    "az": "Dayısı Səlim Amiri Məcnunun görüşünə gəlir",
+    "en": "Majnun's uncle Salim Amiri visits him",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-37"
+    ],
+    "evidence": "Ona deyirdilər Səlim Amiri,",
+    "aliases": [
+      "Salim visits Majnun in the wilderness",
+      "Majnun and Salim in the palm grove"
+    ]
+  },
+  {
+    "id": "mother-visits-majnun",
+    "az": "Anası Məcnunun görüşünə gəlir",
+    "en": "Majnun's mother visits him",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-37",
+      "nizami-leyli-ve-mecnun-38"
+    ],
+    "evidence": "Ana öz oğluna boylandı bir az,",
+    "aliases": [
+      "Majnun's mother combs his untidy hair",
+      "Majnun meeting his mother in the presence of Salim"
+    ]
+  },
+  {
+    "id": "old-man-fetches-majnun",
+    "az": "Leylinin göndərdiyi qoca Məcnunu tapır",
+    "en": "The old man sent by Layla finds Majnun",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-40"
+    ],
+    "evidence": "Bir ağ saçlı qoca göründü birdən.",
+    "aliases": [
+      "An old man sent by Layla sees Majnun on the rocks"
+    ]
+  },
+  {
+    "id": "palm-grove-meeting",
+    "az": "Leyli və Məcnun xurmalıqda görüşürlər",
+    "en": "Layla and Majnun meet in the palm grove",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-40",
+      "nizami-leyli-ve-mecnun-41"
+    ],
+    "evidence": "Bir xurma altında o tutdu qərar,",
+    "aliases": [
+      "Layla visits Majnun in the palm grove",
+      "Majnun singing a ghazal to Layla",
+      "Layla and Majnun reunited in the wilderness",
+      "Layla and Majnun meet in the desert"
+    ]
+  },
+  {
+    "id": "salam-of-baghdad",
+    "az": "Bağdadlı Səlam Məcnunun görüşünə gəlir",
+    "en": "Salam of Baghdad visits Majnun",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-42"
+    ],
+    "evidence": "Səlam düşündü ki, Bağdaddan getsin,",
+    "aliases": [
+      "Salam, a youth from Baghdad, visiting Majnun"
+    ]
+  },
+  {
+    "id": "death-of-ibn-salam",
+    "az": "İbn-Səlamın ölümü, Leyli yas saxlayır",
+    "en": "Death of Ibn Salam; Layla mourns",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-43"
+    ],
+    "evidence": "Nakam İbn-Səlam öldüyü zaman",
+    "aliases": [
+      "Mourning the death of Layla's husband, Ibn Salam"
+    ]
+  },
+  {
+    "id": "zayd-brings-news",
+    "az": "Zeyd Məcnuna İbn-Səlamın ölüm xəbərini gətirir",
+    "en": "Zayd brings Majnun the news of Ibn Salam's death",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-43"
+    ],
+    "evidence": "Məcnuna tez xəbər yetirdi həmən",
+    "aliases": [
+      "Zayd bringing news of Layla's husband's death to Majnun"
+    ]
+  },
+  {
+    "id": "lovers-faint",
+    "az": "Leyli və Məcnun görüşüb huşdan gedirlər",
+    "en": "Layla and Majnun faint at the sight of each other",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-43"
+    ],
+    "evidence": "Huşsuz uzanmışdı o sevgililər,",
+    "aliases": [
+      "The fainting of Layla and Majnun",
+      "Layla and Majnun fainting"
+    ]
+  },
+  {
+    "id": "death-of-layla",
+    "az": "Leylinin ölümü",
+    "en": "Death of Layla",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-44"
+    ],
+    "evidence": "Düşüb xəstələndi o nazik bədən.",
+    "aliases": [
+      "Layla on her deathbed",
+      "Sick woman in bed with her attendants"
+    ]
+  },
+  {
+    "id": "majnun-at-laylas-grave",
+    "az": "Məcnun Leylinin qəbri üstündə",
+    "en": "Majnun mourns at Layla's grave",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-44"
+    ],
+    "evidence": "Onun qan dalğalı qəbrinin üstə",
+    "aliases": [
+      "Majnun lies prostrate at Layla's tomb",
+      "Majnun fainting at Layla's tomb"
+    ]
+  },
+  {
+    "id": "death-of-majnun",
+    "az": "Məcnunun Leylinin qəbri üstündə ölümü",
+    "en": "Majnun dies on Layla's grave",
+    "chapters": [
+      "nizami-leyli-ve-mecnun-45"
+    ],
+    "evidence": "Dost! - deyib, canını tapşırdı ona.",
+    "aliases": [
+      "Majnun lies dead on Layla's tomb",
+      "The death of Majnun on Layla's grave"
+    ]
+  }
+]

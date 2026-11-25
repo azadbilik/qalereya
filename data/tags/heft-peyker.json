@@ -1,0 +1,718 @@
+{
+  "commons-10044364": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "commons-103312119": {
+    "scene": "white-pavilion",
+    "confidence": "high"
+  },
+  "commons-108939298": {
+    "scene": "turktaz-garden",
+    "confidence": "high"
+  },
+  "commons-10959448": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-10959552": {
+    "scene": "fitna-hunt",
+    "confidence": "high"
+  },
+  "commons-10959597": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "commons-10967137": {
+    "scene": "fitna-hunt",
+    "confidence": "high"
+  },
+  "commons-129720427": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "commons-147890": {
+    "scene": "building-of-khawarnaq",
+    "confidence": "high"
+  },
+  "commons-148184218": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-15122086": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "commons-15165326": {
+    "scene": "bahram-kills-dragon",
+    "confidence": "high"
+  },
+  "commons-15181556": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-15190918": {
+    "scene": "white-pavilion",
+    "confidence": "medium"
+  },
+  "commons-156640183": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "commons-157695997": {
+    "scene": "bahram-kills-dragon",
+    "confidence": "high"
+  },
+  "commons-157708007": {
+    "scene": "crown-between-lions",
+    "confidence": "medium"
+  },
+  "commons-158256678": {
+    "scene": "bahram-enthroned",
+    "confidence": "medium"
+  },
+  "commons-158256682": {
+    "scene": "bahram-enthroned",
+    "confidence": "high"
+  },
+  "commons-158256685": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "commons-158315717": {
+    "scene": "crown-between-lions",
+    "confidence": "medium"
+  },
+  "commons-158965188": {
+    "scene": "building-of-khawarnaq",
+    "confidence": "medium"
+  },
+  "commons-159018998": {
+    "scene": "bahram-enthroned",
+    "confidence": "high"
+  },
+  "commons-159019182": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "commons-159019332": {
+    "scene": "fitna-carries-cow",
+    "confidence": "high"
+  },
+  "commons-159019581": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "commons-159019752": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "commons-159090571": {
+    "scene": "shepherd-and-dog",
+    "confidence": "high"
+  },
+  "commons-163795353": {
+    "scene": "shepherd-and-dog",
+    "confidence": "high"
+  },
+  "commons-169354529": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "commons-170192040": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-193763119": {
+    "scene": "sandalwood-pavilion",
+    "confidence": "high"
+  },
+  "commons-193763252": {
+    "scene": "white-pavilion",
+    "confidence": "high"
+  },
+  "commons-194810678": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "commons-194811684": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "commons-194812079": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "commons-196982123": {
+    "scene": "seven-portraits",
+    "confidence": "high"
+  },
+  "commons-197015775": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "commons-197015776": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "commons-197015777": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "commons-26297940": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "commons-30507086": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "commons-30507190": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-30507264": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "commons-30537533": {
+    "scene": "bahram-kills-dragon",
+    "confidence": "high"
+  },
+  "commons-30537858": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "commons-30543911": {
+    "scene": "fitna-hunt",
+    "confidence": "high"
+  },
+  "commons-30547560": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "commons-30573666": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "commons-30573828": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "commons-30574453": {
+    "scene": "fitna-hunt",
+    "confidence": "high"
+  },
+  "commons-30574455": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "commons-30574456": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-30574458": {
+    "scene": "bishr-and-malikha",
+    "confidence": "high"
+  },
+  "commons-30575267": {
+    "scene": "bahram-kills-dragon",
+    "confidence": "high"
+  },
+  "commons-30575268": {
+    "scene": "fitna-hunt",
+    "confidence": "high"
+  },
+  "commons-30575269": {
+    "scene": "fitna-hunt",
+    "confidence": "high"
+  },
+  "commons-30575273": {
+    "scene": "fitna-carries-cow",
+    "confidence": "high"
+  },
+  "commons-30576962": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "commons-30578779": {
+    "scene": "bahram-kills-dragon",
+    "confidence": "high"
+  },
+  "commons-30670272": {
+    "scene": "shepherd-and-dog",
+    "confidence": "high"
+  },
+  "commons-30670396": {
+    "scene": "fitna-carries-cow",
+    "confidence": "high"
+  },
+  "commons-40256864": {
+    "scene": "shepherd-and-dog",
+    "confidence": "high"
+  },
+  "commons-4029350": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "commons-4029523": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "commons-4172435": {
+    "scene": "bahram-hunts-onagers",
+    "confidence": "high"
+  },
+  "commons-4173644": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "commons-48673737": {
+    "scene": "shepherd-and-dog",
+    "confidence": "high"
+  },
+  "commons-61825469": {
+    "scene": "lion-and-onager-one-arrow",
+    "confidence": "high"
+  },
+  "commons-61825470": {
+    "scene": "fitna-hunt",
+    "confidence": "high"
+  },
+  "commons-61826920": {
+    "scene": "lion-and-onager-one-arrow",
+    "confidence": "medium"
+  },
+  "commons-61832382": {
+    "scene": "fitna-hunt",
+    "confidence": "medium"
+  },
+  "commons-62434703": {
+    "scene": "turktaz-garden",
+    "confidence": "high"
+  },
+  "commons-6993339": {
+    "scene": "fitna-carries-cow",
+    "confidence": "high"
+  },
+  "commons-77358612": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "commons-7830590": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "commons-7899910": {
+    "scene": "bahram-kills-dragon",
+    "confidence": "high"
+  },
+  "commons-8104157": {
+    "scene": "mahan-and-the-demon",
+    "confidence": "high"
+  },
+  "commons-90993828": {
+    "scene": "building-of-khawarnaq",
+    "confidence": "high"
+  },
+  "commons-90993830": {
+    "scene": "bahram-kills-dragon",
+    "confidence": "high"
+  },
+  "commons-90993833": {
+    "scene": "garden-maidens-bathing",
+    "confidence": "high"
+  },
+  "commons-90993834": {
+    "scene": "bishr-and-malikha",
+    "confidence": "high"
+  },
+  "commons-91011106": {
+    "scene": "bahram-kills-dragon",
+    "confidence": "high"
+  },
+  "commons-99196240": {
+    "scene": "building-of-khawarnaq",
+    "confidence": "high"
+  },
+  "commons-99540523": {
+    "scene": "fitna-carries-cow",
+    "confidence": "high"
+  },
+  "commons-99540960": {
+    "scene": "bahram-kills-dragon",
+    "confidence": "high"
+  },
+  "commons-99541543": {
+    "scene": "turktaz-garden",
+    "confidence": "high"
+  },
+  "met-446604": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "met-446605": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "met-446606": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "met-446607": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "met-446608": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "met-446609": {
+    "scene": "sandalwood-pavilion",
+    "confidence": "high"
+  },
+  "met-446610": {
+    "scene": "white-pavilion",
+    "confidence": "high"
+  },
+  "met-448372": {
+    "scene": "fitna-hunt",
+    "confidence": "high"
+  },
+  "met-451467": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "met-455047": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "met-455054": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "met-455055": {
+    "scene": "bahram-hunts-onagers",
+    "confidence": "low"
+  },
+  "met-455056": {
+    "scene": "fitna-hunt",
+    "confidence": "medium"
+  },
+  "met-455057": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "met-455058": {
+    "scene": "bishr-and-malikha",
+    "confidence": "high"
+  },
+  "met-455059": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "met-924978": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "walters-W604-154b": {
+    "scene": "lion-and-onager-one-arrow",
+    "confidence": "high"
+  },
+  "walters-W604-159b": {
+    "scene": "crown-between-lions",
+    "confidence": "high"
+  },
+  "walters-W604-163a": {
+    "scene": "fitna-carries-cow",
+    "confidence": "high"
+  },
+  "walters-W604-173a": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "walters-W604-176a": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "walters-W604-179a": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "walters-W604-182b": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "walters-W605-137b": {
+    "scene": "lion-and-onager-one-arrow",
+    "confidence": "medium"
+  },
+  "walters-W605-138a": {
+    "scene": "bahram-kills-dragon",
+    "confidence": "high"
+  },
+  "walters-W605-183a": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "walters-W605-94b": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "walters-W607-134b": {
+    "scene": "crown-between-lions",
+    "confidence": "high"
+  },
+  "walters-W607-136b": {
+    "scene": "fitna-hunt",
+    "confidence": "medium"
+  },
+  "walters-W607-145b": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "walters-W607-154a": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "walters-W607-160a": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "walters-W607-165a": {
+    "scene": "sandalwood-pavilion",
+    "confidence": "high"
+  },
+  "walters-W607-168a": {
+    "scene": "white-pavilion",
+    "confidence": "high"
+  },
+  "walters-W608-173a": {
+    "scene": "lion-and-onager-one-arrow",
+    "confidence": "high"
+  },
+  "walters-W608-174a": {
+    "scene": "bahram-kills-dragon",
+    "confidence": "high"
+  },
+  "walters-W608-174b": {
+    "scene": "seven-portraits",
+    "confidence": "high"
+  },
+  "walters-W608-178b": {
+    "scene": "crown-between-lions",
+    "confidence": "high"
+  },
+  "walters-W608-181a": {
+    "scene": "fitna-hunt",
+    "confidence": "high"
+  },
+  "walters-W608-182b": {
+    "scene": "fitna-carries-cow",
+    "confidence": "high"
+  },
+  "walters-W608-187b": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "walters-W608-193b": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "walters-W608-195b": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "walters-W608-204b": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "walters-W608-207b": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "walters-W608-208a": {
+    "scene": "sandalwood-pavilion",
+    "confidence": "high"
+  },
+  "walters-W608-208b": {
+    "scene": "sandalwood-pavilion",
+    "confidence": "medium"
+  },
+  "walters-W608-213a": {
+    "scene": "white-pavilion",
+    "confidence": "medium"
+  },
+  "walters-W608-213b": {
+    "scene": "white-pavilion",
+    "confidence": "high"
+  },
+  "walters-W609-197a": {
+    "scene": "lion-and-onager-one-arrow",
+    "confidence": "high"
+  },
+  "walters-W609-203a": {
+    "scene": "crown-between-lions",
+    "confidence": "high"
+  },
+  "walters-W609-207b": {
+    "scene": "fitna-carries-cow",
+    "confidence": "high"
+  },
+  "walters-W609-213b": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "walters-W609-221a": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "walters-W609-224b": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "walters-W609-227bisb": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "walters-W609-232a": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "walters-W609-238b": {
+    "scene": "sandalwood-pavilion",
+    "confidence": "high"
+  },
+  "walters-W609-243b": {
+    "scene": "white-pavilion",
+    "confidence": "high"
+  },
+  "walters-W609-250a": {
+    "scene": "shepherd-and-dog",
+    "confidence": "high"
+  },
+  "walters-W610-194b": {
+    "scene": "fitna-carries-cow",
+    "confidence": "high"
+  },
+  "walters-W610-206b": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "walters-W610-212a": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "walters-W610-235a": {
+    "scene": "vizier-hanged",
+    "confidence": "high"
+  },
+  "walters-W611-141a": {
+    "scene": "crown-between-lions",
+    "confidence": "high"
+  },
+  "walters-W611-148a": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "walters-W611-153b": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "walters-W611-156a": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "walters-W611-158b": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "walters-W611-162a": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "walters-W611-166b": {
+    "scene": "sandalwood-pavilion",
+    "confidence": "high"
+  },
+  "walters-W611-170a": {
+    "scene": "white-pavilion",
+    "confidence": "high"
+  },
+  "walters-W612-186b": {
+    "scene": "simnar-thrown-from-roof",
+    "confidence": "high"
+  },
+  "walters-W612-195b": {
+    "scene": "fitna-hunt",
+    "confidence": "high"
+  },
+  "walters-W612-202a": {
+    "scene": "shida-and-the-pavilions",
+    "confidence": "high"
+  },
+  "walters-W612-209a": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "walters-W612-212b": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "walters-W612-215a": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "walters-W612-221a": {
+    "scene": "sandalwood-pavilion",
+    "confidence": "high"
+  },
+  "walters-W612-226a": {
+    "scene": "white-pavilion",
+    "confidence": "high"
+  },
+  "walters-W612-232a": {
+    "scene": "shepherd-and-dog",
+    "confidence": "high"
+  },
+  "walters-W612-236a": {
+    "scene": "vizier-hanged",
+    "confidence": "high"
+  },
+  "walters-W657-174a": {
+    "scene": "black-pavilion",
+    "confidence": "high"
+  },
+  "walters-W657-180a": {
+    "scene": "yellow-pavilion",
+    "confidence": "high"
+  },
+  "walters-W657-182b": {
+    "scene": "green-pavilion",
+    "confidence": "high"
+  },
+  "walters-W657-185b": {
+    "scene": "red-pavilion",
+    "confidence": "high"
+  },
+  "walters-W657-189b": {
+    "scene": "turquoise-pavilion",
+    "confidence": "high"
+  },
+  "walters-W657-194b": {
+    "scene": "sandalwood-pavilion",
+    "confidence": "high"
+  },
+  "walters-W657-199a": {
+    "scene": "white-pavilion",
+    "confidence": "high"
+  },
+  "walters-W657-210b": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "walters-W657-211a": {
+    "scene": "bahram-vanishes-in-cave",
+    "confidence": "low"
+  }
+}

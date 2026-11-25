@@ -1,0 +1,348 @@
+[
+  {
+    "id": "miraj",
+    "az": "Peyğəmbərin meracı",
+    "en": "The Prophet's Night Journey (Mi'raj)",
+    "chapters": [
+      "nizami-yeddi-gozel-3"
+    ],
+    "evidence": "Taxtını ərş üstə qurdu meracı.",
+    "aliases": [
+      "Ascent of the Prophet on Buraq",
+      "Mi'raj"
+    ]
+  },
+  {
+    "id": "building-of-khawarnaq",
+    "az": "Simnar Nemana Xəvərnəq qəsrini tikir",
+    "en": "Simnar builds the palace of Khawarnaq for Nu'man",
+    "chapters": [
+      "nizami-yeddi-gozel-9"
+    ],
+    "evidence": "Tikdi daşla gəcdən gümüş imarət...",
+    "aliases": [
+      "The building of the palace of Khavarnaq",
+      "Construction of the fort of Kharnaq",
+      "Khawarnaq castle"
+    ]
+  },
+  {
+    "id": "simnar-thrown-from-roof",
+    "az": "Neman Simnarı qəsrin damından atdırır",
+    "en": "Nu'man has Simnar thrown from the roof of Khawarnaq",
+    "chapters": [
+      "nizami-yeddi-gozel-9"
+    ],
+    "evidence": "\"Simnarı tullayın qaladan yerə!\"",
+    "aliases": [
+      "Nu'man throws the builder from the roof of Khavarnaq",
+      "Death of Simnar"
+    ]
+  },
+  {
+    "id": "bahram-hunts-onagers",
+    "az": "Bəhram gurları ovlayıb damğalayır",
+    "en": "Bahram hunts onagers and brands them",
+    "chapters": [
+      "nizami-yeddi-gozel-11"
+    ],
+    "evidence": "Hər tutduğu gura vurardı damğa",
+    "aliases": [
+      "Bahram Gur hunting onagers",
+      "Bahram Gur on the chase",
+      "Bahram Gur brands the onagers"
+    ]
+  },
+  {
+    "id": "lion-and-onager-one-arrow",
+    "az": "Bəhram bir oxla şiri və guru vurur",
+    "en": "Bahram shoots a lion and an onager with one arrow",
+    "chapters": [
+      "nizami-yeddi-gozel-11"
+    ],
+    "evidence": "Dəldi şirlə guru ox birdən-birə,",
+    "aliases": [
+      "Bahram Gur kills a lion and a wild ass",
+      "Bahram Gur shoots an ass and lion with one arrow",
+      "Bahram Gur lion hunting"
+    ]
+  },
+  {
+    "id": "bahram-kills-dragon",
+    "az": "Bəhram əjdahanı öldürüb xəzinə tapır",
+    "en": "Bahram kills the dragon and finds the treasure",
+    "chapters": [
+      "nizami-yeddi-gozel-12"
+    ],
+    "evidence": "Dərhal əjdahanın qarnını yardı,",
+    "aliases": [
+      "Bahram Gur slays the dragon",
+      "Bahram Gur kills a dragon and recovers treasure from a cave"
+    ]
+  },
+  {
+    "id": "seven-portraits",
+    "az": "Bəhram Xəvərnəqdə yeddi gözəlin şəklini tapır",
+    "en": "Bahram finds the portraits of the seven princesses in Khawarnaq",
+    "chapters": [
+      "nizami-yeddi-gozel-13"
+    ],
+    "evidence": "Rəsm etmişdi gözəl yeddi şux pəri,",
+    "aliases": [
+      "Bahram Gur and portraits of the seven princesses",
+      "Bahram discovers the hidden room of the seven portraits"
+    ]
+  },
+  {
+    "id": "crown-between-lions",
+    "az": "Bəhram iki şiri öldürüb tacı götürür",
+    "en": "Bahram kills two lions and takes the crown",
+    "chapters": [
+      "nizami-yeddi-gozel-18"
+    ],
+    "evidence": "Onların əlindən tac vurub aldı.",
+    "aliases": [
+      "Bahram Gur seizes the crown from between two lions",
+      "Bahram Gur kills two lions to claim his crown"
+    ]
+  },
+  {
+    "id": "bahram-enthroned",
+    "az": "Bəhram atasının taxtına oturur",
+    "en": "Bahram enthroned in his father's place",
+    "chapters": [
+      "nizami-yeddi-gozel-19"
+    ],
+    "evidence": "Gözəl xislətli şah taxta oturdu.",
+    "aliases": [
+      "Bahram Gur enthroned",
+      "Bahram enthroned in a meadow"
+    ]
+  },
+  {
+    "id": "fitna-hunt",
+    "az": "Bəhram Fitnənin gözü önündə gurun dırnağını qulağına tikir",
+    "en": "Bahram pins the onager's hoof to its ear before Fitna",
+    "chapters": [
+      "nizami-yeddi-gozel-20"
+    ],
+    "evidence": "Dırnağı başında gur yerə gəldi.",
+    "aliases": [
+      "Bahram Gur hunting onagers with Fitna",
+      "Bahram Gur shows his skill hunting while Fitna watches",
+      "Bahram Gur hunts while Fitna plays the harp",
+      "Bahram Gur pinning an ass's hoof to its ear"
+    ]
+  },
+  {
+    "id": "fitna-carries-cow",
+    "az": "Fitnə öküzü çiynində altmış pillə yuxarı qaldırır",
+    "en": "Fitna carries the cow up the sixty stairs",
+    "chapters": [
+      "nizami-yeddi-gozel-21"
+    ],
+    "evidence": "Qalxdı pillələri o bir-bir dama,",
+    "aliases": [
+      "Fitna carries a bull on her shoulders before Bahram Gur",
+      "Fitna's feat of strength",
+      "Fitna heaving a bull-calf"
+    ]
+  },
+  {
+    "id": "shida-and-the-pavilions",
+    "az": "Bəhram Şidəni qonaq edir: yeddi günbəzin tikilməsi",
+    "en": "Bahram entertains Shida, the builder of the seven pavilions",
+    "chapters": [
+      "nizami-yeddi-gozel-25"
+    ],
+    "evidence": "Bir gün eyləyərək Şidəni dəvət,",
+    "aliases": [
+      "Bahram Gur entertains Shida",
+      "Building of the seven pavilions"
+    ]
+  },
+  {
+    "id": "black-pavilion",
+    "az": "Bəhram Qara günbəzdə hind gözəli ilə",
+    "en": "Bahram in the black pavilion with the Indian princess (Saturday)",
+    "chapters": [
+      "nizami-yeddi-gozel-26"
+    ],
+    "evidence": "Ki, hind banusuna yetirsin salam.",
+    "aliases": [
+      "Bahram Gur in the black pavilion",
+      "Bahram Gur and the Indian princess in the dark palace on Saturday",
+      "The Indian princess receiving Bahram Gur on Saturday in the black dome"
+    ]
+  },
+  {
+    "id": "turktaz-garden",
+    "az": "Qara geyən şah pərilər bağında",
+    "en": "The king in black in the garden of the fairies (the Indian princess's tale)",
+    "chapters": [
+      "nizami-yeddi-gozel-26"
+    ],
+    "evidence": "Göründü uzaqdan minlərcə pəri,",
+    "aliases": [
+      "King Turktazi's visit to the magical garden of Turktaz, Queen of the Faeries",
+      "The king who wore black"
+    ]
+  },
+  {
+    "id": "yellow-pavilion",
+    "az": "Bəhram Sarı günbəzdə Rum gözəli ilə",
+    "en": "Bahram in the yellow pavilion with the Byzantine princess (Sunday)",
+    "chapters": [
+      "nizami-yeddi-gozel-27"
+    ],
+    "evidence": "Yollara zər səpib, günbədə getdi,",
+    "aliases": [
+      "Bahram Gur in the yellow pavilion",
+      "Bahram Gur in the yellow palace on Sunday"
+    ]
+  },
+  {
+    "id": "green-pavilion",
+    "az": "Bəhram Yaşıl günbəzdə xarəzmli gözəl ilə",
+    "en": "Bahram in the green pavilion with the Khwarazmian princess (Monday)",
+    "chapters": [
+      "nizami-yeddi-gozel-28"
+    ],
+    "evidence": "Yaşıl günbəd deyə yönəldi, getdi,",
+    "aliases": [
+      "Bahram Gur in the green pavilion",
+      "Bahram Gur in the green palace on Monday",
+      "The Khwarazmian princess receiving Bahram Gur on Monday in the green dome"
+    ]
+  },
+  {
+    "id": "bishr-and-malikha",
+    "az": "Məlixa quyuda boğulur (Bişr hekayəti)",
+    "en": "Malikha drowns in the well (the tale of Bishr)",
+    "chapters": [
+      "nizami-yeddi-gozel-28"
+    ],
+    "evidence": "Bu küp deyildi, bir quyuydu, quyu,",
+    "aliases": [
+      "How a braggart was drowned in a well",
+      "Bishr feeling for the body of his drowned companion Malikha"
+    ]
+  },
+  {
+    "id": "red-pavilion",
+    "az": "Bəhram Qırmızı günbəzdə slavyan gözəli ilə",
+    "en": "Bahram in the red pavilion with the Slavic princess (Tuesday)",
+    "chapters": [
+      "nizami-yeddi-gozel-29"
+    ],
+    "evidence": "Qırmızı günbədə düzəldi yola.",
+    "aliases": [
+      "Bahram Gur in the red pavilion",
+      "Bahram Gur in the red palace on Tuesday",
+      "Bahram Gur with the Russian princess"
+    ]
+  },
+  {
+    "id": "turquoise-pavilion",
+    "az": "Bəhram Firuzəyi günbəzdə məğribli gözəl ilə",
+    "en": "Bahram in the turquoise pavilion with the Maghribi princess (Wednesday)",
+    "chapters": [
+      "nizami-yeddi-gozel-30"
+    ],
+    "evidence": "Firuzə günbədə eylədi pərvaz.",
+    "aliases": [
+      "Bahram Gur in the blue pavilion",
+      "Bahram Gur in the turquoise palace on Wednesday",
+      "Bahram Gur and the princess of the fifth clime"
+    ]
+  },
+  {
+    "id": "mahan-and-the-demon",
+    "az": "Mahanın gözəli əjdahaya dönür",
+    "en": "Mahan's beloved turns into a demon",
+    "chapters": [
+      "nizami-yeddi-gozel-30"
+    ],
+    "evidence": "Gördü ki, ay dönüb bir əjdahaya.",
+    "aliases": [
+      "Mahan embraced by an efreet",
+      "Mahan and the demons"
+    ]
+  },
+  {
+    "id": "sandalwood-pavilion",
+    "az": "Bəhram Səndəli günbəzdə Çin gözəli ilə",
+    "en": "Bahram in the sandalwood pavilion with the Chinese princess (Thursday)",
+    "chapters": [
+      "nizami-yeddi-gozel-31"
+    ],
+    "evidence": "Səndəl rəngindəki günbədə gəldi.",
+    "aliases": [
+      "Bahram Gur in the sandalwood pavilion",
+      "Bahram Gur in the sandal palace on Thursday"
+    ]
+  },
+  {
+    "id": "white-pavilion",
+    "az": "Bəhram Ağ günbəzdə iranlı gözəl ilə",
+    "en": "Bahram in the white pavilion with the Persian princess (Friday)",
+    "chapters": [
+      "nizami-yeddi-gozel-32"
+    ],
+    "evidence": "Həmən ağ günbədin üstünə gəldi.",
+    "aliases": [
+      "Bahram Gur in the white pavilion",
+      "Bahram Gur in the white palace on Friday",
+      "Reception of Bahram Gur by the Persian princess"
+    ]
+  },
+  {
+    "id": "garden-maidens-bathing",
+    "az": "Bağ sahibi hovuzda çimən qızları görür",
+    "en": "The owner of the garden sees the maidens bathing in his pool",
+    "chapters": [
+      "nizami-yeddi-gozel-32"
+    ],
+    "evidence": "O gözəllər suda tez çimən kimi,",
+    "aliases": [
+      "The owner of the garden discovering maidens bathing in his pool"
+    ]
+  },
+  {
+    "id": "shepherd-and-dog",
+    "az": "Bəhram itini ağacdan asmış çobanla",
+    "en": "Bahram and the shepherd who hanged his dog",
+    "chapters": [
+      "nizami-yeddi-gozel-34"
+    ],
+    "evidence": "Ağacdan asılıb bir it aşağı,",
+    "aliases": [
+      "Bahram Gur meets a shepherd who hung his dog on a tree",
+      "Bahram and the dog"
+    ]
+  },
+  {
+    "id": "vizier-hanged",
+    "az": "Zalım vəzirin dar ağacından asılması",
+    "en": "The unjust vizier is hanged",
+    "chapters": [
+      "nizami-yeddi-gozel-36"
+    ],
+    "evidence": "Diriykən asıldı dardan o alçaq,",
+    "aliases": [
+      "The hanging of Bahram Gur's unjust vizier"
+    ]
+  },
+  {
+    "id": "bahram-vanishes-in-cave",
+    "az": "Bəhram son ovda mağarada yox olur",
+    "en": "Bahram's last hunt: he follows an onager into a cave and vanishes",
+    "chapters": [
+      "nizami-yeddi-gozel-37"
+    ],
+    "evidence": "Gur, igidlər kimi içəri girdi,",
+    "aliases": [
+      "Bahram Gur disappears into the cave"
+    ]
+  }
+]

@@ -1,0 +1,282 @@
+{
+ "commons-10967553": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-115058479": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "commons-122122885": {
+  "scene": "faridun-and-the-gazelle",
+  "confidence": "high"
+ },
+ "commons-123921313": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "commons-127888383": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-155534615": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-156624547": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-156624548": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-158379091": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-158613545": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-158613546": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-158613547": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-158615097": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-158615098": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-158615099": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-158615629": {
+  "scene": "tyrant-and-truthful-man",
+  "confidence": "high"
+ },
+ "commons-158615630": {
+  "scene": "tyrant-and-truthful-man",
+  "confidence": "high"
+ },
+ "commons-158615631": {
+  "scene": "tyrant-and-truthful-man",
+  "confidence": "high"
+ },
+ "commons-158615634": {
+  "scene": "tyrant-and-truthful-man",
+  "confidence": "high"
+ },
+ "commons-158648739": {
+  "scene": "tyrant-and-truthful-man",
+  "confidence": "medium"
+ },
+ "commons-159091031": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-159091472": {
+  "scene": "jamshid-and-his-confidant",
+  "confidence": "high"
+ },
+ "commons-159302943": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "low"
+ },
+ "commons-159303153": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "low"
+ },
+ "commons-159560640": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "medium"
+ },
+ "commons-163591944": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "commons-167779454": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "commons-167779456": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "commons-167779463": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "commons-167779464": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "commons-167779468": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "commons-167779475": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "commons-170239945": {
+  "scene": "physicians-duel",
+  "confidence": "high"
+ },
+ "commons-170239946": {
+  "scene": "physicians-duel",
+  "confidence": "high"
+ },
+ "commons-186628713": {
+  "scene": "faridun-and-the-gazelle",
+  "confidence": "high"
+ },
+ "commons-194810998": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "commons-194812304": {
+  "scene": "faridun-and-the-gazelle",
+  "confidence": "high"
+ },
+ "commons-198381524": {
+  "scene": "miraj",
+  "confidence": "high"
+ },
+ "commons-200215189": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "medium"
+ },
+ "commons-21913236": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-22006844": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "commons-45040794": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-45040821": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-45040988": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-45125187": {
+  "scene": "nushirvan-and-the-owls",
+  "confidence": "high"
+ },
+ "commons-48672988": {
+  "scene": "nushirvan-and-the-owls",
+  "confidence": "high"
+ },
+ "commons-48672989": {
+  "scene": "physicians-duel",
+  "confidence": "high"
+ },
+ "commons-8711444": {
+  "scene": "physicians-duel",
+  "confidence": "high"
+ },
+ "commons-88723063": {
+  "scene": "nushirvan-and-the-owls",
+  "confidence": "high"
+ },
+ "commons-89035697": {
+  "scene": "nushirvan-and-the-owls",
+  "confidence": "high"
+ },
+ "commons-8936745": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "commons-90993840": {
+  "scene": "harun-and-the-barber",
+  "confidence": "high"
+ },
+ "commons-91191942": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "met-446593": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "met-453390": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "walters-W605-21b": {
+  "scene": "nushirvan-and-the-owls",
+  "confidence": "high"
+ },
+ "walters-W605-27b": {
+  "scene": "faridun-and-the-gazelle",
+  "confidence": "high"
+ },
+ "walters-W605-40a": {
+  "scene": "jamshid-and-his-confidant",
+  "confidence": "medium"
+ },
+ "walters-W607-15a": {
+  "scene": "nushirvan-and-the-owls",
+  "confidence": "high"
+ },
+ "walters-W607-17a": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "walters-W607-26a": {
+  "scene": "tyrant-and-truthful-man",
+  "confidence": "high"
+ },
+ "walters-W607-29b": {
+  "scene": "jamshid-and-his-confidant",
+  "confidence": "high"
+ },
+ "walters-W607-4b": {
+  "scene": "miraj",
+  "confidence": "medium"
+ },
+ "walters-W609-17a": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "walters-W609-25a": {
+  "scene": "physicians-duel",
+  "confidence": "high"
+ },
+ "walters-W610-16a": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "walters-W611-13a": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ },
+ "walters-W611-15b": {
+  "scene": "fruit-seller-fox-thief",
+  "confidence": "high"
+ },
+ "walters-W612-23b": {
+  "scene": "physicians-duel",
+  "confidence": "high"
+ },
+ "walters-W657-13a": {
+  "scene": "sanjar-and-the-old-woman",
+  "confidence": "high"
+ }
+}

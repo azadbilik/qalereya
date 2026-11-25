@@ -1,0 +1,414 @@
+{
+  "commons-10054444": {
+    "scene": "old-woman-leads-majnun",
+    "confidence": "high"
+  },
+  "commons-116855323": {
+    "scene": "father-visits-majnun",
+    "confidence": "high"
+  },
+  "commons-116855593": {
+    "scene": "majnun-with-animals",
+    "confidence": "medium"
+  },
+  "commons-121082778": {
+    "scene": "palm-grove-meeting",
+    "confidence": "medium"
+  },
+  "commons-15143437": {
+    "scene": "majnun-with-animals",
+    "confidence": "high"
+  },
+  "commons-156092915": {
+    "scene": "old-woman-leads-majnun",
+    "confidence": "high"
+  },
+  "commons-156623837": {
+    "scene": "majnun-at-the-kaaba",
+    "confidence": "high"
+  },
+  "commons-157638401": {
+    "scene": "nawfal-battle",
+    "confidence": "high"
+  },
+  "commons-157660124": {
+    "scene": "school",
+    "confidence": "medium"
+  },
+  "commons-157708006": {
+    "scene": "nawfal-battle",
+    "confidence": "high"
+  },
+  "commons-158258137": {
+    "scene": "majnun-at-the-kaaba",
+    "confidence": "high"
+  },
+  "commons-158315718": {
+    "scene": "majnun-with-animals",
+    "confidence": "medium"
+  },
+  "commons-158379084": {
+    "scene": "nawfal-battle",
+    "confidence": "high"
+  },
+  "commons-158379087": {
+    "scene": "old-woman-leads-majnun",
+    "confidence": "high"
+  },
+  "commons-159156843": {
+    "scene": "salim-visits-majnun",
+    "confidence": "medium"
+  },
+  "commons-186678565": {
+    "scene": "nawfal-meets-majnun",
+    "confidence": "high"
+  },
+  "commons-193763290": {
+    "scene": "zayd-brings-news",
+    "confidence": "high"
+  },
+  "commons-193763456": {
+    "scene": "palm-grove-meeting",
+    "confidence": "high"
+  },
+  "commons-197222839": {
+    "scene": "nizami-advises-son",
+    "confidence": "high"
+  },
+  "commons-197222840": {
+    "scene": "nizami-advises-son",
+    "confidence": "high"
+  },
+  "commons-197241839": {
+    "scene": "nizami-advises-son",
+    "confidence": "high"
+  },
+  "commons-197247624": {
+    "scene": "nizami-advises-son",
+    "confidence": "high"
+  },
+  "commons-197247625": {
+    "scene": "nizami-advises-son",
+    "confidence": "high"
+  },
+  "commons-198381621": {
+    "scene": "majnun-with-animals",
+    "confidence": "high"
+  },
+  "commons-22196883": {
+    "scene": "lovers-faint",
+    "confidence": "high"
+  },
+  "commons-22650016": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-25297927": {
+    "scene": "nizami-advises-son",
+    "confidence": "high"
+  },
+  "commons-27307448": {
+    "scene": "school",
+    "confidence": "high"
+  },
+  "commons-27307456": {
+    "scene": "layla-in-the-palm-grove",
+    "confidence": "medium"
+  },
+  "commons-27307554": {
+    "scene": "palm-grove-meeting",
+    "confidence": "high"
+  },
+  "commons-27308395": {
+    "scene": "school",
+    "confidence": "high"
+  },
+  "commons-30490933": {
+    "scene": "majnun-with-animals",
+    "confidence": "high"
+  },
+  "commons-30574244": {
+    "scene": "school",
+    "confidence": "high"
+  },
+  "commons-48673732": {
+    "scene": "majnun-with-animals",
+    "confidence": "high"
+  },
+  "commons-48673734": {
+    "scene": "old-woman-leads-majnun",
+    "confidence": "high"
+  },
+  "commons-5751781": {
+    "scene": "lovers-faint",
+    "confidence": "high"
+  },
+  "commons-62400484": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "commons-62473594": {
+    "scene": "majnun-with-animals",
+    "confidence": "high"
+  },
+  "commons-7686244": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-7855509": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-8388743": {
+    "scene": "lovers-faint",
+    "confidence": "high"
+  },
+  "commons-854582": {
+    "scene": "death-of-ibn-salam",
+    "confidence": "high"
+  },
+  "commons-88925716": {
+    "scene": "nawfal-battle",
+    "confidence": "high"
+  },
+  "commons-90993821": {
+    "scene": "salim-visits-majnun",
+    "confidence": "high"
+  },
+  "commons-90993822": {
+    "scene": "school",
+    "confidence": "high"
+  },
+  "commons-90993823": {
+    "scene": "lovers-faint",
+    "confidence": "high"
+  },
+  "commons-90993829": {
+    "scene": "death-of-majnun",
+    "confidence": "high"
+  },
+  "commons-90993839": {
+    "scene": "death-of-ibn-salam",
+    "confidence": "high"
+  },
+  "commons-91011110": {
+    "scene": "nawfal-battle",
+    "confidence": "high"
+  },
+  "commons-91011111": {
+    "scene": "majnun-at-the-kaaba",
+    "confidence": "high"
+  },
+  "commons-97490400": {
+    "scene": "majnun-with-animals",
+    "confidence": "medium"
+  },
+  "met-446603": {
+    "scene": "school",
+    "confidence": "high"
+  },
+  "met-455039": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "met-455040": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "met-455041": {
+    "scene": "school",
+    "confidence": "high"
+  },
+  "walters-W604-109b": {
+    "scene": "majnun-at-the-kaaba",
+    "confidence": "high"
+  },
+  "walters-W604-114b": {
+    "scene": "nawfal-battle",
+    "confidence": "high"
+  },
+  "walters-W604-117a": {
+    "scene": "old-woman-leads-majnun",
+    "confidence": "high"
+  },
+  "walters-W604-118a": {
+    "scene": "layla-strikes-ibn-salam",
+    "confidence": "high"
+  },
+  "walters-W604-123a": {
+    "scene": "majnun-at-fathers-grave",
+    "confidence": "high"
+  },
+  "walters-W604-129b": {
+    "scene": "mother-visits-majnun",
+    "confidence": "high"
+  },
+  "walters-W604-132a": {
+    "scene": "old-man-fetches-majnun",
+    "confidence": "high"
+  },
+  "walters-W604-138b": {
+    "scene": "lovers-faint",
+    "confidence": "high"
+  },
+  "walters-W604-141b": {
+    "scene": "majnun-at-laylas-grave",
+    "confidence": "high"
+  },
+  "walters-W604-143b": {
+    "scene": "death-of-majnun",
+    "confidence": "high"
+  },
+  "walters-W605-100a": {
+    "scene": "palm-grove-meeting",
+    "confidence": "medium"
+  },
+  "walters-W605-112b": {
+    "scene": "majnun-at-laylas-grave",
+    "confidence": "high"
+  },
+  "walters-W605-61b": {
+    "scene": "school",
+    "confidence": "high"
+  },
+  "walters-W605-66b": {
+    "scene": "majnun-at-the-kaaba",
+    "confidence": "high"
+  },
+  "walters-W605-68b": {
+    "scene": "father-finds-majnun",
+    "confidence": "medium"
+  },
+  "walters-W605-73b": {
+    "scene": "layla-in-the-palm-grove",
+    "confidence": "high"
+  },
+  "walters-W605-75a": {
+    "scene": "nawfal-battle",
+    "confidence": "high"
+  },
+  "walters-W605-78b": {
+    "scene": "majnun-with-animals",
+    "confidence": "low"
+  },
+  "walters-W605-83b": {
+    "scene": "majnun-with-animals",
+    "confidence": "low"
+  },
+  "walters-W605-85a": {
+    "scene": "father-visits-majnun",
+    "confidence": "high"
+  },
+  "walters-W605-88b": {
+    "scene": "majnun-at-fathers-grave",
+    "confidence": "high"
+  },
+  "walters-W605-97b": {
+    "scene": "salim-visits-majnun",
+    "confidence": "medium"
+  },
+  "walters-W605-98a": {
+    "scene": "mother-visits-majnun",
+    "confidence": "high"
+  },
+  "walters-W608-119a": {
+    "scene": "school",
+    "confidence": "high"
+  },
+  "walters-W608-136b": {
+    "scene": "father-visits-majnun",
+    "confidence": "high"
+  },
+  "walters-W608-147b": {
+    "scene": "palm-grove-meeting",
+    "confidence": "medium"
+  },
+  "walters-W608-154b": {
+    "scene": "lovers-faint",
+    "confidence": "high"
+  },
+  "walters-W609-132b": {
+    "scene": "school",
+    "confidence": "high"
+  },
+  "walters-W609-137a": {
+    "scene": "majnun-at-the-kaaba",
+    "confidence": "high"
+  },
+  "walters-W609-144b": {
+    "scene": "nawfal-battle",
+    "confidence": "high"
+  },
+  "walters-W609-149b": {
+    "scene": "old-woman-leads-majnun",
+    "confidence": "high"
+  },
+  "walters-W609-157b": {
+    "scene": "majnun-with-animals",
+    "confidence": "high"
+  },
+  "walters-W609-167a": {
+    "scene": "palm-grove-meeting",
+    "confidence": "high"
+  },
+  "walters-W609-175b": {
+    "scene": "lovers-faint",
+    "confidence": "high"
+  },
+  "walters-W610-130a": {
+    "scene": "school",
+    "confidence": "high"
+  },
+  "walters-W610-145a": {
+    "scene": "old-woman-leads-majnun",
+    "confidence": "high"
+  },
+  "walters-W610-167a": {
+    "scene": "lovers-faint",
+    "confidence": "high"
+  },
+  "walters-W611-100a": {
+    "scene": "nawfal-battle",
+    "confidence": "high"
+  },
+  "walters-W611-109a": {
+    "scene": "majnun-with-animals",
+    "confidence": "high"
+  },
+  "walters-W611-116b": {
+    "scene": "salim-visits-majnun",
+    "confidence": "high"
+  },
+  "walters-W611-123a": {
+    "scene": "palm-grove-meeting",
+    "confidence": "medium"
+  },
+  "walters-W611-92b": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "walters-W612-160b": {
+    "scene": "palm-grove-meeting",
+    "confidence": "medium"
+  },
+  "walters-W657-110b": {
+    "scene": "school",
+    "confidence": "high"
+  },
+  "walters-W657-120a": {
+    "scene": "nawfal-battle",
+    "confidence": "high"
+  },
+  "walters-W657-138a": {
+    "scene": "palm-grove-meeting",
+    "confidence": "medium"
+  },
+  "walters-W657-152a": {
+    "scene": "death-of-layla",
+    "confidence": "medium"
+  },
+  "walters-W657-153a": {
+    "scene": null,
+    "confidence": "low"
+  }
+}

@@ -1,0 +1,308 @@
+[
+  {
+    "id": "miraj",
+    "az": "Peyğəmbərin meracı",
+    "en": "The Prophet's Night Journey (Mi'raj)",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-8"
+    ],
+    "evidence": "Xoş ol ki, minib Büraqi xoşhal,",
+    "aliases": [
+      "Mi'raj"
+    ]
+  },
+  {
+    "id": "birth-of-qeys",
+    "az": "Qeysin doğulması",
+    "en": "The birth of Qays",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-15"
+    ],
+    "evidence": "Ol növrəsə Qeys qoydular ad.",
+    "aliases": [
+      "Birth of Majnun",
+      "Kays's birth"
+    ]
+  },
+  {
+    "id": "leyli-and-qeys-at-school",
+    "az": "Leyli və Qeys məktəbdə",
+    "en": "Layla and Qays at school",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-16",
+      "fuzuli-leyli-ve-mecnun-17"
+    ],
+    "evidence": "Məktəbdə onunla oldu həmdəm",
+    "aliases": [
+      "Layla and Majnun at school",
+      "The madrasa"
+    ]
+  },
+  {
+    "id": "leylis-mother-reproaches",
+    "az": "Leylinin anası onu danlayır",
+    "en": "Layla's mother reproaches her",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-18"
+    ],
+    "evidence": "Leylinin anası oldu agah,",
+    "aliases": [
+      "Layla and her mother"
+    ]
+  },
+  {
+    "id": "meeting-on-the-way",
+    "az": "Leyli yolda Məcnunla qarşılaşır",
+    "en": "Layla and Majnun meet on the road",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-20"
+    ],
+    "evidence": "Məcnunə müqabil oldu Leyli,",
+    "aliases": [
+      "Meeting of Layla and Majnun"
+    ]
+  },
+  {
+    "id": "father-finds-majnun",
+    "az": "Atası Məcnunu səhrada tapır",
+    "en": "Majnun's father finds him in the wilderness",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-21",
+      "fuzuli-leyli-ve-mecnun-53"
+    ],
+    "evidence": "Bir guşədə gördü laübali.",
+    "aliases": [
+      "Majnun's father gives him advice",
+      "Majnun meets his father"
+    ]
+  },
+  {
+    "id": "father-asks-for-leyli",
+    "az": "Məcnunun atası Leylini elçiliyə gedir",
+    "en": "Majnun's father asks for Layla's hand",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-24"
+    ],
+    "evidence": "Məcnuna mənim qızım nə layiq?",
+    "aliases": [
+      "The proposal",
+      "Layla is asked of her father for Qays"
+    ]
+  },
+  {
+    "id": "majnun-at-kaaba",
+    "az": "Məcnun Kəbədə dua edir",
+    "en": "Majnun prays at the Ka'ba",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-26"
+    ],
+    "evidence": "Çün Kə'bəyə irdi ol nikuxu,",
+    "aliases": [
+      "Majnun and his father at the Ka'ba"
+    ]
+  },
+  {
+    "id": "majnun-among-animals",
+    "az": "Məcnun vəhşi heyvanlar arasında",
+    "en": "Majnun among the wild animals",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-27",
+      "fuzuli-leyli-ve-mecnun-56"
+    ],
+    "evidence": "Xeyli-dədü dam onun sipahı.",
+    "aliases": [
+      "Majnun in the desert",
+      "Majnun amongst animals"
+    ]
+  },
+  {
+    "id": "majnun-frees-gazelle",
+    "az": "Məcnun ceyranı ovçudan xilas edir",
+    "en": "Majnun frees the gazelle from the hunter",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-29"
+    ],
+    "evidence": "Məcnun ona verdi cümlə rəxtin,",
+    "aliases": [
+      "Majnun saves the gazelle"
+    ]
+  },
+  {
+    "id": "leyli-in-garden",
+    "az": "Leyli bahar çağı gülzarda",
+    "en": "Layla in the garden in spring",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-36"
+    ],
+    "evidence": "Cəm' eylədi nazənin sənəmlər,",
+    "aliases": [
+      "Layla in a garden with her maidens"
+    ]
+  },
+  {
+    "id": "ibn-salam-sees-leyli",
+    "az": "İbni Səlam Leylini görüb vurulur",
+    "en": "Ibn Salam sees Layla and falls in love",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-39"
+    ],
+    "evidence": "Bir rahgüzərdə ol nigarə",
+    "aliases": [
+      "Ibn Salam falls in love with Layla"
+    ]
+  },
+  {
+    "id": "majnun-meets-nofel",
+    "az": "Məcnun Növfəllə görüşür",
+    "en": "Majnun meets Nawfal",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-40",
+      "fuzuli-leyli-ve-mecnun-41",
+      "fuzuli-leyli-ve-mecnun-42"
+    ],
+    "evidence": "Növfəl qılıb arizuyi-Məcnun,",
+    "aliases": [
+      "Nawfal visiting Majnun in the desert"
+    ]
+  },
+  {
+    "id": "nofel-battle",
+    "az": "Növfəlin Leylinin qəbiləsi ilə savaşı",
+    "en": "Nawfal battles Layla's tribe",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-43",
+      "fuzuli-leyli-ve-mecnun-44"
+    ],
+    "evidence": "Həngameyi-rəzmi etdilər gərm.",
+    "aliases": [
+      "Battle of Nawfal with Layla's tribe"
+    ]
+  },
+  {
+    "id": "majnun-in-chains",
+    "az": "Məcnun zəncirli əsir kimi dilənməyə gedir",
+    "en": "Majnun goes begging in chains",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-45",
+      "fuzuli-leyli-ve-mecnun-46"
+    ],
+    "evidence": "Zəncirli bir əsir həmrah.",
+    "aliases": [
+      "Majnun goes begging to where Layla lives",
+      "Majnun brought in chains to Layla's tent"
+    ]
+  },
+  {
+    "id": "majnun-at-leylis-tent",
+    "az": "Məcnun Leylinin çadırı önündə",
+    "en": "Majnun before Layla's tent",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-47"
+    ],
+    "evidence": "Çökdüm yerə gərdənimdə zəncir,",
+    "aliases": [
+      "Majnun meets Layla"
+    ]
+  },
+  {
+    "id": "wedding-night",
+    "az": "İbni Səlamla Leylinin gərdək gecəsi",
+    "en": "The wedding night of Ibn Salam and Layla",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-49"
+    ],
+    "evidence": "Əl urdu ki, aça ol niqabı,",
+    "aliases": [
+      "Layla and Ibn Salam in the bridal chamber"
+    ]
+  },
+  {
+    "id": "zeyd-brings-news",
+    "az": "Zeyd Məcnuna Leylinin ərə getdiyini xəbər verir",
+    "en": "Zayd brings Majnun news of Layla's marriage",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-50"
+    ],
+    "evidence": "Zeyd adlı, vəfayi-əhdə qadir.",
+    "aliases": [
+      "Majnun meets Zayd"
+    ]
+  },
+  {
+    "id": "majnun-at-fathers-grave",
+    "az": "Məcnun atasının məzarı üstündə",
+    "en": "Majnun at his father's grave",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-55"
+    ],
+    "evidence": "Çün gördü atasının məzarın,",
+    "aliases": [
+      "Majnun weeps at his father's tomb"
+    ]
+  },
+  {
+    "id": "leyli-finds-majnun",
+    "az": "Karvanı itirən Leyli səhrada Məcnunu tapır",
+    "en": "Layla, lost from the caravan, finds Majnun",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-60",
+      "fuzuli-leyli-ve-mecnun-61",
+      "fuzuli-leyli-ve-mecnun-62",
+      "fuzuli-leyli-ve-mecnun-63",
+      "fuzuli-leyli-ve-mecnun-64"
+    ],
+    "evidence": "Bir şəxsi-həzin göründü nagah,",
+    "aliases": [
+      "Layla visits Majnun in the wilderness"
+    ]
+  },
+  {
+    "id": "rider-comes-for-leyli",
+    "az": "Dəvəli bir atlı Leylinin dalınca gəlir",
+    "en": "A camel rider comes to fetch Layla",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-65"
+    ],
+    "evidence": "Bir naqənişin göründü nagah.",
+    "aliases": [
+      "The caravan guard comes for Layla"
+    ]
+  },
+  {
+    "id": "death-of-leyli",
+    "az": "Leylinin anasına vəsiyyəti və ölümü",
+    "en": "Layla's last words to her mother, and her death",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-68"
+    ],
+    "evidence": "Faş etdi anayə gizli razın:",
+    "aliases": [
+      "Death of Layla"
+    ]
+  },
+  {
+    "id": "majnun-dies-on-grave",
+    "az": "Məcnun Leylinin qəbri üstündə can verir",
+    "en": "Majnun dies on Layla's grave",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-69"
+    ],
+    "evidence": "Qəbrini qucaqladı nigarın,",
+    "aliases": [
+      "Death of Majnun",
+      "Majnun on Layla's grave"
+    ]
+  },
+  {
+    "id": "zeyds-dream",
+    "az": "Zeyd yuxuda Leyli ilə Məcnunu cənnətdə görür",
+    "en": "Zayd dreams of Layla and Majnun in Paradise",
+    "chapters": [
+      "fuzuli-leyli-ve-mecnun-70"
+    ],
+    "evidence": "Bir bağdə iki mahparə.",
+    "aliases": [
+      "Dream sequence featuring two individuals seated in a garden"
+    ]
+  }
+]

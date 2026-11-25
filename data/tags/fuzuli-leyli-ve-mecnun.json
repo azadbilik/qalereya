@@ -1,0 +1,130 @@
+{
+  "commons-156163970": {
+    "scene": "majnun-among-animals",
+    "confidence": "high"
+  },
+  "commons-156164079": {
+    "scene": "zeyds-dream",
+    "confidence": "high"
+  },
+  "commons-21457738": {
+    "scene": "majnun-frees-gazelle",
+    "confidence": "high"
+  },
+  "commons-49978128": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "commons-61464415": {
+    "scene": "leylis-mother-reproaches",
+    "confidence": "low"
+  },
+  "commons-61464448": {
+    "scene": "majnun-at-kaaba",
+    "confidence": "high"
+  },
+  "commons-61464449": {
+    "scene": "leyli-and-qeys-at-school",
+    "confidence": "medium"
+  },
+  "commons-61482790": {
+    "scene": "father-asks-for-leyli",
+    "confidence": "high"
+  },
+  "commons-62011637": {
+    "scene": "leyli-and-qeys-at-school",
+    "confidence": "high"
+  },
+  "commons-62011638": {
+    "scene": "birth-of-qeys",
+    "confidence": "high"
+  },
+  "commons-62011639": {
+    "scene": "majnun-among-animals",
+    "confidence": "low"
+  },
+  "commons-62011642": {
+    "scene": "leyli-in-garden",
+    "confidence": "low"
+  },
+  "commons-62011645": {
+    "scene": "majnun-at-kaaba",
+    "confidence": "high"
+  },
+  "commons-62011646": {
+    "scene": "father-asks-for-leyli",
+    "confidence": "high"
+  },
+  "commons-62011650": {
+    "scene": "ibn-salam-sees-leyli",
+    "confidence": "high"
+  },
+  "commons-62011651": {
+    "scene": "majnun-frees-gazelle",
+    "confidence": "high"
+  },
+  "commons-62012518": {
+    "scene": "majnun-in-chains",
+    "confidence": "high"
+  },
+  "commons-62012520": {
+    "scene": "nofel-battle",
+    "confidence": "high"
+  },
+  "commons-62012522": {
+    "scene": "wedding-night",
+    "confidence": "high"
+  },
+  "commons-62012523": {
+    "scene": "zeyd-brings-news",
+    "confidence": "medium"
+  },
+  "commons-62012524": {
+    "scene": "father-finds-majnun",
+    "confidence": "high"
+  },
+  "commons-62012526": {
+    "scene": "majnun-at-leylis-tent",
+    "confidence": "medium"
+  },
+  "commons-62012528": {
+    "scene": "rider-comes-for-leyli",
+    "confidence": "medium"
+  },
+  "commons-62012529": {
+    "scene": "majnun-dies-on-grave",
+    "confidence": "high"
+  },
+  "commons-62355596": {
+    "scene": "majnun-among-animals",
+    "confidence": "low"
+  },
+  "commons-62355864": {
+    "scene": "father-finds-majnun",
+    "confidence": "high"
+  },
+  "commons-62355912": {
+    "scene": "majnun-meets-nofel",
+    "confidence": "high"
+  },
+  "commons-62356030": {
+    "scene": "leyli-and-qeys-at-school",
+    "confidence": "high"
+  },
+  "commons-62356083": {
+    "scene": "majnun-dies-on-grave",
+    "confidence": "high"
+  },
+  "commons-70746959": {
+    "scene": "birth-of-qeys",
+    "confidence": "high"
+  },
+  "commons-70746960": {
+    "scene": "leyli-and-qeys-at-school",
+    "confidence": "high"
+  },
+  "commons-70746962": {
+    "scene": "father-asks-for-leyli",
+    "confidence": "high"
+  }
+}
