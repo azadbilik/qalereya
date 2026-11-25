@@ -108,7 +108,8 @@
   .legend i { display: block; border-radius: 50%; background: var(--accent); opacity: .8; border: 1px solid var(--paper); }
 
   @media (max-width: 48rem) {
-    .legend { top: .5rem; right: .5rem; padding: .45rem .6rem; font-size: .6875rem; }
+    .legend { top: .5rem; left: .5rem; right: .5rem; max-width: none; display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .8rem; padding: .35rem .6rem; font-size: .6875rem; }
+    .legend i { transform: scale(.75); }
     .panel { top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 55svh; border-radius: 12px 12px 0 0; border-bottom: 0; overflow-y: auto; overscroll-behavior: contain; }
     .head { padding: 1rem 1rem .75rem; }
     h1 { margin-top: .75rem; font-size: 1.5rem; }
@@ -163,17 +164,17 @@ function plural(n, one, few, many) { const r = new Intl.PluralRules('ru').select
 const T = {
   az: { doc: 'Emalatxanalar · Azad Bilik', title: 'Emalatxanalar', sub: 'Nizami və Füzulinin rəsmləri harada çəkilib, 1380–1880', map: 'Xəritə', maps: 'Xəritələr', gallery: 'Qalereya', century: 'Əsr', all: 'Hamısı', allCities: 'Bütün şəhərlər',
     cent: (c) => `${ROMAN[c]} əsr`, cities: (n) => `${n} şəhər`, mss: (n) => `${n} əlyazma`, minis: (n) => `${n} miniatür`, inGallery: (n) => `${n} miniatür qalereyada`,
-    legend: 'Dairə: şəhərdə çəkilmiş miniatürlər', close: 'Bağla', prev: 'Əvvəlki', next: 'Növbəti', openGallery: 'Qalereyada aç',
+    legend: 'Dairə: şəhərdə çəkilmiş miniatürlər', close: 'Bağla', loading: 'Yüklənir…', prev: 'Əvvəlki', next: 'Növbəti', openGallery: 'Qalereyada aç',
     patron: 'Hami', painters: 'Rəssamlar', held: 'Saxlanılır', probable: 'ehtimal', probableTitle: 'Atribusiya ehtimaldır', museums: 'muzeylər',
     note: 'Əlyazmanın köçürüldüyü və rəsmlərinin çəkildiyi şəhər, alimlərin atribusiyasına görə. Şəhəri bilinməyən əlyazmalar (məsələn, Walters kolleksiyasının çoxu) xəritədə yoxdur.' },
   ru: { doc: 'Мастерские · Azad Bilik', title: 'Мастерские', sub: 'Где иллюстрировали Низами и Физули, 1380–1880', map: 'Карта', maps: 'Карты', gallery: 'Галерея', century: 'Век', all: 'Все', allCities: 'Все города',
     cent: (c) => `${ROMAN[c]} век`, cities: (n) => `${n} ${plural(n, 'город', 'города', 'городов')}`, mss: (n) => `${n} ${plural(n, 'рукопись', 'рукописи', 'рукописей')}`, minis: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')}`, inGallery: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')} в галерее`,
-    legend: 'Круг: миниатюры, написанные в городе', close: 'Закрыть', prev: 'Предыдущая', next: 'Следующая', openGallery: 'Открыть в галерее',
+    legend: 'Круг: миниатюры, написанные в городе', close: 'Закрыть', loading: 'Загрузка…', prev: 'Предыдущая', next: 'Следующая', openGallery: 'Открыть в галерее',
     patron: 'Заказчик', painters: 'Художники', held: 'Хранится', probable: 'предположительно', probableTitle: 'Атрибуция предположительная', museums: 'музеи',
     note: 'Город, где рукопись переписана и проиллюстрирована, по атрибуции учёных. Рукописей, город которых неизвестен (например, большинства из собрания Уолтерса), на карте нет.' },
   en: { doc: 'Workshops · Azad Bilik', title: 'Workshops', sub: 'Where Nizami and Fuzuli were painted, 1380–1880', map: 'Map', maps: 'Maps', gallery: 'Gallery', century: 'Century', all: 'All', allCities: 'All cities',
     cent: (c) => `${c}${[, 'st', 'nd', 'rd'][c % 10 * (c % 100 > 3 && c % 100 < 21 ? 0 : 1)] ?? 'th'} century`, cities: (n) => `${n} cit${n === 1 ? 'y' : 'ies'}`, mss: (n) => `${n} manuscript${n === 1 ? '' : 's'}`, minis: (n) => `${n} miniature${n === 1 ? '' : 's'}`, inGallery: (n) => `${n} miniature${n === 1 ? '' : 's'} in the gallery`,
-    legend: 'Circle: miniatures painted in the city', close: 'Close', prev: 'Previous', next: 'Next', openGallery: 'Open in the gallery',
+    legend: 'Circle: miniatures painted in the city', close: 'Close', loading: 'Loading…', prev: 'Previous', next: 'Next', openGallery: 'Open in the gallery',
     patron: 'Patron', painters: 'Painters', held: 'Held by', probable: 'probable', probableTitle: 'Attribution uncertain', museums: 'museums',
     note: 'The city where each manuscript was copied and painted, as scholars attribute it. Manuscripts of unknown city (most of the Walters ones) are not on the map.' },
 };
@@ -219,7 +220,10 @@ map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom
 const tip = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 10 });
 const phone = () => matchMedia('(max-width: 48rem)').matches;
 const pad = () => phone() ? { top: 16, right: 16, left: 16, bottom: document.querySelector('.panel').offsetHeight + 16 } : { top: 32, right: 48, bottom: 32, left: 25 * 16 + 48 };
-map.once('load', () => map.fitBounds([[40, 25], [75, 43]], { padding: pad(), duration: 0 }));
+map.once('load', () => {
+  map.fitBounds([[40, 25], [75, 43]], { padding: pad(), duration: 0 });
+  document.querySelector('.maplibregl-ctrl-attrib')?.classList.remove('maplibregl-compact-show');
+});
 map.on('style.load', () => {
   for (const l of map.getStyle().layers) {
     if (l.type === 'background') map.setPaintProperty(l.id, 'background-color', css('--land'));
@@ -311,14 +315,14 @@ function card(m) {
     <a class="go" href="${href}">${t('inGallery')(own.length)} →</a></section>`;
 }
 
-const src = (u) => u.startsWith('thumbs/') ? '../' + u : u;
+const src = (u) => /^(thumbs|large)\//.test(u) ? '../' + u : u;
 
 // A miniature opens in the hub's viewer (/shared/viewer.js), the rest of its manuscript beside it
 function openPic(list, i) {
   const q = lang === 'az' ? '' : `?lang=${lang}`;
   AzadViewer.open(list, i, {
-    src: (x) => src(x.thumb), full: (x) => x.image, alt: (x) => x.title,
-    labels: { close: t('close'), prev: t('prev'), next: t('next') },
+    src: (x) => src(x.thumb), full: (x) => x.large && src(x.large), fallback: (x) => x.image, alt: (x) => x.title,
+    labels: { close: t('close'), prev: t('prev'), next: t('next'), loading: t('loading') },
     info: (x) => `<h2>${esc(x.title)}</h2>
       <p class="m">${[x.when ?? x.date, x.manuscript, x.museum].filter(Boolean).map(esc).join('<br>')}</p>
       <p><a href="../${q}#${encodeURIComponent(x.id)}">${t('openGallery')} →</a></p>`,

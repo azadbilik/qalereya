@@ -81,6 +81,15 @@ const thumb = (x) => {
   return x.thumb ?? x.image;
 };
 // Cities and dynasties in Azerbaijani and Russian (the catalogue names them in English)
+// The viewer's image: the size a screen needs, not the museum's original (often several MB).
+// Our own 1400px copy where the host offers nothing between (scripts/large.sh), Commons' 1280px
+// standard thumbnail, the Rijksmuseum's image server at 1600px; else the original
+const large = (x) => {
+  if (existsSync(new URL(`../large/${x.id}.jpg`, import.meta.url))) return `large/${x.id}.jpg`;
+  if (/upload\.wikimedia\.org\/wikipedia\/commons\/(?!thumb)/.test(x.image)) return commonsThumb(x.image, 1280);
+  if (/ggpht\.com\/.*=s0$/.test(x.image)) return x.image.replace(/=s0$/, '=s1600');
+  return undefined;
+};
 const PLACE = { Tabriz: ['Təbriz', 'Тебриз'], Shiraz: ['Şiraz', 'Шираз'], Herat: ['Herat', 'Герат'], Baghdad: ['Bağdad', 'Багдад'], Isfahan: ['İsfahan', 'Исфахан'], Bukhara: ['Buxara', 'Бухара'], Kabul: ['Kabil', 'Кабул'], Tehran: ['Tehran', 'Тегеран'], Qazvin: ['Qəzvin', 'Казвин'], Kashan: ['Kaşan', 'Кашан'], Kerman: ['Kirman', 'Керман'], Istanbul: ['İstanbul', 'Стамбул'], Lahore: ['Lahor', 'Лахор'], Abarkuh: ['Əbərkuh', 'Аберкух'], Hyderabad: ['Heydərabad', 'Хайдарабад'], Golconda: ['Qolkonda', 'Голконда'], Ahmedabad: ['Əhmədabad', 'Ахмадабад'], Gaur: ['Qaur', 'Гаур'], Delhi: ['Dehli', 'Дели'], Agra: ['Aqra', 'Агра'], Samarkand: ['Səmərqənd', 'Самарканд'], Mashhad: ['Məşhəd', 'Мешхед'], Yazd: ['Yəzd', 'Йезд'], London: ['London', 'Лондон'] };
 const DYNASTY = { 'Aq Qoyunlu': ['Ağqoyunlu', 'Ак-Коюнлу'], 'Qara Qoyunlu': ['Qaraqoyunlu', 'Кара-Коюнлу'], Safavid: ['Səfəvi', 'Сефевиды'], Timurid: ['Teymuri', 'Тимуриды'], Jalayirid: ['Cəlairi', 'Джалаириды'], Muzaffarid: ['Müzəffəri', 'Музаффариды'], Shaybanid: ['Şeybani', 'Шейбаниды'], Ashtarkhanid: ['Həştərxani', 'Аштарханиды'], Mughal: ['Böyük Moğol', 'Великие Моголы'], Ottoman: ['Osmanlı', 'Османская империя'], Qajar: ['Qacar', 'Каджары'], Zand: ['Zənd', 'Зенды'], 'Qutb Shahi': ['Qütbşahi', 'Кутбшахи'], 'Husain Shahi (Bengal Sultanate)': ['Benqal sultanlığı', 'Бенгальский султанат'] };
 const names = (table, en) => en ? { az: table[en]?.[0] ?? en, ru: table[en]?.[1] ?? en, en } : null;
@@ -121,6 +130,7 @@ const items = artworks.map((x) => ({
   source: x.source,
   image: x.image.replace(/\?.*$/, ''),
   thumb: thumb(x),
+  large: large(x),
   ...(dims[x.id]?.src === thumb(x) ? { w: dims[x.id].w, h: dims[x.id].h } : {}),
   author: x.author,
   poem: x.poem ?? (tags[x.id]?.scene ? tags[x.id].poem : null),

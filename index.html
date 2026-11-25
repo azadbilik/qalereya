@@ -133,8 +133,11 @@
     .info { border-left: 0; }
     dialog { overflow-y: auto; }
   }
-  .stage .loading { position: absolute; top: 1rem; left: 50%; translate: -50% 0; font-size: .75rem; color: var(--muted); background: var(--paper); padding: .2rem .6rem; border-radius: 999px; opacity: 0; transition: opacity .2s .3s; }
-  .stage.busy .loading { opacity: .9; }
+  /* While the image loads: a spinner and a word, after a moment (a cached image needs neither) */
+  .stage .loading { position: absolute; left: 50%; top: 50%; translate: -50% -50%; display: flex; align-items: center; gap: .6rem; padding: .55rem .9rem; border-radius: 999px; background: var(--paper); color: var(--ink); font-size: .8125rem; box-shadow: 0 2px 12px rgb(0 0 0 / .2); opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .stage.busy .loading { opacity: 1; transition-delay: .25s; }
+  .stage .loading i { width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid var(--rule); border-top-color: var(--accent); animation: spin .8s linear infinite; }
+  @keyframes spin { to { transform: rotate(1turn); } }
   .stage img { transition: filter .3s; }
   .stage.busy img { filter: blur(2px); }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } .card .frame::after { animation: none; } }
@@ -177,7 +180,7 @@
   <div class="viewer">
     <div class="stage">
       <img id="v-img" alt="">
-      <span class="loading" aria-hidden="true" data-i18n="loading">Yüklənir…</span>
+      <span class="loading" role="status"><i aria-hidden="true"></i><span data-i18n="loading">Yüklənir…</span></span>
       <button type="button" class="nav prev" id="v-prev" data-i18n-label="prev">←</button>
       <button type="button" class="nav next" id="v-next" data-i18n-label="next">→</button>
     </div>
@@ -361,10 +364,15 @@ function show(id) {
   // The thumbnail at once, softened, while the full image loads; then the full image
   const stage = img.parentElement;
   stage.classList.add('busy');
+  // A screen-sized copy (x.large: ours, or the host's own size) rather than the museum's
+  // original, which can run to several MB; the original if that copy fails
   const full = new Image(); full.referrerPolicy = 'no-referrer';
-  full.onload = () => { if (view[at] === x) { img.src = x.image; stage.classList.remove('busy'); } };
-  full.onerror = () => { if (view[at] === x) stage.classList.remove('busy'); };
-  full.src = x.image;
+  full.onload = () => { if (view[at] === x) { img.src = full.src; stage.classList.remove('busy'); } };
+  full.onerror = () => {
+    if (view[at] !== x) return;
+    if (x.large && full.src !== x.image) full.src = x.image; else stage.classList.remove('busy');
+  };
+  full.src = x.large ?? x.image;
   const poem = data.poemOf.get(x.poem);
   const scene = poem?.scenes?.find((s) => s.id === x.scene);
   const read = x.chapter ? `${KX()}/works/${x.chapter}` : scene?.chapters?.[0] ? `${KX()}/works/${scene.chapters[0]}` : x.poem ? `${KX()}/collections/${x.poem}` : null;
