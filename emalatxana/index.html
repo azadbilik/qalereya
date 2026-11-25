@@ -100,7 +100,36 @@
   .maplibregl-popup-content { background: var(--paper); color: var(--ink); font: .8125rem var(--sans); padding: .4rem .6rem; border-radius: 3px; box-shadow: 0 2px 12px rgb(0 0 0 / .15); }
   .maplibregl-popup-tip { display: none; }
 
+  .thumbs button { flex: none; background: var(--frame); border-radius: 2px; padding: 0; }
+  /* Legend: on the map, always in view */
+  .legend { position: fixed; top: 1rem; right: 1rem; z-index: 2; background: var(--panel); backdrop-filter: blur(8px); border: 1px solid var(--rule); border-radius: 4px; padding: .6rem .8rem; font-size: .75rem; display: grid; gap: .35rem; max-width: 14rem; }
+  .legend .sizes { display: flex; align-items: flex-end; gap: .6rem; }
+  .legend .sizes span { display: grid; justify-items: center; gap: .15rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .legend i { display: block; border-radius: 50%; background: var(--accent); opacity: .8; border: 1px solid var(--paper); }
+  /* Viewer: a miniature opens here, over the map */
+  dialog.lb { border: 0; padding: 0; width: min(64rem, 100vw); height: min(46rem, 100svh); max-width: 100vw; max-height: 100svh; background: var(--paper); color: var(--ink); border-radius: 4px; }
+  dialog.lb::backdrop { background: rgb(0 0 0 / .6); }
+  .lb-body { display: grid; grid-template-columns: 1fr 18rem; height: 100%; }
+  .lb-stage { position: relative; background: var(--frame); min-height: 0; }
+  .lb-stage img { position: absolute; inset: 1.5rem 3.75rem; width: calc(100% - 7.5rem); height: calc(100% - 3rem); object-fit: contain; transition: filter .3s; }
+  .lb-stage.busy img { filter: blur(2px); }
+  .lb-stage .nav { position: absolute; top: 50%; translate: 0 -50%; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--paper); box-shadow: 0 1px 6px rgb(0 0 0 / .15); display: grid; place-items: center; }
+  .lb-stage .prev { left: .75rem; } .lb-stage .next { right: .75rem; }
+  .lb-stage .nav[disabled] { opacity: .3; cursor: default; }
+  .lb-info { padding: 1.25rem 1.25rem 1.5rem; overflow-y: auto; border-left: 1px solid var(--rule); display: flex; flex-direction: column; gap: .75rem; font-size: .875rem; }
+  .lb-info .close { align-self: flex-end; font-size: .8125rem; color: var(--muted); }
+  .lb-info h2 { font: 400 1.25rem/1.25 var(--serif); }
+  .lb-info .m { color: var(--muted); }
+  .lb-info a { font-weight: 500; text-decoration: none; } .lb-info a:hover { color: var(--accent); }
+  .lb-info .pos { margin-top: auto; font-size: .75rem; color: var(--muted); }
+
   @media (max-width: 48rem) {
+    .legend { top: .5rem; right: .5rem; padding: .45rem .6rem; font-size: .6875rem; }
+    .lb-body { grid-template-columns: 1fr; grid-template-rows: 60svh auto; height: auto; min-height: 100%; }
+    dialog.lb { height: 100svh; overflow-y: auto; border-radius: 0; }
+    .lb-stage img { inset: .5rem; width: calc(100% - 1rem); height: calc(100% - 1rem); }
+    .lb-stage .nav { top: auto; bottom: .5rem; translate: none; }
+    .lb-info { border-left: 0; }
     .panel { top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 55svh; border-radius: 12px 12px 0 0; border-bottom: 0; overflow-y: auto; overscroll-behavior: contain; }
     .head { padding: 1rem 1rem .75rem; }
     h1 { margin-top: .75rem; font-size: 1.5rem; }
@@ -132,6 +161,15 @@
   <div class="list" id="list" aria-live="polite"></div>
 </aside>
 
+<div class="legend" id="legend"></div>
+
+<dialog class="lb" id="lb">
+  <div class="lb-body">
+    <div class="lb-stage" id="lb-stage"><img id="lb-img" alt=""><button type="button" class="nav prev" id="lb-prev">←</button><button type="button" class="nav next" id="lb-next">→</button></div>
+    <div class="lb-info" id="lb-info"></div>
+  </div>
+</dialog>
+
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script>
 const dark = matchMedia('(prefers-color-scheme: dark)').matches;
@@ -151,14 +189,17 @@ function plural(n, one, few, many) { const r = new Intl.PluralRules('ru').select
 const T = {
   az: { doc: 'Emalatxanalar · Azad Bilik', title: 'Emalatxanalar', sub: 'Nizami və Füzulinin rəsmləri harada çəkilib, 1380–1880', map: 'Xəritə', maps: 'Xəritələr', gallery: 'Qalereya', century: 'Əsr', all: 'Hamısı', allCities: 'Bütün şəhərlər',
     cent: (c) => `${ROMAN[c]} əsr`, cities: (n) => `${n} şəhər`, mss: (n) => `${n} əlyazma`, minis: (n) => `${n} miniatür`, inGallery: (n) => `${n} miniatür qalereyada`,
+    legend: 'Dairə: şəhərdə çəkilmiş miniatürlər', close: 'Bağla', openGallery: 'Qalereyada aç',
     patron: 'Hami', painters: 'Rəssamlar', held: 'Saxlanılır', probable: 'ehtimal', probableTitle: 'Atribusiya ehtimaldır', museums: 'muzeylər',
     note: 'Əlyazmanın köçürüldüyü və rəsmlərinin çəkildiyi şəhər, alimlərin atribusiyasına görə. Şəhəri bilinməyən əlyazmalar (məsələn, Walters kolleksiyasının çoxu) xəritədə yoxdur.' },
   ru: { doc: 'Мастерские · Azad Bilik', title: 'Мастерские', sub: 'Где иллюстрировали Низами и Физули, 1380–1880', map: 'Карта', maps: 'Карты', gallery: 'Галерея', century: 'Век', all: 'Все', allCities: 'Все города',
     cent: (c) => `${ROMAN[c]} век`, cities: (n) => `${n} ${plural(n, 'город', 'города', 'городов')}`, mss: (n) => `${n} ${plural(n, 'рукопись', 'рукописи', 'рукописей')}`, minis: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')}`, inGallery: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')} в галерее`,
+    legend: 'Круг: миниатюры, написанные в городе', close: 'Закрыть', openGallery: 'Открыть в галерее',
     patron: 'Заказчик', painters: 'Художники', held: 'Хранится', probable: 'предположительно', probableTitle: 'Атрибуция предположительная', museums: 'музеи',
     note: 'Город, где рукопись переписана и проиллюстрирована, по атрибуции учёных. Рукописей, город которых неизвестен (например, большинства из собрания Уолтерса), на карте нет.' },
   en: { doc: 'Workshops · Azad Bilik', title: 'Workshops', sub: 'Where Nizami and Fuzuli were painted, 1380–1880', map: 'Map', maps: 'Maps', gallery: 'Gallery', century: 'Century', all: 'All', allCities: 'All cities',
     cent: (c) => `${c}${[, 'st', 'nd', 'rd'][c % 10 * (c % 100 > 3 && c % 100 < 21 ? 0 : 1)] ?? 'th'} century`, cities: (n) => `${n} cit${n === 1 ? 'y' : 'ies'}`, mss: (n) => `${n} manuscript${n === 1 ? '' : 's'}`, minis: (n) => `${n} miniature${n === 1 ? '' : 's'}`, inGallery: (n) => `${n} miniature${n === 1 ? '' : 's'} in the gallery`,
+    legend: 'Circle: miniatures painted in the city', close: 'Close', openGallery: 'Open in the gallery',
     patron: 'Patron', painters: 'Painters', held: 'Held by', probable: 'probable', probableTitle: 'Attribution uncertain', museums: 'museums',
     note: 'The city where each manuscript was copied and painted, as scholars attribute it. Manuscripts of unknown city (most of the Walters ones) are not on the map.' },
 };
@@ -173,6 +214,7 @@ function applyLang() {
   document.querySelectorAll('[data-i18n]').forEach((el) => el.textContent = t(el.dataset.i18n));
   document.querySelectorAll('[data-i18n-label]').forEach((el) => el.setAttribute('aria-label', t(el.dataset.i18nLabel)));
   document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+  drawLegend();
   document.querySelectorAll('[data-keep-lang]').forEach((a) => { const u = new URL(a.getAttribute('href'), location.href); if (lang === 'az') u.searchParams.delete('lang'); else u.searchParams.set('lang', lang); a.href = u; });
 }
 applyLang();
@@ -267,6 +309,11 @@ function render() {
       <h2>${esc(sel.name)} <small>${t('mss')(sel.manuscripts.length)} · ${t('minis')(sel.n)}</small></h2>
       ${sel.manuscripts.sort((a, b) => a.yearStart - b.yearStart).map(card).join('')}`;
     document.getElementById('back').onclick = () => select(null);
+    // A thumbnail opens the viewer on its manuscript's paintings, all of them, not only the eight shown
+    el.querySelectorAll('[data-pic]').forEach((b) => b.onclick = () => {
+      const all = items.filter((x) => x.ms === b.dataset.ms).sort((a, c) => (a.year ?? 0) - (c.year ?? 0));
+      openPic(all, all.findIndex((x) => x.id === b.dataset.pic));
+    });
     return;
   }
   const total = gs.reduce((s, g) => s + g.n, 0);
@@ -286,8 +333,48 @@ function card(m) {
   return `<section class="ms"><h3>${esc(m.title || m.label)}</h3>
     <p class="when">${esc([when(m), dynasty(m)].filter(Boolean).join(' · '))}${m.confidence !== 'high' ? ` · <span title="${t('probableTitle')}">${t('probable')}</span>` : ''}</p>
     ${rows.length ? `<dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>` : ''}
-    <div class="thumbs">${own.slice(0, 8).map((x) => `<a href="../${q ? '?' + q : ''}#${encodeURIComponent(x.id)}" title="${esc(x.title)}"><img src="${esc(x.thumb.startsWith('thumbs/') ? '../' + x.thumb : x.thumb)}"${x.w ? ` width="${x.w}" height="${x.h}"` : ''} alt="${esc(x.title)}" loading="lazy" referrerpolicy="no-referrer" onload="this.classList.add('ok')" onerror="this.parentElement.remove()"></a>`).join('')}</div>
+    <div class="thumbs">${own.slice(0, 8).map((x) => `<button type="button" data-ms="${esc(m.id)}" data-pic="${esc(x.id)}" title="${esc(x.title)}"><img src="${esc(src(x.thumb))}"${x.w ? ` width="${x.w}" height="${x.h}"` : ''} alt="${esc(x.title)}" loading="lazy" referrerpolicy="no-referrer" onload="this.classList.add('ok')" onerror="this.parentElement.remove()"></button>`).join('')}</div>
     <a class="go" href="${href}">${t('inGallery')(own.length)} →</a></section>`;
+}
+
+const src = (u) => u.startsWith('thumbs/') ? '../' + u : u;
+
+// The viewer: a miniature over the map, the rest of its manuscript a click or an arrow away
+const lb = document.getElementById('lb');
+let lbList = [], lbAt = 0;
+function openPic(list, i) {
+  lbList = list; lbAt = i;
+  const x = list[i];
+  const img = document.getElementById('lb-img'), stage = document.getElementById('lb-stage');
+  img.src = src(x.thumb); img.alt = x.title;
+  stage.classList.add('busy');
+  const full = new Image(); full.referrerPolicy = 'no-referrer';
+  full.onload = () => { if (lbList[lbAt] === x) { img.src = x.image; stage.classList.remove('busy'); } };
+  full.onerror = () => stage.classList.remove('busy');
+  full.src = x.image;
+  const q = lang === 'az' ? '' : `?lang=${lang}`;
+  document.getElementById('lb-info').innerHTML = `<button type="button" class="close" id="lb-close">${t('close')} ✕</button>
+    <h2>${esc(x.title)}</h2>
+    <p class="m">${[x.when ?? x.date, x.manuscript, x.museum].filter(Boolean).map(esc).join('<br>')}</p>
+    <p><a href="../${q}#${encodeURIComponent(x.id)}">${t('openGallery')} →</a></p>
+    <p class="pos">${i + 1} / ${list.length}</p>`;
+  document.getElementById('lb-close').onclick = () => lb.close();
+  document.getElementById('lb-prev').disabled = i <= 0;
+  document.getElementById('lb-next').disabled = i >= list.length - 1;
+  if (!lb.open) lb.showModal();
+}
+document.getElementById('lb-prev').onclick = () => lbAt > 0 && openPic(lbList, lbAt - 1);
+document.getElementById('lb-next').onclick = () => lbAt < lbList.length - 1 && openPic(lbList, lbAt + 1);
+lb.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
+lb.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft' && lbAt > 0) openPic(lbList, lbAt - 1);
+  if (e.key === 'ArrowRight' && lbAt < lbList.length - 1) openPic(lbList, lbAt + 1);
+});
+
+// Circle sizes as the map draws them (radius by the square root of the count)
+function drawLegend() {
+  const r = (n) => { const q = Math.sqrt(n); return q <= 6 ? 5 + (q - 1) / 5 * 9 : 14 + (q - 6) / 6 * 14; };
+  document.getElementById('legend').innerHTML = `<span>${t('legend')}</span><div class="sizes">${[5, 25, 100].map((n) => `<span><i style="width:${2 * r(n)}px;height:${2 * r(n)}px"></i>${n}</span>`).join('')}</div>`;
 }
 
 function select(id) {
