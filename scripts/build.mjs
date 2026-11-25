@@ -113,7 +113,7 @@ const poems = POEMS.map(([slug, az, en]) => ({
     id: s.id, az: s.az, en: s.en, chapters: s.chapters ?? [],
     count: items.filter((x) => x.poem === slug && x.scene === s.id).length,
   })),
-})).filter((p) => p.count > 0);
+})).filter((p) => p.count > 1); // a poem with a single picture is shown among the others, not as a tab
 
 await writeFile(new URL('gallery.json', root), JSON.stringify({ poems, items }) + '\n');
 const n = (f) => items.filter(f).length;

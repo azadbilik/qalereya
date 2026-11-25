@@ -10,6 +10,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Qalereya · Gallery">
 <meta property="og:description" content="Nizami və Füzulinin poemalarına çəkilmiş miniatürlər.">
+<meta property="og:image" content="https://azadbilik.org/qalereya/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/fonts/fonts.css">
 <style>
@@ -193,8 +194,10 @@ fetch('data/gallery.json').then((r) => r.json()).then((d) => {
   if (open && data.byId.has(decodeURIComponent(open))) show(decodeURIComponent(open));
 });
 
+// "Other": pictures of no poem, or of a poem with too few to have its own tab
+const isOther = (x) => !x.poem || !data.poemOf.has(x.poem);
 function drawPoems() {
-  const other = data.items.filter((x) => !x.poem).length;
+  const other = data.items.filter(isOther).length;
   const btn = (slug, label, n) => `<button type="button" data-p="${slug ?? ''}" aria-pressed="${(state.poem ?? '') === (slug ?? '')}">${label}<small>${n}</small></button>`;
   document.getElementById('poems').innerHTML = btn(null, 'Hamısı', data.items.length)
     + data.poems.map((p) => btn(p.slug, esc(p.az), p.count)).join('')
@@ -206,7 +209,7 @@ function drawPoems() {
   });
 }
 
-function inPoem(x) { return state.poem == null || (state.poem === OTHER ? !x.poem : x.poem === state.poem); }
+function inPoem(x) { return state.poem == null || (state.poem === OTHER ? isOther(x) : x.poem === state.poem); }
 
 function drawFilters() {
   const counts = {};

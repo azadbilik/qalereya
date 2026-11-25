@@ -1,102 +1,106 @@
 {
-  "commons-156623833": {
-    "scene": "seven-sages",
-    "confidence": "high"
-  },
-  "commons-156623836": {
-    "scene": "seven-sages",
-    "confidence": "high"
-  },
-  "commons-156623840": {
-    "scene": "drum-talisman",
-    "confidence": "high"
-  },
-  "commons-156623844": {
-    "scene": "drum-talisman",
-    "confidence": "high"
-  },
-  "commons-156623845": {
-    "scene": "drum-talisman",
-    "confidence": "high"
-  },
-  "commons-197050932": {
-    "scene": "drum-talisman",
-    "confidence": "high"
-  },
-  "commons-197050956": {
-    "scene": "drum-talisman",
-    "confidence": "high"
-  },
-  "commons-197311056": {
-    "scene": "drum-talisman",
-    "confidence": "high"
-  },
-  "commons-69887043": {
-    "scene": "iskandar-watches-sirens",
-    "confidence": "high"
-  },
-  "commons-7794427": {
-    "scene": "seven-sages",
-    "confidence": "high"
-  },
-  "met-455025": {
-    "scene": "seven-sages",
-    "confidence": "high"
-  },
-  "walters-W604-296b": {
-    "scene": "iskandar-visits-socrates",
-    "confidence": "high"
-  },
-  "walters-W604-310b": {
-    "scene": "qandahar-idol-girl",
-    "confidence": "high"
-  },
-  "walters-W604-315a": {
-    "scene": "wall-against-gog",
-    "confidence": "high"
-  },
-  "walters-W604-320a": {
-    "scene": "iskandars-coffin",
-    "confidence": "high"
-  },
-  "walters-W607-268b": {
-    "scene": "archimedes-and-chinese-girl",
-    "confidence": "medium"
-  },
-  "walters-W609-364a": {
-    "scene": "zangi-kills-companion",
-    "confidence": "medium"
-  },
-  "walters-W609-372a": {
-    "scene": "seven-sages",
-    "confidence": "high"
-  },
-  "walters-W609-387b": {
-    "scene": "iskandar-watches-sirens",
-    "confidence": "high"
-  },
-  "walters-W610-338b": {
-    "scene": "hermes-and-seventy-sages",
-    "confidence": "high"
-  },
-  "walters-W610-345a": {
-    "scene": "seven-sages",
-    "confidence": "high"
-  },
-  "walters-W612-339a": {
-    "scene": "iskandar-and-wise-shepherd",
-    "confidence": "high"
-  },
-  "walters-W612-343b": {
-    "scene": "baker-before-the-king",
-    "confidence": "high"
-  },
-  "walters-W612-345b": {
-    "scene": "hermes-and-seventy-sages",
-    "confidence": "high"
-  },
-  "walters-W612-374b": {
-    "scene": "iskandars-coffin",
-    "confidence": "high"
-  }
+ "commons-156623833": {
+  "scene": "seven-sages",
+  "confidence": "high"
+ },
+ "commons-156623836": {
+  "scene": "seven-sages",
+  "confidence": "high"
+ },
+ "commons-156623840": {
+  "scene": "drum-talisman",
+  "confidence": "high"
+ },
+ "commons-156623844": {
+  "scene": "drum-talisman",
+  "confidence": "high"
+ },
+ "commons-156623845": {
+  "scene": "drum-talisman",
+  "confidence": "high"
+ },
+ "commons-197050932": {
+  "scene": "drum-talisman",
+  "confidence": "high"
+ },
+ "commons-197050956": {
+  "scene": "drum-talisman",
+  "confidence": "high"
+ },
+ "commons-197311056": {
+  "scene": "drum-talisman",
+  "confidence": "high"
+ },
+ "commons-69887043": {
+  "scene": "iskandar-watches-sirens",
+  "confidence": "high"
+ },
+ "commons-7794427": {
+  "scene": "seven-sages",
+  "confidence": "high"
+ },
+ "met-455025": {
+  "scene": "seven-sages",
+  "confidence": "high"
+ },
+ "walters-W604-296b": {
+  "scene": "iskandar-visits-socrates",
+  "confidence": "high"
+ },
+ "walters-W604-310b": {
+  "scene": "qandahar-idol-girl",
+  "confidence": "high"
+ },
+ "walters-W604-315a": {
+  "scene": "wall-against-gog",
+  "confidence": "high"
+ },
+ "walters-W604-320a": {
+  "scene": "iskandars-coffin",
+  "confidence": "high"
+ },
+ "walters-W607-268b": {
+  "scene": "archimedes-and-chinese-girl",
+  "confidence": "medium"
+ },
+ "walters-W609-364a": {
+  "scene": "zangi-kills-companion",
+  "confidence": "medium"
+ },
+ "walters-W609-372a": {
+  "scene": "seven-sages",
+  "confidence": "high"
+ },
+ "walters-W609-387b": {
+  "scene": "iskandar-watches-sirens",
+  "confidence": "high"
+ },
+ "walters-W610-338b": {
+  "scene": "hermes-and-seventy-sages",
+  "confidence": "high"
+ },
+ "walters-W610-345a": {
+  "scene": "seven-sages",
+  "confidence": "high"
+ },
+ "walters-W612-339a": {
+  "scene": "iskandar-and-wise-shepherd",
+  "confidence": "high"
+ },
+ "walters-W612-343b": {
+  "scene": "baker-before-the-king",
+  "confidence": "high"
+ },
+ "walters-W612-345b": {
+  "scene": "hermes-and-seventy-sages",
+  "confidence": "high"
+ },
+ "walters-W612-374b": {
+  "scene": "iskandars-coffin",
+  "confidence": "high"
+ },
+ "commons-159022995": {
+  "scene": "iskandar-and-wise-shepherd",
+  "confidence": "high"
+ }
 }

@@ -1,306 +1,322 @@
 {
-  "commons-10528273": {
-    "scene": "khizr-at-fountain",
-    "confidence": "high"
-  },
-  "commons-122096320": {
-    "scene": "khizr-at-fountain",
-    "confidence": "high"
-  },
-  "commons-15209741": {
-    "scene": "fire-temples-destroyed",
-    "confidence": "high"
-  },
-  "commons-156623841": {
-    "scene": "darband-hermit",
-    "confidence": "high"
-  },
-  "commons-158379090": {
-    "scene": "battle-with-dara",
-    "confidence": "high"
-  },
-  "commons-167289885": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  },
-  "commons-193763735": {
-    "scene": "iskandar-meets-nushaba",
-    "confidence": "high"
-  },
-  "commons-2079924": {
-    "scene": "khizr-at-fountain",
-    "confidence": "medium"
-  },
-  "commons-27307527": {
-    "scene": "khizr-at-fountain",
-    "confidence": "high"
-  },
-  "commons-31453110": {
-    "scene": "iskandar-lassoes-the-div",
-    "confidence": "high"
-  },
-  "commons-38339466": {
-    "scene": "darband-hermit",
-    "confidence": "high"
-  },
-  "commons-4029486": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  },
-  "commons-52924645": {
-    "scene": "darband-hermit",
-    "confidence": "high"
-  },
-  "commons-52924827": {
-    "scene": "darband-hermit",
-    "confidence": "high"
-  },
-  "commons-62304231": {
-    "scene": "iskandar-meets-nushaba",
-    "confidence": "high"
-  },
-  "commons-6993764": {
-    "scene": "hunt-on-way-to-china",
-    "confidence": "low"
-  },
-  "commons-7178943": {
-    "scene": "iskandar-at-kaaba",
-    "confidence": "high"
-  },
-  "commons-84733299": {
-    "scene": "nushaba-feast",
-    "confidence": "medium"
-  },
-  "commons-88865028": {
-    "scene": "invention-of-mirror",
-    "confidence": "high"
-  },
-  "commons-91011108": {
-    "scene": "battle-with-dara",
-    "confidence": "high"
-  },
-  "met-446611": {
-    "scene": "battle-with-dara",
-    "confidence": "high"
-  },
-  "met-454083": {
-    "scene": null,
-    "confidence": "high"
-  },
-  "met-454084": {
-    "scene": null,
-    "confidence": "high"
-  },
-  "walters-W604-212b": {
-    "scene": "birth-of-iskandar",
-    "confidence": "high"
-  },
-  "walters-W604-215a": {
-    "scene": "egyptians-plead",
-    "confidence": "medium"
-  },
-  "walters-W604-218b": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  },
-  "walters-W604-229b": {
-    "scene": "battle-with-dara",
-    "confidence": "high"
-  },
-  "walters-W604-232a": {
-    "scene": "death-of-dara",
-    "confidence": "medium"
-  },
-  "walters-W604-237b": {
-    "scene": "marriage-to-rawshanak",
-    "confidence": "high"
-  },
-  "walters-W604-244a": {
-    "scene": "nushaba-jewel-banquet",
-    "confidence": "medium"
-  },
-  "walters-W604-245b": {
-    "scene": "nushaba-feast",
-    "confidence": "medium"
-  },
-  "walters-W604-248a": {
-    "scene": "siege-of-darband",
-    "confidence": "medium"
-  },
-  "walters-W604-255a": {
-    "scene": "kayds-daughter",
-    "confidence": "high"
-  },
-  "walters-W604-261a": {
-    "scene": "painting-contest",
-    "confidence": "high"
-  },
-  "walters-W604-267b": {
-    "scene": "war-with-rus",
-    "confidence": "high"
-  },
-  "walters-W604-271a": {
-    "scene": "iskandar-lassoes-the-div",
-    "confidence": "high"
-  },
-  "walters-W604-272a": {
-    "scene": "iskandar-and-chinese-girl",
-    "confidence": "medium"
-  },
-  "walters-W604-276a": {
-    "scene": "iskandar-and-chinese-girl",
-    "confidence": "high"
-  },
-  "walters-W607-193b": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  },
-  "walters-W607-197b": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  },
-  "walters-W607-210b": {
-    "scene": "death-of-dara",
-    "confidence": "high"
-  },
-  "walters-W607-223b": {
-    "scene": "nushaba-shows-portrait",
-    "confidence": "high"
-  },
-  "walters-W607-258b": {
-    "scene": "khizr-at-fountain",
-    "confidence": "high"
-  },
-  "walters-W608-241a": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  },
-  "walters-W608-243a": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  },
-  "walters-W608-254a": {
-    "scene": "battle-with-dara",
-    "confidence": "high"
-  },
-  "walters-W608-269a": {
-    "scene": "iskandar-meets-nushaba",
-    "confidence": "high"
-  },
-  "walters-W608-287a": {
-    "scene": "khaqan-feast",
-    "confidence": "high"
-  },
-  "walters-W608-298b": {
-    "scene": "iskandar-lassoes-the-div",
-    "confidence": "high"
-  },
-  "walters-W609-276b": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  },
-  "walters-W609-291a": {
-    "scene": "death-of-dara",
-    "confidence": "high"
-  },
-  "walters-W609-305b": {
-    "scene": "nushaba-shows-portrait",
-    "confidence": "high"
-  },
-  "walters-W609-320a": {
-    "scene": "hunt-on-way-to-china",
-    "confidence": "medium"
-  },
-  "walters-W609-338b": {
-    "scene": "war-with-rus",
-    "confidence": "high"
-  },
-  "walters-W610-249a": {
-    "scene": "birth-of-iskandar",
-    "confidence": "high"
-  },
-  "walters-W610-256b": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  },
-  "walters-W610-270a": {
-    "scene": "death-of-dara",
-    "confidence": "high"
-  },
-  "walters-W610-284a": {
-    "scene": "iskandar-meets-nushaba",
-    "confidence": "high"
-  },
-  "walters-W610-295b": {
-    "scene": "hunt-on-way-to-china",
-    "confidence": "high"
-  },
-  "walters-W610-320a": {
-    "scene": "khizr-at-fountain",
-    "confidence": "high"
-  },
-  "walters-W611-192b": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  },
-  "walters-W611-204b": {
-    "scene": "death-of-dara",
-    "confidence": "high"
-  },
-  "walters-W611-232b": {
-    "scene": "khaqan-feast",
-    "confidence": "medium"
-  },
-  "walters-W611-237a": {
-    "scene": "war-with-rus",
-    "confidence": "high"
-  },
-  "walters-W612-253a": {
-    "scene": "iskandar-enthroned",
-    "confidence": "medium"
-  },
-  "walters-W612-259a": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  },
-  "walters-W612-268a": {
-    "scene": "dara-demands-tribute",
-    "confidence": "high"
-  },
-  "walters-W612-288b": {
-    "scene": "nushaba-feast",
-    "confidence": "high"
-  },
-  "walters-W612-292a": {
-    "scene": "darband-hermit",
-    "confidence": "high"
-  },
-  "walters-W612-296a": {
-    "scene": "kay-khusraw-cave",
-    "confidence": "high"
-  },
-  "walters-W612-301b": {
-    "scene": "hunt-on-way-to-china",
-    "confidence": "high"
-  },
-  "walters-W612-307b": {
-    "scene": "khaqan-comes-as-envoy",
-    "confidence": "medium"
-  },
-  "walters-W612-320b": {
-    "scene": "war-with-rus",
-    "confidence": "high"
-  },
-  "walters-W612-328a": {
-    "scene": "weighing-the-stone",
-    "confidence": "high"
-  },
-  "walters-W612-329a": {
-    "scene": "city-without-death",
-    "confidence": "high"
-  },
-  "walters-W657-227a": {
-    "scene": "war-with-zangis",
-    "confidence": "high"
-  }
+ "commons-10528273": {
+  "scene": "khizr-at-fountain",
+  "confidence": "high"
+ },
+ "commons-122096320": {
+  "scene": "khizr-at-fountain",
+  "confidence": "high"
+ },
+ "commons-15209741": {
+  "scene": "fire-temples-destroyed",
+  "confidence": "high"
+ },
+ "commons-156623841": {
+  "scene": "darband-hermit",
+  "confidence": "high"
+ },
+ "commons-158379090": {
+  "scene": "battle-with-dara",
+  "confidence": "high"
+ },
+ "commons-167289885": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "commons-193763735": {
+  "scene": "iskandar-meets-nushaba",
+  "confidence": "high"
+ },
+ "commons-2079924": {
+  "scene": "khizr-at-fountain",
+  "confidence": "medium"
+ },
+ "commons-27307527": {
+  "scene": "khizr-at-fountain",
+  "confidence": "high"
+ },
+ "commons-31453110": {
+  "scene": "iskandar-lassoes-the-div",
+  "confidence": "high"
+ },
+ "commons-38339466": {
+  "scene": "darband-hermit",
+  "confidence": "high"
+ },
+ "commons-4029486": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "commons-52924645": {
+  "scene": "darband-hermit",
+  "confidence": "high"
+ },
+ "commons-52924827": {
+  "scene": "darband-hermit",
+  "confidence": "high"
+ },
+ "commons-62304231": {
+  "scene": "iskandar-meets-nushaba",
+  "confidence": "high"
+ },
+ "commons-6993764": {
+  "scene": "hunt-on-way-to-china",
+  "confidence": "low"
+ },
+ "commons-7178943": {
+  "scene": "iskandar-at-kaaba",
+  "confidence": "high"
+ },
+ "commons-84733299": {
+  "scene": "nushaba-feast",
+  "confidence": "medium"
+ },
+ "commons-88865028": {
+  "scene": "invention-of-mirror",
+  "confidence": "high"
+ },
+ "commons-91011108": {
+  "scene": "battle-with-dara",
+  "confidence": "high"
+ },
+ "met-446611": {
+  "scene": "battle-with-dara",
+  "confidence": "high"
+ },
+ "met-454083": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "met-454084": {
+  "scene": null,
+  "confidence": "high"
+ },
+ "walters-W604-212b": {
+  "scene": "birth-of-iskandar",
+  "confidence": "high"
+ },
+ "walters-W604-215a": {
+  "scene": "egyptians-plead",
+  "confidence": "medium"
+ },
+ "walters-W604-218b": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "walters-W604-229b": {
+  "scene": "battle-with-dara",
+  "confidence": "high"
+ },
+ "walters-W604-232a": {
+  "scene": "death-of-dara",
+  "confidence": "medium"
+ },
+ "walters-W604-237b": {
+  "scene": "marriage-to-rawshanak",
+  "confidence": "high"
+ },
+ "walters-W604-244a": {
+  "scene": "nushaba-jewel-banquet",
+  "confidence": "medium"
+ },
+ "walters-W604-245b": {
+  "scene": "nushaba-feast",
+  "confidence": "medium"
+ },
+ "walters-W604-248a": {
+  "scene": "siege-of-darband",
+  "confidence": "medium"
+ },
+ "walters-W604-255a": {
+  "scene": "kayds-daughter",
+  "confidence": "high"
+ },
+ "walters-W604-261a": {
+  "scene": "painting-contest",
+  "confidence": "high"
+ },
+ "walters-W604-267b": {
+  "scene": "war-with-rus",
+  "confidence": "high"
+ },
+ "walters-W604-271a": {
+  "scene": "iskandar-lassoes-the-div",
+  "confidence": "high"
+ },
+ "walters-W604-272a": {
+  "scene": "iskandar-and-chinese-girl",
+  "confidence": "medium"
+ },
+ "walters-W604-276a": {
+  "scene": "iskandar-and-chinese-girl",
+  "confidence": "high"
+ },
+ "walters-W607-193b": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "walters-W607-197b": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "walters-W607-210b": {
+  "scene": "death-of-dara",
+  "confidence": "high"
+ },
+ "walters-W607-223b": {
+  "scene": "nushaba-shows-portrait",
+  "confidence": "high"
+ },
+ "walters-W607-258b": {
+  "scene": "khizr-at-fountain",
+  "confidence": "high"
+ },
+ "walters-W608-241a": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "walters-W608-243a": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "walters-W608-254a": {
+  "scene": "battle-with-dara",
+  "confidence": "high"
+ },
+ "walters-W608-269a": {
+  "scene": "iskandar-meets-nushaba",
+  "confidence": "high"
+ },
+ "walters-W608-287a": {
+  "scene": "khaqan-feast",
+  "confidence": "high"
+ },
+ "walters-W608-298b": {
+  "scene": "iskandar-lassoes-the-div",
+  "confidence": "high"
+ },
+ "walters-W609-276b": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "walters-W609-291a": {
+  "scene": "death-of-dara",
+  "confidence": "high"
+ },
+ "walters-W609-305b": {
+  "scene": "nushaba-shows-portrait",
+  "confidence": "high"
+ },
+ "walters-W609-320a": {
+  "scene": "hunt-on-way-to-china",
+  "confidence": "medium"
+ },
+ "walters-W609-338b": {
+  "scene": "war-with-rus",
+  "confidence": "high"
+ },
+ "walters-W610-249a": {
+  "scene": "birth-of-iskandar",
+  "confidence": "high"
+ },
+ "walters-W610-256b": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "walters-W610-270a": {
+  "scene": "death-of-dara",
+  "confidence": "high"
+ },
+ "walters-W610-284a": {
+  "scene": "iskandar-meets-nushaba",
+  "confidence": "high"
+ },
+ "walters-W610-295b": {
+  "scene": "hunt-on-way-to-china",
+  "confidence": "high"
+ },
+ "walters-W610-320a": {
+  "scene": "khizr-at-fountain",
+  "confidence": "high"
+ },
+ "walters-W611-192b": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "walters-W611-204b": {
+  "scene": "death-of-dara",
+  "confidence": "high"
+ },
+ "walters-W611-232b": {
+  "scene": "khaqan-feast",
+  "confidence": "medium"
+ },
+ "walters-W611-237a": {
+  "scene": "war-with-rus",
+  "confidence": "high"
+ },
+ "walters-W612-253a": {
+  "scene": "iskandar-enthroned",
+  "confidence": "medium"
+ },
+ "walters-W612-259a": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "walters-W612-268a": {
+  "scene": "dara-demands-tribute",
+  "confidence": "high"
+ },
+ "walters-W612-288b": {
+  "scene": "nushaba-feast",
+  "confidence": "high"
+ },
+ "walters-W612-292a": {
+  "scene": "darband-hermit",
+  "confidence": "high"
+ },
+ "walters-W612-296a": {
+  "scene": "kay-khusraw-cave",
+  "confidence": "high"
+ },
+ "walters-W612-301b": {
+  "scene": "hunt-on-way-to-china",
+  "confidence": "high"
+ },
+ "walters-W612-307b": {
+  "scene": "khaqan-comes-as-envoy",
+  "confidence": "medium"
+ },
+ "walters-W612-320b": {
+  "scene": "war-with-rus",
+  "confidence": "high"
+ },
+ "walters-W612-328a": {
+  "scene": "weighing-the-stone",
+  "confidence": "high"
+ },
+ "walters-W612-329a": {
+  "scene": "city-without-death",
+  "confidence": "high"
+ },
+ "walters-W657-227a": {
+  "scene": "war-with-zangis",
+  "confidence": "high"
+ },
+ "cleveland-2021.237": {
+  "scene": null,
+  "confidence": "low"
+ },
+ "commons-158980611": {
+  "scene": "nushaba-shows-portrait",
+  "confidence": "high"
+ },
+ "commons-159020477": {
+  "scene": "nushaba-shows-portrait",
+  "confidence": "high"
+ },
+ "commons-159023140": {
+  "scene": "death-of-dara",
+  "confidence": "high"
+ }
 }
