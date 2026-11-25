@@ -12,6 +12,7 @@ A poem with a scene catalogue reads in story order: each scene (Khusraw sees Shi
 | `data/gallery.json` | What the page reads, built by `node scripts/build.mjs` |
 | `data/dims.json` | Each thumbnail's width and height, so the page lays it out before it loads (`node scripts/dims.mjs`) |
 | `data/manuscripts.json` | Where and when each manuscript was made, kept by hand; the workshops map reads it |
+| `p/<id>/` | One small page per picture with its own link-preview tags (og:/twitter:) that sends a visitor to the gallery with that picture open; the viewer's Share button links here. Made by `scripts/build.mjs`, regenerated on every run |
 | `thumbs/`, `large/` | Our copy of every picture at the sizes the site shows: the thumbnail and the viewer's image (at most 1400px), made by `scripts/mirror.sh` |
 
 Adding pictures: `scripts/export.sh` → `node scripts/build.mjs` → `scripts/mirror.sh` → `node scripts/dims.mjs` → `node scripts/build.mjs`.
