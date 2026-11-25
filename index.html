@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qalereya · Azad Bilik</title>
+<meta name="description" content="Nizami və Füzulinin poemalarına çəkilmiş miniatürlər, muzeylərin açıq kolleksiyalarından. Miniatures painted for the poems of Nizami and Fuzuli, from museums' open collections.">
+<meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14100D" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Qalereya · Gallery">
+<meta property="og:description" content="Nizami və Füzulinin poemalarına çəkilmiş miniatürlər.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+  :root {
+    --paper: #F4EFE6; --ink: #1A1410; --muted: #675E55; --rule: rgb(26 20 16 / .14); --tint: rgb(26 20 16 / .05);
+    --accent: #A81E28; --frame: #E9E2D6;
+    --serif: 'Literata', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #14100D; --ink: #F1EBE1; --muted: #A0968B; --rule: rgb(241 235 225 / .14); --tint: rgb(241 235 225 / .05);
+      --accent: #DA5A61; --frame: #1F1914; }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--paper); color: var(--ink); font: 400 .9375rem/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1px; text-decoration-color: var(--rule); }
+  a:hover { text-decoration-color: currentColor; }
+  button, select { font: inherit; color: inherit; }
+  button { background: none; border: 0; cursor: pointer; padding: 0; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  [lang="en"] { color: var(--muted); }
+  img { display: block; max-width: 100%; }
+
+  .wrap { max-width: 88rem; margin: 0 auto; padding: 0 2rem; }
+  header.top { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
+  .brand { display: inline-flex; align-items: center; gap: .5rem; font-size: .8125rem; font-weight: 600; text-decoration: none; }
+  .brand svg { width: 1rem; height: 1rem; }
+  .star { fill: currentColor; } .gem { fill: var(--accent); }
+  header.top nav { font-size: .8125rem; color: var(--muted); display: flex; gap: 1.25rem; }
+
+  .hero { padding: 3.5rem 0 2.5rem; max-width: 46rem; }
+  h1 { font: 400 clamp(2.5rem, 2rem + 2.5vw, 4rem)/1 var(--serif); letter-spacing: -.03em; }
+  .lead { margin-top: 1.25rem; font: 300 1.25rem/1.45 var(--serif); }
+  .lead[lang="en"] { margin-top: .5rem; font-size: 1.0625rem; font-style: italic; }
+
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
+  .bar .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; padding-top: .75rem; padding-bottom: .75rem; }
+  .poems { display: flex; gap: .25rem; overflow-x: auto; scrollbar-width: none; flex: 1 1 32rem; margin: -.25rem; padding: .25rem; }
+  .poems::-webkit-scrollbar { display: none; }
+  @media (min-width: 48rem) { .poems { flex-wrap: wrap; overflow: visible; } }
+  .poems button { white-space: nowrap; padding: .4rem .75rem; border-radius: 999px; font-size: .8125rem; color: var(--muted); }
+  .poems button:hover { color: var(--ink); background: var(--tint); }
+  .poems button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  .poems small { opacity: .65; margin-left: .3rem; font-variant-numeric: tabular-nums; }
+  .filters { display: flex; align-items: center; gap: 1rem; font-size: .8125rem; color: var(--muted); }
+  .filters select { background: transparent; border: 1px solid var(--rule); border-radius: 3px; padding: .3rem .5rem; max-width: 14rem; }
+  .filters label { display: inline-flex; gap: .4rem; align-items: center; cursor: pointer; white-space: nowrap; }
+  .filters input { accent-color: var(--accent); }
+
+  main { padding: 2rem 0 4rem; }
+  .count { font-size: .8125rem; color: var(--muted); margin-bottom: 1.5rem; }
+  .scene + .scene { margin-top: 3rem; }
+  .scene-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 1rem; padding-bottom: .6rem; border-bottom: 1px solid var(--rule); }
+  .scene-head h2 { font: 400 1.5rem/1.2 var(--serif); letter-spacing: -.015em; }
+  .scene-head h2 [lang="en"] { display: block; font: 400 .8125rem/1.5 var(--sans); margin-top: .15rem; }
+  .scene-head a { font-size: .8125rem; color: var(--muted); white-space: nowrap; }
+
+  .grid { columns: 4 15rem; column-gap: 1.25rem; }
+  .card { break-inside: avoid; margin-bottom: 1.5rem; width: 100%; text-align: left; display: block; }
+  .card .frame { background: var(--frame); border-radius: 2px; overflow: hidden; }
+  .card img { width: 100%; height: auto; transition: opacity .3s, transform .4s; opacity: 0; }
+  .card img.ok { opacity: 1; }
+  .card:hover img { transform: scale(1.015); }
+  .card .t { margin-top: .6rem; font-size: .875rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .card .m { margin-top: .15rem; font-size: .75rem; color: var(--muted); }
+  .empty { color: var(--muted); padding: 3rem 0; }
+
+  footer { border-top: 1px solid var(--rule); padding: 1.75rem 0 2.5rem; font-size: .8125rem; color: var(--muted); }
+  footer p + p { margin-top: .5rem; }
+
+  /* Viewer */
+  dialog { border: 0; padding: 0; width: 100vw; height: 100vh; max-width: none; max-height: none; background: var(--paper); color: var(--ink); }
+  dialog::backdrop { background: rgb(0 0 0 / .6); }
+  .viewer { display: grid; grid-template-columns: 1fr 24rem; height: 100%; }
+  .stage { position: relative; background: var(--frame); display: grid; place-items: center; min-height: 0; overflow: hidden; }
+  .stage img { position: absolute; inset: 2rem 4.5rem; width: calc(100% - 9rem); height: calc(100% - 4rem); object-fit: contain; }
+  .stage .nav { position: absolute; top: 50%; translate: 0 -50%; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--paper); box-shadow: 0 1px 6px rgb(0 0 0 / .15); font-size: 1.1rem; display: grid; place-items: center; }
+  .stage .prev { left: 1rem; } .stage .next { right: 1rem; }
+  .stage .nav[disabled] { opacity: .3; cursor: default; }
+  .info { padding: 1.5rem 1.75rem 2rem; overflow-y: auto; border-left: 1px solid var(--rule); display: flex; flex-direction: column; gap: 1rem; }
+  .info .close { align-self: flex-end; font-size: .8125rem; color: var(--muted); }
+  .info h2 { font: 400 1.5rem/1.2 var(--serif); letter-spacing: -.015em; }
+  .info .scene-name { font-size: .8125rem; color: var(--muted); }
+  .info dl { display: grid; grid-template-columns: 6.5rem 1fr; gap: .35rem 1rem; font-size: .875rem; }
+  .info dt { color: var(--muted); }
+  .badge { display: inline-block; font-size: .75rem; padding: .1rem .45rem; border-radius: 3px; border: 1px solid var(--rule); }
+  .badge.nc { border-color: color-mix(in srgb, var(--accent) 50%, transparent); color: var(--accent); }
+  .links { display: grid; gap: .5rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: .875rem; }
+  .links a { font-weight: 500; text-decoration: none; }
+  .links a:hover { color: var(--accent); }
+  .links [lang="en"] { font-weight: 400; font-size: .75rem; display: block; }
+  .pos { font-size: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: auto; }
+
+  @media (max-width: 48rem) {
+    .wrap { padding: 0 1rem; }
+    .hero { padding: 2rem 0 1.5rem; }
+    .grid { columns: 2; column-gap: .75rem; }
+    .card { margin-bottom: 1rem; }
+    .filters { width: 100%; justify-content: space-between; gap: .5rem; }
+    .filters select { min-width: 0; flex: 1; }
+    .filters label { white-space: normal; }
+    .filters label [lang="en"] { display: none; }
+    .viewer { grid-template-columns: 1fr; grid-template-rows: 62vh auto; height: auto; min-height: 100%; }
+    .stage img { inset: .5rem; width: calc(100% - 1rem); height: calc(100% - 4rem); }
+    .stage .nav { top: auto; bottom: .75rem; translate: none; }
+    .info { border-left: 0; }
+    dialog { overflow-y: auto; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a>
+    <nav><a href="/xerite/">Xəritə</a><a href="https://kitabxana.az">Kitabxana</a></nav>
+  </header>
+  <div class="hero">
+    <h1>Qalereya</h1>
+    <p class="lead">Nizami və Füzulinin poemalarına beş əsr ərzində çəkilmiş miniatürlər: Təbriz, Herat, Şiraz, İstanbul əlyazmalarından, muzeylərin açıq kolleksiyalarından.</p>
+    <p class="lead" lang="en">Five centuries of miniatures painted for the poems of Nizami and Fuzuli, from manuscripts made in Tabriz, Herat, Shiraz and Istanbul, out of museums' open collections.</p>
+  </div>
+</div>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="poems" id="poems" role="group" aria-label="Poema · Poem"></div>
+    <div class="filters">
+      <select id="ms" aria-label="Əlyazma · Manuscript"></select>
+      <label><input type="checkbox" id="free"> Yalnız açıq lisenziya <span lang="en">· CC0/PD only</span></label>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <p class="count" id="count" aria-live="polite"></p>
+  <div id="content"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Şəkillər muzeylərin və Wikimedia Commons-un öz serverlərindən göstərilir; hər birinin mənbəyi və lisenziyası yanındadır. Walters Art Museum-un şəkilləri CC BY-NC-SA lisenziyalıdır: qeyri-kommersiya məqsədilə, mənbə göstərilməklə. <a href="https://github.com/azadbilik/qalereya">GitHub</a></p>
+    <p lang="en">Images load from the museums' and Wikimedia Commons' own servers, each with its source and licence. The Walters Art Museum's are CC BY-NC-SA: non-commercial use, with credit.</p>
+  </div>
+</footer>
+
+<dialog id="viewer" aria-label="Miniatür · Miniature">
+  <div class="viewer">
+    <div class="stage">
+      <img id="v-img" alt="">
+      <button type="button" class="nav prev" id="v-prev" aria-label="Əvvəlki · Previous">←</button>
+      <button type="button" class="nav next" id="v-next" aria-label="Sonrakı · Next">→</button>
+    </div>
+    <div class="info" id="v-info"></div>
+  </div>
+</dialog>
+
+<script>
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const KX = 'https://kitabxana.az';
+const OTHER = '_';
+let data, view = [], at = -1;
+const state = { poem: null, ms: '', free: false };
+
+const params = new URLSearchParams(location.search);
+state.poem = params.get('p'); state.ms = params.get('ms') ?? ''; state.free = params.get('free') === '1';
+
+fetch('data/gallery.json').then((r) => r.json()).then((d) => {
+  data = d;
+  data.byId = new Map(d.items.map((x) => [x.id, x]));
+  data.poemOf = new Map(d.poems.map((p) => [p.slug, p]));
+  drawPoems(); drawFilters(); render();
+  const open = location.hash.slice(1);
+  if (open && data.byId.has(decodeURIComponent(open))) show(decodeURIComponent(open));
+});
+
+function drawPoems() {
+  const other = data.items.filter((x) => !x.poem).length;
+  const btn = (slug, label, n) => `<button type="button" data-p="${slug ?? ''}" aria-pressed="${(state.poem ?? '') === (slug ?? '')}">${label}<small>${n}</small></button>`;
+  document.getElementById('poems').innerHTML = btn(null, 'Hamısı', data.items.length)
+    + data.poems.map((p) => btn(p.slug, esc(p.az), p.count)).join('')
+    + (other ? btn(OTHER, 'Digər', other) : '');
+  document.querySelectorAll('#poems button').forEach((b) => b.onclick = () => {
+    state.poem = b.dataset.p || null;
+    document.querySelectorAll('#poems button').forEach((x) => x.setAttribute('aria-pressed', x === b));
+    state.ms = ''; drawFilters(); render(true);
+  });
+}
+
+function inPoem(x) { return state.poem == null || (state.poem === OTHER ? !x.poem : x.poem === state.poem); }
+
+function drawFilters() {
+  const counts = {};
+  for (const x of data.items) if (inPoem(x) && x.manuscript) counts[x.manuscript] = (counts[x.manuscript] ?? 0) + 1;
+  const ms = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  if (state.ms && !counts[state.ms]) state.ms = '';
+  const sel = document.getElementById('ms');
+  sel.innerHTML = `<option value="">Bütün əlyazmalar · All manuscripts</option>` + ms.map(([m, n]) => `<option value="${esc(m)}"${m === state.ms ? ' selected' : ''}>${esc(m)} (${n})</option>`).join('');
+  sel.hidden = ms.length === 0;
+  sel.onchange = () => { state.ms = sel.value; render(true); };
+  const free = document.getElementById('free');
+  free.checked = state.free;
+  free.onchange = () => { state.free = free.checked; render(true); };
+}
+
+function keepUrl() {
+  const p = new URLSearchParams();
+  if (state.poem) p.set('p', state.poem);
+  if (state.ms) p.set('ms', state.ms);
+  if (state.free) p.set('free', '1');
+  const q = p.toString();
+  history.replaceState(null, '', (q ? `?${q}` : location.pathname) + location.hash);
+}
+
+function render(fromUser) {
+  if (fromUser) keepUrl();
+  const items = data.items.filter((x) => inPoem(x) && (!state.ms || x.manuscript === state.ms) && (!state.free || x.free));
+  const poem = data.poemOf.get(state.poem);
+  const el = document.getElementById('content');
+  document.getElementById('count').textContent = `${items.length} miniatür${poem ? ` · ${poem.az}` : ''}`;
+  if (!items.length) { el.innerHTML = '<p class="empty">Heç nə tapılmadı. <span lang="en">Nothing matches.</span></p>'; view = []; return; }
+
+  // A poem with a scene catalogue reads in story order, scene by scene, each linked to its chapter
+  const scenes = poem?.scenes?.filter((s) => items.some((x) => x.scene === s.id)) ?? [];
+  if (scenes.length) {
+    const rest = items.filter((x) => !x.scene || !scenes.some((s) => s.id === x.scene));
+    view = [...scenes.flatMap((s) => items.filter((x) => x.scene === s.id)), ...rest];
+    el.innerHTML = scenes.map((s) => section(s.az, s.en, s.chapters[0], items.filter((x) => x.scene === s.id))).join('')
+      + (rest.length ? section('Səhnəsi müəyyənləşdirilməyənlər', 'Scene not identified', null, rest) : '');
+  } else {
+    view = items;
+    el.innerHTML = `<div class="grid">${items.map(card).join('')}</div>`;
+  }
+  wire(el);
+}
+
+function section(az, en, chapter, items) {
+  return `<section class="scene"><div class="scene-head"><h2>${esc(az)}<span lang="en">${esc(en)}</span></h2>${chapter ? `<a href="${KX}/works/${chapter}">Fəsli oxu ↗</a>` : ''}</div>
+    <div class="grid">${items.map(card).join('')}</div></section>`;
+}
+
+function card(x) {
+  const meta = [x.date, x.manuscript ?? x.museum].filter(Boolean).join(' · ');
+  return `<button type="button" class="card" data-id="${esc(x.id)}"><div class="frame"><img src="${esc(x.thumb)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+    <p class="t">${esc(x.title)}</p><p class="m">${esc(meta)}</p></button>`;
+}
+
+function wire(el) {
+  el.querySelectorAll('.card').forEach((b) => {
+    b.onclick = () => show(b.dataset.id);
+    const img = b.querySelector('img');
+    const ok = () => img.classList.add('ok');
+    if (img.complete && img.naturalWidth) ok(); else { img.onload = ok; img.onerror = () => b.remove(); }
+  });
+}
+
+// The viewer: the whole picture, what it shows, where it is kept, and the passage it illustrates
+const dlg = document.getElementById('viewer');
+function show(id) {
+  at = view.findIndex((x) => x.id === id);
+  if (at < 0) { view = [data.byId.get(id)]; at = 0; }
+  const x = view[at];
+  const img = document.getElementById('v-img');
+  img.src = x.thumb; img.alt = x.title;
+  const full = new Image(); full.referrerPolicy = 'no-referrer';
+  full.onload = () => { if (view[at] === x) img.src = x.image; };
+  full.src = x.image;
+  const poem = data.poemOf.get(x.poem);
+  const scene = poem?.scenes?.find((s) => s.id === x.scene);
+  const read = x.chapter ? `${KX}/works/${x.chapter}` : scene?.chapters?.[0] ? `${KX}/works/${scene.chapters[0]}` : x.poem ? `${KX}/collections/${x.poem}` : null;
+  const artists = x.artists && !/^(unknown|anonymous|unidentified)/i.test(x.artists) ? x.artists : null;
+  const rows = [['Tarix', x.date], ['Rəssam', artists], ['Əlyazma', x.manuscript], ['Material', x.medium], ['Mənbə', x.museum]].filter(([, v]) => v);
+  document.getElementById('v-info').innerHTML = `
+    <button type="button" class="close" id="v-close" autofocus>Bağla · Close ✕</button>
+    <div>${scene ? `<p class="scene-name">${esc(scene.az)}</p>` : ''}<h2>${esc(x.title)}</h2>${poem ? `<p class="scene-name">${esc(poem.az)}</p>` : ''}</div>
+    <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}
+      <dt>Lisenziya</dt><dd><span class="badge${x.free ? '' : ' nc'}">${esc(x.license)}</span></dd></dl>
+    <div class="links">
+      ${read ? `<a href="${read}">${x.chapter || scene ? 'Bu səhnəni kitabxana.az-da oxu' : 'Poemanı kitabxana.az-da oxu'} →<span lang="en">Read ${x.chapter || scene ? 'this passage' : 'the poem'} on kitabxana.az</span></a>` : ''}
+      <a href="${esc(x.source)}" target="_blank" rel="noopener">Mənbədə bax ↗<span lang="en">At the source</span></a>
+      <a href="${esc(x.image)}" target="_blank" rel="noopener">Tam ölçüdə ↗<span lang="en">Full size</span></a>
+    </div>
+    <p class="pos">${at + 1} / ${view.length}</p>`;
+  document.getElementById('v-close').onclick = () => dlg.close();
+  document.getElementById('v-prev').disabled = at <= 0;
+  document.getElementById('v-next').disabled = at >= view.length - 1;
+  if (!dlg.open) dlg.showModal();
+  history.replaceState(null, '', `${location.search || location.pathname}#${encodeURIComponent(x.id)}`);
+}
+document.getElementById('v-prev').onclick = () => at > 0 && show(view[at - 1].id);
+document.getElementById('v-next').onclick = () => at < view.length - 1 && show(view[at + 1].id);
+dlg.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft' && at > 0) show(view[at - 1].id);
+  if (e.key === 'ArrowRight' && at < view.length - 1) show(view[at + 1].id);
+});
+dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+dlg.addEventListener('close', () => history.replaceState(null, '', location.search || location.pathname));
+</script>
+</body>
+</html>
