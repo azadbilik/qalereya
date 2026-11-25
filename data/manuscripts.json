@@ -2490,11 +2490,11 @@
    "patron": null,
    "painters": [],
    "holding": "British Library, London",
-   "confidence": "medium",
+   "confidence": "high",
    "sources": [
     "https://searcharchives.bl.uk/catalog/032-003441278"
    ],
-   "note": "BL dates it 1 Rabi II 1075 / 1664; the gallery says 16th century.",
+   "note": "Colophon: 1 Rabi II 1075 / 1664 (BL catalogue); the Commons files give no date.",
    "itemCount": 2
   },
   {

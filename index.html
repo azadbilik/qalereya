@@ -38,8 +38,8 @@
   [hidden] { display: none !important; }
 
   .wrap { max-width: 88rem; margin: 0 auto; padding: 0 2rem; }
-  header.top { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
-  .brand { display: inline-flex; align-items: center; gap: .5rem; font-size: .8125rem; font-weight: 600; text-decoration: none; }
+  header.top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem 1.5rem; padding: 1.5rem 0; }
+  .brand { white-space: nowrap; display: inline-flex; align-items: center; gap: .5rem; font-size: .8125rem; font-weight: 600; text-decoration: none; }
   .brand svg { width: 1rem; height: 1rem; }
   .star { fill: currentColor; } .gem { fill: var(--accent); }
   header.top nav { font-size: .8125rem; color: var(--muted); display: flex; gap: 1.25rem; }
@@ -258,6 +258,8 @@ function drawPoems() {
     document.querySelectorAll('#poems button').forEach((x) => x.setAttribute('aria-pressed', x === b));
     state.ms = ''; drawFilters(); render(true);
   });
+  // The chosen poem's tab in view, on a phone where the row scrolls
+  document.querySelector('#poems [aria-pressed="true"]')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 }
 
 function inPoem(x) { return state.poem == null || (state.poem === OTHER ? isOther(x) : x.poem === state.poem); }

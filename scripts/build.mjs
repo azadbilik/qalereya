@@ -15,6 +15,11 @@ const artworks = await read('artworks.json');
 // name replaces the label guessed from a title, and the workshops map reads it
 const catalogue = await read('manuscripts.json').catch(() => ({ manuscripts: [], items: {} }));
 const msById = new Map(catalogue.manuscripts.map((m) => [m.id, m]));
+// A page its museum left undated takes its manuscript's date from the catalogue (BL Or. 405: 1664)
+for (const x of artworks) {
+  const m = msById.get(catalogue.items[x.id]);
+  if (x.yearStart == null && x.yearEnd == null && m?.yearStart) { x.yearStart = m.yearStart; x.yearEnd = m.yearEnd ?? m.yearStart; }
+}
 
 // Poems in the order Nizami wrote the Khamsa, then Fuzuli; an artwork with no poem goes last
 const POEMS = [
