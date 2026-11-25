@@ -10,7 +10,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Emalatxanalar · Where Nizami was painted">
 <meta property="og:description" content="Nizami və Füzulinin poemaları harada və nə vaxt çəkilib.">
-<meta property="og:image" content="https://azadbilik.org/qalereya/og.png">
+<meta property="og:image" content="https://azadbilik.org/qalereya/emalatxana/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
@@ -86,7 +86,9 @@
   .thumbs { display: flex; gap: .4rem; margin-top: .65rem; overflow-x: auto; scrollbar-width: none; }
   .thumbs::-webkit-scrollbar { display: none; }
   .thumbs a { flex: none; background: var(--frame); border-radius: 2px; }
-  .thumbs img { height: 5.5rem; width: auto; display: block; border-radius: 2px; }
+  .thumbs img { height: 5.5rem; width: auto; display: block; border-radius: 2px; opacity: 0; transition: opacity .4s; }
+  .thumbs img:not([width]) { aspect-ratio: 3 / 4; }
+  .thumbs img.ok { opacity: 1; }
   .ms .go { display: inline-block; margin-top: .55rem; font-size: .8125rem; font-weight: 500; text-decoration: none; }
   .ms .go:hover { color: var(--accent); }
 
@@ -118,7 +120,7 @@
 
 <aside class="panel">
   <div class="head">
-    <div class="top"><a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a><nav><a href="../" data-i18n="gallery" data-keep-lang>Qalereya</a><a href="/xerite/" data-i18n="map" data-keep-lang>Xəritə</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav></div>
+    <div class="top"><a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a><nav><a href="/xeriteler/" data-i18n="maps" data-keep-lang>Xəritələr</a><a href="../" data-i18n="gallery" data-keep-lang>Qalereya</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav></div>
     <h1 data-i18n="title">Emalatxanalar</h1>
     <p class="sub" data-i18n="sub">Nizami və Füzulinin rəsmləri harada çəkilib, 1380–1880</p>
   </div>
@@ -147,15 +149,15 @@ let lang = (() => {
 })();
 function plural(n, one, few, many) { const r = new Intl.PluralRules('ru').select(n); return r === 'one' ? one : r === 'few' ? few : many; }
 const T = {
-  az: { doc: 'Emalatxanalar · Azad Bilik', title: 'Emalatxanalar', sub: 'Nizami və Füzulinin rəsmləri harada çəkilib, 1380–1880', map: 'Xəritə', gallery: 'Qalereya', century: 'Əsr', all: 'Hamısı', allCities: 'Bütün şəhərlər',
+  az: { doc: 'Emalatxanalar · Azad Bilik', title: 'Emalatxanalar', sub: 'Nizami və Füzulinin rəsmləri harada çəkilib, 1380–1880', map: 'Xəritə', maps: 'Xəritələr', gallery: 'Qalereya', century: 'Əsr', all: 'Hamısı', allCities: 'Bütün şəhərlər',
     cent: (c) => `${ROMAN[c]} əsr`, cities: (n) => `${n} şəhər`, mss: (n) => `${n} əlyazma`, minis: (n) => `${n} miniatür`, inGallery: (n) => `${n} miniatür qalereyada`,
     patron: 'Hami', painters: 'Rəssamlar', held: 'Saxlanılır', probable: 'ehtimal', probableTitle: 'Atribusiya ehtimaldır', museums: 'muzeylər',
     note: 'Əlyazmanın köçürüldüyü və rəsmlərinin çəkildiyi şəhər, alimlərin atribusiyasına görə. Şəhəri bilinməyən əlyazmalar (məsələn, Walters kolleksiyasının çoxu) xəritədə yoxdur.' },
-  ru: { doc: 'Мастерские · Azad Bilik', title: 'Мастерские', sub: 'Где иллюстрировали Низами и Физули, 1380–1880', map: 'Карта', gallery: 'Галерея', century: 'Век', all: 'Все', allCities: 'Все города',
+  ru: { doc: 'Мастерские · Azad Bilik', title: 'Мастерские', sub: 'Где иллюстрировали Низами и Физули, 1380–1880', map: 'Карта', maps: 'Карты', gallery: 'Галерея', century: 'Век', all: 'Все', allCities: 'Все города',
     cent: (c) => `${ROMAN[c]} век`, cities: (n) => `${n} ${plural(n, 'город', 'города', 'городов')}`, mss: (n) => `${n} ${plural(n, 'рукопись', 'рукописи', 'рукописей')}`, minis: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')}`, inGallery: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')} в галерее`,
     patron: 'Заказчик', painters: 'Художники', held: 'Хранится', probable: 'предположительно', probableTitle: 'Атрибуция предположительная', museums: 'музеи',
     note: 'Город, где рукопись переписана и проиллюстрирована, по атрибуции учёных. Рукописей, город которых неизвестен (например, большинства из собрания Уолтерса), на карте нет.' },
-  en: { doc: 'Workshops · Azad Bilik', title: 'Workshops', sub: 'Where Nizami and Fuzuli were painted, 1380–1880', map: 'Map', gallery: 'Gallery', century: 'Century', all: 'All', allCities: 'All cities',
+  en: { doc: 'Workshops · Azad Bilik', title: 'Workshops', sub: 'Where Nizami and Fuzuli were painted, 1380–1880', map: 'Map', maps: 'Maps', gallery: 'Gallery', century: 'Century', all: 'All', allCities: 'All cities',
     cent: (c) => `${c}${[, 'st', 'nd', 'rd'][c % 10 * (c % 100 > 3 && c % 100 < 21 ? 0 : 1)] ?? 'th'} century`, cities: (n) => `${n} cit${n === 1 ? 'y' : 'ies'}`, mss: (n) => `${n} manuscript${n === 1 ? '' : 's'}`, minis: (n) => `${n} miniature${n === 1 ? '' : 's'}`, inGallery: (n) => `${n} miniature${n === 1 ? '' : 's'} in the gallery`,
     patron: 'Patron', painters: 'Painters', held: 'Held by', probable: 'probable', probableTitle: 'Attribution uncertain', museums: 'museums',
     note: 'The city where each manuscript was copied and painted, as scholars attribute it. Manuscripts of unknown city (most of the Walters ones) are not on the map.' },
@@ -284,7 +286,7 @@ function card(m) {
   return `<section class="ms"><h3>${esc(m.title || m.label)}</h3>
     <p class="when">${esc([when(m), dynasty(m)].filter(Boolean).join(' · '))}${m.confidence !== 'high' ? ` · <span title="${t('probableTitle')}">${t('probable')}</span>` : ''}</p>
     ${rows.length ? `<dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>` : ''}
-    <div class="thumbs">${own.slice(0, 8).map((x) => `<a href="../${q ? '?' + q : ''}#${encodeURIComponent(x.id)}" title="${esc(x.title)}"><img src="${esc(x.thumb.startsWith('thumbs/') ? '../' + x.thumb : x.thumb)}" alt="${esc(x.title)}" loading="lazy" referrerpolicy="no-referrer"></a>`).join('')}</div>
+    <div class="thumbs">${own.slice(0, 8).map((x) => `<a href="../${q ? '?' + q : ''}#${encodeURIComponent(x.id)}" title="${esc(x.title)}"><img src="${esc(x.thumb.startsWith('thumbs/') ? '../' + x.thumb : x.thumb)}"${x.w ? ` width="${x.w}" height="${x.h}"` : ''} alt="${esc(x.title)}" loading="lazy" referrerpolicy="no-referrer" onload="this.classList.add('ok')" onerror="this.parentElement.remove()"></a>`).join('')}</div>
     <a class="go" href="${href}">${t('inGallery')(own.length)} →</a></section>`;
 }
 

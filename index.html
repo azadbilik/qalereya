@@ -16,13 +16,13 @@
 <style>
   :root {
     --paper: #F4EFE6; --ink: #1A1410; --muted: #675E55; --rule: rgb(26 20 16 / .14); --tint: rgb(26 20 16 / .05);
-    --accent: #A81E28; --frame: #E9E2D6;
+    --accent: #A81E28; --frame: #E9E2D6; --sheen: rgb(255 255 255 / .45);
     --serif: 'Literata', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
     color-scheme: light dark;
   }
   @media (prefers-color-scheme: dark) {
     :root { --paper: #14100D; --ink: #F1EBE1; --muted: #A0968B; --rule: rgb(241 235 225 / .14); --tint: rgb(241 235 225 / .05);
-      --accent: #DA5A61; --frame: #1F1914; }
+      --accent: #DA5A61; --frame: #1F1914; --sheen: rgb(255 255 255 / .05); }
   }
   * { box-sizing: border-box; margin: 0; }
   body { background: var(--paper); color: var(--ink); font: 400 .9375rem/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
@@ -75,9 +75,17 @@
   .strip .card img { height: 17rem; width: auto; max-width: none; min-width: 8rem; }
   .strip .card .t { -webkit-line-clamp: 1; }
   .card { break-inside: avoid; margin-bottom: 1.5rem; width: 100%; text-align: left; display: block; }
-  .card .frame { background: var(--frame); border-radius: 2px; overflow: hidden; }
-  .card img { width: 100%; height: auto; transition: opacity .3s, transform .4s; opacity: 0; }
+  .card .frame { position: relative; background: var(--frame); border-radius: 2px; overflow: hidden; }
+  /* Until the picture arrives its box (sized from data/dims.json) carries a slow sheen */
+  .card .frame::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(100deg, transparent 30%, var(--sheen) 50%, transparent 70%) 0 0 / 250% 100%;
+    animation: sheen 1.6s ease-in-out infinite; transition: opacity .3s; }
+  .card .frame.ok::after { opacity: 0; animation: none; }
+  @keyframes sheen { from { background-position: 100% 0; } to { background-position: -150% 0; } }
+  .card img { width: 100%; height: auto; transition: opacity .4s, transform .4s; opacity: 0; }
   .card img.ok { opacity: 1; }
+  /* A picture of unknown size keeps a page's shape while it loads */
+  .card img:not([width]):not(.ok) { aspect-ratio: 3 / 4; }
   .card:hover img { transform: scale(1.015); }
   .card .t { margin-top: .6rem; font-size: .875rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .card .m { margin-top: .15rem; font-size: .75rem; color: var(--muted); }
@@ -125,14 +133,18 @@
     .info { border-left: 0; }
     dialog { overflow-y: auto; }
   }
-  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  .stage .loading { position: absolute; top: 1rem; left: 50%; translate: -50% 0; font-size: .75rem; color: var(--muted); background: var(--paper); padding: .2rem .6rem; border-radius: 999px; opacity: 0; transition: opacity .2s .3s; }
+  .stage.busy .loading { opacity: .9; }
+  .stage img { transition: filter .3s; }
+  .stage.busy img { filter: blur(2px); }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } .card .frame::after { animation: none; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a>
-    <nav><a href="emalatxana/" data-i18n="workshops" data-keep-lang>Emalatxanalar</a><a href="/xerite/" data-i18n="map" data-keep-lang>Xəritə</a><a href="https://kitabxana.az" data-i18n="library" id="kx">Kitabxana</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
+    <nav><a href="emalatxana/" data-i18n="workshops" data-keep-lang>Emalatxanalar</a><a href="/xeriteler/" data-i18n="maps" data-keep-lang>Xəritələr</a><a href="https://kitabxana.az" data-i18n="library" id="kx">Kitabxana</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
   </header>
   <div class="hero">
     <h1 data-i18n="title">Qalereya</h1>
@@ -165,6 +177,7 @@
   <div class="viewer">
     <div class="stage">
       <img id="v-img" alt="">
+      <span class="loading" aria-hidden="true" data-i18n="loading">Yüklənir…</span>
       <button type="button" class="nav prev" id="v-prev" data-i18n-label="prev">←</button>
       <button type="button" class="nav next" id="v-next" data-i18n-label="next">→</button>
     </div>
@@ -186,25 +199,28 @@ const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 
 function plural(n, one, few, many) { const r = new Intl.PluralRules('ru').select(n); return r === 'one' ? one : r === 'few' ? few : many; }
 const T = {
   az: { doc: 'Qalereya · Azad Bilik', title: 'Qalereya', lead: 'Nizami və Füzulinin poemalarına beş əsr ərzində çəkilmiş miniatürlər: Təbriz, Herat, Şiraz, İstanbul əlyazmalarından, muzeylərin açıq kolleksiyalarından.',
-    workshops: 'Emalatxanalar', map: 'Xəritə', library: 'Kitabxana', poem: 'Poema', manuscript: 'Əlyazma', allMs: 'Bütün əlyazmalar', freeOnly: 'Yalnız sərbəst lisenziya',
+    workshops: 'Emalatxanalar', maps: 'Xəritələr', library: 'Kitabxana', poem: 'Poema', manuscript: 'Əlyazma', allMs: 'Bütün əlyazmalar', freeOnly: 'Yalnız sərbəst lisenziya',
     footer: 'Şəkillər muzeylərin və Wikimedia Commons-un öz serverlərindən göstərilir; hər birinin mənbəyi və lisenziyası yanındadır.',
     miniature: 'Miniatür', prev: 'Əvvəlki', next: 'Sonrakı', all: 'Hamısı', other: 'Digər', count: (n) => `${n} miniatür`, empty: 'Heç nə tapılmadı.', noScene: 'Səhnəsi müəyyənləşdirilməyənlər',
     readChapter: 'Fəsli oxu', undated: 'Tarixsiz', cent: (c) => `${ROMAN[c]} əsr`,
     date: 'Tarix', painted: 'Çəkilib', artist: 'Rəssam', ms: 'Əlyazma', medium: 'Material', held: 'Mənbə', credit: 'Kredit', licence: 'Lisenziya', close: 'Bağla',
+    loading: 'Yüklənir…',
     readScene: 'Bu səhnəni kitabxana.az-da oxu', readPoem: 'Poemanı kitabxana.az-da oxu', atSource: 'Mənbədə bax', full: 'Tam ölçüdə' },
   ru: { doc: 'Галерея · Azad Bilik', title: 'Галерея', lead: 'Пять веков миниатюр к поэмам Низами и Физули — из рукописей, созданных в Тебризе, Герате, Ширазе и Стамбуле, из открытых коллекций музеев.',
-    workshops: 'Мастерские', map: 'Карта', library: 'Библиотека', poem: 'Поэма', manuscript: 'Рукопись', allMs: 'Все рукописи', freeOnly: 'Только свободная лицензия',
+    workshops: 'Мастерские', maps: 'Карты', library: 'Библиотека', poem: 'Поэма', manuscript: 'Рукопись', allMs: 'Все рукописи', freeOnly: 'Только свободная лицензия',
     footer: 'Изображения загружаются с серверов музеев и Викисклада; у каждого указаны источник и лицензия.',
     miniature: 'Миниатюра', prev: 'Предыдущая', next: 'Следующая', all: 'Все', other: 'Другое', count: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')}`, empty: 'Ничего не найдено.', noScene: 'Сцена не определена',
     readChapter: 'Читать главу', undated: 'Без даты', cent: (c) => `${ROMAN[c]} век`,
     date: 'Дата', painted: 'Создана', artist: 'Художник', ms: 'Рукопись', medium: 'Материал', held: 'Собрание', credit: 'Авторство', licence: 'Лицензия', close: 'Закрыть',
+    loading: 'Загрузка…',
     readScene: 'Читать эту сцену на kitabxana.az', readPoem: 'Читать поэму на kitabxana.az', atSource: 'В источнике', full: 'Полный размер' },
   en: { doc: 'Gallery · Azad Bilik', title: 'Gallery', lead: 'Five centuries of miniatures painted for the poems of Nizami and Fuzuli, from manuscripts made in Tabriz, Herat, Shiraz and Istanbul, out of museums\' open collections.',
-    workshops: 'Workshops', map: 'Map', library: 'Library', poem: 'Poem', manuscript: 'Manuscript', allMs: 'All manuscripts', freeOnly: 'Free to reuse only',
+    workshops: 'Workshops', maps: 'Maps', library: 'Library', poem: 'Poem', manuscript: 'Manuscript', allMs: 'All manuscripts', freeOnly: 'Free to reuse only',
     footer: 'Images load from the museums\' and Wikimedia Commons\' own servers, each with its source and licence.',
     miniature: 'Miniature', prev: 'Previous', next: 'Next', all: 'All', other: 'Other', count: (n) => `${n} miniature${n === 1 ? '' : 's'}`, empty: 'Nothing matches.', noScene: 'Scene not identified',
     readChapter: 'Read the chapter', undated: 'Undated', cent: (c) => `${c}${[, 'st', 'nd', 'rd'][c % 10 * (c % 100 > 3 && c % 100 < 21 ? 0 : 1)] ?? 'th'} century`,
     date: 'Date', painted: 'Painted in', artist: 'Artist', ms: 'Manuscript', medium: 'Medium', held: 'Held by', credit: 'Credit', licence: 'Licence', close: 'Close',
+    loading: 'Loading…',
     readScene: 'Read this passage on kitabxana.az', readPoem: 'Read the poem on kitabxana.az', atSource: 'At the source', full: 'Full size' },
 };
 const t = (k) => T[lang][k];
@@ -321,7 +337,7 @@ function section(name, chapter, items) {
 function card(x, inScene) {
   const head = inScene ? (whenOf(x) ?? t('undated')) : x.title;
   const meta = inScene ? x.manuscript : [whenOf(x) ?? x.date, x.manuscript ?? x.museum].filter(Boolean).join(' · ');
-  return `<button type="button" class="card" data-id="${esc(x.id)}" title="${esc(x.title)}"><div class="frame"><img src="${esc(x.thumb)}" alt="${esc(x.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+  return `<button type="button" class="card" data-id="${esc(x.id)}" title="${esc(x.title)}"><div class="frame"><img src="${esc(x.thumb)}"${x.w ? ` width="${x.w}" height="${x.h}"` : ''} alt="${esc(x.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
     <p class="t">${esc(head)}</p><p class="m">${esc(meta ?? '')}</p></button>`;
 }
 
@@ -329,7 +345,7 @@ function wire(el) {
   el.querySelectorAll('.card').forEach((b) => {
     b.onclick = () => show(b.dataset.id);
     const img = b.querySelector('img');
-    const ok = () => img.classList.add('ok');
+    const ok = () => { img.classList.add('ok'); img.parentElement.classList.add('ok'); };
     if (img.complete && img.naturalWidth) ok(); else { img.onload = ok; img.onerror = () => b.remove(); }
   });
 }
@@ -342,8 +358,12 @@ function show(id) {
   const x = view[at];
   const img = document.getElementById('v-img');
   img.src = x.thumb; img.alt = x.title;
+  // The thumbnail at once, softened, while the full image loads; then the full image
+  const stage = img.parentElement;
+  stage.classList.add('busy');
   const full = new Image(); full.referrerPolicy = 'no-referrer';
-  full.onload = () => { if (view[at] === x) img.src = x.image; };
+  full.onload = () => { if (view[at] === x) { img.src = x.image; stage.classList.remove('busy'); } };
+  full.onerror = () => { if (view[at] === x) stage.classList.remove('busy'); };
   full.src = x.image;
   const poem = data.poemOf.get(x.poem);
   const scene = poem?.scenes?.find((s) => s.id === x.scene);

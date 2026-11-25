@@ -11,6 +11,8 @@ const read = async (p) => JSON.parse(await readFile(new URL(p, root), 'utf8'));
 const list = async (dir) => (await readdir(new URL(dir, root)).catch(() => [])).filter((f) => f.endsWith('.json'));
 
 const artworks = await read('artworks.json');
+// Each thumbnail's size (scripts/dims.mjs), so the page can lay the picture out before it loads
+const dims = await read('dims.json').catch(() => ({}));
 // Where and when each manuscript was made (data/manuscripts.json, kept by hand): its catalogue
 // name replaces the label guessed from a title, and the workshops map reads it
 const catalogue = await read('manuscripts.json').catch(() => ({ manuscripts: [], items: {} }));
@@ -66,7 +68,9 @@ const manuscript = (x) => {
 };
 
 // Commons originals are large: the grid takes a 500px thumbnail, the viewer the original
-const commonsThumb = (url, w) => url.replace(/\?.*$/, '').replace(/\/commons\/(.\/..\/)([^/]+)$/, `/commons/thumb/$1$2/${w}px-$2`);
+// A TIFF (a museum's master scan) has its thumbnails as JPEGs of its first page
+const commonsThumb = (url, w) => url.replace(/\?.*$/, '').replace(/\/commons\/(.\/..\/)([^/]+)$/, (_, dir, name) =>
+  /\.tiff?$/i.test(name) ? `/commons/thumb/${dir}${name}/lossy-page1-${w}px-${name}.jpg` : `/commons/thumb/${dir}${name}/${w}px-${name}`);
 // The Walters serves only full scans (~600 KB) and 117px thumbnails: those are resized once into
 // thumbs/<id>.jpg (CC0, scripts/thumbs.sh) and served from here
 const local = (x) => existsSync(new URL(`../thumbs/${x.id}.jpg`, import.meta.url)) ? `thumbs/${x.id}.jpg` : null;
@@ -117,6 +121,7 @@ const items = artworks.map((x) => ({
   source: x.source,
   image: x.image.replace(/\?.*$/, ''),
   thumb: thumb(x),
+  ...(dims[x.id]?.src === thumb(x) ? { w: dims[x.id].w, h: dims[x.id].h } : {}),
   author: x.author,
   poem: x.poem ?? (tags[x.id]?.scene ? tags[x.id].poem : null),
   chapter: x.chapter,
@@ -141,4 +146,4 @@ if (missing.length) console.warn(`no Azerbaijani/Russian name for: ${missing.joi
 // The workshops map names its cities and dynasties from the same tables
 await writeFile(new URL('gallery.json', root), JSON.stringify({ poems, items, names: { places: PLACE, dynasties: DYNASTY } }) + '\n');
 const n = (f) => items.filter(f).length;
-console.log(`${items.length} artworks · ${n((x) => x.poem)} in a poem · ${n((x) => x.scene)} with a scene · ${n((x) => x.manuscript)} with a manuscript · ${n((x) => x.free)} free to reuse`);
+console.log(`${n((x) => x.w)} with a known size · ${items.length} artworks · ${n((x) => x.poem)} in a poem · ${n((x) => x.scene)} with a scene · ${n((x) => x.manuscript)} with a manuscript · ${n((x) => x.free)} free to reuse`);
