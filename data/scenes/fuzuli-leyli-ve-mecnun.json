@@ -3,6 +3,7 @@
     "id": "miraj",
     "az": "Peyğəmbərin meracı",
     "en": "The Prophet's Night Journey (Mi'raj)",
+    "ru": "Вознесение Пророка (Мирадж)",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-8"
     ],
@@ -15,6 +16,7 @@
     "id": "birth-of-qeys",
     "az": "Qeysin doğulması",
     "en": "The birth of Qays",
+    "ru": "Рождение Кайса",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-15"
     ],
@@ -28,6 +30,7 @@
     "id": "leyli-and-qeys-at-school",
     "az": "Leyli və Qeys məktəbdə",
     "en": "Layla and Qays at school",
+    "ru": "Лейли и Кайс в школе",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-16",
       "fuzuli-leyli-ve-mecnun-17"
@@ -42,6 +45,7 @@
     "id": "leylis-mother-reproaches",
     "az": "Leylinin anası onu danlayır",
     "en": "Layla's mother reproaches her",
+    "ru": "Мать упрекает Лейли",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-18"
     ],
@@ -54,6 +58,7 @@
     "id": "meeting-on-the-way",
     "az": "Leyli yolda Məcnunla qarşılaşır",
     "en": "Layla and Majnun meet on the road",
+    "ru": "Лейли и Меджнун встречаются на дороге",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-20"
     ],
@@ -66,6 +71,7 @@
     "id": "father-finds-majnun",
     "az": "Atası Məcnunu səhrada tapır",
     "en": "Majnun's father finds him in the wilderness",
+    "ru": "Отец находит Меджнуна в пустыне",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-21",
       "fuzuli-leyli-ve-mecnun-53"
@@ -80,6 +86,7 @@
     "id": "father-asks-for-leyli",
     "az": "Məcnunun atası Leylini elçiliyə gedir",
     "en": "Majnun's father asks for Layla's hand",
+    "ru": "Отец Меджнуна сватается за Лейли",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-24"
     ],
@@ -93,6 +100,7 @@
     "id": "majnun-at-kaaba",
     "az": "Məcnun Kəbədə dua edir",
     "en": "Majnun prays at the Ka'ba",
+    "ru": "Меджнун молится у Каабы",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-26"
     ],
@@ -105,6 +113,7 @@
     "id": "majnun-among-animals",
     "az": "Məcnun vəhşi heyvanlar arasında",
     "en": "Majnun among the wild animals",
+    "ru": "Меджнун среди диких зверей",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-27",
       "fuzuli-leyli-ve-mecnun-56"
@@ -119,6 +128,7 @@
     "id": "majnun-frees-gazelle",
     "az": "Məcnun ceyranı ovçudan xilas edir",
     "en": "Majnun frees the gazelle from the hunter",
+    "ru": "Меджнун спасает газель от охотника",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-29"
     ],
@@ -131,6 +141,7 @@
     "id": "leyli-in-garden",
     "az": "Leyli bahar çağı gülzarda",
     "en": "Layla in the garden in spring",
+    "ru": "Лейли в весеннем саду",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-36"
     ],
@@ -143,6 +154,7 @@
     "id": "ibn-salam-sees-leyli",
     "az": "İbni Səlam Leylini görüb vurulur",
     "en": "Ibn Salam sees Layla and falls in love",
+    "ru": "Ибн Салам видит Лейли и влюбляется",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-39"
     ],
@@ -155,6 +167,7 @@
     "id": "majnun-meets-nofel",
     "az": "Məcnun Növfəllə görüşür",
     "en": "Majnun meets Nawfal",
+    "ru": "Меджнун встречает Науфаля",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-40",
       "fuzuli-leyli-ve-mecnun-41",
@@ -169,6 +182,7 @@
     "id": "nofel-battle",
     "az": "Növfəlin Leylinin qəbiləsi ilə savaşı",
     "en": "Nawfal battles Layla's tribe",
+    "ru": "Науфаль воюет с племенем Лейли",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-43",
       "fuzuli-leyli-ve-mecnun-44"
@@ -182,6 +196,7 @@
     "id": "majnun-in-chains",
     "az": "Məcnun zəncirli əsir kimi dilənməyə gedir",
     "en": "Majnun goes begging in chains",
+    "ru": "Меджнун просит подаяние в цепях",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-45",
       "fuzuli-leyli-ve-mecnun-46"
@@ -196,6 +211,7 @@
     "id": "majnun-at-leylis-tent",
     "az": "Məcnun Leylinin çadırı önündə",
     "en": "Majnun before Layla's tent",
+    "ru": "Меджнун у шатра Лейли",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-47"
     ],
@@ -208,6 +224,7 @@
     "id": "wedding-night",
     "az": "İbni Səlamla Leylinin gərdək gecəsi",
     "en": "The wedding night of Ibn Salam and Layla",
+    "ru": "Брачная ночь Ибн Салама и Лейли",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-49"
     ],
@@ -220,6 +237,7 @@
     "id": "zeyd-brings-news",
     "az": "Zeyd Məcnuna Leylinin ərə getdiyini xəbər verir",
     "en": "Zayd brings Majnun news of Layla's marriage",
+    "ru": "Зейд приносит Меджнуну весть о замужестве Лейли",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-50"
     ],
@@ -232,6 +250,7 @@
     "id": "majnun-at-fathers-grave",
     "az": "Məcnun atasının məzarı üstündə",
     "en": "Majnun at his father's grave",
+    "ru": "Меджнун на могиле отца",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-55"
     ],
@@ -244,6 +263,7 @@
     "id": "leyli-finds-majnun",
     "az": "Karvanı itirən Leyli səhrada Məcnunu tapır",
     "en": "Layla, lost from the caravan, finds Majnun",
+    "ru": "Лейли, отставшая от каравана, находит Меджнуна",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-60",
       "fuzuli-leyli-ve-mecnun-61",
@@ -260,6 +280,7 @@
     "id": "rider-comes-for-leyli",
     "az": "Dəvəli bir atlı Leylinin dalınca gəlir",
     "en": "A camel rider comes to fetch Layla",
+    "ru": "Всадник на верблюде приезжает за Лейли",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-65"
     ],
@@ -272,6 +293,7 @@
     "id": "death-of-leyli",
     "az": "Leylinin anasına vəsiyyəti və ölümü",
     "en": "Layla's last words to her mother, and her death",
+    "ru": "Последние слова Лейли к матери и её смерть",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-68"
     ],
@@ -284,6 +306,7 @@
     "id": "majnun-dies-on-grave",
     "az": "Məcnun Leylinin qəbri üstündə can verir",
     "en": "Majnun dies on Layla's grave",
+    "ru": "Меджнун умирает на могиле Лейли",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-69"
     ],
@@ -297,6 +320,7 @@
     "id": "zeyds-dream",
     "az": "Zeyd yuxuda Leyli ilə Məcnunu cənnətdə görür",
     "en": "Zayd dreams of Layla and Majnun in Paradise",
+    "ru": "Зейд видит во сне Лейли и Меджнуна в раю",
     "chapters": [
       "fuzuli-leyli-ve-mecnun-70"
     ],

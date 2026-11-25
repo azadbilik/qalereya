@@ -18,14 +18,14 @@ const msById = new Map(catalogue.manuscripts.map((m) => [m.id, m]));
 
 // Poems in the order Nizami wrote the Khamsa, then Fuzuli; an artwork with no poem goes last
 const POEMS = [
-  ['nizami-mexzenul-esrar', 'Sirlər xəzinəsi', 'The Treasury of Mysteries'],
-  ['nizami-xosrov-va-sirin', 'Xosrov və Şirin', 'Khusraw and Shirin'],
-  ['nizami-leyli-va-macnun', 'Leyli və Məcnun', 'Layla and Majnun'],
-  ['nizami-heft-peyker', 'Yeddi gözəl', 'The Seven Beauties'],
-  ['nizami-serefname', 'Şərəfnamə', 'Iskandarnama: Sharafnama'],
-  ['nizami-xerednama', 'İqbalnamə', 'Iskandarnama: Iqbalnama'],
-  ['fuzuli-leyli-ve-mecnun', 'Füzuli: Leyli və Məcnun', 'Fuzuli: Layla and Majnun'],
-  ['fuzuli-hediqetus-sueda', 'Hədiqətüs-süəda', 'Fuzuli: Garden of the Blessed'],
+  ['nizami-mexzenul-esrar', 'Sirlər xəzinəsi', 'The Treasury of Mysteries', 'Сокровищница тайн'],
+  ['nizami-xosrov-va-sirin', 'Xosrov və Şirin', 'Khusraw and Shirin', 'Хосров и Ширин'],
+  ['nizami-leyli-va-macnun', 'Leyli və Məcnun', 'Layla and Majnun', 'Лейли и Меджнун'],
+  ['nizami-heft-peyker', 'Yeddi gözəl', 'The Seven Beauties', 'Семь красавиц'],
+  ['nizami-serefname', 'Şərəfnamə', 'Iskandarnama: Sharafnama', 'Искандер-наме: Шараф-наме'],
+  ['nizami-xerednama', 'İqbalnamə', 'Iskandarnama: Iqbalnama', 'Искандер-наме: Икбал-наме'],
+  ['fuzuli-leyli-ve-mecnun', 'Füzuli: Leyli və Məcnun', 'Fuzuli: Layla and Majnun', 'Физули: Лейли и Меджнун'],
+  ['fuzuli-hediqetus-sueda', 'Hədiqətüs-süəda', 'Fuzuli: Garden of the Blessed', 'Физули: Сад блаженных'],
 ];
 
 const scenes = {};
@@ -71,8 +71,11 @@ const thumb = (x) => {
   if (/images\.metmuseum\.org/.test(x.thumb)) return x.thumb;
   return x.thumb ?? x.image;
 };
-const PLACE_AZ = { Tabriz: 'Təbriz', Shiraz: 'Şiraz', Baghdad: 'Bağdad', Isfahan: 'İsfahan', Bukhara: 'Buxara', Kabul: 'Kabil', Qazvin: 'Qəzvin', Kashan: 'Kaşan', Kerman: 'Kirman', Istanbul: 'İstanbul', Lahore: 'Lahor', Abarkuh: 'Əbərkuh', Hyderabad: 'Heydərabad', Golconda: 'Qolkonda', Ahmedabad: 'Əhmədabad', Gaur: 'Qaur' };
-const DYNASTY_AZ = { 'Aq Qoyunlu': 'Ağqoyunlu', 'Qara Qoyunlu': 'Qaraqoyunlu', Safavid: 'Səfəvi', Timurid: 'Teymuri', Jalayirid: 'Cəlairi', Muzaffarid: 'Müzəffəri', Shaybanid: 'Şeybani', Ashtarkhanid: 'Həştərxani', Mughal: 'Böyük Moğol', Ottoman: 'Osmanlı', Qajar: 'Qacar', Zand: 'Zənd', 'Qutb Shahi': 'Qütbşahi', 'Husain Shahi (Bengal Sultanate)': 'Benqal sultanlığı' };
+// Cities and dynasties in Azerbaijani and Russian (the catalogue names them in English)
+const PLACE = { Tabriz: ['Təbriz', 'Тебриз'], Shiraz: ['Şiraz', 'Шираз'], Herat: ['Herat', 'Герат'], Baghdad: ['Bağdad', 'Багдад'], Isfahan: ['İsfahan', 'Исфахан'], Bukhara: ['Buxara', 'Бухара'], Kabul: ['Kabil', 'Кабул'], Tehran: ['Tehran', 'Тегеран'], Qazvin: ['Qəzvin', 'Казвин'], Kashan: ['Kaşan', 'Кашан'], Kerman: ['Kirman', 'Керман'], Istanbul: ['İstanbul', 'Стамбул'], Lahore: ['Lahor', 'Лахор'], Abarkuh: ['Əbərkuh', 'Аберкух'], Hyderabad: ['Heydərabad', 'Хайдарабад'], Golconda: ['Qolkonda', 'Голконда'], Ahmedabad: ['Əhmədabad', 'Ахмадабад'], Gaur: ['Qaur', 'Гаур'], Delhi: ['Dehli', 'Дели'], Agra: ['Aqra', 'Агра'], Samarkand: ['Səmərqənd', 'Самарканд'], Mashhad: ['Məşhəd', 'Мешхед'], Yazd: ['Yəzd', 'Йезд'], London: ['London', 'Лондон'] };
+const DYNASTY = { 'Aq Qoyunlu': ['Ağqoyunlu', 'Ак-Коюнлу'], 'Qara Qoyunlu': ['Qaraqoyunlu', 'Кара-Коюнлу'], Safavid: ['Səfəvi', 'Сефевиды'], Timurid: ['Teymuri', 'Тимуриды'], Jalayirid: ['Cəlairi', 'Джалаириды'], Muzaffarid: ['Müzəffəri', 'Музаффариды'], Shaybanid: ['Şeybani', 'Шейбаниды'], Ashtarkhanid: ['Həştərxani', 'Аштарханиды'], Mughal: ['Böyük Moğol', 'Великие Моголы'], Ottoman: ['Osmanlı', 'Османская империя'], Qajar: ['Qacar', 'Каджары'], Zand: ['Zənd', 'Зенды'], 'Qutb Shahi': ['Qütbşahi', 'Кутбшахи'], 'Husain Shahi (Bengal Sultanate)': ['Benqal sultanlığı', 'Бенгальский султанат'] };
+const names = (table, en) => en ? { az: table[en]?.[0] ?? en, ru: table[en]?.[1] ?? en, en } : null;
+const unnamed = (table, xs) => [...new Set(xs.filter((x) => x && !table[x]))];
 const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX', 'XXI'];
 // A short Common-era date: "1481", "1539–1543", or "XVI əsr" for a whole-century estimate
 const when = (x) => {
@@ -93,12 +96,14 @@ const items = artworks.map((x) => ({
   century: century(x),
   year: x.yearStart ?? x.yearEnd ?? null,
   when: when(x),
+  // A whole-century estimate, which the page words in the reader's language
+  wc: x.yearStart && (x.yearEnd ?? x.yearStart) - x.yearStart >= 90 ? Math.floor((x.yearStart - 1) / 100) + 1 : undefined,
   artists: x.artists,
   medium: x.medium,
   manuscript: (() => { const m = msById.get(catalogue.items[x.id]); return m && !m.single && !m.kind ? m.label : manuscript(x); })(),
   ms: catalogue.items[x.id] ?? null,
   // Where it was painted, for the viewer: "Təbriz, 1539–1543"
-  place: (() => { const m = msById.get(catalogue.items[x.id]); return m?.place ? { city: PLACE_AZ[m.place] ?? m.place, dynasty: DYNASTY_AZ[m.dynasty] ?? m.dynasty ?? null } : null; })(),
+  place: (() => { const m = msById.get(catalogue.items[x.id]); return m?.place ? { city: names(PLACE, m.place), dynasty: names(DYNASTY, m.dynasty) } : null; })(),
   museum: x.museum,
   license: x.license,
   // Free to reuse for anything; CC BY asks for the credit line, shown with the picture
@@ -117,15 +122,18 @@ const items = artworks.map((x) => ({
 const rank = (x) => { const i = POEMS.findIndex(([slug]) => slug === x.poem); return i < 0 ? POEMS.length : i; };
 items.sort((a, b) => rank(a) - rank(b) || (a.year ?? 9999) - (b.year ?? 9999) || (a.manuscript ?? '~').localeCompare(b.manuscript ?? '~'));
 
-const poems = POEMS.map(([slug, az, en]) => ({
-  slug, az, en,
+const poems = POEMS.map(([slug, az, en, ru]) => ({
+  slug, az, en, ru,
   count: items.filter((x) => x.poem === slug).length,
   scenes: (scenes[slug.replace(/^nizami-/, '')] ?? scenes[slug] ?? []).map((s) => ({
-    id: s.id, az: s.az, en: s.en, chapters: s.chapters ?? [],
+    id: s.id, az: s.az, en: s.en, ru: s.ru ?? s.en, chapters: s.chapters ?? [],
     count: items.filter((x) => x.poem === slug && x.scene === s.id).length,
   })),
 })).filter((p) => p.count > 1); // a poem with a single picture is shown among the others, not as a tab
 
-await writeFile(new URL('gallery.json', root), JSON.stringify({ poems, items }) + '\n');
+const missing = [...unnamed(PLACE, catalogue.manuscripts.map((m) => m.place)), ...unnamed(DYNASTY, catalogue.manuscripts.map((m) => m.dynasty))];
+if (missing.length) console.warn(`no Azerbaijani/Russian name for: ${missing.join(', ')}`);
+// The workshops map names its cities and dynasties from the same tables
+await writeFile(new URL('gallery.json', root), JSON.stringify({ poems, items, names: { places: PLACE, dynasties: DYNASTY } }) + '\n');
 const n = (f) => items.filter(f).length;
 console.log(`${items.length} artworks · ${n((x) => x.poem)} in a poem · ${n((x) => x.scene)} with a scene · ${n((x) => x.manuscript)} with a manuscript · ${n((x) => x.free)} free to reuse`);

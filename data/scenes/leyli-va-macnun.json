@@ -3,6 +3,7 @@
     "id": "nizami-advises-son",
     "az": "Nizami oğlu Məhəmmədə nəsihət verir",
     "en": "Nizami addresses his son Muhammad",
+    "ru": "Низами обращается к сыну Мухаммеду",
     "chapters": [
       "nizami-leyli-ve-mecnun-9"
     ],
@@ -16,6 +17,7 @@
     "id": "school",
     "az": "Leyli və Məcnun məktəbdə",
     "en": "Layla and Majnun at school",
+    "ru": "Лейли и Меджнун в школе",
     "chapters": [
       "nizami-leyli-ve-mecnun-11",
       "nizami-leyli-ve-mecnun-12"
@@ -31,6 +33,7 @@
     "id": "majnun-at-the-kaaba",
     "az": "Atası Məcnunu Kəbəyə aparır",
     "en": "Majnun's father takes him to the Kaaba",
+    "ru": "Отец ведёт Меджнуна к Каабе",
     "chapters": [
       "nizami-leyli-ve-mecnun-16"
     ],
@@ -46,6 +49,7 @@
     "id": "father-finds-majnun",
     "az": "Atası Məcnunu xarabalıqda tapır",
     "en": "Majnun's father finds him in the ruins and counsels him",
+    "ru": "Отец находит Меджнуна среди развалин и наставляет его",
     "chapters": [
       "nizami-leyli-ve-mecnun-16",
       "nizami-leyli-ve-mecnun-17"
@@ -59,6 +63,7 @@
     "id": "layla-in-the-palm-grove",
     "az": "Leyli qızlarla xurmalıqda",
     "en": "Layla with her companions in the palm grove",
+    "ru": "Лейли с подругами в пальмовой роще",
     "chapters": [
       "nizami-leyli-ve-mecnun-19"
     ],
@@ -72,6 +77,7 @@
     "id": "nawfal-meets-majnun",
     "az": "Nofəl Məcnunla tanış olur",
     "en": "Nawfal meets Majnun in the desert",
+    "ru": "Науфаль встречает Меджнуна в пустыне",
     "chapters": [
       "nizami-leyli-ve-mecnun-21"
     ],
@@ -84,6 +90,7 @@
     "id": "nawfal-battle",
     "az": "Nofəlin Leylinin qəbiləsi ilə döyüşü",
     "en": "Nawfal battles Layla's tribe",
+    "ru": "Науфаль воюет с племенем Лейли",
     "chapters": [
       "nizami-leyli-ve-mecnun-22",
       "nizami-leyli-ve-mecnun-24"
@@ -99,6 +106,7 @@
     "id": "majnun-frees-gazelles",
     "az": "Məcnun ahuları azad edir",
     "en": "Majnun frees the gazelles",
+    "ru": "Меджнун освобождает газелей",
     "chapters": [
       "nizami-leyli-ve-mecnun-25"
     ],
@@ -112,6 +120,7 @@
     "id": "old-woman-leads-majnun",
     "az": "Qarı zəncirli Məcnunu Leylinin çadırına gətirir",
     "en": "The old woman leads Majnun in chains to Layla's tent",
+    "ru": "Старуха ведёт Меджнуна в цепях к шатру Лейли",
     "chapters": [
       "nizami-leyli-ve-mecnun-27"
     ],
@@ -125,6 +134,7 @@
     "id": "layla-strikes-ibn-salam",
     "az": "Leyli İbn-Səlama sillə vurur",
     "en": "Layla strikes Ibn Salam, who falls senseless",
+    "ru": "Лейли ударяет Ибн Салама, и он падает без чувств",
     "chapters": [
       "nizami-leyli-ve-mecnun-28"
     ],
@@ -137,6 +147,7 @@
     "id": "father-visits-majnun",
     "az": "Atası səhrada Məcnunun görüşünə gəlir",
     "en": "Majnun's father visits him in the wilderness",
+    "ru": "Отец навещает Меджнуна в пустыне",
     "chapters": [
       "nizami-leyli-ve-mecnun-30",
       "nizami-leyli-ve-mecnun-31"
@@ -151,6 +162,7 @@
     "id": "majnun-at-fathers-grave",
     "az": "Məcnun atasının qəbri üstündə",
     "en": "Majnun weeps at his father's grave",
+    "ru": "Меджнун плачет на могиле отца",
     "chapters": [
       "nizami-leyli-ve-mecnun-32"
     ],
@@ -164,6 +176,7 @@
     "id": "majnun-with-animals",
     "az": "Məcnun vəhşi heyvanlar arasında",
     "en": "Majnun among the wild animals",
+    "ru": "Меджнун среди диких зверей",
     "chapters": [
       "nizami-leyli-ve-mecnun-33"
     ],
@@ -179,6 +192,7 @@
     "id": "salim-visits-majnun",
     "az": "Dayısı Səlim Amiri Məcnunun görüşünə gəlir",
     "en": "Majnun's uncle Salim Amiri visits him",
+    "ru": "Дядя Меджнуна Салим Амири навещает его",
     "chapters": [
       "nizami-leyli-ve-mecnun-37"
     ],
@@ -192,6 +206,7 @@
     "id": "mother-visits-majnun",
     "az": "Anası Məcnunun görüşünə gəlir",
     "en": "Majnun's mother visits him",
+    "ru": "Мать навещает Меджнуна",
     "chapters": [
       "nizami-leyli-ve-mecnun-37",
       "nizami-leyli-ve-mecnun-38"
@@ -206,6 +221,7 @@
     "id": "old-man-fetches-majnun",
     "az": "Leylinin göndərdiyi qoca Məcnunu tapır",
     "en": "The old man sent by Layla finds Majnun",
+    "ru": "Старик, посланный Лейли, находит Меджнуна",
     "chapters": [
       "nizami-leyli-ve-mecnun-40"
     ],
@@ -218,6 +234,7 @@
     "id": "palm-grove-meeting",
     "az": "Leyli və Məcnun xurmalıqda görüşürlər",
     "en": "Layla and Majnun meet in the palm grove",
+    "ru": "Лейли и Меджнун встречаются в пальмовой роще",
     "chapters": [
       "nizami-leyli-ve-mecnun-40",
       "nizami-leyli-ve-mecnun-41"
@@ -234,6 +251,7 @@
     "id": "salam-of-baghdad",
     "az": "Bağdadlı Səlam Məcnunun görüşünə gəlir",
     "en": "Salam of Baghdad visits Majnun",
+    "ru": "Салам Багдадский навещает Меджнуна",
     "chapters": [
       "nizami-leyli-ve-mecnun-42"
     ],
@@ -246,6 +264,7 @@
     "id": "death-of-ibn-salam",
     "az": "İbn-Səlamın ölümü, Leyli yas saxlayır",
     "en": "Death of Ibn Salam; Layla mourns",
+    "ru": "Смерть Ибн Салама; Лейли скорбит",
     "chapters": [
       "nizami-leyli-ve-mecnun-43"
     ],
@@ -258,6 +277,7 @@
     "id": "zayd-brings-news",
     "az": "Zeyd Məcnuna İbn-Səlamın ölüm xəbərini gətirir",
     "en": "Zayd brings Majnun the news of Ibn Salam's death",
+    "ru": "Зейд приносит Меджнуну весть о смерти Ибн Салама",
     "chapters": [
       "nizami-leyli-ve-mecnun-43"
     ],
@@ -270,6 +290,7 @@
     "id": "lovers-faint",
     "az": "Leyli və Məcnun görüşüb huşdan gedirlər",
     "en": "Layla and Majnun faint at the sight of each other",
+    "ru": "Лейли и Меджнун падают без чувств при встрече",
     "chapters": [
       "nizami-leyli-ve-mecnun-43"
     ],
@@ -283,6 +304,7 @@
     "id": "death-of-layla",
     "az": "Leylinin ölümü",
     "en": "Death of Layla",
+    "ru": "Смерть Лейли",
     "chapters": [
       "nizami-leyli-ve-mecnun-44"
     ],
@@ -296,6 +318,7 @@
     "id": "majnun-at-laylas-grave",
     "az": "Məcnun Leylinin qəbri üstündə",
     "en": "Majnun mourns at Layla's grave",
+    "ru": "Меджнун скорбит на могиле Лейли",
     "chapters": [
       "nizami-leyli-ve-mecnun-44"
     ],
@@ -309,6 +332,7 @@
     "id": "death-of-majnun",
     "az": "Məcnunun Leylinin qəbri üstündə ölümü",
     "en": "Majnun dies on Layla's grave",
+    "ru": "Меджнун умирает на могиле Лейли",
     "chapters": [
       "nizami-leyli-ve-mecnun-45"
     ],

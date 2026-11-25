@@ -32,7 +32,9 @@
   a:hover { text-decoration-color: currentColor; }
   button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
-  [lang="en"] { color: var(--muted); }
+  .langs { display: inline-flex; gap: .15rem; }
+  .langs button { font-size: .6875rem; letter-spacing: .04em; padding: .1rem .3rem; border-radius: 2px; }
+  .langs button[aria-pressed="true"] { color: var(--ink); box-shadow: inset 0 -1px currentColor; }
   [hidden] { display: none !important; }
 
   #map { position: fixed; inset: 0; background: var(--water); }
@@ -112,16 +114,16 @@
 </style>
 </head>
 <body>
-<div id="map" role="region" aria-label="Xəritə · Map"></div>
+<div id="map" role="region" data-i18n-label="map"></div>
 
 <aside class="panel">
   <div class="head">
-    <div class="top"><a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a><nav><a href="../">Qalereya</a><a href="/xerite/">Xəritə</a></nav></div>
-    <h1>Emalatxanalar</h1>
-    <p class="sub" lang="en">Where Nizami and Fuzuli were painted, 1380–1880</p>
+    <div class="top"><a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a><nav><a href="../" data-i18n="gallery" data-keep-lang>Qalereya</a><a href="/xerite/" data-i18n="map" data-keep-lang>Xəritə</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav></div>
+    <h1 data-i18n="title">Emalatxanalar</h1>
+    <p class="sub" data-i18n="sub">Nizami və Füzulinin rəsmləri harada çəkilib, 1380–1880</p>
   </div>
   <div class="controls">
-    <div class="hist-label"><span>Əsr <span lang="en">· Century</span></span><button type="button" id="all" hidden>Hamısı <span lang="en">· All</span></button></div>
+    <div class="hist-label"><span data-i18n="century">Əsr</span><button type="button" id="all" hidden data-i18n="all">Hamısı</button></div>
     <div class="hist" id="hist"></div>
     <div class="hist-axis" id="axis"></div>
   </div>
@@ -135,10 +137,56 @@ const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX'];
 const centuryOf = (y) => Math.floor((y - 1) / 100) + 1;
-const PLACE_AZ = { Tabriz: 'Təbriz', Herat: 'Herat', Shiraz: 'Şiraz', Baghdad: 'Bağdad', Isfahan: 'İsfahan', Bukhara: 'Buxara', Kabul: 'Kabil', Tehran: 'Tehran', Qazvin: 'Qəzvin', Kashan: 'Kaşan', Kerman: 'Kirman', Istanbul: 'İstanbul', Lahore: 'Lahor', Abarkuh: 'Əbərkuh', Hyderabad: 'Heydərabad', Golconda: 'Qolkonda', Ahmedabad: 'Əhmədabad', Gaur: 'Qaur', London: 'London' };
-const placeName = (p) => PLACE_AZ[p] ?? p;
-const DYNASTY_AZ = { 'Aq Qoyunlu': 'Ağqoyunlu', 'Qara Qoyunlu': 'Qaraqoyunlu', Safavid: 'Səfəvi', Timurid: 'Teymuri', Jalayirid: 'Cəlairi', Muzaffarid: 'Müzəffəri', Shaybanid: 'Şeybani', Ashtarkhanid: 'Həştərxani', Mughal: 'Böyük Moğol', Ottoman: 'Osmanlı', Qajar: 'Qacar', Zand: 'Zənd', 'Qutb Shahi': 'Qütbşahi', 'Husain Shahi (Bengal Sultanate)': 'Benqal sultanlığı' };
-const dynasty = (m) => m.dynasty ? (DYNASTY_AZ[m.dynasty] ?? m.dynasty) : '';
+// One language at a time: ?lang=, else the visitor's last choice on azadbilik.org, else Azerbaijani
+const LANGS = ['az', 'ru', 'en'];
+let lang = (() => {
+  const q = new URLSearchParams(location.search).get('lang');
+  if (LANGS.includes(q)) return q;
+  try { const s = localStorage.getItem('lang'); if (LANGS.includes(s)) return s; } catch {}
+  return 'az';
+})();
+function plural(n, one, few, many) { const r = new Intl.PluralRules('ru').select(n); return r === 'one' ? one : r === 'few' ? few : many; }
+const T = {
+  az: { doc: 'Emalatxanalar · Azad Bilik', title: 'Emalatxanalar', sub: 'Nizami və Füzulinin rəsmləri harada çəkilib, 1380–1880', map: 'Xəritə', gallery: 'Qalereya', century: 'Əsr', all: 'Hamısı', allCities: 'Bütün şəhərlər',
+    cent: (c) => `${ROMAN[c]} əsr`, cities: (n) => `${n} şəhər`, mss: (n) => `${n} əlyazma`, minis: (n) => `${n} miniatür`, inGallery: (n) => `${n} miniatür qalereyada`,
+    patron: 'Hami', painters: 'Rəssamlar', held: 'Saxlanılır', probable: 'ehtimal', probableTitle: 'Atribusiya ehtimaldır', museums: 'muzeylər',
+    note: 'Əlyazmanın köçürüldüyü və rəsmlərinin çəkildiyi şəhər, alimlərin atribusiyasına görə. Şəhəri bilinməyən əlyazmalar (məsələn, Walters kolleksiyasının çoxu) xəritədə yoxdur.' },
+  ru: { doc: 'Мастерские · Azad Bilik', title: 'Мастерские', sub: 'Где иллюстрировали Низами и Физули, 1380–1880', map: 'Карта', gallery: 'Галерея', century: 'Век', all: 'Все', allCities: 'Все города',
+    cent: (c) => `${ROMAN[c]} век`, cities: (n) => `${n} ${plural(n, 'город', 'города', 'городов')}`, mss: (n) => `${n} ${plural(n, 'рукопись', 'рукописи', 'рукописей')}`, minis: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')}`, inGallery: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')} в галерее`,
+    patron: 'Заказчик', painters: 'Художники', held: 'Хранится', probable: 'предположительно', probableTitle: 'Атрибуция предположительная', museums: 'музеи',
+    note: 'Город, где рукопись переписана и проиллюстрирована, по атрибуции учёных. Рукописей, город которых неизвестен (например, большинства из собрания Уолтерса), на карте нет.' },
+  en: { doc: 'Workshops · Azad Bilik', title: 'Workshops', sub: 'Where Nizami and Fuzuli were painted, 1380–1880', map: 'Map', gallery: 'Gallery', century: 'Century', all: 'All', allCities: 'All cities',
+    cent: (c) => `${c}${[, 'st', 'nd', 'rd'][c % 10 * (c % 100 > 3 && c % 100 < 21 ? 0 : 1)] ?? 'th'} century`, cities: (n) => `${n} cit${n === 1 ? 'y' : 'ies'}`, mss: (n) => `${n} manuscript${n === 1 ? '' : 's'}`, minis: (n) => `${n} miniature${n === 1 ? '' : 's'}`, inGallery: (n) => `${n} miniature${n === 1 ? '' : 's'} in the gallery`,
+    patron: 'Patron', painters: 'Painters', held: 'Held by', probable: 'probable', probableTitle: 'Attribution uncertain', museums: 'museums',
+    note: 'The city where each manuscript was copied and painted, as scholars attribute it. Manuscripts of unknown city (most of the Walters ones) are not on the map.' },
+};
+const t = (k) => T[lang][k];
+let NAMES = { places: {}, dynasties: {} };
+const named = (table, en) => en ? ({ az: table[en]?.[0], ru: table[en]?.[1], en })[lang] ?? en : '';
+const placeName = (p) => named(NAMES.places, p);
+const dynasty = (m) => named(NAMES.dynasties, m.dynasty);
+function applyLang() {
+  document.documentElement.lang = lang;
+  document.title = t('doc');
+  document.querySelectorAll('[data-i18n]').forEach((el) => el.textContent = t(el.dataset.i18n));
+  document.querySelectorAll('[data-i18n-label]').forEach((el) => el.setAttribute('aria-label', t(el.dataset.i18nLabel)));
+  document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+  document.querySelectorAll('[data-keep-lang]').forEach((a) => { const u = new URL(a.getAttribute('href'), location.href); if (lang === 'az') u.searchParams.delete('lang'); else u.searchParams.set('lang', lang); a.href = u; });
+}
+applyLang();
+document.querySelectorAll('[data-lang]').forEach((b) => b.onclick = () => {
+  lang = b.dataset.lang;
+  try { localStorage.setItem('lang', lang); } catch {}
+  const u = new URL(location.href);
+  if (lang === 'az') u.searchParams.delete('lang'); else u.searchParams.set('lang', lang);
+  history.replaceState(null, '', u);
+  applyLang();
+  if (!manuscripts.length) return;
+  for (const l of map.getStyle().layers)
+    if (l.type === 'symbol' && l.layout?.['text-field'])
+      map.setLayoutProperty(l.id, 'text-field', ['coalesce', ['get', `name:${lang}`], ['get', lang === 'ru' ? 'name' : 'name:latin'], ['get', 'name']]);
+  drawHistogram(); render();
+});
 const when = (m) => m.yearStart ? (m.yearEnd && m.yearEnd !== m.yearStart ? `${m.yearStart}–${m.yearEnd}` : String(m.yearStart)) : '';
 
 let manuscripts = [], items = [], century = null, place = null;
@@ -147,7 +195,7 @@ const map = new maplibregl.Map({
   container: 'map',
   style: `https://tiles.openfreemap.org/styles/${dark ? 'dark' : 'positron'}`,
   bounds: [[40, 25], [75, 43]], minZoom: 2, maxZoom: 10,
-  attributionControl: { compact: true, customAttribution: '<a href="https://www.wikidata.org">Wikidata</a> · muzeylər · museums' },
+  attributionControl: { compact: true, customAttribution: `<a href="https://www.wikidata.org">Wikidata</a> · ${t('museums')}` },
 });
 map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom-right');
 const tip = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 10 });
@@ -159,13 +207,14 @@ map.on('style.load', () => {
     if (l.type === 'background') map.setPaintProperty(l.id, 'background-color', css('--land'));
     if (l.type === 'fill' && /water|ocean|lake/.test(l.id)) map.setPaintProperty(l.id, 'fill-color', css('--water'));
     if (l.type === 'symbol' && l.layout?.['text-field'])
-      map.setLayoutProperty(l.id, 'text-field', ['coalesce', ['get', 'name:az'], ['get', 'name:latin'], ['get', 'name']]);
+      map.setLayoutProperty(l.id, 'text-field', ['coalesce', ['get', `name:${lang}`], ['get', lang === 'ru' ? 'name' : 'name:latin'], ['get', 'name']]);
   }
 });
 
 map.on('load', async () => {
   const [cat, gallery] = await Promise.all([fetch('../data/manuscripts.json').then((r) => r.json()), fetch('../data/gallery.json').then((r) => r.json())]);
   items = gallery.items;
+  NAMES = gallery.names ?? NAMES;
   const count = new Map();
   for (const x of items) if (x.ms) count.set(x.ms, (count.get(x.ms) ?? 0) + 1);
   // A workshop needs a city and a date; prints, carpets and later collectors' albums are left out
@@ -182,7 +231,7 @@ map.on('load', async () => {
   map.on('mousemove', 'places', (e) => {
     map.getCanvas().style.cursor = 'pointer';
     const p = e.features[0].properties;
-    tip.setLngLat(e.features[0].geometry.coordinates).setHTML(`<strong>${esc(p.name)}</strong> · ${p.n} miniatür`).addTo(map);
+    tip.setLngLat(e.features[0].geometry.coordinates).setHTML(`<strong>${esc(p.name)}</strong> · ${t('minis')(p.n)}`).addTo(map);
   });
   map.on('mouseleave', 'places', () => { map.getCanvas().style.cursor = ''; tip.remove(); });
   map.on('click', 'places', (e) => select(e.features[0].properties.id));
@@ -212,30 +261,31 @@ function render() {
   const sel = gs.find((g) => g.id === place);
   document.getElementById('all').hidden = century == null;
   if (sel) {
-    el.innerHTML = `<button type="button" class="back" id="back">← Bütün şəhərlər <span lang="en">· All cities</span></button>
-      <h2>${esc(sel.name)} <small>${sel.manuscripts.length} əlyazma · ${sel.n} miniatür</small></h2>
+    el.innerHTML = `<button type="button" class="back" id="back">← ${t('allCities')}</button>
+      <h2>${esc(sel.name)} <small>${t('mss')(sel.manuscripts.length)} · ${t('minis')(sel.n)}</small></h2>
       ${sel.manuscripts.sort((a, b) => a.yearStart - b.yearStart).map(card).join('')}`;
     document.getElementById('back').onclick = () => select(null);
     return;
   }
   const total = gs.reduce((s, g) => s + g.n, 0);
-  el.innerHTML = `<h2>${century ? `${ROMAN[century]} əsr` : 'Bütün şəhərlər'} <small>${gs.length} şəhər · ${total} miniatür</small></h2>
+  el.innerHTML = `<h2>${century ? t('cent')(century) : t('allCities')} <small>${t('cities')(gs.length)} · ${t('minis')(total)}</small></h2>
     <ol class="places">${gs.map((g) => `<li><button type="button" data-id="${esc(g.id)}"><span class="name">${esc(g.name)}</span><span class="num">${g.n}</span>
       <span class="meta">${esc(g.manuscripts.sort((a, b) => b.n - a.n).slice(0, 2).map((m) => `${dynasty(m) ? dynasty(m) + ', ' : ''}${when(m)}`).join(' · '))}${g.manuscripts.length > 2 ? '…' : ''}</span></button></li>`).join('')}</ol>
-    <p class="note">Əlyazmanın köçürüldüyü və rəsmlərinin çəkildiyi şəhər, alimlərin atribusiyasına görə. Şəhəri bilinməyən əlyazmalar (məsələn, Walters kolleksiyasının çoxu) xəritədə yoxdur. <span lang="en">The city where each manuscript was copied and painted, as scholars attribute it. Manuscripts of unknown city (most of the Walters ones) are not on the map.</span></p>`;
+    <p class="note">${t('note')}</p>`;
   el.querySelectorAll('button[data-id]').forEach((b) => b.onclick = () => select(b.dataset.id));
 }
 
 // A manuscript: when, for whom, by whom, where it is now, and its paintings in the gallery
 function card(m) {
   const own = items.filter((x) => x.ms === m.id).sort((a, b) => (a.year ?? 0) - (b.year ?? 0));
-  const href = m.single ? `../#${encodeURIComponent(own[0]?.id ?? '')}` : `../?ms=${encodeURIComponent(own.find((x) => x.manuscript)?.manuscript ?? m.label)}`;
-  const rows = [['Hami', m.patron], ['Rəssamlar', m.painters?.join(', ')], ['Saxlanılır', m.holding]].filter(([, v]) => v);
+  const q = lang === 'az' ? '' : `lang=${lang}`;
+  const href = m.single ? `../${q ? '?' + q : ''}#${encodeURIComponent(own[0]?.id ?? '')}` : `../?ms=${encodeURIComponent(own.find((x) => x.manuscript)?.manuscript ?? m.label)}${q ? '&' + q : ''}`;
+  const rows = [[t('patron'), m.patron], [t('painters'), m.painters?.join(', ')], [t('held'), m.holding]].filter(([, v]) => v);
   return `<section class="ms"><h3>${esc(m.title || m.label)}</h3>
-    <p class="when">${esc([when(m), dynasty(m)].filter(Boolean).join(' · '))}${m.confidence !== 'high' ? ' · <span title="Atribusiya ehtimaldır · attribution uncertain">ehtimal</span>' : ''}</p>
+    <p class="when">${esc([when(m), dynasty(m)].filter(Boolean).join(' · '))}${m.confidence !== 'high' ? ` · <span title="${t('probableTitle')}">${t('probable')}</span>` : ''}</p>
     ${rows.length ? `<dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>` : ''}
-    <div class="thumbs">${own.slice(0, 8).map((x) => `<a href="../#${encodeURIComponent(x.id)}" title="${esc(x.title)}"><img src="${esc(x.thumb.startsWith('thumbs/') ? '../' + x.thumb : x.thumb)}" alt="${esc(x.title)}" loading="lazy" referrerpolicy="no-referrer"></a>`).join('')}</div>
-    <a class="go" href="${href}">${own.length} miniatür qalereyada →</a></section>`;
+    <div class="thumbs">${own.slice(0, 8).map((x) => `<a href="../${q ? '?' + q : ''}#${encodeURIComponent(x.id)}" title="${esc(x.title)}"><img src="${esc(x.thumb.startsWith('thumbs/') ? '../' + x.thumb : x.thumb)}" alt="${esc(x.title)}" loading="lazy" referrerpolicy="no-referrer"></a>`).join('')}</div>
+    <a class="go" href="${href}">${t('inGallery')(own.length)} →</a></section>`;
 }
 
 function select(id) {
@@ -252,7 +302,7 @@ function drawHistogram() {
   const count = (c) => manuscripts.filter((m) => m.century === c).reduce((s, m) => s + m.n, 0);
   const max = Math.max(...range.map(count));
   const hist = document.getElementById('hist');
-  hist.innerHTML = range.map((c) => `<button type="button" data-c="${c}" aria-pressed="${century === c}" aria-label="${ROMAN[c]} əsr: ${count(c)}" title="${ROMAN[c]} əsr · ${count(c)}"><span class="bar" style="height:${Math.sqrt(count(c) / max) * 100}%"></span></button>`).join('');
+  hist.innerHTML = range.map((c) => `<button type="button" data-c="${c}" aria-pressed="${century === c}" aria-label="${t('cent')(c)}: ${count(c)}" title="${t('cent')(c)} · ${count(c)}"><span class="bar" style="height:${Math.sqrt(count(c) / max) * 100}%"></span></button>`).join('');
   document.getElementById('axis').innerHTML = range.map((c) => `<span>${ROMAN[c]}</span>`).join('');
   hist.querySelectorAll('button').forEach((b) => b.onclick = () => { const c = +b.dataset.c; century = century === c ? null : c; place = null; drawHistogram(); render(); });
 }

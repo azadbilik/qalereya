@@ -31,7 +31,9 @@
   button, select { font: inherit; color: inherit; }
   button { background: none; border: 0; cursor: pointer; padding: 0; }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
-  [lang="en"] { color: var(--muted); }
+  .langs { display: inline-flex; gap: .15rem; }
+  .langs button { font-size: .6875rem; letter-spacing: .04em; padding: .1rem .3rem; border-radius: 2px; }
+  .langs button[aria-pressed="true"] { color: var(--ink); box-shadow: inset 0 -1px currentColor; }
   img { display: block; max-width: 100%; }
   [hidden] { display: none !important; }
 
@@ -45,7 +47,6 @@
   .hero { padding: 3.5rem 0 2.5rem; max-width: 46rem; }
   h1 { font: 400 clamp(2.5rem, 2rem + 2.5vw, 4rem)/1 var(--serif); letter-spacing: -.03em; }
   .lead { margin-top: 1.25rem; font: 300 1.25rem/1.45 var(--serif); }
-  .lead[lang="en"] { margin-top: .5rem; font-size: 1.0625rem; font-style: italic; }
 
   .bar { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
   .bar .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; padding-top: .75rem; padding-bottom: .75rem; }
@@ -65,7 +66,6 @@
   .scene + .scene { margin-top: 3rem; }
   .scene-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 1rem; padding-bottom: .6rem; border-bottom: 1px solid var(--rule); }
   .scene-head h2 { font: 400 1.5rem/1.2 var(--serif); letter-spacing: -.015em; }
-  .scene-head h2 [lang="en"] { display: block; font: 400 .8125rem/1.5 var(--sans); margin-top: .15rem; }
   .scene-head a { font-size: .8125rem; color: var(--muted); white-space: nowrap; }
 
   .grid { columns: 4 15rem; column-gap: 1.25rem; }
@@ -106,7 +106,6 @@
   .links { display: grid; gap: .5rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: .875rem; }
   .links a { font-weight: 500; text-decoration: none; }
   .links a:hover { color: var(--accent); }
-  .links [lang="en"] { font-weight: 400; font-size: .75rem; display: block; }
   .pos { font-size: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: auto; }
 
   @media (max-width: 48rem) {
@@ -119,7 +118,7 @@
     .filters { width: 100%; justify-content: space-between; gap: .5rem; }
     .filters select { min-width: 0; flex: 1; }
     .filters label { white-space: normal; }
-    .filters label [lang="en"] { display: none; }
+    header.top nav { gap: .75rem; flex-wrap: wrap; justify-content: flex-end; }
     .viewer { grid-template-columns: 1fr; grid-template-rows: 62vh auto; height: auto; min-height: 100%; }
     .stage img { inset: .5rem; width: calc(100% - 1rem); height: calc(100% - 4rem); }
     .stage .nav { top: auto; bottom: .75rem; translate: none; }
@@ -133,21 +132,20 @@
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a>
-    <nav><a href="emalatxana/">Emalatxanalar</a><a href="/xerite/">Xəritə</a><a href="https://kitabxana.az">Kitabxana</a></nav>
+    <nav><a href="emalatxana/" data-i18n="workshops" data-keep-lang>Emalatxanalar</a><a href="/xerite/" data-i18n="map" data-keep-lang>Xəritə</a><a href="https://kitabxana.az" data-i18n="library" id="kx">Kitabxana</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
   </header>
   <div class="hero">
-    <h1>Qalereya</h1>
-    <p class="lead">Nizami və Füzulinin poemalarına beş əsr ərzində çəkilmiş miniatürlər: Təbriz, Herat, Şiraz, İstanbul əlyazmalarından, muzeylərin açıq kolleksiyalarından.</p>
-    <p class="lead" lang="en">Five centuries of miniatures painted for the poems of Nizami and Fuzuli, from manuscripts made in Tabriz, Herat, Shiraz and Istanbul, out of museums' open collections.</p>
+    <h1 data-i18n="title">Qalereya</h1>
+    <p class="lead" data-i18n="lead">Nizami və Füzulinin poemalarına beş əsr ərzində çəkilmiş miniatürlər: Təbriz, Herat, Şiraz, İstanbul əlyazmalarından, muzeylərin açıq kolleksiyalarından.</p>
   </div>
 </div>
 
 <div class="bar">
   <div class="wrap">
-    <div class="poems" id="poems" role="group" aria-label="Poema · Poem"></div>
+    <div class="poems" id="poems" role="group" data-i18n-label="poem"></div>
     <div class="filters">
-      <select id="ms" aria-label="Əlyazma · Manuscript"></select>
-      <label><input type="checkbox" id="free"> Yalnız sərbəst lisenziya <span lang="en">· Free to reuse only</span></label>
+      <select id="ms" data-i18n-label="manuscript"></select>
+      <label><input type="checkbox" id="free"> <span data-i18n="freeOnly">Yalnız sərbəst lisenziya</span></label>
     </div>
   </div>
 </div>
@@ -159,17 +157,16 @@
 
 <footer>
   <div class="wrap">
-    <p>Şəkillər muzeylərin və Wikimedia Commons-un öz serverlərindən göstərilir; hər birinin mənbəyi və lisenziyası yanındadır. <a href="https://github.com/azadbilik/qalereya">GitHub</a></p>
-    <p lang="en">Images load from the museums' and Wikimedia Commons' own servers, each with its source and licence.</p>
+    <p><span data-i18n="footer">Şəkillər muzeylərin və Wikimedia Commons-un öz serverlərindən göstərilir; hər birinin mənbəyi və lisenziyası yanındadır.</span> <a href="https://github.com/azadbilik/qalereya">GitHub</a></p>
   </div>
 </footer>
 
-<dialog id="viewer" aria-label="Miniatür · Miniature">
+<dialog id="viewer" data-i18n-label="miniature">
   <div class="viewer">
     <div class="stage">
       <img id="v-img" alt="">
-      <button type="button" class="nav prev" id="v-prev" aria-label="Əvvəlki · Previous">←</button>
-      <button type="button" class="nav next" id="v-next" aria-label="Sonrakı · Next">→</button>
+      <button type="button" class="nav prev" id="v-prev" data-i18n-label="prev">←</button>
+      <button type="button" class="nav next" id="v-next" data-i18n-label="next">→</button>
     </div>
     <div class="info" id="v-info"></div>
   </div>
@@ -177,7 +174,61 @@
 
 <script>
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-const KX = 'https://kitabxana.az';
+// One language at a time: ?lang=, else the visitor's last choice on azadbilik.org, else Azerbaijani
+const LANGS = ['az', 'ru', 'en'];
+let lang = (() => {
+  const q = new URLSearchParams(location.search).get('lang');
+  if (LANGS.includes(q)) return q;
+  try { const s = localStorage.getItem('lang'); if (LANGS.includes(s)) return s; } catch {}
+  return 'az';
+})();
+const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX', 'XXI'];
+function plural(n, one, few, many) { const r = new Intl.PluralRules('ru').select(n); return r === 'one' ? one : r === 'few' ? few : many; }
+const T = {
+  az: { doc: 'Qalereya · Azad Bilik', title: 'Qalereya', lead: 'Nizami və Füzulinin poemalarına beş əsr ərzində çəkilmiş miniatürlər: Təbriz, Herat, Şiraz, İstanbul əlyazmalarından, muzeylərin açıq kolleksiyalarından.',
+    workshops: 'Emalatxanalar', map: 'Xəritə', library: 'Kitabxana', poem: 'Poema', manuscript: 'Əlyazma', allMs: 'Bütün əlyazmalar', freeOnly: 'Yalnız sərbəst lisenziya',
+    footer: 'Şəkillər muzeylərin və Wikimedia Commons-un öz serverlərindən göstərilir; hər birinin mənbəyi və lisenziyası yanındadır.',
+    miniature: 'Miniatür', prev: 'Əvvəlki', next: 'Sonrakı', all: 'Hamısı', other: 'Digər', count: (n) => `${n} miniatür`, empty: 'Heç nə tapılmadı.', noScene: 'Səhnəsi müəyyənləşdirilməyənlər',
+    readChapter: 'Fəsli oxu', undated: 'Tarixsiz', cent: (c) => `${ROMAN[c]} əsr`,
+    date: 'Tarix', painted: 'Çəkilib', artist: 'Rəssam', ms: 'Əlyazma', medium: 'Material', held: 'Mənbə', credit: 'Kredit', licence: 'Lisenziya', close: 'Bağla',
+    readScene: 'Bu səhnəni kitabxana.az-da oxu', readPoem: 'Poemanı kitabxana.az-da oxu', atSource: 'Mənbədə bax', full: 'Tam ölçüdə' },
+  ru: { doc: 'Галерея · Azad Bilik', title: 'Галерея', lead: 'Пять веков миниатюр к поэмам Низами и Физули — из рукописей, созданных в Тебризе, Герате, Ширазе и Стамбуле, из открытых коллекций музеев.',
+    workshops: 'Мастерские', map: 'Карта', library: 'Библиотека', poem: 'Поэма', manuscript: 'Рукопись', allMs: 'Все рукописи', freeOnly: 'Только свободная лицензия',
+    footer: 'Изображения загружаются с серверов музеев и Викисклада; у каждого указаны источник и лицензия.',
+    miniature: 'Миниатюра', prev: 'Предыдущая', next: 'Следующая', all: 'Все', other: 'Другое', count: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')}`, empty: 'Ничего не найдено.', noScene: 'Сцена не определена',
+    readChapter: 'Читать главу', undated: 'Без даты', cent: (c) => `${ROMAN[c]} век`,
+    date: 'Дата', painted: 'Создана', artist: 'Художник', ms: 'Рукопись', medium: 'Материал', held: 'Собрание', credit: 'Авторство', licence: 'Лицензия', close: 'Закрыть',
+    readScene: 'Читать эту сцену на kitabxana.az', readPoem: 'Читать поэму на kitabxana.az', atSource: 'В источнике', full: 'Полный размер' },
+  en: { doc: 'Gallery · Azad Bilik', title: 'Gallery', lead: 'Five centuries of miniatures painted for the poems of Nizami and Fuzuli, from manuscripts made in Tabriz, Herat, Shiraz and Istanbul, out of museums\' open collections.',
+    workshops: 'Workshops', map: 'Map', library: 'Library', poem: 'Poem', manuscript: 'Manuscript', allMs: 'All manuscripts', freeOnly: 'Free to reuse only',
+    footer: 'Images load from the museums\' and Wikimedia Commons\' own servers, each with its source and licence.',
+    miniature: 'Miniature', prev: 'Previous', next: 'Next', all: 'All', other: 'Other', count: (n) => `${n} miniature${n === 1 ? '' : 's'}`, empty: 'Nothing matches.', noScene: 'Scene not identified',
+    readChapter: 'Read the chapter', undated: 'Undated', cent: (c) => `${c}${[, 'st', 'nd', 'rd'][c % 10 * (c % 100 > 3 && c % 100 < 21 ? 0 : 1)] ?? 'th'} century`,
+    date: 'Date', painted: 'Painted in', artist: 'Artist', ms: 'Manuscript', medium: 'Medium', held: 'Held by', credit: 'Credit', licence: 'Licence', close: 'Close',
+    readScene: 'Read this passage on kitabxana.az', readPoem: 'Read the poem on kitabxana.az', atSource: 'At the source', full: 'Full size' },
+};
+const t = (k) => T[lang][k];
+const KX = () => `https://kitabxana.az${lang === 'az' ? '' : '/' + lang}`;
+const tr = (o) => o?.[lang] || o?.az || '';
+const whenOf = (x) => x.wc ? t('cent')(x.wc) : x.when;
+function applyLang() {
+  document.documentElement.lang = lang;
+  document.title = t('doc');
+  document.querySelectorAll('[data-i18n]').forEach((el) => el.textContent = t(el.dataset.i18n));
+  document.querySelectorAll('[data-i18n-label]').forEach((el) => el.setAttribute('aria-label', t(el.dataset.i18nLabel)));
+  document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+  document.querySelectorAll('[data-keep-lang]').forEach((a) => { const u = new URL(a.getAttribute('href'), location.href); if (lang === 'az') u.searchParams.delete('lang'); else u.searchParams.set('lang', lang); a.href = u; });
+  document.getElementById('kx').href = KX();
+}
+applyLang();
+document.querySelectorAll('[data-lang]').forEach((b) => b.onclick = () => {
+  lang = b.dataset.lang;
+  try { localStorage.setItem('lang', lang); } catch {}
+  applyLang();
+  if (!data) return;
+  drawPoems(); drawFilters(); render(true);
+  if (dlg.open && view[at]) show(view[at].id);
+});
 const OTHER = '_';
 let data, view = [], at = -1;
 const state = { poem: null, ms: '', free: false };
@@ -199,9 +250,9 @@ const isOther = (x) => !x.poem || !data.poemOf.has(x.poem);
 function drawPoems() {
   const other = data.items.filter(isOther).length;
   const btn = (slug, label, n) => `<button type="button" data-p="${slug ?? ''}" aria-pressed="${(state.poem ?? '') === (slug ?? '')}">${label}<small>${n}</small></button>`;
-  document.getElementById('poems').innerHTML = btn(null, 'Hamısı', data.items.length)
-    + data.poems.map((p) => btn(p.slug, esc(p.az), p.count)).join('')
-    + (other ? btn(OTHER, 'Digər', other) : '');
+  document.getElementById('poems').innerHTML = btn(null, t('all'), data.items.length)
+    + data.poems.map((p) => btn(p.slug, esc(tr(p)), p.count)).join('')
+    + (other ? btn(OTHER, t('other'), other) : '');
   document.querySelectorAll('#poems button').forEach((b) => b.onclick = () => {
     state.poem = b.dataset.p || null;
     document.querySelectorAll('#poems button').forEach((x) => x.setAttribute('aria-pressed', x === b));
@@ -217,7 +268,7 @@ function drawFilters() {
   const ms = Object.entries(counts).sort((a, b) => b[1] - a[1]);
   if (state.ms && !counts[state.ms]) state.ms = '';
   const sel = document.getElementById('ms');
-  sel.innerHTML = `<option value="">Bütün əlyazmalar · All manuscripts</option>` + ms.map(([m, n]) => `<option value="${esc(m)}"${m === state.ms ? ' selected' : ''}>${esc(m)} (${n})</option>`).join('');
+  sel.innerHTML = `<option value="">${t('allMs')}</option>` + ms.map(([m, n]) => `<option value="${esc(m)}"${m === state.ms ? ' selected' : ''}>${esc(m)} (${n})</option>`).join('');
   sel.hidden = ms.length === 0;
   sel.onchange = () => { state.ms = sel.value; render(true); };
   const free = document.getElementById('free');
@@ -232,6 +283,7 @@ function keepUrl() {
   if (state.poem) p.set('p', state.poem);
   if (state.ms) p.set('ms', state.ms);
   if (state.free) p.set('free', '1');
+  if (lang !== 'az') p.set('lang', lang);
   const q = p.toString();
   history.replaceState(null, '', (q ? `?${q}` : location.pathname) + location.hash);
 }
@@ -241,16 +293,16 @@ function render(fromUser) {
   const items = data.items.filter((x) => inPoem(x) && (!state.ms || x.manuscript === state.ms) && (!state.free || x.free));
   const poem = data.poemOf.get(state.poem);
   const el = document.getElementById('content');
-  document.getElementById('count').textContent = `${items.length} miniatür${poem ? ` · ${poem.az}` : ''}`;
-  if (!items.length) { el.innerHTML = '<p class="empty">Heç nə tapılmadı. <span lang="en">Nothing matches.</span></p>'; view = []; return; }
+  document.getElementById('count').textContent = `${t('count')(items.length)}${poem ? ` · ${tr(poem)}` : ''}`;
+  if (!items.length) { el.innerHTML = `<p class="empty">${t('empty')}</p>`; view = []; return; }
 
   // A poem with a scene catalogue reads in story order, scene by scene, each linked to its chapter
   const scenes = poem?.scenes?.filter((s) => items.some((x) => x.scene === s.id)) ?? [];
   if (scenes.length) {
     const rest = items.filter((x) => !x.scene || !scenes.some((s) => s.id === x.scene));
     view = [...scenes.flatMap((s) => items.filter((x) => x.scene === s.id)), ...rest];
-    el.innerHTML = scenes.map((s) => section(s.az, s.en, s.chapters[0], items.filter((x) => x.scene === s.id))).join('')
-      + (rest.length ? section('Səhnəsi müəyyənləşdirilməyənlər', 'Scene not identified', null, rest) : '');
+    el.innerHTML = scenes.map((s) => section(tr(s), s.chapters[0], items.filter((x) => x.scene === s.id))).join('')
+      + (rest.length ? section(t('noScene'), null, rest) : '');
   } else {
     view = items;
     el.innerHTML = `<div class="grid">${items.map(card).join('')}</div>`;
@@ -258,17 +310,17 @@ function render(fromUser) {
   wire(el);
 }
 
-function section(az, en, chapter, items) {
-  return `<section class="scene"><div class="scene-head"><h2>${esc(az)}<span lang="en">${esc(en)}</span></h2>${chapter ? `<a href="${KX}/works/${chapter}">Fəsli oxu ↗</a>` : ''}</div>
+function section(name, chapter, items) {
+  return `<section class="scene"><div class="scene-head"><h2>${esc(name)}</h2>${chapter ? `<a href="${KX()}/works/${chapter}">${t('readChapter')} ↗</a>` : ''}</div>
     <div class="strip">${items.map((x) => card(x, true)).join('')}</div></section>`;
 }
 
 // In a scene the heading already says what is painted: the caption says where and when
 function card(x, inScene) {
-  const t = inScene ? (x.when ?? 'Tarixsiz') : x.title;
-  const meta = inScene ? x.manuscript : [x.when ?? x.date, x.manuscript ?? x.museum].filter(Boolean).join(' · ');
+  const head = inScene ? (whenOf(x) ?? t('undated')) : x.title;
+  const meta = inScene ? x.manuscript : [whenOf(x) ?? x.date, x.manuscript ?? x.museum].filter(Boolean).join(' · ');
   return `<button type="button" class="card" data-id="${esc(x.id)}" title="${esc(x.title)}"><div class="frame"><img src="${esc(x.thumb)}" alt="${esc(x.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-    <p class="t">${esc(t)}</p><p class="m">${esc(meta ?? '')}</p></button>`;
+    <p class="t">${esc(head)}</p><p class="m">${esc(meta ?? '')}</p></button>`;
 }
 
 function wire(el) {
@@ -293,20 +345,20 @@ function show(id) {
   full.src = x.image;
   const poem = data.poemOf.get(x.poem);
   const scene = poem?.scenes?.find((s) => s.id === x.scene);
-  const read = x.chapter ? `${KX}/works/${x.chapter}` : scene?.chapters?.[0] ? `${KX}/works/${scene.chapters[0]}` : x.poem ? `${KX}/collections/${x.poem}` : null;
+  const read = x.chapter ? `${KX()}/works/${x.chapter}` : scene?.chapters?.[0] ? `${KX()}/works/${scene.chapters[0]}` : x.poem ? `${KX()}/collections/${x.poem}` : null;
   const artists = x.artists && !/^(unknown|anonymous|unidentified)/i.test(x.artists) ? x.artists : null;
-  const rows = [['Tarix', x.date], ['Rəssam', artists], ['Əlyazma', x.manuscript], ['Material', x.medium], ['Mənbə', x.museum], ['Kredit', x.credit]].filter(([, v]) => v);
+  const rows = [[t('date'), esc(x.date)], [t('artist'), esc(artists)], [t('ms'), esc(x.manuscript)], [t('medium'), esc(x.medium)], [t('held'), esc(x.museum)], [t('credit'), esc(x.credit)]].filter(([, v]) => v);
   // Where it was painted, linking to the workshops map
-  if (x.place) rows.splice(1, 0, ['Çəkilib', `<a href="emalatxana/">${esc(x.place.city)}</a>${x.place.dynasty ? ` · ${esc(x.place.dynasty)}` : ''}`]);
+  if (x.place) rows.splice(1, 0, [t('painted'), `<a href="emalatxana/${lang === 'az' ? '' : '?lang=' + lang}">${esc(tr(x.place.city))}</a>${x.place.dynasty ? ` · ${esc(tr(x.place.dynasty))}` : ''}`]);
   document.getElementById('v-info').innerHTML = `
-    <button type="button" class="close" id="v-close" autofocus>Bağla · Close ✕</button>
-    <div>${scene ? `<p class="scene-name">${esc(scene.az)}</p>` : ''}<h2>${esc(x.title)}</h2>${poem ? `<p class="scene-name">${esc(poem.az)}</p>` : ''}</div>
-    <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${k === 'Çəkilib' ? v : esc(v)}</dd>`).join('')}
-      <dt>Lisenziya</dt><dd><span class="badge${x.free ? '' : ' nc'}">${esc(x.license)}</span></dd></dl>
+    <button type="button" class="close" id="v-close" autofocus>${t('close')} ✕</button>
+    <div>${scene ? `<p class="scene-name">${esc(tr(scene))}</p>` : ''}<h2>${esc(x.title)}</h2>${poem ? `<p class="scene-name">${esc(tr(poem))}</p>` : ''}</div>
+    <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}
+      <dt>${t('licence')}</dt><dd><span class="badge${x.free ? '' : ' nc'}">${esc(x.license)}</span></dd></dl>
     <div class="links">
-      ${read ? `<a href="${read}">${x.chapter || scene ? 'Bu səhnəni kitabxana.az-da oxu' : 'Poemanı kitabxana.az-da oxu'} →<span lang="en">Read ${x.chapter || scene ? 'this passage' : 'the poem'} on kitabxana.az</span></a>` : ''}
-      <a href="${esc(x.source)}" target="_blank" rel="noopener">Mənbədə bax ↗<span lang="en">At the source</span></a>
-      <a href="${esc(x.image)}" target="_blank" rel="noopener">Tam ölçüdə ↗<span lang="en">Full size</span></a>
+      ${read ? `<a href="${read}">${x.chapter || scene ? t('readScene') : t('readPoem')} →</a>` : ''}
+      <a href="${esc(x.source)}" target="_blank" rel="noopener">${t('atSource')} ↗</a>
+      <a href="${esc(x.image)}" target="_blank" rel="noopener">${t('full')} ↗</a>
     </div>
     <p class="pos">${at + 1} / ${view.length}</p>`;
   document.getElementById('v-close').onclick = () => dlg.close();

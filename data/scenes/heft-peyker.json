@@ -3,6 +3,7 @@
     "id": "miraj",
     "az": "Peyğəmbərin meracı",
     "en": "The Prophet's Night Journey (Mi'raj)",
+    "ru": "Вознесение Пророка (Мирадж)",
     "chapters": [
       "nizami-yeddi-gozel-3"
     ],
@@ -16,6 +17,7 @@
     "id": "building-of-khawarnaq",
     "az": "Simnar Nemana Xəvərnəq qəsrini tikir",
     "en": "Simnar builds the palace of Khawarnaq for Nu'man",
+    "ru": "Симнар строит для Нумана дворец Хаварнак",
     "chapters": [
       "nizami-yeddi-gozel-9"
     ],
@@ -30,6 +32,7 @@
     "id": "simnar-thrown-from-roof",
     "az": "Neman Simnarı qəsrin damından atdırır",
     "en": "Nu'man has Simnar thrown from the roof of Khawarnaq",
+    "ru": "Нуман приказывает сбросить Симнара с крыши Хаварнака",
     "chapters": [
       "nizami-yeddi-gozel-9"
     ],
@@ -43,6 +46,7 @@
     "id": "bahram-hunts-onagers",
     "az": "Bəhram gurları ovlayıb damğalayır",
     "en": "Bahram hunts onagers and brands them",
+    "ru": "Бахрам охотится на онагров и клеймит их",
     "chapters": [
       "nizami-yeddi-gozel-11"
     ],
@@ -57,6 +61,7 @@
     "id": "lion-and-onager-one-arrow",
     "az": "Bəhram bir oxla şiri və guru vurur",
     "en": "Bahram shoots a lion and an onager with one arrow",
+    "ru": "Бахрам пронзает одной стрелой льва и онагра",
     "chapters": [
       "nizami-yeddi-gozel-11"
     ],
@@ -71,6 +76,7 @@
     "id": "bahram-kills-dragon",
     "az": "Bəhram əjdahanı öldürüb xəzinə tapır",
     "en": "Bahram kills the dragon and finds the treasure",
+    "ru": "Бахрам убивает дракона и находит клад",
     "chapters": [
       "nizami-yeddi-gozel-12"
     ],
@@ -84,6 +90,7 @@
     "id": "seven-portraits",
     "az": "Bəhram Xəvərnəqdə yeddi gözəlin şəklini tapır",
     "en": "Bahram finds the portraits of the seven princesses in Khawarnaq",
+    "ru": "Бахрам находит в Хаварнаке портреты семи принцесс",
     "chapters": [
       "nizami-yeddi-gozel-13"
     ],
@@ -97,6 +104,7 @@
     "id": "crown-between-lions",
     "az": "Bəhram iki şiri öldürüb tacı götürür",
     "en": "Bahram kills two lions and takes the crown",
+    "ru": "Бахрам убивает двух львов и берёт корону",
     "chapters": [
       "nizami-yeddi-gozel-18"
     ],
@@ -110,6 +118,7 @@
     "id": "bahram-enthroned",
     "az": "Bəhram atasının taxtına oturur",
     "en": "Bahram enthroned in his father's place",
+    "ru": "Бахрам на троне отца",
     "chapters": [
       "nizami-yeddi-gozel-19"
     ],
@@ -123,6 +132,7 @@
     "id": "fitna-hunt",
     "az": "Bəhram Fitnənin gözü önündə gurun dırnağını qulağına tikir",
     "en": "Bahram pins the onager's hoof to its ear before Fitna",
+    "ru": "Бахрам пригвождает копыто онагра к уху перед Фитне",
     "chapters": [
       "nizami-yeddi-gozel-20"
     ],
@@ -138,6 +148,7 @@
     "id": "fitna-carries-cow",
     "az": "Fitnə öküzü çiynində altmış pillə yuxarı qaldırır",
     "en": "Fitna carries the cow up the sixty stairs",
+    "ru": "Фитне несёт корову по шестидесяти ступеням",
     "chapters": [
       "nizami-yeddi-gozel-21"
     ],
@@ -152,6 +163,7 @@
     "id": "shida-and-the-pavilions",
     "az": "Bəhram Şidəni qonaq edir: yeddi günbəzin tikilməsi",
     "en": "Bahram entertains Shida, the builder of the seven pavilions",
+    "ru": "Бахрам принимает Шиду, строителя семи павильонов",
     "chapters": [
       "nizami-yeddi-gozel-25"
     ],
@@ -165,6 +177,7 @@
     "id": "black-pavilion",
     "az": "Bəhram Qara günbəzdə hind gözəli ilə",
     "en": "Bahram in the black pavilion with the Indian princess (Saturday)",
+    "ru": "Бахрам в Чёрном павильоне с индийской принцессой (суббота)",
     "chapters": [
       "nizami-yeddi-gozel-26"
     ],
@@ -179,6 +192,7 @@
     "id": "turktaz-garden",
     "az": "Qara geyən şah pərilər bağında",
     "en": "The king in black in the garden of the fairies (the Indian princess's tale)",
+    "ru": "Король в чёрном в саду пери (рассказ индийской принцессы)",
     "chapters": [
       "nizami-yeddi-gozel-26"
     ],
@@ -192,6 +206,7 @@
     "id": "yellow-pavilion",
     "az": "Bəhram Sarı günbəzdə Rum gözəli ilə",
     "en": "Bahram in the yellow pavilion with the Byzantine princess (Sunday)",
+    "ru": "Бахрам в Жёлтом павильоне с византийской принцессой (воскресенье)",
     "chapters": [
       "nizami-yeddi-gozel-27"
     ],
@@ -205,6 +220,7 @@
     "id": "green-pavilion",
     "az": "Bəhram Yaşıl günbəzdə xarəzmli gözəl ilə",
     "en": "Bahram in the green pavilion with the Khwarazmian princess (Monday)",
+    "ru": "Бахрам в Зелёном павильоне с хорезмийской принцессой (понедельник)",
     "chapters": [
       "nizami-yeddi-gozel-28"
     ],
@@ -219,6 +235,7 @@
     "id": "bishr-and-malikha",
     "az": "Məlixa quyuda boğulur (Bişr hekayəti)",
     "en": "Malikha drowns in the well (the tale of Bishr)",
+    "ru": "Малиха тонет в колодце (рассказ о Бишре)",
     "chapters": [
       "nizami-yeddi-gozel-28"
     ],
@@ -232,6 +249,7 @@
     "id": "red-pavilion",
     "az": "Bəhram Qırmızı günbəzdə slavyan gözəli ilə",
     "en": "Bahram in the red pavilion with the Slavic princess (Tuesday)",
+    "ru": "Бахрам в Красном павильоне со славянской принцессой (вторник)",
     "chapters": [
       "nizami-yeddi-gozel-29"
     ],
@@ -246,6 +264,7 @@
     "id": "turquoise-pavilion",
     "az": "Bəhram Firuzəyi günbəzdə məğribli gözəl ilə",
     "en": "Bahram in the turquoise pavilion with the Maghribi princess (Wednesday)",
+    "ru": "Бахрам в Бирюзовом павильоне с магрибской принцессой (среда)",
     "chapters": [
       "nizami-yeddi-gozel-30"
     ],
@@ -260,6 +279,7 @@
     "id": "mahan-and-the-demon",
     "az": "Mahanın gözəli əjdahaya dönür",
     "en": "Mahan's beloved turns into a demon",
+    "ru": "Возлюбленная Махана превращается в дива",
     "chapters": [
       "nizami-yeddi-gozel-30"
     ],
@@ -273,6 +293,7 @@
     "id": "sandalwood-pavilion",
     "az": "Bəhram Səndəli günbəzdə Çin gözəli ilə",
     "en": "Bahram in the sandalwood pavilion with the Chinese princess (Thursday)",
+    "ru": "Бахрам в Сандаловом павильоне с китайской принцессой (четверг)",
     "chapters": [
       "nizami-yeddi-gozel-31"
     ],
@@ -286,6 +307,7 @@
     "id": "white-pavilion",
     "az": "Bəhram Ağ günbəzdə iranlı gözəl ilə",
     "en": "Bahram in the white pavilion with the Persian princess (Friday)",
+    "ru": "Бахрам в Белом павильоне с персидской принцессой (пятница)",
     "chapters": [
       "nizami-yeddi-gozel-32"
     ],
@@ -300,6 +322,7 @@
     "id": "garden-maidens-bathing",
     "az": "Bağ sahibi hovuzda çimən qızları görür",
     "en": "The owner of the garden sees the maidens bathing in his pool",
+    "ru": "Хозяин сада видит девушек, купающихся в его бассейне",
     "chapters": [
       "nizami-yeddi-gozel-32"
     ],
@@ -312,6 +335,7 @@
     "id": "shepherd-and-dog",
     "az": "Bəhram itini ağacdan asmış çobanla",
     "en": "Bahram and the shepherd who hanged his dog",
+    "ru": "Бахрам и пастух, повесивший собаку",
     "chapters": [
       "nizami-yeddi-gozel-34"
     ],
@@ -325,6 +349,7 @@
     "id": "vizier-hanged",
     "az": "Zalım vəzirin dar ağacından asılması",
     "en": "The unjust vizier is hanged",
+    "ru": "Несправедливого визиря вешают",
     "chapters": [
       "nizami-yeddi-gozel-36"
     ],
@@ -337,6 +362,7 @@
     "id": "bahram-vanishes-in-cave",
     "az": "Bəhram son ovda mağarada yox olur",
     "en": "Bahram's last hunt: he follows an onager into a cave and vanishes",
+    "ru": "Последняя охота Бахрама: за онагром он уходит в пещеру и исчезает",
     "chapters": [
       "nizami-yeddi-gozel-37"
     ],

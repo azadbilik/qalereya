@@ -3,6 +3,7 @@
     "id": "miraj",
     "az": "Peyğəmbərin meracı",
     "en": "The Prophet's Night Journey (Mi'raj)",
+    "ru": "Вознесение Пророка (Мирадж)",
     "chapters": [
       "nizami-serefname-4"
     ],
@@ -16,6 +17,7 @@
     "id": "birth-of-iskandar",
     "az": "İskəndərin doğulması",
     "en": "The birth of Iskandar",
+    "ru": "Рождение Искандера",
     "chapters": [
       "nizami-serefname-12"
     ],
@@ -28,6 +30,7 @@
     "id": "iskandar-at-school",
     "az": "İskəndər Ərəstu ilə birlikdə dərs alır",
     "en": "Iskandar is taught with Aristotle by Nicomachus",
+    "ru": "Никомах учит Искандера вместе с Аристотелем",
     "chapters": [
       "nizami-serefname-13"
     ],
@@ -41,6 +44,7 @@
     "id": "iskandar-enthroned",
     "az": "İskəndər taxta çıxır",
     "en": "Iskandar enthroned",
+    "ru": "Искандер на троне",
     "chapters": [
       "nizami-serefname-14",
       "nizami-serefname-27",
@@ -56,6 +60,7 @@
     "id": "egyptians-plead",
     "az": "Misirlilər zəncilərdən İskəndərə şikayət edir",
     "en": "The Egyptians plead with Iskandar against the Zangis",
+    "ru": "Египтяне жалуются Искандеру на зинджей",
     "chapters": [
       "nizami-serefname-15"
     ],
@@ -68,6 +73,7 @@
     "id": "war-with-zangis",
     "az": "İskəndərin zəncilərlə döyüşü",
     "en": "Iskandar battles the Zangis",
+    "ru": "Искандер сражается с зинджами",
     "chapters": [
       "nizami-serefname-16",
       "nizami-serefname-17"
@@ -84,6 +90,7 @@
     "id": "invention-of-mirror",
     "az": "İskəndər güzgünü yaradır",
     "en": "Iskandar invents the mirror",
+    "ru": "Искандер изобретает зеркало",
     "chapters": [
       "nizami-serefname-19"
     ],
@@ -96,6 +103,7 @@
     "id": "dara-demands-tribute",
     "az": "Dara İskəndərdən xərac istəyir",
     "en": "Dara demands tribute; Dara's letter",
+    "ru": "Дара требует дани; письмо Дары",
     "chapters": [
       "nizami-serefname-20",
       "nizami-serefname-23"
@@ -110,6 +118,7 @@
     "id": "battle-with-dara",
     "az": "İskəndərin Dara ilə döyüşü",
     "en": "Iskandar battles Dara",
+    "ru": "Искандер сражается с Дарой",
     "chapters": [
       "nizami-serefname-25"
     ],
@@ -123,6 +132,7 @@
     "id": "death-of-dara",
     "az": "Dara İskəndərin qucağında ölür",
     "en": "Dara dies in Iskandar's arms",
+    "ru": "Дара умирает на руках Искандера",
     "chapters": [
       "nizami-serefname-26"
     ],
@@ -137,6 +147,7 @@
     "id": "fire-temples-destroyed",
     "az": "İskəndər atəşkədələri dağıdır",
     "en": "Iskandar destroys the fire temples",
+    "ru": "Искандер разрушает храмы огня",
     "chapters": [
       "nizami-serefname-28"
     ],
@@ -149,6 +160,7 @@
     "id": "marriage-to-rawshanak",
     "az": "İskəndər Rövşənəklə evlənir",
     "en": "Iskandar marries Rawshanak",
+    "ru": "Искандер женится на Роушанак",
     "chapters": [
       "nizami-serefname-29"
     ],
@@ -161,6 +173,7 @@
     "id": "iskandar-at-kaaba",
     "az": "İskəndər Kəbəni ziyarət edir",
     "en": "Iskandar at the Ka'ba",
+    "ru": "Искандер у Каабы",
     "chapters": [
       "nizami-serefname-32"
     ],
@@ -173,6 +186,7 @@
     "id": "iskandar-meets-nushaba",
     "az": "İskəndər elçi libasında Bərdədə Nüşabənin sarayına gəlir",
     "en": "Iskandar, disguised as his own envoy, meets Nushaba in Barda'a",
+    "ru": "Искандер, выдавая себя за собственного посла, встречает Нушабе в Бердаа",
     "chapters": [
       "nizami-serefname-33"
     ],
@@ -187,6 +201,7 @@
     "id": "nushaba-shows-portrait",
     "az": "Nüşabə İskəndərə öz şəklini göstərir",
     "en": "Nushaba shows Iskandar his own portrait",
+    "ru": "Нушабе показывает Искандеру его портрет",
     "chapters": [
       "nizami-serefname-33"
     ],
@@ -199,6 +214,7 @@
     "id": "nushaba-jewel-banquet",
     "az": "Nüşabə İskəndərin qabağına daş-qaş düzür",
     "en": "Nushaba sets a tray of jewels before Iskandar",
+    "ru": "Нушабе ставит перед Искандером поднос с драгоценностями",
     "chapters": [
       "nizami-serefname-33"
     ],
@@ -211,6 +227,7 @@
     "id": "nushaba-feast",
     "az": "İskəndərin Nüşabə ilə bəzmi",
     "en": "Iskandar feasts Nushaba",
+    "ru": "Искандер угощает Нушабе",
     "chapters": [
       "nizami-serefname-34"
     ],
@@ -225,6 +242,7 @@
     "id": "siege-of-darband",
     "az": "İskəndər Dərbənd qalasını mühasirəyə alır",
     "en": "Iskandar besieges the fortress of Darband",
+    "ru": "Искандер осаждает крепость Дарбанд",
     "chapters": [
       "nizami-serefname-36"
     ],
@@ -237,6 +255,7 @@
     "id": "darband-hermit",
     "az": "İskəndər köhüldə zahidin yanına gedir",
     "en": "Iskandar visits the hermit in his cave",
+    "ru": "Искандер посещает отшельника в пещере",
     "chapters": [
       "nizami-serefname-36"
     ],
@@ -251,6 +270,7 @@
     "id": "kay-khusraw-cave",
     "az": "İskəndər Keyxosrovun köhülünə gedir",
     "en": "Iskandar at the cave of Kay Khusraw",
+    "ru": "Искандер в пещере Кейхосрова",
     "chapters": [
       "nizami-serefname-38"
     ],
@@ -263,6 +283,7 @@
     "id": "kayds-daughter",
     "az": "Hind şahı Keyd qızını İskəndərə verir",
     "en": "Kayd of India gives Iskandar his daughter",
+    "ru": "Кайд Индийский отдаёт Искандеру дочь",
     "chapters": [
       "nizami-serefname-41"
     ],
@@ -275,6 +296,7 @@
     "id": "hunt-on-way-to-china",
     "az": "İskəndər Çin yolunda ov edir",
     "en": "Iskandar hunts on his way to China",
+    "ru": "Искандер охотится по пути в Китай",
     "chapters": [
       "nizami-serefname-42"
     ],
@@ -289,6 +311,7 @@
     "id": "khaqan-comes-as-envoy",
     "az": "Xaqan elçi libasında İskəndərin yanına gəlir",
     "en": "The Khaqan of China comes to Iskandar as his own envoy",
+    "ru": "Хакан Китая приходит к Искандеру как собственный посол",
     "chapters": [
       "nizami-serefname-43"
     ],
@@ -301,6 +324,7 @@
     "id": "painting-contest",
     "az": "Rum və Çin nəqqaşlarının yarışı",
     "en": "The contest of the Greek and Chinese painters",
+    "ru": "Состязание греческих и китайских художников",
     "chapters": [
       "nizami-serefname-44"
     ],
@@ -313,6 +337,7 @@
     "id": "khaqan-feast",
     "az": "Xaqan İskəndərə qonaqlıq verir",
     "en": "The Khaqan feasts Iskandar",
+    "ru": "Хакан угощает Искандера",
     "chapters": [
       "nizami-serefname-45"
     ],
@@ -326,6 +351,7 @@
     "id": "war-with-rus",
     "az": "İskəndərin ruslarla döyüşləri",
     "en": "Iskandar's battles with the Rus",
+    "ru": "Сражения Искандера с русами",
     "chapters": [
       "nizami-serefname-49",
       "nizami-serefname-50",
@@ -347,6 +373,7 @@
     "id": "iskandar-lassoes-the-div",
     "az": "İskəndər rusların divini kəməndlə tutur",
     "en": "Iskandar lassoes the Rus giant",
+    "ru": "Искандер заарканивает великана-руса",
     "chapters": [
       "nizami-serefname-55"
     ],
@@ -360,6 +387,7 @@
     "id": "nushaba-freed",
     "az": "Nüşabə əsirlikdən qurtarılır",
     "en": "Nushaba is set free",
+    "ru": "Нушабе получает свободу",
     "chapters": [
       "nizami-serefname-57"
     ],
@@ -372,6 +400,7 @@
     "id": "iskandar-and-chinese-girl",
     "az": "İskəndər və çinli kəniz",
     "en": "Iskandar and the Chinese slave girl",
+    "ru": "Искандер и китайская рабыня",
     "chapters": [
       "nizami-serefname-58"
     ],
@@ -385,6 +414,7 @@
     "id": "khizr-at-fountain",
     "az": "Xızır və İlyas dirilik suyunu tapır",
     "en": "Khizr and Ilyas find the Water of Life",
+    "ru": "Хизр и Ильяс находят живую воду",
     "chapters": [
       "nizami-serefname-60"
     ],
@@ -399,6 +429,7 @@
     "id": "weighing-the-stone",
     "az": "Zülmətdən gətirilən daş tərəzidə çəkilir",
     "en": "The stone from the Darkness is weighed",
+    "ru": "Взвешивание камня из Тьмы",
     "chapters": [
       "nizami-serefname-61"
     ],
@@ -411,6 +442,7 @@
     "id": "city-without-death",
     "az": "İskəndərə ölümsüz şəhərdən danışırlar",
     "en": "Iskandar is told of the city without death",
+    "ru": "Искандеру рассказывают о городе без смерти",
     "chapters": [
       "nizami-serefname-61"
     ],

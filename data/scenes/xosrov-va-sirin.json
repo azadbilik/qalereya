@@ -3,6 +3,7 @@
     "id": "atabak-enthroned",
     "az": "Atabəy Məhəmməd Cahan Pəhləvan taxtda",
     "en": "Atabak Muhammad Jahan Pahlavan enthroned (dedication)",
+    "ru": "Восшествие на престол атабека Мухаммеда Джахана Пехлевана (посвящение)",
     "chapters": [
       "nizami-xosrov-ve-sirin-8"
     ],
@@ -16,6 +17,7 @@
     "id": "khusraw-begs-hormuz-pardon",
     "az": "Xosrov atası Hürmüzdən əfv diləyir",
     "en": "Khusraw begs his father Hurmuz for pardon",
+    "ru": "Хосров просит прощения у отца Хормоза",
     "chapters": [
       "nizami-xosrov-ve-sirin-16"
     ],
@@ -30,6 +32,7 @@
     "id": "shapur-shows-portrait",
     "az": "Şapur Şirinə Xosrovun şəklini göstərir",
     "en": "Shapur shows Shirin the portrait of Khusraw",
+    "ru": "Шапур показывает Ширин портрет Хосрова",
     "chapters": [
       "nizami-xosrov-ve-sirin-20",
       "nizami-xosrov-ve-sirin-21",
@@ -46,6 +49,7 @@
     "id": "shapur-reveals-himself",
     "az": "Şapur özünü Şirinə tanıdır",
     "en": "Shapur reveals himself to Shirin",
+    "ru": "Шапур открывается Ширин",
     "chapters": [
       "nizami-xosrov-ve-sirin-23"
     ],
@@ -59,6 +63,7 @@
     "id": "shirin-flees-on-shabdiz",
     "az": "Şirin Şəbdizə minib Mədainə qaçır",
     "en": "Shirin rides off on Shabdiz",
+    "ru": "Ширин скачет на Шебдизе",
     "chapters": [
       "nizami-xosrov-ve-sirin-24"
     ],
@@ -72,6 +77,7 @@
     "id": "khusraw-sees-shirin-bathing",
     "az": "Xosrov çeşmədə çimən Şirini görür",
     "en": "Khusraw sees Shirin bathing",
+    "ru": "Хосров видит купающуюся Ширин",
     "chapters": [
       "nizami-xosrov-ve-sirin-25"
     ],
@@ -87,6 +93,7 @@
     "id": "shirin-arrives-at-madain",
     "az": "Şirin Mədaində Xosrovun sarayına gəlir",
     "en": "Shirin arrives at Khusraw's palace in Mada'in",
+    "ru": "Ширин прибывает во дворец Хосрова в Мадаине",
     "chapters": [
       "nizami-xosrov-ve-sirin-26"
     ],
@@ -99,6 +106,7 @@
     "id": "khusraw-at-mahin-banu",
     "az": "Xosrov Ərməndə Məhin Banunun qonağı olur",
     "en": "Khusraw is received by Mahin Banu in Armenia",
+    "ru": "Мехин Бану принимает Хосрова в Армении",
     "chapters": [
       "nizami-xosrov-ve-sirin-28"
     ],
@@ -111,6 +119,7 @@
     "id": "shapur-returns-to-khusraw",
     "az": "Şapur Xosrovun yanına qayıdır",
     "en": "Shapur returns to Khusraw",
+    "ru": "Шапур возвращается к Хосрову",
     "chapters": [
       "nizami-xosrov-ve-sirin-29"
     ],
@@ -123,6 +132,7 @@
     "id": "shapur-fetches-shirin",
     "az": "Şapur Şirinin dalınca onun qəsrinə gedir",
     "en": "Shapur goes again to fetch Shirin",
+    "ru": "Шапур снова едет за Ширин",
     "chapters": [
       "nizami-xosrov-ve-sirin-30"
     ],
@@ -136,6 +146,7 @@
     "id": "khusraw-enthroned",
     "az": "Xosrov taxta çıxır",
     "en": "Khusraw enthroned",
+    "ru": "Хосров на троне",
     "chapters": [
       "nizami-xosrov-ve-sirin-32",
       "nizami-xosrov-ve-sirin-44"
@@ -150,6 +161,7 @@
     "id": "meeting-at-the-hunt",
     "az": "Xosrov və Şirin ovda görüşürlər",
     "en": "Khusraw and Shirin meet while hunting",
+    "ru": "Хосров и Ширин встречаются на охоте",
     "chapters": [
       "nizami-xosrov-ve-sirin-35"
     ],
@@ -164,6 +176,7 @@
     "id": "polo-game",
     "az": "Xosrov və Şirin çövkan oynayırlar",
     "en": "Khusraw and Shirin play polo",
+    "ru": "Хосров и Ширин играют в поло",
     "chapters": [
       "nizami-xosrov-ve-sirin-36"
     ],
@@ -177,6 +190,7 @@
     "id": "khusraw-kills-lion",
     "az": "Xosrov şiri yumruqla öldürür",
     "en": "Khusraw kills a lion with his fist",
+    "ru": "Хосров убивает льва кулаком",
     "chapters": [
       "nizami-xosrov-ve-sirin-38"
     ],
@@ -191,6 +205,7 @@
     "id": "maidens-tell-stories",
     "az": "Xosrov və Şirin qızların əfsanələrini dinləyirlər",
     "en": "Khusraw and Shirin listen to the maidens' stories",
+    "ru": "Хосров и Ширин слушают рассказы девушек",
     "chapters": [
       "nizami-xosrov-ve-sirin-39",
       "nizami-xosrov-ve-sirin-40"
@@ -204,6 +219,7 @@
     "id": "khusraw-at-caesars-court",
     "az": "Xosrov Rumda Qeysərin sarayında, Məryəmlə evlənir",
     "en": "Khusraw at the Byzantine court marries Maryam",
+    "ru": "Хосров при византийском дворе женится на Марии",
     "chapters": [
       "nizami-xosrov-ve-sirin-42"
     ],
@@ -217,6 +233,7 @@
     "id": "battle-with-bahram-chubin",
     "az": "Xosrovun Bəhram Çubinlə döyüşü",
     "en": "Khusraw battles Bahram Chubin",
+    "ru": "Хосров сражается с Бахрамом Чубином",
     "chapters": [
       "nizami-xosrov-ve-sirin-43"
     ],
@@ -230,6 +247,7 @@
     "id": "shirin-laments",
     "az": "Şirin Xosrovun ayrılığına ağlayır",
     "en": "Shirin weeps over Khusraw's absence",
+    "ru": "Ширин плачет о разлуке с Хосровом",
     "chapters": [
       "nizami-xosrov-ve-sirin-45"
     ],
@@ -242,6 +260,7 @@
     "id": "death-of-bahram-announced",
     "az": "Xosrova Bəhramın ölüm xəbəri gəlir",
     "en": "Khusraw hears of Bahram Chubin's death",
+    "ru": "Хосров узнаёт о смерти Бахрама Чубина",
     "chapters": [
       "nizami-xosrov-ve-sirin-48"
     ],
@@ -254,6 +273,7 @@
     "id": "barbad-plays",
     "az": "Barbəd Xosrovun məclisində otuz nəğmə çalır",
     "en": "Barbad plays his thirty melodies for Khusraw",
+    "ru": "Барбад играет Хосрову свои тридцать мелодий",
     "chapters": [
       "nizami-xosrov-ve-sirin-49",
       "nizami-xosrov-ve-sirin-50"
@@ -268,6 +288,7 @@
     "id": "farhad-before-shirin",
     "az": "Şapur Fərhadı Şirinin hüzuruna gətirir",
     "en": "Shapur brings Farhad before Shirin",
+    "ru": "Шапур приводит Фархада к Ширин",
     "chapters": [
       "nizami-xosrov-ve-sirin-53"
     ],
@@ -282,6 +303,7 @@
     "id": "milk-channel",
     "az": "Fərhad Şirin üçün süd arxı çəkir",
     "en": "Farhad carves a milk channel for Shirin",
+    "ru": "Фархад прорубает для Ширин молочный канал",
     "chapters": [
       "nizami-xosrov-ve-sirin-53"
     ],
@@ -295,6 +317,7 @@
     "id": "khusraw-learns-of-farhad",
     "az": "Xosrov Fərhadın eşqindən xəbər tutur",
     "en": "Khusraw is told of Farhad's love for Shirin",
+    "ru": "Хосрову рассказывают о любви Фархада к Ширин",
     "chapters": [
       "nizami-xosrov-ve-sirin-55"
     ],
@@ -307,6 +330,7 @@
     "id": "farhad-before-khusraw",
     "az": "Fərhad Xosrovun hüzurunda: münazirə",
     "en": "Farhad before Khusraw: their debate",
+    "ru": "Фархад перед Хосровом: их спор",
     "chapters": [
       "nizami-xosrov-ve-sirin-56",
       "nizami-xosrov-ve-sirin-57"
@@ -322,6 +346,7 @@
     "id": "farhad-carves-bisutun",
     "az": "Fərhad Bisütun dağını çapır, Şirinin şəklini yonur",
     "en": "Farhad carves Mount Bisutun",
+    "ru": "Фархад высекает гору Бисутун",
     "chapters": [
       "nizami-xosrov-ve-sirin-58"
     ],
@@ -335,6 +360,7 @@
     "id": "shirin-visits-farhad",
     "az": "Şirin Bisütunda Fərhadın yanına gəlir",
     "en": "Shirin visits Farhad at Bisutun",
+    "ru": "Ширин навещает Фархада у Бисутуна",
     "chapters": [
       "nizami-xosrov-ve-sirin-59"
     ],
@@ -349,6 +375,7 @@
     "id": "farhad-carries-shirin",
     "az": "Fərhad Şirini atı ilə birlikdə çiyninə alır",
     "en": "Farhad carries Shirin and her horse",
+    "ru": "Фархад несёт Ширин вместе с конём",
     "chapters": [
       "nizami-xosrov-ve-sirin-59"
     ],
@@ -363,6 +390,7 @@
     "id": "death-of-farhad",
     "az": "Fərhadın ölümü",
     "en": "Death of Farhad",
+    "ru": "Смерть Фархада",
     "chapters": [
       "nizami-xosrov-ve-sirin-60"
     ],
@@ -376,6 +404,7 @@
     "id": "khusraw-and-shakar",
     "az": "Xosrov İsfahanda Şəkərin məclisində",
     "en": "Khusraw and Shakar of Isfahan",
+    "ru": "Хосров и Шакар из Исфахана",
     "chapters": [
       "nizami-xosrov-ve-sirin-65"
     ],
@@ -389,6 +418,7 @@
     "id": "khusraw-at-shirins-castle",
     "az": "Xosrov Şirinin qəsrinə gəlir",
     "en": "Khusraw at Shirin's castle",
+    "ru": "Хосров у замка Ширин",
     "chapters": [
       "nizami-xosrov-ve-sirin-67",
       "nizami-xosrov-ve-sirin-68"
@@ -404,6 +434,7 @@
     "id": "khusraw-leaves-castle",
     "az": "Xosrov Şirinin qəsrindən qayıdır",
     "en": "Khusraw leaves Shirin's castle",
+    "ru": "Хосров покидает замок Ширин",
     "chapters": [
       "nizami-xosrov-ve-sirin-78"
     ],
@@ -416,6 +447,7 @@
     "id": "shirin-rides-to-khusraw",
     "az": "Şirin Gülgünə minib Xosrovun düşərgəsinə gəlir",
     "en": "Shirin rides to Khusraw's camp",
+    "ru": "Ширин скачет в стан Хосрова",
     "chapters": [
       "nizami-xosrov-ve-sirin-79"
     ],
@@ -428,6 +460,7 @@
     "id": "barbad-nakisa-contest",
     "az": "Barbəd və Nikisanın deyişməsi",
     "en": "Barbad and Nakisa sing for Khusraw and Shirin",
+    "ru": "Барбад и Накиса поют для Хосрова и Ширин",
     "chapters": [
       "nizami-xosrov-ve-sirin-80",
       "nizami-xosrov-ve-sirin-81",
@@ -448,6 +481,7 @@
     "id": "shirin-comes-out-of-tent",
     "az": "Şirin çadırdan çıxıb Xosrovla barışır",
     "en": "Shirin comes out of the tent and is reconciled with Khusraw",
+    "ru": "Ширин выходит из шатра и мирится с Хосровом",
     "chapters": [
       "nizami-xosrov-ve-sirin-88"
     ],
@@ -461,6 +495,7 @@
     "id": "shirin-brought-to-madain",
     "az": "Xosrov Şirini təmtəraqla Mədainə gətirir",
     "en": "Khusraw brings Shirin to Mada'in",
+    "ru": "Хосров привозит Ширин в Мадаин",
     "chapters": [
       "nizami-xosrov-ve-sirin-89"
     ],
@@ -473,6 +508,7 @@
     "id": "wedding",
     "az": "Xosrov və Şirinin toyu",
     "en": "Wedding of Khusraw and Shirin",
+    "ru": "Свадьба Хосрова и Ширин",
     "chapters": [
       "nizami-xosrov-ve-sirin-89",
       "nizami-xosrov-ve-sirin-90"
@@ -489,6 +525,7 @@
     "id": "khusraw-and-shirin-enthroned",
     "az": "Xosrov və Şirin taxtda",
     "en": "Khusraw and Shirin enthroned",
+    "ru": "Хосров и Ширин на троне",
     "chapters": [
       "nizami-xosrov-ve-sirin-91"
     ],
@@ -501,6 +538,7 @@
     "id": "buzurg-umid-advises",
     "az": "Büzürgümid Xosrova nəsihət verir",
     "en": "Buzurg Umid instructs Khusraw",
+    "ru": "Бузург Умид наставляет Хосрова",
     "chapters": [
       "nizami-xosrov-ve-sirin-92"
     ],
@@ -513,6 +551,7 @@
     "id": "shiruya-murders-khusraw",
     "az": "Şiruyə Xosrovu öldürür",
     "en": "Shiruya murders Khusraw",
+    "ru": "Шируйе убивает Хосрова",
     "chapters": [
       "nizami-xosrov-ve-sirin-112"
     ],
@@ -526,6 +565,7 @@
     "id": "khusraws-funeral",
     "az": "Xosrovun dəfni",
     "en": "Khusraw's funeral procession",
+    "ru": "Погребальное шествие Хосрова",
     "chapters": [
       "nizami-xosrov-ve-sirin-113"
     ],
@@ -538,6 +578,7 @@
     "id": "shirin-suicide",
     "az": "Şirin Xosrovun dəxməsində özünü öldürür",
     "en": "Shirin kills herself at Khusraw's tomb",
+    "ru": "Ширин убивает себя на гробнице Хосрова",
     "chapters": [
       "nizami-xosrov-ve-sirin-113"
     ],
@@ -551,6 +592,7 @@
     "id": "khusraw-tears-prophets-letter",
     "az": "Xosrov Peyğəmbəri yuxuda görür və məktubunu cırır",
     "en": "Khusraw dreams of the Prophet and tears up his letter",
+    "ru": "Хосрову снится Пророк, и он рвёт своё письмо",
     "chapters": [
       "nizami-xosrov-ve-sirin-116",
       "nizami-xosrov-ve-sirin-117"
@@ -564,6 +606,7 @@
     "id": "miraj",
     "az": "Peyğəmbərin meracı",
     "en": "The Prophet's Night Journey (Mi'raj)",
+    "ru": "Вознесение Пророка (Мирадж)",
     "chapters": [
       "nizami-xosrov-ve-sirin-118"
     ],
@@ -577,6 +620,7 @@
     "id": "qizil-arslan-welcomes-nizami",
     "az": "Qızıl Arslan Nizamini qəbul edir",
     "en": "Qizil Arslan receives Nizami",
+    "ru": "Кызыл-Арслан принимает Низами",
     "chapters": [
       "nizami-xosrov-ve-sirin-120"
     ],

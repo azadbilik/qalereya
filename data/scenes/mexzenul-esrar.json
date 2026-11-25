@@ -3,6 +3,7 @@
     "id": "miraj",
     "az": "Peyğəmbərin meracı",
     "en": "The Prophet's Night Journey (Mi'raj)",
+    "ru": "Вознесение Пророка (Мирадж)",
     "chapters": [
       "nizami-sirler-xezinesi-5"
     ],
@@ -17,6 +18,7 @@
     "id": "despairing-king-forgiven",
     "az": "Ədalətli padşah yuxuda bağışlanmış zalım şahı görür",
     "en": "A just king dreams of a tyrant who was forgiven",
+    "ru": "Справедливому царю снится прощённый тиран",
     "chapters": [
       "nizami-sirler-xezinesi-21"
     ],
@@ -30,6 +32,7 @@
     "id": "nushirvan-and-the-owls",
     "az": "Nuşirəvan və vəzir xarabalıqda iki quşu dinləyirlər",
     "en": "Nushirvan and his vizier listen to the owls in a ruined village",
+    "ru": "Ануширван и его везир слушают сов в разрушенной деревне",
     "chapters": [
       "nizami-sirler-xezinesi-23"
     ],
@@ -45,6 +48,7 @@
     "id": "solomon-and-the-farmer",
     "az": "Süleyman və qoca əkinçi",
     "en": "Solomon and the old farmer",
+    "ru": "Сулейман и старый земледелец",
     "chapters": [
       "nizami-sirler-xezinesi-25"
     ],
@@ -58,6 +62,7 @@
     "id": "sanjar-and-the-old-woman",
     "az": "Sultan Səncər və qarı",
     "en": "Sultan Sanjar and the old woman",
+    "ru": "Султан Санджар и старуха",
     "chapters": [
       "nizami-sirler-xezinesi-27"
     ],
@@ -73,6 +78,7 @@
     "id": "old-brickmaker",
     "az": "Qoca kərpickəsən",
     "en": "The old brick-maker and the youth",
+    "ru": "Старый кирпичник и юноша",
     "chapters": [
       "nizami-sirler-xezinesi-29"
     ],
@@ -86,6 +92,7 @@
     "id": "hunter-dog-fox",
     "az": "Ovçu, iti və tülkü",
     "en": "The hunter, his dog and the fox",
+    "ru": "Охотник, его собака и лиса",
     "chapters": [
       "nizami-sirler-xezinesi-31"
     ],
@@ -98,6 +105,7 @@
     "id": "faridun-and-the-gazelle",
     "az": "Fridun və maral",
     "en": "Faridun and the gazelle",
+    "ru": "Фаридун и газель",
     "chapters": [
       "nizami-sirler-xezinesi-33"
     ],
@@ -111,6 +119,7 @@
     "id": "fruit-seller-fox-thief",
     "az": "Meyvəsatanın tülküsü və oğru",
     "en": "The fruit-seller's fox and the thief",
+    "ru": "Лиса торговца фруктами и вор",
     "chapters": [
       "nizami-sirler-xezinesi-35"
     ],
@@ -124,6 +133,7 @@
     "id": "repentant-ascetic",
     "az": "Tövbəsini sındıran zahid",
     "en": "The ascetic who broke his vow",
+    "ru": "Отшельник, нарушивший обет",
     "chapters": [
       "nizami-sirler-xezinesi-37"
     ],
@@ -136,6 +146,7 @@
     "id": "jesus-and-the-dead-dog",
     "az": "İsa və ölü it",
     "en": "Jesus and the dead dog",
+    "ru": "Иисус и мёртвая собака",
     "chapters": [
       "nizami-sirler-xezinesi-39"
     ],
@@ -149,6 +160,7 @@
     "id": "mobad-and-the-garden",
     "az": "Mö'bid və viran olmuş bağ",
     "en": "The mobad visits a garden and finds it ruined",
+    "ru": "Мобед посещает сад и находит его разорённым",
     "chapters": [
       "nizami-sirler-xezinesi-41"
     ],
@@ -162,6 +174,7 @@
     "id": "physicians-duel",
     "az": "İki rəqib həkim",
     "en": "The duel of the two physicians",
+    "ru": "Поединок двух лекарей",
     "chapters": [
       "nizami-sirler-xezinesi-43"
     ],
@@ -177,6 +190,7 @@
     "id": "pilgrim-and-sufi",
     "az": "Hacı və sofi",
     "en": "The pilgrim and the sufi who kept his gold",
+    "ru": "Паломник и суфий, сохранивший своё золото",
     "chapters": [
       "nizami-sirler-xezinesi-45"
     ],
@@ -189,6 +203,7 @@
     "id": "tyrant-and-truthful-man",
     "az": "Zalım padşah və doğruçu qoca",
     "en": "The unjust king and the truthful old man",
+    "ru": "Несправедливый царь и правдивый старец",
     "chapters": [
       "nizami-sirler-xezinesi-47"
     ],
@@ -203,6 +218,7 @@
     "id": "prince-of-marv",
     "az": "Mərv şahzadəsi və qoca düşmənlər",
     "en": "The young prince of Marv and his old enemies",
+    "ru": "Юный принц Мерва и его старые враги",
     "chapters": [
       "nizami-sirler-xezinesi-49"
     ],
@@ -215,6 +231,7 @@
     "id": "injured-child",
     "az": "Ayağı sınan uşaq",
     "en": "The injured boy and his playmates",
+    "ru": "Раненый мальчик и его товарищи по играм",
     "chapters": [
       "nizami-sirler-xezinesi-51"
     ],
@@ -227,6 +244,7 @@
     "id": "pir-and-disciple",
     "az": "Mürşid və mürid",
     "en": "The master and the disciple who stayed",
+    "ru": "Учитель и ученик, который остался",
     "chapters": [
       "nizami-sirler-xezinesi-53"
     ],
@@ -239,6 +257,7 @@
     "id": "jamshid-and-his-confidant",
     "az": "Cəmşidin sirdaşı və qoca qarı",
     "en": "Jamshid's confidant and the old woman",
+    "ru": "Доверенный Джамшида и старуха",
     "chapters": [
       "nizami-sirler-xezinesi-55"
     ],
@@ -253,6 +272,7 @@
     "id": "harun-and-the-barber",
     "az": "Harun ər-Rəşid və dəllək",
     "en": "Harun al-Rashid and the barber",
+    "ru": "Харун ар-Рашид и цирюльник",
     "chapters": [
       "nizami-sirler-xezinesi-57"
     ],
@@ -265,6 +285,7 @@
     "id": "nightingale-and-falcon",
     "az": "Bülbül və qızılquş",
     "en": "The nightingale and the falcon",
+    "ru": "Соловей и сокол",
     "chapters": [
       "nizami-sirler-xezinesi-59"
     ],

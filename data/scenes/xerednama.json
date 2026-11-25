@@ -3,6 +3,7 @@
     "id": "iskandar-and-wise-shepherd",
     "az": "İskəndər və müdrik çoban",
     "en": "Iskandar and the wise shepherd",
+    "ru": "Искандер и мудрый пастух",
     "chapters": [
       "nizami-iqbalname-10"
     ],
@@ -15,6 +16,7 @@
     "id": "archimedes-and-chinese-girl",
     "az": "Ərəstu, Arşimides və çinli kəniz",
     "en": "Aristotle, Archimedes and the Chinese girl",
+    "ru": "Аристотель, Архимед и китайская девушка",
     "chapters": [
       "nizami-iqbalname-11"
     ],
@@ -27,6 +29,7 @@
     "id": "baker-before-the-king",
     "az": "Varlanmış çörəkçi şahın hüzurunda",
     "en": "The baker grown rich is summoned before the king",
+    "ru": "Разбогатевшего пекаря вызывают к царю",
     "chapters": [
       "nizami-iqbalname-13"
     ],
@@ -39,6 +42,7 @@
     "id": "zangi-kills-companion",
     "az": "Çörəkçinin nağılı: zənci yoldaşını öldürür",
     "en": "The baker's tale: the Zangi kills his companion",
+    "ru": "Рассказ пекаря: зинджи убивает своего товарища",
     "chapters": [
       "nizami-iqbalname-13"
     ],
@@ -51,6 +55,7 @@
     "id": "hermes-and-seventy-sages",
     "az": "Hürmüz və onu inkar edən yetmiş alim",
     "en": "Hermes and the seventy sages who denied him",
+    "ru": "Гермес и семьдесят мудрецов, отвергавших его",
     "chapters": [
       "nizami-iqbalname-14"
     ],
@@ -64,6 +69,7 @@
     "id": "plato-music",
     "az": "Əflatun ərğənunla heyvanları yatırdır",
     "en": "Plato's music lulls the beasts",
+    "ru": "Музыка Платона усыпляет зверей",
     "chapters": [
       "nizami-iqbalname-15"
     ],
@@ -76,6 +82,7 @@
     "id": "iskandar-visits-socrates",
     "az": "İskəndər Sokratın yanına gedir",
     "en": "Iskandar visits Socrates",
+    "ru": "Искандер посещает Сократа",
     "chapters": [
       "nizami-iqbalname-17"
     ],
@@ -88,6 +95,7 @@
     "id": "seven-sages",
     "az": "İskəndər yeddi filosofla",
     "en": "Iskandar and the seven sages",
+    "ru": "Искандер и семь мудрецов",
     "chapters": [
       "nizami-iqbalname-19",
       "nizami-iqbalname-20",
@@ -111,6 +119,7 @@
     "id": "iskandar-made-prophet",
     "az": "İskəndərə peyğəmbərlik verilir",
     "en": "Iskandar is called to prophethood",
+    "ru": "Искандер призван к пророчеству",
     "chapters": [
       "nizami-iqbalname-29"
     ],
@@ -123,6 +132,7 @@
     "id": "qandahar-idol-girl",
     "az": "Qəndəharda canlı büt - gözəl qız",
     "en": "The living idol of Qandahar",
+    "ru": "Живой идол Кандагара",
     "chapters": [
       "nizami-iqbalname-35"
     ],
@@ -135,6 +145,7 @@
     "id": "iskandar-watches-sirens",
     "az": "İskəndər dəniz pərilərini seyr edir",
     "en": "Iskandar watches the sirens",
+    "ru": "Искандер наблюдает за сиренами",
     "chapters": [
       "nizami-iqbalname-35"
     ],
@@ -147,6 +158,7 @@
     "id": "drum-talisman",
     "az": "İskəndər tilsimin təbilini çalır",
     "en": "Iskandar beats the drum of the talisman",
+    "ru": "Искандер бьёт в барабан талисмана",
     "chapters": [
       "nizami-iqbalname-35"
     ],
@@ -161,6 +173,7 @@
     "id": "wall-against-gog",
     "az": "İskəndər Yəcuc səddini tikir",
     "en": "Iskandar builds the wall against Gog and Magog",
+    "ru": "Искандер строит стену против Гога и Магога",
     "chapters": [
       "nizami-iqbalname-36"
     ],
@@ -173,6 +186,7 @@
     "id": "city-of-the-righteous",
     "az": "Qapıları qıfılsız ədalətli şəhər",
     "en": "The city of the righteous",
+    "ru": "Город праведников",
     "chapters": [
       "nizami-iqbalname-36"
     ],
@@ -185,6 +199,7 @@
     "id": "death-of-iskandar",
     "az": "İskəndərin ölümü",
     "en": "The death of Iskandar",
+    "ru": "Смерть Искандера",
     "chapters": [
       "nizami-iqbalname-38",
       "nizami-iqbalname-39"
@@ -198,6 +213,7 @@
     "id": "iskandars-coffin",
     "az": "İskəndərin tabutu, bir əli tabutdan kənarda",
     "en": "Iskandar's coffin, one hand left outside",
+    "ru": "Гроб Искандера с одной рукой наружу",
     "chapters": [
       "nizami-iqbalname-39"
     ],
