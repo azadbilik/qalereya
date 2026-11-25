@@ -17,16 +17,22 @@ const POEMS = [
   ['nizami-xosrov-va-sirin', 'Xosrov və Şirin', 'Khusraw and Shirin'],
   ['nizami-leyli-va-macnun', 'Leyli və Məcnun', 'Layla and Majnun'],
   ['nizami-heft-peyker', 'Yeddi gözəl', 'The Seven Beauties'],
-  ['nizami-serefname', 'İskəndərnamə: Şərəfnamə', 'Iskandarnama: Sharafnama'],
-  ['nizami-xerednama', 'İskəndərnamə: İqbalnamə', 'Iskandarnama: Iqbalnama'],
+  ['nizami-serefname', 'Şərəfnamə', 'Iskandarnama: Sharafnama'],
+  ['nizami-xerednama', 'İqbalnamə', 'Iskandarnama: Iqbalnama'],
   ['fuzuli-leyli-ve-mecnun', 'Füzuli: Leyli və Məcnun', 'Fuzuli: Layla and Majnun'],
-  ['fuzuli-hediqetus-sueda', 'Füzuli: Hədiqətüs-süəda', 'Fuzuli: Garden of the Blessed'],
+  ['fuzuli-hediqetus-sueda', 'Hədiqətüs-süəda', 'Fuzuli: Garden of the Blessed'],
 ];
 
 const scenes = {};
 for (const f of await list('scenes/')) scenes[f.replace(/\.json$/, '')] = await read(`scenes/${f}`);
+// A tag file is named after its poem: an artwork kitabxana hasn't filed under a poem joins the
+// poem its scene belongs to
 const tags = {};
-for (const f of await list('tags/')) Object.assign(tags, await read(`tags/${f}`));
+for (const f of await list('tags/')) {
+  const key = f.replace(/\.json$/, '');
+  const poem = POEMS.find(([slug]) => slug === key || slug === `nizami-${key}`)?.[0];
+  for (const [id, t] of Object.entries(await read(`tags/${f}`))) tags[id] = { ...t, poem };
+}
 
 // Commons titles sometimes arrive as raw template text: title QS:P1476,en:"…"
 const cleanTitle = (t) => {
@@ -56,6 +62,14 @@ const thumb = (x) => {
   if (/images\.metmuseum\.org/.test(x.thumb)) return x.thumb;
   return x.thumb ?? x.image;
 };
+const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX', 'XXI'];
+// A short Common-era date: "1481", "1539–1543", or "XVI əsr" for a whole-century estimate
+const when = (x) => {
+  const [a, b] = [x.yearStart, x.yearEnd ?? x.yearStart];
+  if (!a) return null;
+  if (b - a >= 90) return `${ROMAN[Math.floor((a - 1) / 100) + 1]} əsr`;
+  return a === b ? String(a) : `${a}–${b}`;
+};
 const century = (x) => {
   const y = x.yearStart ?? x.yearEnd;
   return y ? Math.floor((y - 1) / 100) + 1 : null;
@@ -66,6 +80,8 @@ const items = artworks.map((x) => ({
   title: cleanTitle(x.title),
   date: x.date && !/^\d{4}-\d\d-\d\d$/.test(x.date) ? x.date : (x.yearStart ? String(x.yearStart) : null),
   century: century(x),
+  year: x.yearStart ?? x.yearEnd ?? null,
+  when: when(x),
   artists: x.artists,
   medium: x.medium,
   manuscript: manuscript(x),
@@ -76,14 +92,14 @@ const items = artworks.map((x) => ({
   image: x.image.replace(/\?.*$/, ''),
   thumb: thumb(x),
   author: x.author,
-  poem: x.poem,
+  poem: x.poem ?? (tags[x.id]?.scene ? tags[x.id].poem : null),
   chapter: x.chapter,
   scene: tags[x.id]?.scene ?? null,
 }));
 
 // Nizami's poems in order, then Fuzuli's, then the rest; within a poem, oldest first
 const rank = (x) => { const i = POEMS.findIndex(([slug]) => slug === x.poem); return i < 0 ? POEMS.length : i; };
-items.sort((a, b) => rank(a) - rank(b) || (a.century ?? 99) - (b.century ?? 99) || (a.manuscript ?? '~').localeCompare(b.manuscript ?? '~'));
+items.sort((a, b) => rank(a) - rank(b) || (a.year ?? 9999) - (b.year ?? 9999) || (a.manuscript ?? '~').localeCompare(b.manuscript ?? '~'));
 
 const poems = POEMS.map(([slug, az, en]) => ({
   slug, az, en,

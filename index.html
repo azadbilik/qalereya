@@ -32,6 +32,7 @@
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
   [lang="en"] { color: var(--muted); }
   img { display: block; max-width: 100%; }
+  [hidden] { display: none !important; }
 
   .wrap { max-width: 88rem; margin: 0 auto; padding: 0 2rem; }
   header.top { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
@@ -49,7 +50,6 @@
   .bar .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; padding-top: .75rem; padding-bottom: .75rem; }
   .poems { display: flex; gap: .25rem; overflow-x: auto; scrollbar-width: none; flex: 1 1 32rem; margin: -.25rem; padding: .25rem; }
   .poems::-webkit-scrollbar { display: none; }
-  @media (min-width: 48rem) { .poems { flex-wrap: wrap; overflow: visible; } }
   .poems button { white-space: nowrap; padding: .4rem .75rem; border-radius: 999px; font-size: .8125rem; color: var(--muted); }
   .poems button:hover { color: var(--ink); background: var(--tint); }
   .poems button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
@@ -68,6 +68,11 @@
   .scene-head a { font-size: .8125rem; color: var(--muted); white-space: nowrap; }
 
   .grid { columns: 4 15rem; column-gap: 1.25rem; }
+  /* A scene: its paintings side by side at one height, oldest first, captioned by manuscript and date */
+  .strip { display: flex; flex-wrap: wrap; gap: 1.5rem 1.25rem; align-items: flex-start; }
+  .strip .card { width: min-content; margin: 0; }
+  .strip .card img { height: 17rem; width: auto; max-width: none; min-width: 8rem; }
+  .strip .card .t { -webkit-line-clamp: 1; }
   .card { break-inside: avoid; margin-bottom: 1.5rem; width: 100%; text-align: left; display: block; }
   .card .frame { background: var(--frame); border-radius: 2px; overflow: hidden; }
   .card img { width: 100%; height: auto; transition: opacity .3s, transform .4s; opacity: 0; }
@@ -107,6 +112,8 @@
     .wrap { padding: 0 1rem; }
     .hero { padding: 2rem 0 1.5rem; }
     .grid { columns: 2; column-gap: .75rem; }
+    .strip { gap: 1rem .75rem; }
+    .strip .card img { height: 11rem; min-width: 5rem; }
     .card { margin-bottom: 1rem; }
     .filters { width: 100%; justify-content: space-between; gap: .5rem; }
     .filters select { min-width: 0; flex: 1; }
@@ -250,13 +257,15 @@ function render(fromUser) {
 
 function section(az, en, chapter, items) {
   return `<section class="scene"><div class="scene-head"><h2>${esc(az)}<span lang="en">${esc(en)}</span></h2>${chapter ? `<a href="${KX}/works/${chapter}">Fəsli oxu ↗</a>` : ''}</div>
-    <div class="grid">${items.map(card).join('')}</div></section>`;
+    <div class="strip">${items.map((x) => card(x, true)).join('')}</div></section>`;
 }
 
-function card(x) {
-  const meta = [x.date, x.manuscript ?? x.museum].filter(Boolean).join(' · ');
-  return `<button type="button" class="card" data-id="${esc(x.id)}"><div class="frame"><img src="${esc(x.thumb)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-    <p class="t">${esc(x.title)}</p><p class="m">${esc(meta)}</p></button>`;
+// In a scene the heading already says what is painted: the caption says where and when
+function card(x, inScene) {
+  const t = inScene ? (x.when ?? 'Tarixsiz') : x.title;
+  const meta = inScene ? x.manuscript : [x.when ?? x.date, x.manuscript ?? x.museum].filter(Boolean).join(' · ');
+  return `<button type="button" class="card" data-id="${esc(x.id)}" title="${esc(x.title)}"><div class="frame"><img src="${esc(x.thumb)}" alt="${esc(x.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+    <p class="t">${esc(t)}</p><p class="m">${esc(meta ?? '')}</p></button>`;
 }
 
 function wire(el) {
