@@ -56,8 +56,9 @@
     "confidence": "high"
   },
   "commons-15181556": {
-    "scene": null,
-    "confidence": "low"
+    "scene": "lion-and-onager-one-arrow",
+    "confidence": "high",
+    "note": "Bahram shoots as the lion leaps on the onager; placed from the picture 2026-11-26"
   },
   "commons-15190918": {
     "scene": "white-pavilion",
@@ -248,8 +249,9 @@
     "confidence": "high"
   },
   "commons-30574456": {
-    "scene": null,
-    "confidence": "low"
+    "scene": "garden-maidens-bathing",
+    "confidence": "high",
+    "note": "Same folio as met-455059; placed from the picture 2026-11-26"
   },
   "commons-30574458": {
     "scene": "bishr-and-malikha",
@@ -466,8 +468,9 @@
     "confidence": "high"
   },
   "met-455059": {
-    "scene": null,
-    "confidence": "low"
+    "scene": "garden-maidens-bathing",
+    "confidence": "high",
+    "note": "The garden owner watches the maidens bathing in the pool (the Met titles it The Eavesdropper); placed from the picture 2026-11-26"
   },
   "met-924978": {
     "scene": "red-pavilion",
@@ -772,5 +775,25 @@
   "walters-W657-211a": {
     "scene": "bahram-vanishes-in-cave",
     "confidence": "low"
+  },
+  "commons-159299294": {
+    "scene": "yellow-pavilion",
+    "confidence": "high",
+    "note": "Bodleian Elliott 192 fol. 190a: yellow dome over the pavilion; placed from the picture 2026-11-26"
+  },
+  "commons-159299484": {
+    "scene": "red-pavilion",
+    "confidence": "high",
+    "note": "Bodleian Elliott 192 fol. 196b: red dome over the pavilion; placed from the picture 2026-11-26"
+  },
+  "commons-99786967": {
+    "scene": "black-pavilion",
+    "confidence": "high",
+    "note": "Black dome and black hangings: Bahram with the Indian princess; placed from the picture 2026-11-26"
+  },
+  "commons-53314813": {
+    "scene": "garden-maidens-bathing",
+    "confidence": "medium",
+    "note": "Two versions of the bathing-maidens composition side by side (Behzad and a copy); placed from the picture 2026-11-26"
   }
 }

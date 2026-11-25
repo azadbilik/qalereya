@@ -1,818 +1,837 @@
 {
- "commons-10044284": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-10044330": {
-  "scene": "farhad-carries-shirin",
-  "confidence": "medium"
- },
- "commons-10044401": {
-  "scene": "battle-with-bahram-chubin",
-  "confidence": "high"
- },
- "commons-10109185": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-10967556": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-116466713": {
-  "scene": null,
-  "confidence": "high"
- },
- "commons-116525142": {
-  "scene": null,
-  "confidence": "high"
- },
- "commons-12146311": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-12146401": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-122095063": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-122330874": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-122715070": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-123931108": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-129707319": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "commons-129744149": {
-  "scene": "shirin-suicide",
-  "confidence": "high"
- },
- "commons-13326986": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "commons-13960892": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-15109219": {
-  "scene": "khusraw-enthroned",
-  "confidence": "medium"
- },
- "commons-15109299": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-15109425": {
-  "scene": "farhad-before-khusraw",
-  "confidence": "high"
- },
- "commons-15155497": {
-  "scene": "khusraw-enthroned",
-  "confidence": "high"
- },
- "commons-156875493": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "commons-157781586": {
-  "scene": "farhad-before-shirin",
-  "confidence": "high"
- },
- "commons-157781891": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "commons-157788257": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "medium"
- },
- "commons-158256676": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "commons-158258134": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-158315719": {
-  "scene": "farhad-before-khusraw",
-  "confidence": "medium"
- },
- "commons-158379086": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-158613764": {
-  "scene": "khusraw-kills-lion",
-  "confidence": "high"
- },
- "commons-158613765": {
-  "scene": "khusraw-kills-lion",
-  "confidence": "high"
- },
- "commons-158613924": {
-  "scene": "meeting-at-the-hunt",
-  "confidence": "medium"
- },
- "commons-158614175": {
-  "scene": "farhad-before-khusraw",
-  "confidence": "high"
- },
- "commons-158614176": {
-  "scene": "farhad-before-khusraw",
-  "confidence": "high"
- },
- "commons-158614177": {
-  "scene": "farhad-before-khusraw",
-  "confidence": "high"
- },
- "commons-158614349": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-158615235": {
-  "scene": "khusraw-kills-lion",
-  "confidence": "high"
- },
- "commons-158615325": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-158979795": {
-  "scene": "khusraw-leaves-castle",
-  "confidence": "high"
- },
- "commons-159019872": {
-  "scene": "battle-with-bahram-chubin",
-  "confidence": "high"
- },
- "commons-159020101": {
-  "scene": "farhad-carries-shirin",
-  "confidence": "high"
- },
- "commons-159022546": {
-  "scene": "battle-with-bahram-chubin",
-  "confidence": "medium"
- },
- "commons-159022547": {
-  "scene": "battle-with-bahram-chubin",
-  "confidence": "medium"
- },
- "commons-159024843": {
-  "scene": "battle-with-bahram-chubin",
-  "confidence": "high"
- },
- "commons-159024844": {
-  "scene": "battle-with-bahram-chubin",
-  "confidence": "high"
- },
- "commons-159091473": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "commons-159548660": {
-  "scene": "farhad-before-shirin",
-  "confidence": "high"
- },
- "commons-17782918": {
-  "scene": "milk-channel",
-  "confidence": "high"
- },
- "commons-179832234": {
-  "scene": "khusraw-enthroned",
-  "confidence": "high"
- },
- "commons-185150777": {
-  "scene": "wedding",
-  "confidence": "high"
- },
- "commons-19107170": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-194810293": {
-  "scene": "barbad-plays",
-  "confidence": "medium"
- },
- "commons-194811282": {
-  "scene": "shapur-fetches-shirin",
-  "confidence": "medium"
- },
- "commons-194811867": {
-  "scene": "barbad-nakisa-contest",
-  "confidence": "medium"
- },
- "commons-21056136": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-21925251": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "commons-2222722": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-23613305": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-27308574": {
-  "scene": "shapur-shows-portrait",
-  "confidence": "high"
- },
- "commons-27308685": {
-  "scene": "shirin-arrives-at-madain",
-  "confidence": "medium"
- },
- "commons-29665394": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-29665681": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-30153328": {
-  "scene": "polo-game",
-  "confidence": "high"
- },
- "commons-31453309": {
-  "scene": "polo-game",
-  "confidence": "high"
- },
- "commons-31453310": {
-  "scene": "farhad-carries-shirin",
-  "confidence": "high"
- },
- "commons-31453312": {
-  "scene": "shirin-brought-to-madain",
-  "confidence": "high"
- },
- "commons-31453313": {
-  "scene": "khusraws-funeral",
-  "confidence": "high"
- },
- "commons-31453315": {
-  "scene": null,
-  "confidence": "high"
- },
- "commons-32907816": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "commons-40292882": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-4174043": {
-  "scene": null,
-  "confidence": "high"
- },
- "commons-4174062": {
-  "scene": null,
-  "confidence": "high"
- },
- "commons-48651183": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-48651184": {
-  "scene": "shapur-shows-portrait",
-  "confidence": "high"
- },
- "commons-48651187": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-48651189": {
-  "scene": "meeting-at-the-hunt",
-  "confidence": "high"
- },
- "commons-48651190": {
-  "scene": "barbad-plays",
-  "confidence": "high"
- },
- "commons-48651192": {
-  "scene": "meeting-at-the-hunt",
-  "confidence": "medium"
- },
- "commons-48651195": {
-  "scene": "maidens-tell-stories",
-  "confidence": "high"
- },
- "commons-48651196": {
-  "scene": "maidens-tell-stories",
-  "confidence": "high"
- },
- "commons-48651199": {
-  "scene": "khusraw-enthroned",
-  "confidence": "high"
- },
- "commons-48651200": {
-  "scene": "farhad-before-shirin",
-  "confidence": "medium"
- },
- "commons-48651202": {
-  "scene": "milk-channel",
-  "confidence": "high"
- },
- "commons-48651203": {
-  "scene": "farhad-before-khusraw",
-  "confidence": "high"
- },
- "commons-48651207": {
-  "scene": "farhad-carries-shirin",
-  "confidence": "high"
- },
- "commons-48651209": {
-  "scene": "khusraw-enthroned",
-  "confidence": "medium"
- },
- "commons-52947610": {
-  "scene": "khusraw-begs-hormuz-pardon",
-  "confidence": "high"
- },
- "commons-61570368": {
-  "scene": "shapur-shows-portrait",
-  "confidence": "high"
- },
- "commons-61608937": {
-  "scene": "shapur-returns-to-khusraw",
-  "confidence": "high"
- },
- "commons-62473593": {
-  "scene": "maidens-tell-stories",
-  "confidence": "high"
- },
- "commons-635065": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-7178918": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-7822103": {
-  "scene": "battle-with-bahram-chubin",
-  "confidence": "high"
- },
- "commons-7826901": {
-  "scene": "farhad-carries-shirin",
-  "confidence": "high"
- },
- "commons-7849944": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "commons-84107003": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-8534640": {
-  "scene": "farhad-before-shirin",
-  "confidence": "medium"
- },
- "commons-8711085": {
-  "scene": "shapur-shows-portrait",
-  "confidence": "high"
- },
- "commons-8711643": {
-  "scene": "barbad-plays",
-  "confidence": "high"
- },
- "commons-8711846": {
-  "scene": "shapur-shows-portrait",
-  "confidence": "high"
- },
- "commons-90993818": {
-  "scene": "khusraw-begs-hormuz-pardon",
-  "confidence": "high"
- },
- "commons-90993819": {
-  "scene": "death-of-farhad",
-  "confidence": "high"
- },
- "commons-90993843": {
-  "scene": "shiruya-murders-khusraw",
-  "confidence": "high"
- },
- "commons-91011107": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "commons-97219407": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "commons-97219623": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "commons-97490206": {
-  "scene": "farhad-carries-shirin",
-  "confidence": "high"
- },
- "commons-97490587": {
-  "scene": null,
-  "confidence": "low"
- },
- "met-446594": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "met-446595": {
-  "scene": "milk-channel",
-  "confidence": "high"
- },
- "met-446602": {
-  "scene": "wedding",
-  "confidence": "high"
- },
- "met-448176": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "met-452756": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "met-453191": {
-  "scene": null,
-  "confidence": "low"
- },
- "met-453980": {
-  "scene": "khusraw-enthroned",
-  "confidence": "medium"
- },
- "walters-W604-32b": {
-  "scene": "khusraw-begs-hormuz-pardon",
-  "confidence": "high"
- },
- "walters-W604-35a": {
-  "scene": "shapur-shows-portrait",
-  "confidence": "high"
- },
- "walters-W604-39a": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "walters-W604-40b": {
-  "scene": "khusraw-at-mahin-banu",
-  "confidence": "medium"
- },
- "walters-W604-43a": {
-  "scene": "shapur-fetches-shirin",
-  "confidence": "medium"
- },
- "walters-W604-44a": {
-  "scene": "khusraw-enthroned",
-  "confidence": "high"
- },
- "walters-W604-45a": {
-  "scene": "meeting-at-the-hunt",
-  "confidence": "medium"
- },
- "walters-W604-46a": {
-  "scene": "polo-game",
-  "confidence": "high"
- },
- "walters-W604-47a": {
-  "scene": "khusraw-kills-lion",
-  "confidence": "high"
- },
- "walters-W604-50b": {
-  "scene": "khusraw-at-caesars-court",
-  "confidence": "high"
- },
- "walters-W604-51b": {
-  "scene": "battle-with-bahram-chubin",
-  "confidence": "high"
- },
- "walters-W604-52b": {
-  "scene": "shirin-laments",
-  "confidence": "high"
- },
- "walters-W604-54b": {
-  "scene": "death-of-bahram-announced",
-  "confidence": "high"
- },
- "walters-W604-59a": {
-  "scene": "farhad-before-shirin",
-  "confidence": "medium"
- },
- "walters-W604-59b": {
-  "scene": "milk-channel",
-  "confidence": "high"
- },
- "walters-W604-62a": {
-  "scene": "farhad-before-khusraw",
-  "confidence": "high"
- },
- "walters-W604-63a": {
-  "scene": "farhad-carves-bisutun",
-  "confidence": "high"
- },
- "walters-W604-65a": {
-  "scene": "farhad-carries-shirin",
-  "confidence": "high"
- },
- "walters-W604-70a": {
-  "scene": "khusraw-and-shakar",
-  "confidence": "medium"
- },
- "walters-W604-74a": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "medium"
- },
- "walters-W604-78b": {
-  "scene": "shirin-rides-to-khusraw",
-  "confidence": "medium"
- },
- "walters-W604-79b": {
-  "scene": "barbad-nakisa-contest",
-  "confidence": "high"
- },
- "walters-W604-90b": {
-  "scene": "khusraw-tears-prophets-letter",
-  "confidence": "high"
- },
- "walters-W604-94b": {
-  "scene": "qizil-arslan-welcomes-nizami",
-  "confidence": "high"
- },
- "walters-W605-173b": {
-  "scene": "khusraw-learns-of-farhad",
-  "confidence": "high"
- },
- "walters-W605-257a": {
-  "scene": "khusraw-and-shirin-enthroned",
-  "confidence": "medium"
- },
- "walters-W605-258b": {
-  "scene": "death-of-farhad",
-  "confidence": "high"
- },
- "walters-W605-277a": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "low"
- },
- "walters-W605-292a": {
-  "scene": "shirin-comes-out-of-tent",
-  "confidence": "low"
- },
- "walters-W605-90a": {
-  "scene": "farhad-before-khusraw",
-  "confidence": "high"
- },
- "walters-W607-110a": {
-  "scene": "shiruya-murders-khusraw",
-  "confidence": "high"
- },
- "walters-W607-37a": {
-  "scene": "atabak-enthroned",
-  "confidence": "high"
- },
- "walters-W607-45b": {
-  "scene": "shapur-reveals-himself",
-  "confidence": "low"
- },
- "walters-W607-62b": {
-  "scene": "khusraw-enthroned",
-  "confidence": "high"
- },
- "walters-W607-68a": {
-  "scene": "khusraw-and-shirin-enthroned",
-  "confidence": "low"
- },
- "walters-W607-78b": {
-  "scene": "farhad-carves-bisutun",
-  "confidence": "high"
- },
- "walters-W607-86a": {
-  "scene": "khusraw-and-shakar",
-  "confidence": "high"
- },
- "walters-W607-93a": {
-  "scene": null,
-  "confidence": "low"
- },
- "walters-W608-45b": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "walters-W608-51b": {
-  "scene": "meeting-at-the-hunt",
-  "confidence": "high"
- },
- "walters-W608-54a": {
-  "scene": "khusraw-kills-lion",
-  "confidence": "high"
- },
- "walters-W608-69b": {
-  "scene": "farhad-before-khusraw",
-  "confidence": "high"
- },
- "walters-W608-72b": {
-  "scene": "farhad-carries-shirin",
-  "confidence": "high"
- },
- "walters-W608-81b": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "walters-W608-96a": {
-  "scene": "wedding",
-  "confidence": "high"
- },
- "walters-W609-106a": {
-  "scene": "wedding",
-  "confidence": "high"
- },
- "walters-W609-111b": {
-  "scene": "shiruya-murders-khusraw",
-  "confidence": "high"
- },
- "walters-W609-44b": {
-  "scene": "shapur-shows-portrait",
-  "confidence": "high"
- },
- "walters-W609-49a": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "walters-W609-58a": {
-  "scene": "khusraw-kills-lion",
-  "confidence": "high"
- },
- "walters-W609-78b": {
-  "scene": "shirin-visits-farhad",
-  "confidence": "high"
- },
- "walters-W609-88b": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "walters-W610-47a": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "walters-W610-55a": {
-  "scene": "polo-game",
-  "confidence": "high"
- },
- "walters-W610-62b": {
-  "scene": "battle-with-bahram-chubin",
-  "confidence": "high"
- },
- "walters-W610-91b": {
-  "scene": "khusraw-at-shirins-castle",
-  "confidence": "high"
- },
- "walters-W611-32b": {
-  "scene": "shapur-shows-portrait",
-  "confidence": "high"
- },
- "walters-W611-45a": {
-  "scene": "battle-with-bahram-chubin",
-  "confidence": "high"
- },
- "walters-W611-53b": {
-  "scene": "farhad-carries-shirin",
-  "confidence": "high"
- },
- "walters-W611-66a": {
-  "scene": "khusraw-and-shirin-enthroned",
-  "confidence": "medium"
- },
- "walters-W611-72b": {
-  "scene": "buzurg-umid-advises",
-  "confidence": "high"
- },
- "walters-W612-109b": {
-  "scene": "shiruya-murders-khusraw",
-  "confidence": "high"
- },
- "walters-W612-110b": {
-  "scene": "shirin-suicide",
-  "confidence": "high"
- },
- "walters-W612-40b": {
-  "scene": "khusraw-begs-hormuz-pardon",
-  "confidence": "high"
- },
- "walters-W612-48a": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "walters-W612-57a": {
-  "scene": "khusraw-kills-lion",
-  "confidence": "high"
- },
- "walters-W612-72b": {
-  "scene": "farhad-before-khusraw",
-  "confidence": "medium"
- },
- "walters-W612-79b": {
-  "scene": "farhad-carries-shirin",
-  "confidence": "high"
- },
- "walters-W612-89b": {
-  "scene": null,
-  "confidence": "low"
- },
- "walters-W612-98b": {
-  "scene": "khusraw-and-shakar",
-  "confidence": "medium"
- },
- "walters-W657-100a": {
-  "scene": null,
-  "confidence": "high"
- },
- "walters-W657-39b": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "walters-W657-62a": {
-  "scene": "shirin-visits-farhad",
-  "confidence": "high"
- },
- "walters-W657-69b": {
-  "scene": "shirin-visits-farhad",
-  "confidence": "high"
- },
- "walters-W657-70a": {
-  "scene": "shirin-visits-farhad",
-  "confidence": "high"
- },
- "cleveland-1944.499": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "cleveland-1947.500.b": {
-  "scene": null,
-  "confidence": "low"
- },
- "commons-154587072": {
-  "scene": "wedding",
-  "confidence": "high"
- },
- "commons-158256681": {
-  "scene": "wedding",
-  "confidence": "high"
- },
- "commons-158256683": {
-  "scene": "wedding",
-  "confidence": "high"
- },
- "commons-158980350": {
-  "scene": "wedding",
-  "confidence": "high"
- },
- "commons-159020277": {
-  "scene": "khusraw-kills-lion",
-  "confidence": "high"
- },
- "commons-159044869": {
-  "scene": "khusraw-kills-lion",
-  "confidence": "high"
- },
- "commons-159024418": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "europeana-90402-AK-MAK-1253": {
-  "scene": "khusraw-sees-shirin-bathing",
-  "confidence": "high"
- },
- "europeana-90402-AK-MAK-1254": {
-  "scene": "shapur-shows-portrait",
-  "confidence": "high"
- },
- "europeana-90402-AK-MAK-1256": {
-  "scene": "farhad-carries-shirin",
-  "confidence": "high"
- },
- "europeana-90402-AK-MAK-1255": {
-  "scene": "barbad-plays",
-  "confidence": "medium"
- },
- "europeana-90402-AK-MAK-1257": {
-  "scene": null,
-  "confidence": "low"
- }
+  "commons-10044284": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high",
+    "note": "Shirin bathing among the rocks, Khusraw on horseback above; placed from the picture 2026-11-26"
+  },
+  "commons-10044330": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "medium"
+  },
+  "commons-10044401": {
+    "scene": "battle-with-bahram-chubin",
+    "confidence": "high"
+  },
+  "commons-10109185": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-10967556": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-116466713": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "commons-116525142": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "commons-12146311": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-12146401": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-122095063": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-122330874": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-122715070": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-123931108": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-129707319": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "commons-129744149": {
+    "scene": "shirin-suicide",
+    "confidence": "high"
+  },
+  "commons-13326986": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "commons-13960892": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-15109219": {
+    "scene": "khusraw-enthroned",
+    "confidence": "medium"
+  },
+  "commons-15109299": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-15109425": {
+    "scene": "farhad-before-khusraw",
+    "confidence": "high"
+  },
+  "commons-15155497": {
+    "scene": "khusraw-enthroned",
+    "confidence": "high"
+  },
+  "commons-156875493": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "commons-157781586": {
+    "scene": "farhad-before-shirin",
+    "confidence": "high"
+  },
+  "commons-157781891": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "commons-157788257": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "medium"
+  },
+  "commons-158256676": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "commons-158258134": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-158315719": {
+    "scene": "farhad-before-khusraw",
+    "confidence": "medium"
+  },
+  "commons-158379086": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-158613764": {
+    "scene": "khusraw-kills-lion",
+    "confidence": "high"
+  },
+  "commons-158613765": {
+    "scene": "khusraw-kills-lion",
+    "confidence": "high"
+  },
+  "commons-158613924": {
+    "scene": "meeting-at-the-hunt",
+    "confidence": "medium"
+  },
+  "commons-158614175": {
+    "scene": "farhad-before-khusraw",
+    "confidence": "high"
+  },
+  "commons-158614176": {
+    "scene": "farhad-before-khusraw",
+    "confidence": "high"
+  },
+  "commons-158614177": {
+    "scene": "farhad-before-khusraw",
+    "confidence": "high"
+  },
+  "commons-158614349": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-158615235": {
+    "scene": "khusraw-kills-lion",
+    "confidence": "high"
+  },
+  "commons-158615325": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-158979795": {
+    "scene": "khusraw-leaves-castle",
+    "confidence": "high"
+  },
+  "commons-159019872": {
+    "scene": "battle-with-bahram-chubin",
+    "confidence": "high"
+  },
+  "commons-159020101": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "high"
+  },
+  "commons-159022546": {
+    "scene": "battle-with-bahram-chubin",
+    "confidence": "medium"
+  },
+  "commons-159022547": {
+    "scene": "battle-with-bahram-chubin",
+    "confidence": "medium"
+  },
+  "commons-159024843": {
+    "scene": "battle-with-bahram-chubin",
+    "confidence": "high"
+  },
+  "commons-159024844": {
+    "scene": "battle-with-bahram-chubin",
+    "confidence": "high"
+  },
+  "commons-159091473": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "commons-159548660": {
+    "scene": "farhad-before-shirin",
+    "confidence": "high"
+  },
+  "commons-17782918": {
+    "scene": "milk-channel",
+    "confidence": "high"
+  },
+  "commons-179832234": {
+    "scene": "khusraw-enthroned",
+    "confidence": "high"
+  },
+  "commons-185150777": {
+    "scene": "wedding",
+    "confidence": "high"
+  },
+  "commons-19107170": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-194810293": {
+    "scene": "barbad-plays",
+    "confidence": "medium"
+  },
+  "commons-194811282": {
+    "scene": "shapur-fetches-shirin",
+    "confidence": "medium"
+  },
+  "commons-194811867": {
+    "scene": "barbad-nakisa-contest",
+    "confidence": "medium"
+  },
+  "commons-21056136": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-21925251": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "commons-2222722": {
+    "scene": "meeting-at-the-hunt",
+    "confidence": "medium",
+    "note": "Khusraw and Shirin on horseback meeting in open country; placed from the picture 2026-11-26"
+  },
+  "commons-23613305": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-27308574": {
+    "scene": "shapur-shows-portrait",
+    "confidence": "high"
+  },
+  "commons-27308685": {
+    "scene": "shirin-arrives-at-madain",
+    "confidence": "medium"
+  },
+  "commons-29665394": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-29665681": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-30153328": {
+    "scene": "polo-game",
+    "confidence": "high"
+  },
+  "commons-31453309": {
+    "scene": "polo-game",
+    "confidence": "high"
+  },
+  "commons-31453310": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "high"
+  },
+  "commons-31453312": {
+    "scene": "shirin-brought-to-madain",
+    "confidence": "high"
+  },
+  "commons-31453313": {
+    "scene": "khusraws-funeral",
+    "confidence": "high"
+  },
+  "commons-31453315": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "commons-32907816": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "commons-40292882": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-4174043": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "commons-4174062": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "commons-48651183": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-48651184": {
+    "scene": "shapur-shows-portrait",
+    "confidence": "high"
+  },
+  "commons-48651187": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-48651189": {
+    "scene": "meeting-at-the-hunt",
+    "confidence": "high"
+  },
+  "commons-48651190": {
+    "scene": "barbad-plays",
+    "confidence": "high"
+  },
+  "commons-48651192": {
+    "scene": "meeting-at-the-hunt",
+    "confidence": "medium"
+  },
+  "commons-48651195": {
+    "scene": "maidens-tell-stories",
+    "confidence": "high"
+  },
+  "commons-48651196": {
+    "scene": "maidens-tell-stories",
+    "confidence": "high"
+  },
+  "commons-48651199": {
+    "scene": "khusraw-enthroned",
+    "confidence": "high"
+  },
+  "commons-48651200": {
+    "scene": "farhad-before-shirin",
+    "confidence": "medium"
+  },
+  "commons-48651202": {
+    "scene": "milk-channel",
+    "confidence": "high"
+  },
+  "commons-48651203": {
+    "scene": "farhad-before-khusraw",
+    "confidence": "high"
+  },
+  "commons-48651207": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "high"
+  },
+  "commons-48651209": {
+    "scene": "khusraw-enthroned",
+    "confidence": "medium"
+  },
+  "commons-52947610": {
+    "scene": "khusraw-begs-hormuz-pardon",
+    "confidence": "high"
+  },
+  "commons-61570368": {
+    "scene": "shapur-shows-portrait",
+    "confidence": "high"
+  },
+  "commons-61608937": {
+    "scene": "shapur-returns-to-khusraw",
+    "confidence": "high"
+  },
+  "commons-62473593": {
+    "scene": "maidens-tell-stories",
+    "confidence": "high"
+  },
+  "commons-635065": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-7178918": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-7822103": {
+    "scene": "battle-with-bahram-chubin",
+    "confidence": "high"
+  },
+  "commons-7826901": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "high"
+  },
+  "commons-7849944": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "commons-84107003": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "medium",
+    "note": "Shirin in the tower window, Khusraw on horseback below; placed from the picture 2026-11-26"
+  },
+  "commons-8534640": {
+    "scene": "farhad-before-shirin",
+    "confidence": "medium"
+  },
+  "commons-8711085": {
+    "scene": "shapur-shows-portrait",
+    "confidence": "high"
+  },
+  "commons-8711643": {
+    "scene": "barbad-plays",
+    "confidence": "high"
+  },
+  "commons-8711846": {
+    "scene": "shapur-shows-portrait",
+    "confidence": "high"
+  },
+  "commons-90993818": {
+    "scene": "khusraw-begs-hormuz-pardon",
+    "confidence": "high"
+  },
+  "commons-90993819": {
+    "scene": "death-of-farhad",
+    "confidence": "high"
+  },
+  "commons-90993843": {
+    "scene": "shiruya-murders-khusraw",
+    "confidence": "high"
+  },
+  "commons-91011107": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "commons-97219407": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "commons-97219623": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "commons-97490206": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "high"
+  },
+  "commons-97490587": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "met-446594": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "met-446595": {
+    "scene": "milk-channel",
+    "confidence": "high"
+  },
+  "met-446602": {
+    "scene": "wedding",
+    "confidence": "high"
+  },
+  "met-448176": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "met-452756": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "met-453191": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "met-453980": {
+    "scene": "khusraw-enthroned",
+    "confidence": "medium"
+  },
+  "walters-W604-32b": {
+    "scene": "khusraw-begs-hormuz-pardon",
+    "confidence": "high"
+  },
+  "walters-W604-35a": {
+    "scene": "shapur-shows-portrait",
+    "confidence": "high"
+  },
+  "walters-W604-39a": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "walters-W604-40b": {
+    "scene": "khusraw-at-mahin-banu",
+    "confidence": "medium"
+  },
+  "walters-W604-43a": {
+    "scene": "shapur-fetches-shirin",
+    "confidence": "medium"
+  },
+  "walters-W604-44a": {
+    "scene": "khusraw-enthroned",
+    "confidence": "high"
+  },
+  "walters-W604-45a": {
+    "scene": "meeting-at-the-hunt",
+    "confidence": "medium"
+  },
+  "walters-W604-46a": {
+    "scene": "polo-game",
+    "confidence": "high"
+  },
+  "walters-W604-47a": {
+    "scene": "khusraw-kills-lion",
+    "confidence": "high"
+  },
+  "walters-W604-50b": {
+    "scene": "khusraw-at-caesars-court",
+    "confidence": "high"
+  },
+  "walters-W604-51b": {
+    "scene": "battle-with-bahram-chubin",
+    "confidence": "high"
+  },
+  "walters-W604-52b": {
+    "scene": "shirin-laments",
+    "confidence": "high"
+  },
+  "walters-W604-54b": {
+    "scene": "death-of-bahram-announced",
+    "confidence": "high"
+  },
+  "walters-W604-59a": {
+    "scene": "farhad-before-shirin",
+    "confidence": "medium"
+  },
+  "walters-W604-59b": {
+    "scene": "milk-channel",
+    "confidence": "high"
+  },
+  "walters-W604-62a": {
+    "scene": "farhad-before-khusraw",
+    "confidence": "high"
+  },
+  "walters-W604-63a": {
+    "scene": "farhad-carves-bisutun",
+    "confidence": "high"
+  },
+  "walters-W604-65a": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "high"
+  },
+  "walters-W604-70a": {
+    "scene": "khusraw-and-shakar",
+    "confidence": "medium"
+  },
+  "walters-W604-74a": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "medium"
+  },
+  "walters-W604-78b": {
+    "scene": "shirin-rides-to-khusraw",
+    "confidence": "medium"
+  },
+  "walters-W604-79b": {
+    "scene": "barbad-nakisa-contest",
+    "confidence": "high"
+  },
+  "walters-W604-90b": {
+    "scene": "khusraw-tears-prophets-letter",
+    "confidence": "high"
+  },
+  "walters-W604-94b": {
+    "scene": "qizil-arslan-welcomes-nizami",
+    "confidence": "high"
+  },
+  "walters-W605-173b": {
+    "scene": "khusraw-learns-of-farhad",
+    "confidence": "high"
+  },
+  "walters-W605-257a": {
+    "scene": "khusraw-and-shirin-enthroned",
+    "confidence": "medium"
+  },
+  "walters-W605-258b": {
+    "scene": "death-of-farhad",
+    "confidence": "high"
+  },
+  "walters-W605-277a": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "low"
+  },
+  "walters-W605-292a": {
+    "scene": "shirin-comes-out-of-tent",
+    "confidence": "low"
+  },
+  "walters-W605-90a": {
+    "scene": "farhad-before-khusraw",
+    "confidence": "high"
+  },
+  "walters-W607-110a": {
+    "scene": "shiruya-murders-khusraw",
+    "confidence": "high"
+  },
+  "walters-W607-37a": {
+    "scene": "atabak-enthroned",
+    "confidence": "high"
+  },
+  "walters-W607-45b": {
+    "scene": "shapur-reveals-himself",
+    "confidence": "low"
+  },
+  "walters-W607-62b": {
+    "scene": "khusraw-enthroned",
+    "confidence": "high"
+  },
+  "walters-W607-68a": {
+    "scene": "khusraw-and-shirin-enthroned",
+    "confidence": "low"
+  },
+  "walters-W607-78b": {
+    "scene": "farhad-carves-bisutun",
+    "confidence": "high"
+  },
+  "walters-W607-86a": {
+    "scene": "khusraw-and-shakar",
+    "confidence": "high"
+  },
+  "walters-W607-93a": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "walters-W608-45b": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "walters-W608-51b": {
+    "scene": "meeting-at-the-hunt",
+    "confidence": "high"
+  },
+  "walters-W608-54a": {
+    "scene": "khusraw-kills-lion",
+    "confidence": "high"
+  },
+  "walters-W608-69b": {
+    "scene": "farhad-before-khusraw",
+    "confidence": "high"
+  },
+  "walters-W608-72b": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "high"
+  },
+  "walters-W608-81b": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "walters-W608-96a": {
+    "scene": "wedding",
+    "confidence": "high"
+  },
+  "walters-W609-106a": {
+    "scene": "wedding",
+    "confidence": "high"
+  },
+  "walters-W609-111b": {
+    "scene": "shiruya-murders-khusraw",
+    "confidence": "high"
+  },
+  "walters-W609-44b": {
+    "scene": "shapur-shows-portrait",
+    "confidence": "high"
+  },
+  "walters-W609-49a": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "walters-W609-58a": {
+    "scene": "khusraw-kills-lion",
+    "confidence": "high"
+  },
+  "walters-W609-78b": {
+    "scene": "shirin-visits-farhad",
+    "confidence": "high"
+  },
+  "walters-W609-88b": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "walters-W610-47a": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "walters-W610-55a": {
+    "scene": "polo-game",
+    "confidence": "high"
+  },
+  "walters-W610-62b": {
+    "scene": "battle-with-bahram-chubin",
+    "confidence": "high"
+  },
+  "walters-W610-91b": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "high"
+  },
+  "walters-W611-32b": {
+    "scene": "shapur-shows-portrait",
+    "confidence": "high"
+  },
+  "walters-W611-45a": {
+    "scene": "battle-with-bahram-chubin",
+    "confidence": "high"
+  },
+  "walters-W611-53b": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "high"
+  },
+  "walters-W611-66a": {
+    "scene": "khusraw-and-shirin-enthroned",
+    "confidence": "medium"
+  },
+  "walters-W611-72b": {
+    "scene": "buzurg-umid-advises",
+    "confidence": "high"
+  },
+  "walters-W612-109b": {
+    "scene": "shiruya-murders-khusraw",
+    "confidence": "high"
+  },
+  "walters-W612-110b": {
+    "scene": "shirin-suicide",
+    "confidence": "high"
+  },
+  "walters-W612-40b": {
+    "scene": "khusraw-begs-hormuz-pardon",
+    "confidence": "high"
+  },
+  "walters-W612-48a": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "walters-W612-57a": {
+    "scene": "khusraw-kills-lion",
+    "confidence": "high"
+  },
+  "walters-W612-72b": {
+    "scene": "farhad-before-khusraw",
+    "confidence": "medium"
+  },
+  "walters-W612-79b": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "high"
+  },
+  "walters-W612-89b": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "walters-W612-98b": {
+    "scene": "khusraw-and-shakar",
+    "confidence": "medium"
+  },
+  "walters-W657-100a": {
+    "scene": null,
+    "confidence": "high"
+  },
+  "walters-W657-39b": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "walters-W657-62a": {
+    "scene": "shirin-visits-farhad",
+    "confidence": "high"
+  },
+  "walters-W657-69b": {
+    "scene": "shirin-visits-farhad",
+    "confidence": "high"
+  },
+  "walters-W657-70a": {
+    "scene": "shirin-visits-farhad",
+    "confidence": "high"
+  },
+  "cleveland-1944.499": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "cleveland-1947.500.b": {
+    "scene": null,
+    "confidence": "low"
+  },
+  "commons-154587072": {
+    "scene": "wedding",
+    "confidence": "high"
+  },
+  "commons-158256681": {
+    "scene": "wedding",
+    "confidence": "high"
+  },
+  "commons-158256683": {
+    "scene": "wedding",
+    "confidence": "high"
+  },
+  "commons-158980350": {
+    "scene": "wedding",
+    "confidence": "high"
+  },
+  "commons-159020277": {
+    "scene": "khusraw-kills-lion",
+    "confidence": "high"
+  },
+  "commons-159044869": {
+    "scene": "khusraw-kills-lion",
+    "confidence": "high"
+  },
+  "commons-159024418": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "europeana-90402-AK-MAK-1253": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high"
+  },
+  "europeana-90402-AK-MAK-1254": {
+    "scene": "shapur-shows-portrait",
+    "confidence": "high"
+  },
+  "europeana-90402-AK-MAK-1256": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "high"
+  },
+  "europeana-90402-AK-MAK-1255": {
+    "scene": "barbad-plays",
+    "confidence": "medium"
+  },
+  "europeana-90402-AK-MAK-1257": {
+    "scene": "barbad-nakisa-contest",
+    "confidence": "medium",
+    "note": "Khusraw and Shirin under a canopy with musicians playing for them; placed from the picture 2026-11-26"
+  },
+  "commons-156991718": {
+    "scene": "khusraw-sees-shirin-bathing",
+    "confidence": "high",
+    "note": "Humayun Khamsa fol. 34r: Shirin bathing in the pool, Khusraw on horseback above; placed from the picture 2026-11-26"
+  },
+  "commons-156992150": {
+    "scene": "farhad-carries-shirin",
+    "confidence": "high",
+    "note": "Humayun Khamsa fol. 65v: Farhad lifts Shirin and her horse; placed from the picture 2026-11-26"
+  },
+  "commons-156992151": {
+    "scene": "khusraw-at-shirins-castle",
+    "confidence": "medium",
+    "note": "Humayun Khamsa fol. 73v: Shirin at the palace window, Khusraw below; follows fol. 65v (Farhad) in story order; placed from the picture 2026-11-26"
+  }
 }
