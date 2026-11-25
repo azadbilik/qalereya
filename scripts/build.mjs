@@ -3,7 +3,7 @@
 // kitabxana chapters it happens in) and data/tags/<poem>.json (artwork id → scene).
 //
 //   node scripts/build.mjs
-import { readFile, readdir, writeFile } from 'node:fs/promises';
+import { readFile, readdir, writeFile, mkdir, rm } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 
 const root = new URL('../data/', import.meta.url);
@@ -157,3 +157,68 @@ if (missing.length) console.warn(`no Azerbaijani/Russian name for: ${missing.joi
 await writeFile(new URL('gallery.json', root), JSON.stringify({ poems, items, names: { places: PLACE, dynasties: DYNASTY } }) + '\n');
 const n = (f) => items.filter(f).length;
 console.log(`${n((x) => x.w)} with a known size · ${items.length} artworks · ${n((x) => x.poem)} in a poem · ${n((x) => x.scene)} with a scene · ${n((x) => x.manuscript)} with a manuscript · ${n((x) => x.free)} free to reuse`);
+
+// One small page per picture, p/<id>/: what a link preview (Telegram, WhatsApp, Facebook, X: no JS)
+// reads, which then sends a visitor on to the gallery with that picture open. The share button in the
+// viewer links here. Regenerated in full on every run.
+const SITE = 'https://azadbilik.org/qalereya/';
+const attr = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const clip = (s, n) => s.length <= n ? s : s.slice(0, n - 1).replace(/[\s,;:.(-]+\S*$/, '') + '…';
+// A JPEG's size, read from its start-of-frame marker
+const jpegSize = async (path) => {
+  const b = await readFile(path);
+  for (let i = 2; i + 9 < b.length;) {
+    if (b[i] !== 0xff) { i++; continue; }
+    const m = b[i + 1];
+    if (m >= 0xc0 && m <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(m)) return { w: b.readUInt16BE(i + 7), h: b.readUInt16BE(i + 5) };
+    i += 2 + b.readUInt16BE(i + 2);
+  }
+  return null;
+};
+const pdir = new URL('../p/', import.meta.url);
+await rm(pdir, { recursive: true, force: true });
+let pages = 0;
+for (const x of items) {
+  if (!x.large?.startsWith('large/')) continue; // the preview image must be ours and absolute
+  const poem = poems.find((p) => p.slug === x.poem) ?? POEMS.filter(([s]) => s === x.poem).map(([slug, az]) => ({ az }))[0];
+  const scene = poem?.scenes?.find((s) => s.id === x.scene);
+  const title = scene?.az ?? clip(x.title, 90);
+  const desc = [poem?.az, x.manuscript].filter(Boolean).join(' · ');
+  const holder = [x.museum, x.license, x.credit && x.credit !== x.museum ? x.credit : null].filter(Boolean).join(', ');
+  const description = clip(`${desc ? desc + '. ' : ''}${holder}`, 200);
+  const size = await jpegSize(new URL(`../${x.large}`, import.meta.url));
+  const url = `${SITE}p/${encodeURIComponent(x.id)}/`;
+  const html = `<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${attr(title)} · Qalereya</title>
+<meta name="description" content="${attr(description)}">
+<link rel="canonical" href="${url}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Azad Bilik · Qalereya">
+<meta property="og:url" content="${url}">
+<meta property="og:title" content="${attr(title)}">
+<meta property="og:description" content="${attr(description)}">
+<meta property="og:image" content="${SITE}${x.large}">${size ? `
+<meta property="og:image:width" content="${size.w}">
+<meta property="og:image:height" content="${size.h}">` : ''}
+<meta property="og:image:alt" content="${attr(title)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${attr(title)}">
+<meta name="twitter:description" content="${attr(description)}">
+<meta name="twitter:image" content="${SITE}${x.large}">
+<script>location.replace('../../' + location.search + '#${encodeURIComponent(x.id)}');</script>
+<noscript><meta http-equiv="refresh" content="0;url=../../#${encodeURIComponent(x.id)}"></noscript>
+</head>
+<body>
+<p><a href="../../#${encodeURIComponent(x.id)}">${attr(clip(x.title, 90))}</a></p>
+</body>
+</html>
+`;
+  await mkdir(new URL(`${encodeURIComponent(x.id)}/`, pdir), { recursive: true });
+  await writeFile(new URL(`${encodeURIComponent(x.id)}/index.html`, pdir), html);
+  pages++;
+}
+console.log(`${pages} share pages in p/`);

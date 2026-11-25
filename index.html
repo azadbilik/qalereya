@@ -113,7 +113,8 @@
   .badge.nc { border-color: color-mix(in srgb, var(--accent) 50%, transparent); color: var(--accent); }
   .links { display: grid; gap: .5rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: .875rem; }
   .links a { font-weight: 500; text-decoration: none; }
-  .links a:hover { color: var(--accent); }
+  .links a:hover, .links button:hover { color: var(--accent); }
+  .links button { font-weight: 500; text-align: left; font-size: inherit; }
   .pos { font-size: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: auto; }
 
   @media (max-width: 48rem) {
@@ -208,7 +209,7 @@ const T = {
     readChapter: 'Fəsli oxu', undated: 'Tarixsiz', cent: (c) => `${ROMAN[c]} əsr`,
     date: 'Tarix', painted: 'Çəkilib', artist: 'Rəssam', ms: 'Əlyazma', medium: 'Material', held: 'Mənbə', credit: 'Kredit', licence: 'Lisenziya', close: 'Bağla',
     loading: 'Yüklənir…',
-    readScene: 'Bu səhnəni kitabxana.az-da oxu', readPoem: 'Poemanı kitabxana.az-da oxu', atSource: 'Mənbədə bax', full: 'Tam ölçüdə' },
+    readScene: 'Bu səhnəni kitabxana.az-da oxu', readPoem: 'Poemanı kitabxana.az-da oxu', atSource: 'Mənbədə bax', full: 'Tam ölçüdə', share: 'Linki paylaş', copied: 'Link köçürüldü' },
   ru: { doc: 'Галерея · Azad Bilik', title: 'Галерея', lead: 'Пять веков миниатюр к поэмам Низами и Физули — из рукописей, созданных в Тебризе, Герате, Ширазе и Стамбуле, из открытых коллекций музеев.',
     workshops: 'Мастерские', maps: 'Карты', library: 'Библиотека', poem: 'Поэма', manuscript: 'Рукопись', allMs: 'Все рукописи', freeOnly: 'Только свободная лицензия',
     footer: 'Изображения — из открытых коллекций музеев и Викисклада; копии для экрана хранятся здесь, оригиналы — у источника. У каждого указаны источник и лицензия.',
@@ -216,7 +217,7 @@ const T = {
     readChapter: 'Читать главу', undated: 'Без даты', cent: (c) => `${ROMAN[c]} век`,
     date: 'Дата', painted: 'Создана', artist: 'Художник', ms: 'Рукопись', medium: 'Материал', held: 'Собрание', credit: 'Авторство', licence: 'Лицензия', close: 'Закрыть',
     loading: 'Загрузка…',
-    readScene: 'Читать эту сцену на kitabxana.az', readPoem: 'Читать поэму на kitabxana.az', atSource: 'В источнике', full: 'Полный размер' },
+    readScene: 'Читать эту сцену на kitabxana.az', readPoem: 'Читать поэму на kitabxana.az', atSource: 'В источнике', full: 'Полный размер', share: 'Поделиться', copied: 'Ссылка скопирована' },
   en: { doc: 'Gallery · Azad Bilik', title: 'Gallery', lead: 'Five centuries of miniatures painted for the poems of Nizami and Fuzuli, from manuscripts made in Tabriz, Herat, Shiraz and Istanbul, out of museums\' open collections.',
     workshops: 'Workshops', maps: 'Maps', library: 'Library', poem: 'Poem', manuscript: 'Manuscript', allMs: 'All manuscripts', freeOnly: 'Free to reuse only',
     footer: 'The pictures come from museums\' open collections and Wikimedia Commons; screen-sized copies are kept here, the originals at the source. Each comes with its source and licence.',
@@ -224,7 +225,7 @@ const T = {
     readChapter: 'Read the chapter', undated: 'Undated', cent: (c) => `${c}${[, 'st', 'nd', 'rd'][c % 10 * (c % 100 > 3 && c % 100 < 21 ? 0 : 1)] ?? 'th'} century`,
     date: 'Date', painted: 'Painted in', artist: 'Artist', ms: 'Manuscript', medium: 'Medium', held: 'Held by', credit: 'Credit', licence: 'Licence', close: 'Close',
     loading: 'Loading…',
-    readScene: 'Read this passage on kitabxana.az', readPoem: 'Read the poem on kitabxana.az', atSource: 'At the source', full: 'Full size' },
+    readScene: 'Read this passage on kitabxana.az', readPoem: 'Read the poem on kitabxana.az', atSource: 'At the source', full: 'Full size', share: 'Share', copied: 'Link copied' },
 };
 const t = (k) => T[lang][k];
 const KX = () => `https://kitabxana.az${lang === 'az' ? '' : '/' + lang}`;
@@ -389,9 +390,16 @@ function show(id) {
       ${read ? `<a href="${read}">${x.chapter || scene ? t('readScene') : t('readPoem')} →</a>` : ''}
       <a href="${esc(x.source)}" target="_blank" rel="noopener">${t('atSource')} ↗</a>
       <a href="${esc(x.image)}" target="_blank" rel="noopener">${t('full')} ↗</a>
+      <button type="button" id="v-share">${t('share')}</button>
     </div>
     <p class="pos">${at + 1} / ${view.length}</p>`;
   document.getElementById('v-close').onclick = () => dlg.close();
+  // The picture's own page (p/<id>/, built by scripts/build.mjs), whose link preview shows this picture
+  document.getElementById('v-share').onclick = async (e) => {
+    const url = new URL(`p/${encodeURIComponent(x.id)}/${lang === 'az' ? '' : '?lang=' + lang}`, new URL('.', location.href)).href;
+    if (navigator.share) { try { await navigator.share({ title: x.title, url }); } catch {} return; }
+    try { await navigator.clipboard.writeText(url); e.target.textContent = t('copied'); } catch { prompt(t('share'), url); }
+  };
   document.getElementById('v-prev').disabled = at <= 0;
   document.getElementById('v-next').disabled = at >= view.length - 1;
   if (!dlg.open) dlg.showModal();
