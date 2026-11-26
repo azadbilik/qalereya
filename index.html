@@ -64,15 +64,20 @@
   .bar { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
   .bar .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; padding-top: .75rem; padding-bottom: .75rem; }
   .poems { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; flex: 1 1 40rem; margin: -.25rem; padding: .25rem; }
-  .poems .poet { font-size: .75rem; color: var(--muted); padding: 0 .1rem 0 .9rem; white-space: nowrap; }
-  .poems .poet:empty { padding-left: .5rem; }
+  /* A poet's name heads their poems: a small label after a rule, not another button */
+  .poems .poet { font-size: .6875rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-left: .6rem; padding: .15rem .25rem .15rem .8rem; border-left: 1px solid var(--rule); white-space: nowrap; }
+  .poems .poet:empty { padding: 0; margin-left: .35rem; height: 1.1rem; }
   .poems::-webkit-scrollbar { display: none; }
   .poems button { white-space: nowrap; padding: .4rem .75rem; border-radius: 999px; font-size: .8125rem; color: var(--muted); }
   .poems button:hover { color: var(--ink); background: var(--tint); }
   .poems button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
-  .poems small { margin-left: .3rem; font-variant-numeric: tabular-nums; }
+  .poems small { margin-left: .3rem; font-size: .75rem; font-variant-numeric: tabular-nums; }
   .filters { display: flex; align-items: center; gap: 1rem; font-size: .8125rem; color: var(--muted); }
-  .filters select { background: transparent; border: 1px solid var(--rule); border-radius: 3px; padding: .3rem .5rem; max-width: 14rem; }
+  /* The selects drawn like the poem chips: a pill, its own arrow */
+  .filters select { -webkit-appearance: none; appearance: none; font-size: .8125rem; color: var(--muted); background: transparent no-repeat right .7rem center / .55rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23887' stroke-width='1.4'/%3E%3C/svg%3E");
+    border: 1px solid var(--rule); border-radius: 999px; padding: .4rem 1.8rem .4rem .8rem; max-width: 14rem; cursor: pointer; }
+  .filters select:hover { color: var(--ink); border-color: color-mix(in srgb, var(--ink) 35%, transparent); }
   .filters label { display: inline-flex; gap: .4rem; align-items: center; cursor: pointer; white-space: nowrap; }
   .filters input { accent-color: var(--accent); }
   .filters select:has(option:checked:not([value=""])) { border-color: var(--ink); color: var(--ink); }
@@ -240,7 +245,7 @@ const T = {
     footer: 'Şəkillər muzeylərin açıq kolleksiyalarından və Wikimedia Commons-dandır; ekrana uyğun surətləri burada saxlanılır, əsli mənbədədir. Hər birinin mənbəyi və lisenziyası yanındadır.',
     miniature: 'Miniatür', prev: 'Əvvəlki', next: 'Sonrakı', all: 'Hamısı', other: 'Digər', count: (n) => `${n} miniatür`, empty: 'Heç nə tapılmadı.', noScene: 'Səhnəsi müəyyənləşdirilməyənlər',
     readChapter: 'Fəsli oxu', undated: 'Tarixsiz', cent: (c) => `${ROMAN[c]} əsr`,
-    date: 'Tarix', painted: 'Çəkilib', artist: 'Rəssam', ms: 'Əlyazma', medium: 'Material', held: 'Mənbə', credit: 'Kredit', licence: 'Lisenziya', close: 'Bağla',
+    date: 'Tarix', painted: 'Çəkilib', artist: 'Rəssam', ms: 'Əlyazma', medium: 'Material', held: 'Mənbə', credit: 'Kredit', srcTitle: 'Mənbədəki adı', licence: 'Lisenziya', close: 'Bağla',
     loading: 'Yüklənir…', noImage: 'Şəkil yüklənmədi — açıb mənbədə baxın',
     readScene: 'Bu səhnəni kitabxana.az-da oxu', readPoem: 'Poemanı kitabxana.az-da oxu', atSource: 'Mənbədə bax', full: 'Tam ölçüdə', share: 'Linki paylaş', copied: 'Link köçürüldü' },
   ru: { doc: 'Галерея · Azad Bilik', title: 'Галерея', lead: 'Пять веков миниатюр к поэмам Низами и Физули — из рукописей, созданных в Тебризе, Герате, Ширазе и Стамбуле, из открытых коллекций музеев.',
@@ -248,7 +253,7 @@ const T = {
     footer: 'Изображения — из открытых коллекций музеев и Викисклада; копии для экрана хранятся здесь, оригиналы — у источника. У каждого указаны источник и лицензия.',
     miniature: 'Миниатюра', prev: 'Предыдущая', next: 'Следующая', all: 'Все', other: 'Другое', count: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')}`, empty: 'Ничего не найдено.', noScene: 'Сцена не определена',
     readChapter: 'Читать главу', undated: 'Без даты', cent: (c) => `${ROMAN[c]} век`,
-    date: 'Дата', painted: 'Создана', artist: 'Художник', ms: 'Рукопись', medium: 'Материал', held: 'Собрание', credit: 'Авторство', licence: 'Лицензия', close: 'Закрыть',
+    date: 'Дата', painted: 'Создана', artist: 'Художник', ms: 'Рукопись', medium: 'Материал', held: 'Собрание', credit: 'Авторство', srcTitle: 'Название в источнике', licence: 'Лицензия', close: 'Закрыть',
     loading: 'Загрузка…', noImage: 'Изображение не загрузилось — откройте, чтобы посмотреть в источнике',
     readScene: 'Читать эту сцену на kitabxana.az', readPoem: 'Читать поэму на kitabxana.az', atSource: 'В источнике', full: 'Полный размер', share: 'Поделиться', copied: 'Ссылка скопирована' },
   en: { doc: 'Gallery · Azad Bilik', title: 'Gallery', lead: 'Five centuries of miniatures painted for the poems of Nizami and Fuzuli, from manuscripts made in Tabriz, Herat, Shiraz and Istanbul, out of museums\' open collections.',
@@ -256,7 +261,7 @@ const T = {
     footer: 'The pictures come from museums\' open collections and Wikimedia Commons; screen-sized copies are kept here, the originals at the source. Each comes with its source and licence.',
     miniature: 'Miniature', prev: 'Previous', next: 'Next', all: 'All', other: 'Other', count: (n) => `${n} miniature${n === 1 ? '' : 's'}`, empty: 'Nothing matches.', noScene: 'Scene not identified',
     readChapter: 'Read the chapter', undated: 'Undated', cent: (c) => `${c}${[, 'st', 'nd', 'rd'][c % 10 * (c % 100 > 3 && c % 100 < 21 ? 0 : 1)] ?? 'th'} century`,
-    date: 'Date', painted: 'Painted in', artist: 'Artist', ms: 'Manuscript', medium: 'Medium', held: 'Held by', credit: 'Credit', licence: 'Licence', close: 'Close',
+    date: 'Date', painted: 'Painted in', artist: 'Artist', ms: 'Manuscript', medium: 'Medium', held: 'Held by', credit: 'Credit', srcTitle: 'Title at the source', licence: 'Licence', close: 'Close',
     loading: 'Loading…', noImage: 'The picture didn’t load — open it to see it at the source',
     readScene: 'Read this passage on kitabxana.az', readPoem: 'Read the poem on kitabxana.az', atSource: 'At the source', full: 'Full size', share: 'Share', copied: 'Link copied' },
 };
@@ -370,7 +375,9 @@ function drawFilters() {
   free.onchange = () => { state.free = free.checked; drawFilters(); render(true); };
 
   const reset = document.getElementById('reset');
-  reset.hidden = !(state.ms || state.c || state.pl || state.free);
+  const active = [state.ms, state.c, state.pl, state.free].filter(Boolean).length;
+  reset.hidden = !active;
+  reset.textContent = `${t('reset')} (${active})`;
   reset.onclick = clearFilters;
 }
 function clearFilters() {
@@ -421,9 +428,12 @@ function section(name, chapter, items) {
     <div class="strip">${items.map((x) => card(x, true)).join('')}</div></section>`;
 }
 
+// A picture's name in the reader's language: its scene where the catalogue knows it, else the title at the source
+const sceneOf = (x) => data.poemOf.get(x.poem)?.scenes?.find((s) => s.id === x.scene);
+const nameOf = (x) => { const sc = sceneOf(x); return sc ? tr(sc) : x.title; };
 // In a scene the heading already says what is painted: the caption says where and when
 function card(x, inScene) {
-  const head = inScene ? (whenOf(x) ?? t('undated')) : x.title;
+  const head = inScene ? (whenOf(x) ?? t('undated')) : nameOf(x);
   const meta = inScene ? x.manuscript : [whenOf(x) ?? x.date, x.manuscript ?? x.museum].filter(Boolean).join(' · ');
   return `<button type="button" class="card" data-id="${esc(x.id)}" title="${esc(x.title)}"><div class="frame"><img src="${esc(x.thumb)}"${x.w ? ` width="${x.w}" height="${x.h}"` : ''} alt="${esc(x.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
     <p class="t">${esc(head)}</p><p class="m">${esc(meta ?? '')}</p></button>`;
@@ -474,13 +484,15 @@ function show(id) {
   const poem = data.poemOf.get(x.poem);
   const scene = poem?.scenes?.find((s) => s.id === x.scene);
   const read = x.chapter ? `${KX()}/works/${x.chapter}` : scene?.chapters?.[0] ? `${KX()}/works/${scene.chapters[0]}` : x.poem ? `${KX()}/collections/${x.poem}` : null;
-  const artists = x.artists && !/^(unknown|anonymous|unidentified)/i.test(x.artists) ? x.artists : null;
+  // No painter named when the source only says "1386-88 Baghdad artist", "unknown" and the like
+  const artists = x.artists && !/^(unknown|anonymous|unidentified)/i.test(x.artists) && !/^\d|\b(artist|painter)s?$/i.test(x.artists.trim()) ? x.artists : null;
   const rows = [[t('date'), esc(x.date)], [t('artist'), esc(artists)], [t('ms'), esc(x.manuscript)], [t('medium'), esc(x.medium)], [t('held'), esc(x.museum)], [t('credit'), esc(x.credit)]].filter(([, v]) => v);
   // Where it was painted, linking to the workshops map
+  if (scene && x.title) rows.push([t('srcTitle'), esc(x.title)]);
   if (x.place) rows.splice(1, 0, [t('painted'), `<a href="emalatxana/${lang === 'az' ? '' : '?lang=' + lang}">${esc(tr(x.place.city))}</a>${x.place.dynasty ? ` · ${esc(tr(x.place.dynasty))}` : ''}`]);
   document.getElementById('v-info').innerHTML = `
     <button type="button" class="close" id="v-close" autofocus>${t('close')} ✕</button>
-    <div>${scene ? `<p class="scene-name">${esc(tr(scene))}</p>` : ''}<h2>${esc(x.title)}</h2>${poem ? `<p class="scene-name">${esc(tr(poem))}</p>` : ''}</div>
+    <div><h2>${esc(nameOf(x))}</h2>${poem ? `<p class="scene-name">${esc(tr(poem))}</p>` : ''}</div>
     <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}
       <dt>${t('licence')}</dt><dd><span class="badge${x.free ? '' : ' nc'}">${esc(x.license)}</span></dd></dl>
     <div class="links">
