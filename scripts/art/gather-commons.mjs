@@ -21,6 +21,11 @@ const SEEDS = [
   ['textile', 'q', 'Shirvan rug', 150], ['textile', 'q', 'Karabakh carpet', 200], ['textile', 'q', 'Guba carpet', 150], ['textile', 'q', 'Gazakh carpet', 100], ['textile', 'q', 'Tabriz carpet', 150], ['textile', 'q', 'Azerbaijani carpet museum', 250], ['textile', 'q', 'Azerbaijani rug', 250], ['textile', 'q', 'Ganja carpet Azerbaijan', 60], ['textile', 'q', 'Baku carpet Azerbaijan', 80], ['textile', 'q', 'kelaghayi Azerbaijan', 60], ['textile', 'q', 'Azerbaijani embroidery', 60], ['textile', 'q', 'Azerbaijan National Carpet Museum', 200],
   ['tabriz', 'q', 'Tabriz school miniature', 100], ['tabriz', 'q', 'Jalayirid painting Tabriz', 60], ['tabriz', 'q', 'Safavid Tabriz painting', 100],
   ['modern', 'q', 'Mir Mohsun Navvab', 60], ['modern', 'q', 'Usta Gambar Garabaghi', 40], ['modern', 'q', 'Mirza Gadim Iravani', 60], ['modern', 'q', 'Bahruz Kangarli', 60], ['modern', 'q', 'Azim Azimzade', 100], ['modern', 'q', 'Sattar Bahlulzade', 80], ['modern', 'q', 'Javad Mirjavadov', 60], ['modern', 'q', 'Tahir Salahov', 60], ['modern', 'q', 'Togrul Narimanbekov', 60], ['modern', 'q', 'Mikayil Abdullayev', 60], ['modern', 'q', 'Azerbaijan National Art Museum painting', 200], ['modern', 'q', 'Azerbaijani painter oil on canvas', 250], ['modern', 'q', 'Azerbaijani sculpture', 100], ['modern', 'q', 'Azerbaijan Soviet poster', 100], ['modern', 'q', 'Shusha painting 19th century Karabakh', 60], ['modern', 'q', 'Azerbaijani contemporary art', 150], ['modern', 'q', 'Heydar Aliyev Center exhibition art', 40], ['modern', 'q', 'Yarat contemporary art Baku', 60], ['modern', 'q', 'Azerbaijani graphic art', 60], ['modern', 'q', 'Azerbaijani miniature art', 80],
+  // second pass: Tabriz-school albums and manuscripts held abroad (Topkapı, British Library, Hermitage, Met…)
+  ['tabriz', 'q', 'Great Mongol Shahnameh Tabriz', 120], ['tabriz', 'q', 'Shahnameh Shah Tahmasp Tabriz', 150], ['tabriz', 'q', 'Jalayirid Khamsa Tabriz', 60], ['tabriz', 'q', 'Aq Qoyunlu painting Tabriz', 60], ['tabriz', 'q', 'Sultan Muhammad Tabriz painter', 80], ['tabriz', 'q', 'Mir Musavvir', 60], ['tabriz', 'q', 'Aqa Mirak', 40], ['tabriz', 'q', 'Muzaffar Ali Safavid painter', 40], ['tabriz', 'q', 'Sadiqi Beg', 40], ['tabriz', 'q', 'Demotte Shahnameh', 80], ['tabriz', 'q', 'Diez Albums Tabriz', 60], ['tabriz', 'q', 'Topkapi Tabriz Nizami Khamsa', 80], ['tabriz', 'q', 'British Library Tabriz manuscript Khamsa', 60], ['tabriz', 'q', 'Hermitage Tabriz miniature', 60], ['tabriz', 'q', 'Ilkhanid Tabriz Jami al-Tawarikh', 80], ['tabriz', 'q', 'Rashid al-Din Tabriz manuscript', 60],
+  // territory pass: objects of Karabakh, Nakhchivan, Ganja and neighbours
+  ['textile', 'q', 'Shusha Carpet Museum', 150], ['textile', 'q', 'Karabakh carpets exhibit', 150], ['modern', 'q', 'Shusha museum exhibit', 100], ['medieval', 'q', 'Nakhchivan museum exhibit', 100], ['medieval', 'q', 'Julfa Djulfa khachkar', 120], ['medieval', 'q', 'khachkar Nakhchivan', 80], ['medieval', 'q', 'khachkar Karabakh', 120], ['medieval', 'q', 'Ordubad museum', 60], ['medieval', 'q', 'Ganja museum exhibit', 80], ['medieval', 'q', 'Agdam museum exhibit', 40], ['medieval', 'q', 'Gandzasar relief', 60],
+  ['medieval', 'cat', 'Carpets of Nagorno-Karabakh', 1], ['medieval', 'cat', 'Shusha Carpet Museum', 1],
 ];
 const HIT = /azerbaij|tabriz|tebriz|shirvan|şirvan|karabakh|karabagh|qarabağ|garabagh|gobustan|qobustan|gamigaya|qamıqaya|nakhchivan|nakhichevan|naxçıvan|baku|bakı|ganja|gəncə|genje|shusha|şuşa|guba|quba|gazakh|qazax|kazak|sheki|şəki|lahij|lahıc|mingachevir|mingəçevir|beylagan|beyləqan|barda|bərdə|caucasian albania|albania|kura-araxes|khojaly|navvab|kangarli|kəngərli|azimzade|bahlulzade|bəhlulzadə|mirjavadov|salahov|narimanbe|abdullayev|iravani|garabaghi|kelaghayi|kəlağayı|shamakhi|şamaxı|kitabe|shebeke|şəbəkə/i;
 const SKIP_CAT = (c) => /Heydar Aliyev|Ilham Aliyev|Flag|Coat of arms|Stamps|Banknote|Coins|Football|Eurovision|Presidents|Politics|Military|Armed forces|Elections|Railway|Airport|Road|Hospital|Parliament|Sport|Soldier|Disasters|Events in|People of|Buildings in|Streets|Mosques|Churches|Hotels|Schools|University|Companies|Transport|Cityscape|Panoram|Night|Aerial/i.test(c);
@@ -55,8 +60,13 @@ try {
 } catch (e) { console.error('no artists.json yet', e.message); }
 
 console.error('files', files.size);
-const titles = [...files.keys()];
-const out = [];
+let prev = [];
+try { prev = JSON.parse(await readFile(new URL('data/art/raw/commons.json', root), 'utf8')); } catch {}
+const prevBy = new Map(prev.map((r) => [r.title, r]));
+const titles = [...files.keys()].filter((t) => !prevBy.has(t));
+console.error('new files to describe', titles.length);
+const out = [...prev];
+for (const r of out) { const e = files.get(r.title); if (e) { r.themes = [...new Set([...r.themes, ...e.themes])]; r.seeds = [...new Set([...r.seeds, ...e.seeds])].slice(0, 6); } }
 for (let i = 0; i < titles.length; i += 50) {
   const r = await commons({ action: 'query', prop: 'imageinfo', iiprop: 'url|size|mime|extmetadata', iiextmetadatafilter: 'LicenseShortName|License|UsageTerms|Artist|Credit|ImageDescription|ObjectName|DateTimeOriginal|DateTime|Categories|Copyrighted|AttributionRequired|Restrictions|Permission', iiurlwidth: 900, titles: titles.slice(i, i + 50).join('|') });
   for (const p of r?.query?.pages ?? []) {

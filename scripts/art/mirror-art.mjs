@@ -43,5 +43,9 @@ async function one(x) {
 const queue = todo.slice(0, limit);
 await Promise.all([1, 2, 3, 4].map(async () => { while (queue.length) { await one(queue.shift()); if (made % 50 === 0) await writeFile(dimsFile, JSON.stringify(dims)); await sleep(150); } }));
 await writeFile(dimsFile, JSON.stringify(dims));
+// Files of items that left the catalogue (or are no longer free) go too
+{ const { readdir } = await import('node:fs/promises'); const keep = new Set(todo.map((x) => x.id + '.jpg'));
+  for (const d of ['thumbs', 'large']) for (const f of await readdir(dir(d))) if (!keep.has(f)) { await rm(dir(`${d}/${f}`)); }
+  for (const id of Object.keys(dims)) if (!keep.has(id + '.jpg')) delete dims[id]; await writeFile(dimsFile, JSON.stringify(dims)); }
 await rm(tmp, { recursive: true, force: true });
 console.error(`free items ${todo.length}, made ${made}, failed ${failed}`);

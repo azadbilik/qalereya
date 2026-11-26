@@ -28,16 +28,6 @@
   "works": 10
  },
  {
-  "id": "Q4311350",
-  "name": "Mir Mohsun Navvab",
-  "nameAz": "Mir Möhsün Nəvvab",
-  "born": "1833",
-  "died": "1918",
-  "birthplace": "Shusha",
-  "workRights": "public domain in Azerbaijan",
-  "works": 7
- },
- {
   "id": "Q890423",
   "name": "Togrul Narimanbeyov",
   "nameAz": "Toğrul Nərimanbəyov",
@@ -63,6 +53,16 @@
   "birthplace": "Shaki",
   "workRights": "protected",
   "works": 6
+ },
+ {
+  "id": "Q4311350",
+  "name": "Mir Mohsun Navvab",
+  "nameAz": "Mir Möhsün Nəvvab",
+  "born": "1833",
+  "died": "1918",
+  "birthplace": "Shusha",
+  "workRights": "public domain in Azerbaijan",
+  "works": 5
  },
  {
   "id": "Q2627373",
@@ -214,6 +214,16 @@
   "birthplace": "Baku",
   "workRights": "protected",
   "works": 2
+ },
+ {
+  "id": "Q2384994",
+  "name": "Ajami Nakhchivani",
+  "nameAz": "Əcəmi Naxçıvani",
+  "born": "1120",
+  "died": "1300",
+  "birthplace": "Nakhchivan",
+  "workRights": "public domain in Azerbaijan",
+  "works": 1
  },
  {
   "id": "Q65154148",
@@ -512,16 +522,6 @@
   "born": "1946",
   "birthplace": "Baku",
   "workRights": "protected",
-  "works": 0
- },
- {
-  "id": "Q2384994",
-  "name": "Ajami Nakhchivani",
-  "nameAz": "Əcəmi Naxçıvani",
-  "born": "1120",
-  "died": "1300",
-  "birthplace": "Nakhchivan",
-  "workRights": "public domain in Azerbaijan",
   "works": 0
  },
  {

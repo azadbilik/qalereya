@@ -1,7 +1,7 @@
 // Cleveland Museum of Art Open Access (CC0) → data/art/raw/cleveland.json
 import { writeFile, mkdir } from 'node:fs/promises';
 import { getJson, root } from './lib.mjs';
-const QUERIES = ['Azerbaijan', 'Tabriz', 'Shirvan', 'Karabagh', 'Karabakh', 'Genje', 'Ganja', 'Baku', 'Kazak', 'Kuba', 'Caucasus', 'Caucasian', 'Nakhchivan', 'Ardabil', 'Maragha', 'Shamakhi', 'Seychour', 'Talish', 'Jalayirid', 'Gobustan', 'Sheki', 'Barda', 'Qazvin Tabriz'];
+const QUERIES = ['Azerbaijan', 'Tabriz', 'Shirvan', 'Karabagh', 'Karabakh', 'Genje', 'Ganja', 'Baku', 'Kazak', 'Kuba', 'Caucasus', 'Caucasian', 'Nakhchivan', 'Ardabil', 'Maragha', 'Shamakhi', 'Seychour', 'Talish', 'Jalayirid', 'Gobustan', 'Sheki', 'Barda', 'Qazvin Tabriz', 'Ilkhanid', 'Jalayirid', 'Aq Qoyunlu', 'Turkman', 'Safavid Tabriz', 'Shahnama Tabriz', 'Shahsevan', 'Mughan', 'Karabagh rug', 'Chila', 'Marasali', 'Caucasian rug'];
 const HIT = /azerbaij|tabriz|shirvan|karabagh|karabakh|\bkazak\b|\bgenje\b|\bganja\b|\bbaku\b|shusha|\bkuba\b|seychour|talish|moghan|nakhchivan|nakhichevan|gobustan|ardabil|maragha|urmia|shamakhi|sheki|mingachevir|caucas|jalayir|shirvanshah|derbend/i;
 const seen = new Map();
 for (const q of QUERIES) {

@@ -3,7 +3,7 @@
 import { writeFile, mkdir } from 'node:fs/promises';
 import { getJson, root } from './lib.mjs';
 const KEY = process.env.EUROPEANA_KEY ?? 'api2demo';
-const QUERIES = ['Azerbaijan carpet', 'Azerbaijan painting', 'Azerbaijan rug', 'Azerbaijan ceramic', 'Azerbaijan embroidery', 'Azerbaijan miniature', 'Azerbaijani', 'Shirvan rug', 'Tabriz', 'Karabakh rug', 'Kuba rug', 'Kazak rug', 'Gobustan', 'Caucasian Albania', 'Baku painting', 'Ganja', 'Shusha', 'Nakhchivan', 'Azerbaijan sculpture', 'Azerbaijan metalwork', 'Seychour', 'Shemakha', 'Genje'];
+const QUERIES = ['Azerbaijan carpet', 'Azerbaijan painting', 'Azerbaijan rug', 'Azerbaijan ceramic', 'Azerbaijan embroidery', 'Azerbaijan miniature', 'Azerbaijani', 'Shirvan rug', 'Tabriz', 'Karabakh rug', 'Kuba rug', 'Kazak rug', 'Gobustan', 'Caucasian Albania', 'Baku painting', 'Ganja', 'Shusha', 'Nakhchivan', 'Azerbaijan sculpture', 'Azerbaijan metalwork', 'Seychour', 'Shemakha', 'Genje', 'Karabagh', 'Shirwan', 'Kasak tapijt', 'Kuba tapijt', 'Bakoe', 'Tebris', 'Aserbaidschan', 'Aserbeidschan', 'Azerbaïdjan', 'Azerbaigian', 'Azerbaiyán', 'Kaukasisch tapijt', 'Kaukasischer Teppich', 'tapis du Caucase', 'Karabagh tapijt', 'Tabriz miniature', 'Tabriz manuscript', 'Safavid Tabriz', 'Ilkhanid Tabriz', 'Azerbaijan manuscript', 'Azerbaijan textile', 'Azerbaijan photograph art'];
 const HIT = /azerbaij|tabriz|shirvan|karabagh|karabakh|gobustan|baku|ganja|genje|kuba|kazak|shemakha|shamakhi|seychour|shusha|nakhchivan|albania/i;
 const ART = /rug|carpet|paint|miniature|ceramic|embroider|sculpt|metal|textile|drawing|print|manuscript|vase|bowl|plate|jewel|tile|relief|petroglyph|statue|dish|jug|weav|kilim|painting|watercolo|etching|engrav/i;
 const seen = new Map();

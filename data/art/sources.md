@@ -1,6 +1,6 @@
 # Azerbaijani art catalogue: sources, licences, method
 
-A catalogue of Azerbaijani art from prehistory to today (north and south of the Araz, Azerbaijani artists abroad), shown at [azadbilik.org/qalereya/tarix](https://azadbilik.org/qalereya/tarix/). Built 2026-11-26. The Nizami and Fuzuli miniatures stay in the main gallery (`data/artworks.json`); anything already there is left out of this catalogue.
+A catalogue of Azerbaijani art from prehistory to today (north and south of the Araz, Azerbaijani artists abroad), shown at [azadbilik.org/qalereya/tarix](https://azadbilik.org/qalereya/tarix/). Built 2026-11-26, second pass the same day. The Nizami and Fuzuli miniatures stay in the main gallery (`data/artworks.json`); anything already there is left out of this catalogue.
 
 Files: `catalogue.json` (the page reads it), `catalogue.csv` (same rows, flat), `raw/*.json` (what each source returned, before our rules), `artists.json` (registry of Azerbaijani artists with lifespans), `dims.json` (mirrored thumbnail sizes), `.cache/` (HTTP cache, not committed).
 
@@ -30,24 +30,31 @@ All items link to the holder's record (`url`), and Wikidata items also to the Co
 
 ## Counts
 
-Run `node scripts/art/stats.mjs` for the current table. At the first build: 1,792 works; 1,442 with a free image kept in `tarix/`, 144 protected (metadata and link only), 206 with no free image (V&A 145, museum records without a licence).
+Run `node scripts/art/stats.mjs` for the current table. After the second pass: 2,042 works; 1,704 with a free image kept in `tarix/`, 127 protected (metadata and link only), 211 with no free image (V&A 145, museum records without a licence).
 
 | Period | works | free image | protected | no free image |
 |---|---:|---:|---:|---:|
-| Prehistory and rock art (to 3000 BCE) | 168 | 168 | 0 | 0 |
+| Prehistory and rock art (to 3000 BCE) | 263 | 263 | 0 | 0 |
 | Bronze and Iron Age | 47 | 47 | 0 | 0 |
-| Caucasian Albania and antiquity | 108 | 108 | 0 | 0 |
-| Middle Ages (650–1500) | 224 | 213 | 9 | 2 |
-| Safavids, Tabriz school, khanates (1500–1800) | 265 | 213 | 6 | 46 |
-| 19th century | 616 | 513 | 4 | 99 |
-| 20th century | 137 | 50 | 43 | 44 |
+| Caucasian Albania and antiquity | 90 | 90 | 0 | 0 |
+| Middle Ages (650–1500) | 226 | 223 | 1 | 2 |
+| Safavids, Tabriz school, khanates (1500–1800) | 295 | 242 | 6 | 47 |
+| 19th century | 755 | 648 | 4 | 103 |
+| 20th century | 147 | 60 | 43 | 44 |
 | Contemporary (1991–) | 14 | 0 | 8 | 6 |
-| Undated | 213 | 130 | 74 | 9 |
+| Undated | 205 | 131 | 65 | 9 |
 
 ## Surveyed, not used
 
 | Source | Why |
 |---|---|
+| Rijksmuseum (direct API) | Its linked-data API answers title searches, but the few Azerbaijani-named objects (Karabagh and Shirwan rugs) already come through Europeana with their licences. |
+| Brooklyn Museum | API needs a key; none available. Skipped. |
+| British Museum | Collection site answers 403 to scripts; no open API. Skipped. |
+| Louvre | collections.louvre.fr answers 429 to scripts; no open search API. Skipped. |
+| Hermitage | No public API or open-licence images. Skipped. |
+| LACMA | No working open API found. Skipped. |
+| Topkapı, British Library, Hermitage albums | No data of their own; Commons holds their Public Domain scans, searched for the Tabriz school (Great Mongol Shahnama, Shah Tahmasp Shahnama, Jalayirid and Aq Qoyunlu painting, Sultan Muhammad, Mir Musavvir, Diez albums…). |
 | Walters Art Museum | Only manuscripts are open (CC0); its Nizami and Fuzuli folios are already in the main gallery. Object API needs a key. |
 | British Museum, Louvre, Hermitage, Tretyakov, State Russian Museum | No open search API; images are rights-reserved or non-commercial. Works from them appear only through Wikidata or Commons when someone has uploaded them freely. |
 | LACMA, Brooklyn Museum | Brooklyn's API needs a key; LACMA's open data was not surveyed. Worth a second pass. |
@@ -60,8 +67,8 @@ Run `node scripts/art/stats.mjs` for the current table. At the first build: 1,79
 - The 20th century and contemporary art are thin: 151 works against hundreds of known paintings. Sattar Bahlulzade, Tahir Salahov, Togrul Narimanbekov, Mikayil Abdullayev and Javad Mirjavadov all died after 1955 (or live), so their works are metadata-only by rule, and Wikidata knows few of them. Only the national museums can fill this.
 - Pre-1955 painters (Kangarli d. 1922, Azimzade d. 1943, Mirza Gadim Iravani, Mir Mohsun Navvab, Usta Gambar) have about a dozen free images between them on Commons. Many more exist in the National Art Museum.
 - Ceramics, metalwork and stone of the Middle Ages come almost entirely from volunteers' photographs of the National Museum of History, so their dates are sometimes only approximate.
-- Karabakh and Nakhchivan material that Commons files under Armenian or Artsakh categories (carpets of the Shusha museum, khachkars) was left out pending a decision; see the report.
-- Tabriz school manuscripts beyond the Nizami and Fuzuli folios: 123 manuscript pages (Met, Cleveland, Commons); Topkapı, British Library and Hermitage albums are not covered.
+- Commons files about objects from Karabakh, Nakhchivan, Ganja and neighbouring districts are included when they are art or heritage objects (carpets, carvings, rock art), whatever Commons category they sit in. Each gets a plain title built from the object type and place; the page shows only what the object is, place, date, the photographer's credit where the licence requires it, the licence and the link to the Commons file. Tourist and landscape photographs, buildings and graves are not included.
+- Tabriz school manuscripts beyond the Nizami and Fuzuli folios: 141 manuscript pages (Met, Cleveland, Commons); the great albums are only as complete as what volunteers have uploaded.
 
 ## Rebuild
 

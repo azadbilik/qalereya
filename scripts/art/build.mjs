@@ -41,7 +41,7 @@ function parseYears(s) {
     const m = c[2] ? +c[2] : n;
     return bc ? [-(m * 100), -((n - 1) * 100)] : [(n - 1) * 100, m * 100];
   }
-  const ys = [...s.matchAll(/(?<!\d)(\d{3,4})(?!\d)/g)].map((m) => +m[1]).filter((y) => y >= 100 && y <= 2030);
+  const ys = [...s.matchAll(/(?<!\d)(\d{3,4})(?!\d)/g)].map((m) => +m[1]).filter((y) => (bc ? y >= 100 : y >= 600) && y <= 2030);
   if (!ys.length) return [null, null];
   const a = Math.min(...ys), b = Math.max(...ys);
   return bc ? [-b, -a] : [a, b];
@@ -109,6 +109,7 @@ const items = [];
 const push = (it) => {
   it.period ||= periodOf(it.yearStart, it.yearEnd) || (it.theme && it.theme !== 'modern' ? THEME_PERIOD[it.theme] : null) || null;
   it.medium ||= 'other';
+  if (it.medium === 'rock-art' && it.source === 'commons') { it.period = 'prehistory'; it.yearStart = it.yearEnd = undefined; }
   it.protectedReason = protectedBy(it);
   const lic = it.license;
   if (!it.image) it.imageStatus = 'none';
@@ -161,20 +162,24 @@ for (const x of vam) {
 }
 
 // ---------- Commons + Wikidata ----------
+const PLACE_AZ = { Gobustan: 'Qobustan', Nakhchivan: 'Naxçıvan', Shirvan: 'Şirvan', Quba: 'Quba', Karabakh: 'Qarabağ', Ganja: 'Gəncə', Baku: 'Bakı', Tabriz: 'Təbriz', Sheki: 'Şəki', Gazakh: 'Qazax', Mingachevir: 'Mingəçevir', Beylagan: 'Beyləqan', Barda: 'Bərdə', Lahij: 'Lahıc', Gabala: 'Qəbələ' };
+const KIND_AZ = { khachkar: 'Xaçdaş', gravestone: 'Məzar daşı' };
 const looksFile = (t) => /^(?:file:)?(?:img|dsc|dscn|p\d|_dsc|screenshot|photo|image|pict|dscf|\d{6,})/i.test(t.replace(/^File:/, ''));
 const titleFrom = (c) => { const base = c.title.replace(/^File:/, '').replace(/\.\w+$/, '').replace(/_/g, ' '); const d = c.objectName || (looksFile(c.title) ? c.description.slice(0, 120) : ''); return clean(d || base); };
 const byTitle = new Map(commons.map((c) => [c.title, c]));
 const used = new Set();
-const SPORT = /plaque|lövhə|xatirə|memorial|monument to|games|basketball|judo|wrestling|football|volleyball|taekwondo|fencing|weightlift|gymnast|boxing|chess|athlet|marathon|formula|eurovision|festival|concert|conference|congress|forum|summit|meeting|visit|inaugur|ceremony|parade|election|president|minister|military|soldier|army|war\b|conflict|panorama|aerial|skyline|cityscape|stadium|hospital|airport|highway|hotel|metro|railway|station|bridge|supermarket|restaurant|screenshot|wikimania|wikipedia|wikidata|wiki loves|logo|stamp|banknote|\bcoin|flag\b|map of|portrait of (?:president|ilham)|footballer|actor|actress|singer|politician/i;
+const SPORT = /mosque|məscid|karvansaray|caravanserai|pəncərə|binası|stained glass|plaque|lövhə|xatirə|memorial|monument to|games|basketball|judo|wrestling|football|volleyball|taekwondo|fencing|weightlift|gymnast|boxing|chess|athlet|marathon|formula|eurovision|festival|concert|conference|congress|forum|summit|meeting|visit|inaugur|ceremony|parade|election|president|minister|military|soldier|army|war\b|conflict|panorama|aerial|skyline|cityscape|stadium|hospital|airport|highway|hotel|metro|railway|station|bridge|supermarket|restaurant|screenshot|wikimania|wikipedia|wikidata|logo|stamp|banknote|\bcoin|flag\b|map of|portrait of (?:president|ilham)|footballer|actor|actress|singer|politician/i;
 const FOREIGN = /armenia|yerevan|artsakh|nagorno|stepanakert|zangezur|syunik|kapan\b|shushi\b|karabakh republic|republic of artsakh|[԰-֏]/i;
-const ART_CATS = /petroglyph|gobustan|qobustan|gamigaya|gemigaya|carpet|\brugs?\b|khurjun|jewel|archaeolog|mingəçevir|mingachevir|beylagan|ceramic|pottery|kitabe|stone (?:horses?|rams?|number)|metalwork|textile|embroider|kəlağayı|kelaghayi|collections of the museum|national museum of art|museum of history|museum of azerbaijan|paintings by|miniatur|tabriz school|murals?|shebeke|lahij|lahic|copper|caucasian albania|shirvanshah|exhibits|sculptures? (?:of|by|in) azerbaijan|azerbaijani (?:painting|art|artists)/i;
+const TERRITORY = /kara?bagh|karabakh|qarabağ|garabagh|\bshusha\b|\bshushi\b|şuşa|\bagdam\b|ağdam|aghdam|nakh[ci]+van|naxçıvan|ordubad|julfa|djulfa|jugha|culfa|\bganja\b|gəncə|gandzasar|kirovabad|shamkir|şəmkir|gazakh|qazax|tovuz|lachin|kalbajar|kəlbəcər|jabrayil|cəbrayıl|zangilan|qubadli|khojaly|xocalı|khojavend|hadrut|askeran|khankendi|\bstepanakert\b/i;
+const OUTSIDE = /yerevan|syunik|kapan\b|gyumri|vayots|ararat province|armavir|tavush|\blori\b|shirak|gegharkunik|aragatsotn|kotayk|etchmiadzin|echmiadzin|sevan\b|dilijan|noravank|tatev/i;
+const ART_CATS = /khachkar|shusha carpet|carpets of nagorno|petroglyph|gobustan|qobustan|gamigaya|gemigaya|carpet|\brugs?\b|khurjun|jewel|archaeolog|mingəçevir|mingachevir|beylagan|ceramic|pottery|kitabe|stone (?:horses?|rams?|number)|metalwork|textile|embroider|kəlağayı|kelaghayi|collections of the museum|national museum of art|museum of history|museum of azerbaijan|paintings by|miniatur|tabriz school|murals?|shebeke|lahij|lahic|copper|caucasian albania|shirvanshah|exhibits|sculptures? (?:of|by|in) azerbaijan|azerbaijani (?:painting|art|artists)/i;
 const NOT_ART_CATS = /wiki loves monuments|cultural heritage monuments|mosques?\b|churches|cemeter|graves|gravestones? (?:in|around)|tombstones? (?:in|around)|mausoleum|türbə|castles?|palaces?|fortress|caravanserai|towers?\b|bridge|city|streets?|villages?|districts?|national parks?|reserve|nature|mountains?|rivers?|lakes?|buildings?|houses?|architecture|geography|landscape|mud volcano/i;
 const AZ_NAMES = ['mirza kadym irevani', 'mirza gadim iravani', 'mirzə qədim irəvani', 'mirze qedim irevani', 'kangarli', 'kəngərli', 'azimzade', 'əzimzadə', 'azim azimzade', 'bahlulzade', 'bəhlulzadə', 'navvab', 'nəvvab', 'usta gambar', 'üstad qəmbər', 'ali bey huseynzade', 'əli bəy hüseynzadə', 'mirjavadov', 'mircavadov', 'salahov', 'narimanbekov', 'nərimanbəyov', 'telman abdinov', 'azerbaijani painter', 'azərbaycan rəssam', 'unknown azerbaijani'];
 const azNames = new Set([...AZ_NAMES, ...artists.flatMap((a) => [a.name, a.nameAz]).filter((n) => n && n.includes(' ')).map((n) => n.toLowerCase())]);
 const hasAzName = (hay) => [...azNames].some((n) => hay.includes(n));
 // Default period from what a thing is, when no date is given
 const CAT_PERIOD = [[/petroglyph|gobustan|gamigaya|gemigaya|stone number|rock art|qaya/i, 'prehistory'], [/caucasian albania|albanian|kish\b/i, 'antiquity'], [/mingəçevir|mingachevir|ovçular|ovcular|kura-araxes|khojaly|gadabay|bronze age|iron age/i, 'bronze-iron'],
-  [/atropaten|albania|albanian/i, 'antiquity'], [/beylagan|shirvanshah|kitabe|medieval|13th|14th|15th|atabeg|ilkhan|jalayir/i, 'medieval'], [/stone (?:horses?|rams?)|qoç/i, 'early-modern'], [/lahij|lahic|carpet|\brugs?\b|khurjun|kəlağayı|kelaghayi|embroider|textile|shebeke/i, 'c19']];
+  [/atropaten|albania|albanian/i, 'antiquity'], [/beylagan|shirvanshah|kitabe|medieval|13th|14th|15th|atabeg|ilkhan|jalayir/i, 'medieval'], [/khachkar/i, 'medieval'], [/stone (?:horses?|rams?)|qoç/i, 'early-modern'], [/lahij|lahic|carpet|\brugs?\b|khurjun|kəlağayı|kelaghayi|embroider|textile|shebeke/i, 'c19']];
 const MILL = /(\d)(?:st|nd|rd|th)?[\s-]*(?:millennium|тысячелетие)[\s-]*(?:BC|BCE|до н)/i;
 function commonsYears(c) {
   const mm = (c.title + ' ' + c.description).match(MILL);
@@ -224,7 +229,9 @@ for (const c of commons) {
   const catsText = c.cats.join(' | ');
   const text = [c.title, c.description, c.objectName, catsText].join(' | ');
   if (!/^image\/(jpeg|png|tiff|webp)/.test(c.mime ?? '') || (c.width ?? 0) < 300) continue;
-  if (FOREIGN.test(text)) { dropped.foreign++; continue; }
+  const foreignHit = FOREIGN.test(text);
+  const territory = TERRITORY.test(text) && !OUTSIDE.test(text);
+  if (foreignHit && !territory) { dropped.foreign++; continue; }
   if (SPORT.test(c.title + ' ' + c.objectName + ' ' + catsText)) { dropped.noise++; continue; }
   const fromArtistSeed = c.seeds.some((s) => s.startsWith('artist:') && registered.has(s.slice(7)));
   const stoneNo = /stone number|\d+ (?:nömrəli|saylı) daş/i.test(text);
@@ -242,10 +249,20 @@ for (const c of commons) {
   // A flat or figural modern work needs a known maker who died before 1956; otherwise it stays metadata-only
   const gated = ['painting', 'graphics', 'sculpture'].includes(med);
   const place = placeOf(text, c.seeds.join(' '));
+  if (foreignHit && med === 'manuscript') { dropped.notArt++; continue; }
   const dflt = CAT_PERIOD.find(([re]) => re.test(catsText + ' ' + c.title))?.[1];
   const artistName = c.artist && c.artist.length < 80 ? c.artist : '';
-  push({ id: 'commons-' + slug(c.title.replace(/^File:/, '').replace(/\.\w+$/, '')) + '-' + hash(c.title), source: 'commons', title: { en: titleFrom(c) }, artist: ma && !/^[a-zəıöüçşğ]+$/.test(ma.name) ? ma.name : '', artistId: ma?.id, artistDied: ma?.died, unknownModernMaker: gated && !ma?.died && (y1 == null || y1 > LIMIT) && !/^(public domain|pd)/i.test(c.license ?? '') || undefined, credit: artistName, dateText: '', yearStart: y0, yearEnd: y1, medium: med, place: place ?? '',
-    period: y0 == null ? dflt : undefined, periodGuess: y0 == null || undefined, institution: collectionOf(catsText), accession: '', url: 'https://commons.wikimedia.org/wiki/' + encodeURIComponent(c.title.replace(/ /g, '_')), license: c.license, image: c.thumb || c.url, imageOriginal: c.url, width: c.width, height: c.height, theme: dflt ? undefined : c.themes[0], cats: c.cats.slice(0, 6) });
+  push({ id: 'commons-' + slug(c.title.replace(/^File:/, '').replace(/\.\w+$/, '')) + '-' + hash(c.title), source: 'commons', title: foreignHit ? neutralTitle(c, med, place, y0) : { en: titleFrom(c) }, artist: ma && !/^[a-zəıöüçşğ]+$/.test(ma.name) ? ma.name : '', artistId: ma?.id, artistDied: ma?.died, unknownModernMaker: gated && !ma?.died && (y1 == null || y1 > LIMIT) && !/^(public domain|pd)/i.test(c.license ?? '') || undefined, credit: foreignHit && /^(public domain|pd)/i.test(c.license ?? '') ? undefined : artistName || 'Wikimedia Commons contributors', dateText: '', yearStart: y0, yearEnd: y1, medium: med, place: place ?? '',
+    period: y0 == null ? dflt : undefined, periodGuess: y0 == null || undefined, institution: collectionOf(catsText), accession: '', url: 'https://commons.wikimedia.org/wiki/' + encodeURIComponent(c.title.replace(/ /g, '_')), license: c.license, image: c.thumb || c.url, imageOriginal: c.url, width: c.width, height: c.height, theme: dflt ? undefined : c.themes[0] });
+}
+// A title for an object whose own file title is a catalogue label or in another script: what it is and where, from the file's own data
+function neutralTitle(c, med, place, y0) {
+  const t = [c.title, c.objectName, c.description].join(' ');
+  const kind = /khachkar/i.test(t) ? 'khachkar' : /tombstone|gravestone|headstone/i.test(t) ? 'gravestone' : null;
+  const en = kind === 'khachkar' ? 'Khachkar' : kind === 'gravestone' ? 'Gravestone' : (MEDIUM_LABEL[med] ?? MEDIUM_LABEL.other).en.replace(/ and .*$/, '').replace(/s$/, '');
+  const az = KIND_AZ[kind] ?? (MEDIUM_LABEL[med] ?? MEDIUM_LABEL.other).az;
+  const yr = y0 != null && y0 > 0 ? ` (${y0})` : '';
+  return { en: en + (place ? ', ' + place : '') + yr, az: az + (place ? ', ' + (PLACE_AZ[place] ?? place) : '') + yr };
 }
 function slugless(s) { return s.toLowerCase(); }
 function collectionOf(cats) {
@@ -260,6 +277,9 @@ function hash(s) { let h = 0; for (const ch of s) h = (h * 31 + ch.charCodeAt(0)
 console.error('commons dropped', dropped);
 
 // ---------- finish ----------
+// Identical generated titles ("Carpet, Karabakh") get a running number so cards can be told apart
+{ const seenT = {}; for (const x of items) if (x.source === 'commons' && x.title.az && /^[A-Z][\w ]+(, [\w ]+)?( \(\d+\))?$/.test(x.title.en)) { const k = x.title.en; seenT[k] = (seenT[k] ?? 0) + 1; }
+  const idx = {}; for (const x of items) if (x.source === 'commons' && x.title.az && seenT[x.title.en] > 1) { idx[x.title.en] = (idx[x.title.en] ?? 0) + 1; x.title = { en: `${x.title.en} · ${idx[x.title.en]}`, az: `${x.title.az} · ${idx[x.title.en]}` }; } }
 const seen = new Set();
 const out = items.filter((x) => (seen.has(x.id) ? false : seen.add(x.id)));
 for (const x of out) for (const k of Object.keys(x)) if (x[k] == null || x[k] === '' || (Array.isArray(x[k]) && !x[k].length)) delete x[k];
