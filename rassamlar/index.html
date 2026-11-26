@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/shared/theme.js"></script>
 <title>Rəssamlar şəbəkəsi · Azad Bilik</title>
 <meta name="description" content="Nizami və Füzulinin miniatürlərini kim kiminlə, kimin üçün və harada çəkib; hansı səhnələr emalatxanadan emalatxanaya gedib. Who painted with whom, for whom and where; which scenes travelled between workshops.">
 <meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
@@ -21,9 +22,11 @@
     color-scheme: light dark;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --paper: #14100D; --ink: #F1EBE1; --muted: #A0968B; --rule: rgb(241 235 225 / .14); --frame: #1F1914;
+    :root:not([data-theme="light"]) { --paper: #14100D; --ink: #F1EBE1; --muted: #A0968B; --rule: rgb(241 235 225 / .14); --frame: #1F1914;
       --accent: #DA5A61; --second: #6FB3CC; --third: #A9BC6A; --ms: #8F857A; }
   }
+  :root[data-theme="dark"] { --paper: #14100D; --ink: #F1EBE1; --muted: #A0968B; --rule: rgb(241 235 225 / .14); --frame: #1F1914;
+      --accent: #DA5A61; --second: #6FB3CC; --third: #A9BC6A; --ms: #8F857A; }
   * { box-sizing: border-box; margin: 0; }
   body { background: var(--paper); color: var(--ink); font: 400 .9375rem/1.5 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
   a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1px; text-decoration-color: var(--rule); }
