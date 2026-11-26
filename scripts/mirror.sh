@@ -15,6 +15,18 @@ export UA="azadbilik-qalereya/0.1 (https://github.com/azadbilik/qalereya)"
 export TMPD=$(mktemp -d)
 trap 'rm -rf "$TMPD"' EXIT
 
+# complete <file>: a JPEG ends with its end marker, a PNG with IEND. A download cut short (a busy
+# host, a dropped connection) still converts, and showed in the grid as a picture gone grey below
+# where the data stopped; such a file is fetched again instead of kept
+complete() {
+  case "$(head -c 4 "$1" | xxd -p)" in
+    ffd8*) tail -c 64 "$1" | xxd -p | tr -d '\n' | grep -q ffd9 ;;
+    89504e47) tail -c 12 "$1" | xxd -p | tr -d '\n' | grep -q 49454e44 ;;
+    *) true ;;
+  esac
+}
+export -f complete
+
 # fetch <url> <out> <max px> [<backup url>]: download (the backup, the original, when the host has
 # no copy at that size: Commons won't make a 1280px copy of a narrower picture), then shrink
 # (never enlarge) to <max px> as a JPEG
@@ -22,7 +34,7 @@ fetch() {
   url=$1; out=$2; max=$3; backup=${4:-}; f="$TMPD/$(basename "$out")"
   [ -s "$out" ] && return 0
   for try in 1 2 3; do
-    curl -sfL --max-time 120 -A "$UA" -o "$f" "$url" && [ -s "$f" ] && break
+    curl -sfL --max-time 120 -A "$UA" -o "$f" "$url" && [ -s "$f" ] && complete "$f" && break
     rm -f "$f"; sleep $((try * 4))
     if [ "$try" = 2 ] && [ -n "$backup" ]; then url=$backup; fi
   done
