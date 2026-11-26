@@ -87,6 +87,7 @@
   main { padding: 2rem 0 4rem; }
   .count { font-size: .8125rem; color: var(--muted); margin-bottom: 1.5rem; }
   .scene + .scene { margin-top: 3rem; }
+  .scene { scroll-margin-top: 8rem; }
   .scene-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 1rem; padding-bottom: .6rem; border-bottom: 1px solid var(--rule); }
   .scene-head h2 { font: 400 1.5rem/1.2 var(--serif); letter-spacing: -.015em; }
   .scene-head a { font-size: .8125rem; color: var(--muted); white-space: nowrap; }
@@ -300,8 +301,10 @@ fetch('data/gallery.json').then((r) => r.json()).then((d) => {
   data.byId = new Map(d.items.map((x) => [x.id, x]));
   data.poemOf = new Map(d.poems.map((p) => [p.slug, p]));
   drawPoems(); drawFilters(); render();
-  const open = location.hash.slice(1);
-  if (open && data.byId.has(decodeURIComponent(open))) show(decodeURIComponent(open));
+  const open = decodeURIComponent(location.hash.slice(1));
+  if (open && data.byId.has(open)) show(open);
+  // a scene named in the link (#s-<scene>, from the site's search): scrolled to
+  else if (open.startsWith('s-')) requestAnimationFrame(() => document.getElementById(open)?.scrollIntoView({ block: 'start' }));
 });
 
 // "Other": pictures of no poem, or of a poem with too few to have its own tab
@@ -414,7 +417,7 @@ function render(fromUser) {
   if (scenes.length) {
     const rest = items.filter((x) => !x.scene || !scenes.some((s) => s.id === x.scene));
     view = [...scenes.flatMap((s) => items.filter((x) => x.scene === s.id)), ...rest];
-    el.innerHTML = scenes.map((s) => section(tr(s), s.chapters[0], items.filter((x) => x.scene === s.id))).join('')
+    el.innerHTML = scenes.map((s) => section(tr(s), s.chapters[0], items.filter((x) => x.scene === s.id), s.id)).join('')
       + (rest.length ? section(t('noScene'), null, rest) : '');
   } else {
     view = items;
@@ -423,8 +426,8 @@ function render(fromUser) {
   wire(el);
 }
 
-function section(name, chapter, items) {
-  return `<section class="scene"><div class="scene-head"><h2>${esc(name)}</h2>${chapter ? `<a href="${KX()}/works/${chapter}">${t('readChapter')} ↗</a>` : ''}</div>
+function section(name, chapter, items, id) {
+  return `<section class="scene"${id ? ` id="s-${esc(id)}"` : ''}><div class="scene-head"><h2>${esc(name)}</h2>${chapter ? `<a href="${KX()}/works/${chapter}">${t('readChapter')} ↗</a>` : ''}</div>
     <div class="strip">${items.map((x) => card(x, true)).join('')}</div></section>`;
 }
 
