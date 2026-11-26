@@ -23,6 +23,10 @@ Adding pictures: `scripts/export.sh` → `node scripts/build.mjs` → `scripts/m
 
 [`/qalereya/rassamlar/`](https://azadbilik.org/qalereya/rassamlar/): two graphs from the same catalogue. **Painters and patrons:** the manuscripts of `data/manuscripts.json` that name a painter or a patron (28 of 142), linked to their painters, their patron and their city (or dynasty when the catalogue has no city). "Bihzad (attributed)" and "(ascribed)" are one painter, the link marked probable; "Mirak" and "Aqa Mirak" are not merged (unchecked). Painters "who worked together" are only those named in the same manuscript's entry, not on the same folio. **Scenes that travelled:** scenes (`data/tags`) painted in manuscripts of two or more cities, linked to those cities, with the earliest year per city; only the 407 of 780 pictures whose manuscript has a city count. Rebuild: `node scripts/network.mjs`. Graph: [d3](https://d3js.org) 7.9.0 (ISC) from jsDelivr, force layout settled before paint.
 
+## Azerbaijani art: `tarix/`
+
+**[azadbilik.org/qalereya/tarix](https://azadbilik.org/qalereya/tarix/)**: a sourced catalogue of Azerbaijani art from the Gobustan rock engravings to today, with a timeline, filters by kind, place and museum, and a viewer. Data in `data/art/` (`catalogue.json`, `catalogue.csv`, `artists.json`), method, licences, counts and gaps in [`data/art/sources.md`](data/art/sources.md), scripts in `scripts/art/`. A picture is kept only when its licence is free and the work is out of copyright (author died before 1956); every other work is listed with a link to its holder.
+
 ## Images and licences
 
 Every picture is free to reuse: the Metropolitan Museum's, the Walters Art Museum's and the Cleveland Museum of Art's are CC0, the Rijksmuseum's and Wikimedia Commons' public domain, the Chester Beatty's CC BY 4.0 (credited beside the picture). So the gallery keeps its own screen-sized copies in `thumbs/` and `large/` and loads nothing from the museums' servers, which can be slow; the original stays at its source, linked from the viewer with its licence.

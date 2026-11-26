@@ -176,7 +176,7 @@
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a>
-    <nav aria-label="Azad Bilik"><a href="https://kitabxana.az" data-i18n="library" id="kx">Kitabxana</a><a href="./" data-i18n="title" aria-current="page" data-keep-lang>Qalereya</a><a href="/xeriteler/" data-i18n="maps" data-keep-lang>Ədəbi xəritələr</a><a href="/atlas/" data-i18n="atlas" data-keep-lang>Atlas</a><a href="/musiqi/" data-i18n="music" data-keep-lang>Musiqi</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
+    <nav aria-label="Azad Bilik"><a href="https://kitabxana.az" data-i18n="library" id="kx">Kitabxana</a><a href="./" data-i18n="title" aria-current="page" data-keep-lang>Qalereya</a><a href="tarix/" data-i18n="art" data-keep-lang>İncəsənət</a><a href="/xeriteler/" data-i18n="maps" data-keep-lang>Ədəbi xəritələr</a><a href="/atlas/" data-i18n="atlas" data-keep-lang>Atlas</a><a href="/musiqi/" data-i18n="music" data-keep-lang>Musiqi</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
   </header>
   <div class="hero">
     <h1 data-i18n="title">Qalereya</h1>
@@ -234,7 +234,7 @@ const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 
 function plural(n, one, few, many) { const r = new Intl.PluralRules('ru').select(n); return r === 'one' ? one : r === 'few' ? few : many; }
 const T = {
   az: { doc: 'Qalereya · Azad Bilik', title: 'Qalereya', lead: 'Nizami və Füzulinin poemalarına beş əsr ərzində çəkilmiş miniatürlər: Təbriz, Herat, Şiraz, İstanbul əlyazmalarından, muzeylərin açıq kolleksiyalarından.',
-    workshops: 'Emalatxanaların xəritəsi', maps: 'Ədəbi xəritələr', atlas: 'Atlas', music: 'Musiqi', library: 'Kitabxana', poem: 'Poema', manuscript: 'Əlyazma', allMs: 'Bütün əlyazmalar', century: 'Əsr', allC: 'Bütün əsrlər', school: 'Harada çəkilib', allPl: 'Bütün məktəblər', cities: 'Şəhər', dynasties: 'Sülalə', reset: 'Sıfırla', freeOnly: 'Yalnız sərbəst lisenziya',
+    workshops: 'Emalatxanaların xəritəsi', maps: 'Ədəbi xəritələr', art: 'İncəsənət', atlas: 'Atlas', music: 'Musiqi', library: 'Kitabxana', poem: 'Poema', manuscript: 'Əlyazma', allMs: 'Bütün əlyazmalar', century: 'Əsr', allC: 'Bütün əsrlər', school: 'Harada çəkilib', allPl: 'Bütün məktəblər', cities: 'Şəhər', dynasties: 'Sülalə', reset: 'Sıfırla', freeOnly: 'Yalnız sərbəst lisenziya',
     footer: 'Şəkillər muzeylərin açıq kolleksiyalarından və Wikimedia Commons-dandır; ekrana uyğun surətləri burada saxlanılır, əsli mənbədədir. Hər birinin mənbəyi və lisenziyası yanındadır.',
     miniature: 'Miniatür', prev: 'Əvvəlki', next: 'Sonrakı', all: 'Hamısı', other: 'Digər', count: (n) => `${n} miniatür`, empty: 'Heç nə tapılmadı.', noScene: 'Səhnəsi müəyyənləşdirilməyənlər',
     readChapter: 'Fəsli oxu', undated: 'Tarixsiz', cent: (c) => `${ROMAN[c]} əsr`,
@@ -242,7 +242,7 @@ const T = {
     loading: 'Yüklənir…', noImage: 'Şəkil yüklənmədi — açıb mənbədə baxın',
     readScene: 'Bu səhnəni kitabxana.az-da oxu', readPoem: 'Poemanı kitabxana.az-da oxu', atSource: 'Mənbədə bax', full: 'Tam ölçüdə', share: 'Linki paylaş', copied: 'Link köçürüldü' },
   ru: { doc: 'Галерея · Azad Bilik', title: 'Галерея', lead: 'Пять веков миниатюр к поэмам Низами и Физули — из рукописей, созданных в Тебризе, Герате, Ширазе и Стамбуле, из открытых коллекций музеев.',
-    workshops: 'Карта мастерских', maps: 'Литературные карты', atlas: 'Атлас', music: 'Музыка', library: 'Библиотека', poem: 'Поэма', manuscript: 'Рукопись', allMs: 'Все рукописи', century: 'Век', allC: 'Все века', school: 'Где написана', allPl: 'Все школы', cities: 'Город', dynasties: 'Династия', reset: 'Сбросить', freeOnly: 'Только свободная лицензия',
+    workshops: 'Карта мастерских', maps: 'Литературные карты', art: 'Искусство', atlas: 'Атлас', music: 'Музыка', library: 'Библиотека', poem: 'Поэма', manuscript: 'Рукопись', allMs: 'Все рукописи', century: 'Век', allC: 'Все века', school: 'Где написана', allPl: 'Все школы', cities: 'Город', dynasties: 'Династия', reset: 'Сбросить', freeOnly: 'Только свободная лицензия',
     footer: 'Изображения — из открытых коллекций музеев и Викисклада; копии для экрана хранятся здесь, оригиналы — у источника. У каждого указаны источник и лицензия.',
     miniature: 'Миниатюра', prev: 'Предыдущая', next: 'Следующая', all: 'Все', other: 'Другое', count: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')}`, empty: 'Ничего не найдено.', noScene: 'Сцена не определена',
     readChapter: 'Читать главу', undated: 'Без даты', cent: (c) => `${ROMAN[c]} век`,
@@ -250,7 +250,7 @@ const T = {
     loading: 'Загрузка…', noImage: 'Изображение не загрузилось — откройте, чтобы посмотреть в источнике',
     readScene: 'Читать эту сцену на kitabxana.az', readPoem: 'Читать поэму на kitabxana.az', atSource: 'В источнике', full: 'Полный размер', share: 'Поделиться', copied: 'Ссылка скопирована' },
   en: { doc: 'Gallery · Azad Bilik', title: 'Gallery', lead: 'Five centuries of miniatures painted for the poems of Nizami and Fuzuli, from manuscripts made in Tabriz, Herat, Shiraz and Istanbul, out of museums\' open collections.',
-    workshops: 'Map of the workshops', maps: 'Literary maps', atlas: 'Atlas', music: 'Music', library: 'Library', poem: 'Poem', manuscript: 'Manuscript', allMs: 'All manuscripts', century: 'Century', allC: 'All centuries', school: 'Where painted', allPl: 'All schools', cities: 'City', dynasties: 'Dynasty', reset: 'Clear filters', freeOnly: 'Free to reuse only',
+    workshops: 'Map of the workshops', maps: 'Literary maps', art: 'Art', atlas: 'Atlas', music: 'Music', library: 'Library', poem: 'Poem', manuscript: 'Manuscript', allMs: 'All manuscripts', century: 'Century', allC: 'All centuries', school: 'Where painted', allPl: 'All schools', cities: 'City', dynasties: 'Dynasty', reset: 'Clear filters', freeOnly: 'Free to reuse only',
     footer: 'The pictures come from museums\' open collections and Wikimedia Commons; screen-sized copies are kept here, the originals at the source. Each comes with its source and licence.',
     miniature: 'Miniature', prev: 'Previous', next: 'Next', all: 'All', other: 'Other', count: (n) => `${n} miniature${n === 1 ? '' : 's'}`, empty: 'Nothing matches.', noScene: 'Scene not identified',
     readChapter: 'Read the chapter', undated: 'Undated', cent: (c) => `${c}${[, 'st', 'nd', 'rd'][c % 10 * (c % 100 > 3 && c % 100 < 21 ? 0 : 1)] ?? 'th'} century`,

@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Azərbaycan incəsənəti · Azad Bilik</title>
+<meta name="description" content="Azərbaycan incəsənətinin qədimdən bu günə mənbələrlə kataloqu: Qobustan qayaüstü rəsmləri, xalça, keramika, miniatür, rəngkarlıq. A sourced catalogue of Azerbaijani art from prehistory to today.">
+<meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14100D" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Azərbaycan incəsənəti · Azerbaijani art">
+<meta property="og:description" content="Qobustandan müasir dövrə qədər: mənbəli kataloq.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+  :root {
+    --paper: #F4EFE6; --ink: #1A1410; --muted: #675E55; --rule: rgb(26 20 16 / .14); --tint: rgb(26 20 16 / .05);
+    --accent: #A81E28; --frame: #E9E2D6; --sheen: rgb(255 255 255 / .45);
+    --serif: 'Literata', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #14100D; --ink: #F1EBE1; --muted: #A0968B; --rule: rgb(241 235 225 / .14); --tint: rgb(241 235 225 / .05);
+      --accent: #DA5A61; --frame: #1F1914; --sheen: rgb(255 255 255 / .05); }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--paper); color: var(--ink); font: 400 .9375rem/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1px; text-decoration-color: var(--rule); }
+  a:hover { text-decoration-color: currentColor; }
+  button, select, input { font: inherit; color: inherit; }
+  button { background: none; border: 0; cursor: pointer; padding: 0; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  .langs { display: inline-flex; gap: .15rem; }
+  .langs button { font-size: .6875rem; letter-spacing: .04em; padding: .1rem .3rem; border-radius: 2px; min-height: 1.75rem; min-width: 1.75rem; }
+  .langs button[aria-pressed="true"] { color: var(--ink); box-shadow: inset 0 -1px currentColor; }
+  img { display: block; max-width: 100%; }
+  [hidden] { display: none !important; }
+
+  .wrap { max-width: 88rem; margin: 0 auto; padding: 0 2rem; }
+  header.top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem 1.5rem; padding: 1.5rem 0; }
+  .brand { white-space: nowrap; display: inline-flex; align-items: center; gap: .5rem; font-size: .8125rem; font-weight: 600; text-decoration: none; }
+  .brand svg { width: 1rem; height: 1rem; }
+  .star { fill: currentColor; } .gem { fill: var(--accent); }
+  header.top nav { font-size: .8125rem; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: .25rem 1.25rem; }
+  header.top nav a { text-decoration: none; }
+  header.top nav a:hover, header.top nav a[aria-current] { color: var(--ink); }
+  header.top nav a[aria-current] { box-shadow: inset 0 -1px currentColor; }
+  .hero { padding: 3rem 0 2rem; max-width: 50rem; }
+  h1 { font: 400 clamp(2.25rem, 1.8rem + 2.5vw, 3.75rem)/1.05 var(--serif); letter-spacing: -.03em; }
+  .lead { margin-top: 1.25rem; font: 300 1.25rem/1.45 var(--serif); }
+  .lead a { font: 400 .875rem var(--sans); white-space: nowrap; color: var(--accent); text-decoration: none; }
+  .lead a::after { content: ' →'; }
+  .lead a:hover { text-decoration: underline; }
+
+  /* The timeline: one stop per period, a rule through them */
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
+  .bar .wrap { padding-top: .6rem; padding-bottom: .6rem; display: grid; gap: .6rem; }
+  .tl { display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; margin: 0 -.25rem; padding: 0 .25rem; }
+  .tl::-webkit-scrollbar { display: none; }
+  .tl button { flex: 1 0 auto; text-align: left; padding: .75rem .9rem .35rem 0; min-width: 7.5rem; max-width: 14rem; position: relative; color: var(--muted); border-top: 1px solid var(--rule); }
+  .tl button::before { content: ''; position: absolute; top: -.3125rem; left: 0; width: .5rem; height: .5rem; background: var(--paper); border: 1px solid var(--muted); border-radius: 50%; transform: rotate(45deg); border-radius: 0; }
+  .tl button .span { display: block; font: 600 .75rem var(--sans); font-variant-numeric: tabular-nums; color: var(--ink); }
+  .tl button .nm { display: block; font-size: .75rem; line-height: 1.3; margin-top: .1rem; }
+  .tl button small { font-variant-numeric: tabular-nums; margin-left: .25rem; }
+  .tl button:hover { color: var(--ink); }
+  .tl button[aria-pressed="true"] { color: var(--ink); border-top: 2px solid var(--accent); }
+  .tl button[aria-pressed="true"]::before { background: var(--accent); border-color: var(--accent); top: -.34375rem; }
+  .filters { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; font-size: .8125rem; color: var(--muted); }
+  .filters select, .filters input[type="search"] { background: transparent; border: 1px solid var(--rule); border-radius: 3px; padding: .3rem .5rem; max-width: 15rem; }
+  .filters input[type="search"] { width: 11rem; }
+  .filters label { display: inline-flex; gap: .4rem; align-items: center; cursor: pointer; white-space: nowrap; }
+  .filters input[type="checkbox"] { accent-color: var(--accent); }
+  .filters select:has(option:checked:not([value=""])) { border-color: var(--ink); color: var(--ink); }
+  .link { color: var(--accent); text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: 1px; white-space: nowrap; }
+  .link:hover { text-decoration-thickness: 2px; }
+
+  main { padding: 2rem 0 4rem; }
+  .count { font-size: .8125rem; color: var(--muted); margin-bottom: 1.5rem; }
+  .chapter + .chapter { margin-top: 3.5rem; }
+  .chapter-head { margin-bottom: 1.25rem; padding-bottom: .75rem; border-bottom: 1px solid var(--rule); display: grid; gap: .35rem; max-width: 52rem; }
+  .chapter-head .span { font: 600 .75rem var(--sans); letter-spacing: .04em; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .chapter-head h2 { font: 400 1.75rem/1.2 var(--serif); letter-spacing: -.015em; }
+  .chapter-head p { color: var(--muted); font-size: .9375rem; }
+  .chapter-head p a { color: var(--accent); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 1.5rem 1.25rem; align-items: start; }
+  .card { text-align: left; display: block; width: 100%; min-width: 0; }
+  .card .frame { position: relative; background: var(--frame); border-radius: 2px; overflow: hidden; aspect-ratio: 4 / 3; display: grid; place-items: center; }
+  .card .frame img { width: 100%; height: 100%; object-fit: contain; transition: opacity .4s, transform .4s; opacity: 0; }
+  .card .frame img.ok { opacity: 1; }
+  .card:hover .frame img { transform: scale(1.02); }
+  .card .frame::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(100deg, transparent 30%, var(--sheen) 50%, transparent 70%) 0 0 / 250% 100%; animation: sheen 1.6s ease-in-out infinite; transition: opacity .3s; }
+  .card .frame.ok::after, .card .frame.noimg::after { opacity: 0; animation: none; }
+  @keyframes sheen { from { background-position: 100% 0; } to { background-position: -150% 0; } }
+  /* An item with no picture of its own (protected, or not freely licensed): a plain tile that says so */
+  .card .frame.noimg { padding: 1rem; text-align: center; border: 1px dashed var(--rule); background: transparent; }
+  .card .frame.noimg span { font-size: .75rem; color: var(--muted); line-height: 1.35; }
+  .card .t { margin-top: .6rem; font-size: .875rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .card .m { margin-top: .15rem; font-size: .75rem; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .more { margin-top: 1.5rem; }
+  .empty { color: var(--muted); padding: 3rem 0; }
+
+  footer { border-top: 1px solid var(--rule); padding: 1.75rem 0 2.5rem; font-size: .8125rem; color: var(--muted); }
+  footer p + p { margin-top: .5rem; }
+
+  dialog { border: 0; padding: 0; width: 100vw; height: 100vh; max-width: none; max-height: none; background: var(--paper); color: var(--ink); }
+  dialog::backdrop { background: rgb(0 0 0 / .6); }
+  .viewer { display: grid; grid-template-columns: 1fr 24rem; height: 100%; }
+  .stage { position: relative; background: var(--frame); display: grid; place-items: center; min-height: 0; overflow: hidden; }
+  .stage img { position: absolute; inset: 2rem 4.5rem; width: calc(100% - 9rem); height: calc(100% - 4rem); object-fit: contain; transition: filter .3s; }
+  .stage.busy img { filter: blur(2px); }
+  .stage .nopic { max-width: 26rem; padding: 2rem; text-align: center; color: var(--muted); font-size: .9375rem; }
+  .stage .nav { position: absolute; top: 50%; translate: 0 -50%; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--paper); box-shadow: 0 1px 6px rgb(0 0 0 / .15); font-size: 1.1rem; display: grid; place-items: center; }
+  .stage .prev { left: 1rem; } .stage .next { right: 1rem; }
+  .stage .nav[disabled] { opacity: .3; cursor: default; }
+  .info { padding: 1.5rem 1.75rem 2rem; overflow-y: auto; border-left: 1px solid var(--rule); display: flex; flex-direction: column; gap: 1rem; }
+  .info .close { align-self: flex-end; font-size: .8125rem; color: var(--muted); }
+  .info h2 { font: 400 1.5rem/1.2 var(--serif); letter-spacing: -.015em; }
+  .info .sub { font-size: .8125rem; color: var(--muted); }
+  .info dl { display: grid; grid-template-columns: 6.5rem 1fr; gap: .35rem 1rem; font-size: .875rem; }
+  .info dt { color: var(--muted); }
+  .info dd { overflow-wrap: anywhere; }
+  .badge { display: inline-block; font-size: .75rem; padding: .1rem .45rem; border-radius: 3px; border: 1px solid var(--rule); }
+  .badge.nc { border-color: color-mix(in srgb, var(--accent) 50%, transparent); color: var(--accent); }
+  .note { font-size: .8125rem; color: var(--muted); border-left: 2px solid var(--accent); padding-left: .75rem; }
+  .links { display: grid; gap: .5rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: .875rem; }
+  .links a, .links button { font-weight: 500; text-decoration: none; text-align: left; font-size: inherit; }
+  .links a:hover, .links button:hover { color: var(--accent); }
+  .pos { font-size: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: auto; }
+  .stage .loading { position: absolute; left: 50%; top: 50%; translate: -50% -50%; display: flex; align-items: center; gap: .6rem; padding: .55rem .9rem; border-radius: 999px; background: var(--paper); font-size: .8125rem; box-shadow: 0 2px 12px rgb(0 0 0 / .2); opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .stage.busy .loading { opacity: 1; transition-delay: .25s; }
+  .stage .loading i { width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid var(--rule); border-top-color: var(--accent); animation: spin .8s linear infinite; }
+  @keyframes spin { to { transform: rotate(1turn); } }
+
+  @media (max-width: 48rem) {
+    .wrap { padding: 0 1rem; }
+    .hero { padding: 2rem 0 1.5rem; }
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem .75rem; }
+    .filters { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+    .filters select, .filters input[type="search"] { min-width: 0; max-width: none; width: 100%; }
+    .filters label { white-space: normal; }
+    .tl button { min-width: 6.5rem; }
+    header.top nav { gap: .75rem; }
+    .viewer { grid-template-columns: 1fr; grid-template-rows: 62vh auto; height: auto; min-height: 100%; }
+    .stage img { inset: .5rem; width: calc(100% - 1rem); height: calc(100% - 4rem); }
+    .stage .nav { top: auto; bottom: .75rem; translate: none; }
+    .info { border-left: 0; }
+    dialog { overflow-y: auto; }
+  }
+  @media (max-width: 40rem) { header.top { position: relative; } header.top .langs { position: absolute; top: calc(1.5rem - .375rem); right: 0; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } .card .frame::after { animation: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a>
+    <nav aria-label="Azad Bilik"><a href="https://kitabxana.az" data-i18n="library" id="kx">Kitabxana</a><a href="../" data-i18n="gallery" data-keep-lang>Qalereya</a><a href="./" data-i18n="title" aria-current="page" data-keep-lang>İncəsənət</a><a href="/xeriteler/" data-i18n="maps" data-keep-lang>Ədəbi xəritələr</a><a href="/atlas/" data-i18n="atlas" data-keep-lang>Atlas</a><a href="/musiqi/" data-i18n="music" data-keep-lang>Musiqi</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
+  </header>
+  <div class="hero">
+    <h1 data-i18n="h1">Azərbaycan incəsənəti</h1>
+    <p class="lead"><span data-i18n="lead"></span> <a href="../" data-i18n="miniatures" data-keep-lang>Nizami və Füzulinin miniatürləri</a></p>
+  </div>
+</div>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="tl" id="tl" role="group" data-i18n-label="timeline"></div>
+    <div class="filters">
+      <input type="search" id="q" data-i18n-ph="search" data-i18n-label="search" autocomplete="off">
+      <select id="m" data-i18n-label="medium"></select>
+      <select id="pl" data-i18n-label="place"></select>
+      <select id="inst" data-i18n-label="museum"></select>
+      <label><input type="checkbox" id="pic"> <span data-i18n="picOnly">Yalnız şəkilli</span></label>
+      <button type="button" class="link" id="reset" data-i18n="reset" hidden>Sıfırla</button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <p class="count" id="count" aria-live="polite"></p>
+  <div id="content"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p data-i18n="footer"></p>
+    <p><a href="https://github.com/azadbilik/qalereya/blob/main/data/art/sources.md" data-i18n="sources">Mənbələr və lisenziyalar</a> · <a href="../data/art/catalogue.json">JSON</a> · <a href="../data/art/catalogue.csv">CSV</a></p>
+  </div>
+</footer>
+
+<dialog id="viewer" data-i18n-label="item">
+  <div class="viewer">
+    <div class="stage">
+      <img id="v-img" alt="" hidden>
+      <p class="nopic" id="v-nopic" hidden></p>
+      <span class="loading" role="status"><i aria-hidden="true"></i><span data-i18n="loading">Yüklənir…</span></span>
+      <button type="button" class="nav prev" id="v-prev" data-i18n-label="prev">←</button>
+      <button type="button" class="nav next" id="v-next" data-i18n-label="next">→</button>
+    </div>
+    <div class="info" id="v-info"></div>
+  </div>
+</dialog>
+
+<script>
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const LANGS = ['az', 'ru', 'en'];
+let lang = (() => {
+  const q = new URLSearchParams(location.search).get('lang');
+  if (LANGS.includes(q)) return q;
+  try { const s = localStorage.getItem('lang'); if (LANGS.includes(s)) return s; } catch {}
+  return 'az';
+})();
+function plural(n, one, few, many) { const r = new Intl.PluralRules('ru').select(n); return r === 'one' ? one : r === 'few' ? few : many; }
+const T = {
+  az: { doc: 'Azərbaycan incəsənəti · Azad Bilik', title: 'İncəsənət', gallery: 'Qalereya', h1: 'Azərbaycan incəsənəti',
+    lead: 'Qobustanın qayaüstü rəsmlərindən bu günə qədər: muzeylərin və Wikimedia Commons-un açıq məlumatlarından toplanmış kataloq. Şəkil yalnız sərbəst lisenziyalı və müəllif hüququ başa çatmış əsərlər üçün göstərilir; qalanlarına saxlandığı yerə keçid verilir.',
+    miniatures: 'Nizami və Füzulinin miniatürləri', maps: 'Ədəbi xəritələr', atlas: 'Atlas', music: 'Musiqi', library: 'Kitabxana', timeline: 'Zaman xətti',
+    search: 'Axtar…', medium: 'Növ', allM: 'Bütün növlər', place: 'Yer', allPl: 'Bütün yerlər', museum: 'Mənbə', allI: 'Bütün muzeylər', picOnly: 'Yalnız şəkilli', reset: 'Sıfırla', allP: 'Hamısı',
+    count: (n, k) => `${n} əsər${k != null ? ` · ${k} şəkilli` : ''}`, empty: 'Heç nə tapılmadı.', showAll: (n) => `Hamısını göstər (${n})`, noPic: 'Şəkil yoxdur', nopicFree: 'Şəkil göstərilmir',
+    footer: 'Hər qeyd muzeyin və ya Commons-un səhifəsinə bağlıdır. Müəllifi 1955-dən sonra vəfat etmiş əsərlərin (Azərbaycanda müəllif hüququ ömür + 70 il) şəkli göstərilmir. Ekrana uyğun surətlər burada saxlanılır, əsli mənbədədir.', sources: 'Mənbələr və lisenziyalar',
+    item: 'Əsər', prev: 'Əvvəlki', next: 'Sonrakı', close: 'Bağla', loading: 'Yüklənir…', date: 'Tarix', artist: 'Müəllif', medium2: 'Növ', place2: 'Yer', held: 'Saxlanılır', inv: 'İnventar №', licence: 'Lisenziya', credit: 'Foto/kredit', mat: 'Material', period: 'Dövr',
+    atSource: 'Mənbədə bax', commons: 'Commons səhifəsi', wikidata: 'Wikidata', full: 'Tam ölçüdə', share: 'Linki paylaş', copied: 'Link köçürüldü', undated: 'Tarixsiz', bce: 'e.ə.',
+    noImgProtected: 'Bu əsərin şəkli burada göstərilmir: müəllif hüququ qüvvədədir (müəllif 1955-dən sonra vəfat edib və ya əsər sonra yaradılıb). Mənbədə baxın.', noImgLicence: 'Bu əsərin şəkli sərbəst lisenziya ilə verilmir. Mənbədə baxın.', noImgNone: 'Bu qeydin şəkli yoxdur. Mənbədə baxın.', nc: 'Qeyri-kommersiya lisenziyası — şəkil saxlanılmır.' },
+  ru: { doc: 'Искусство Азербайджана · Azad Bilik', title: 'Искусство', gallery: 'Галерея', h1: 'Искусство Азербайджана',
+    lead: 'От наскальных рисунков Гобустана до наших дней: каталог по открытым данным музеев и Викисклада. Изображение показано только для свободно лицензированных работ с истёкшими авторскими правами; для остальных дана ссылка на место хранения.',
+    miniatures: 'Миниатюры к поэмам Низами и Физули', maps: 'Литературные карты', atlas: 'Атлас', music: 'Музыка', library: 'Библиотека', timeline: 'Линия времени',
+    search: 'Поиск…', medium: 'Вид', allM: 'Все виды', place: 'Место', allPl: 'Все места', museum: 'Источник', allI: 'Все музеи', picOnly: 'Только с изображением', reset: 'Сбросить', allP: 'Все',
+    count: (n, k) => `${n} ${plural(n, 'произведение', 'произведения', 'произведений')}${k != null ? ` · ${k} с изображением` : ''}`, empty: 'Ничего не найдено.', showAll: (n) => `Показать все (${n})`, noPic: 'Без изображения', nopicFree: 'Изображение не показано',
+    footer: 'Каждая запись ведёт на страницу музея или Викисклада. Изображения работ авторов, умерших после 1955 года (в Азербайджане авторское право действует всю жизнь + 70 лет), не показываются. Копии для экрана хранятся здесь, оригиналы — у источника.', sources: 'Источники и лицензии',
+    item: 'Произведение', prev: 'Предыдущее', next: 'Следующее', close: 'Закрыть', loading: 'Загрузка…', date: 'Дата', artist: 'Автор', medium2: 'Вид', place2: 'Место', held: 'Хранится', inv: 'Инв. №', licence: 'Лицензия', credit: 'Фото/авторство', mat: 'Материал', period: 'Период',
+    atSource: 'В источнике', commons: 'Страница на Викискладе', wikidata: 'Викиданные', full: 'Полный размер', share: 'Поделиться', copied: 'Ссылка скопирована', undated: 'Без даты', bce: 'до н. э.',
+    noImgProtected: 'Изображение здесь не показано: действует авторское право (автор умер после 1955 года или работа создана позже). Смотрите у источника.', noImgLicence: 'Изображение не под свободной лицензией. Смотрите у источника.', noImgNone: 'У записи нет изображения. Смотрите у источника.', nc: 'Некоммерческая лицензия — изображение не сохраняется.' },
+  en: { doc: 'Azerbaijani art · Azad Bilik', title: 'Art', gallery: 'Gallery', h1: 'Azerbaijani art',
+    lead: 'From the rock art of Gobustan to today: a catalogue assembled from museums\' open data and Wikimedia Commons. A picture is shown only for works that are freely licensed and out of copyright; the rest link to where they are held.',
+    miniatures: 'Miniatures for Nizami and Fuzuli', maps: 'Literary maps', atlas: 'Atlas', music: 'Music', library: 'Library', timeline: 'Timeline',
+    search: 'Search…', medium: 'Kind', allM: 'All kinds', place: 'Place', allPl: 'All places', museum: 'Source', allI: 'All museums', picOnly: 'With picture only', reset: 'Reset', allP: 'All',
+    count: (n, k) => `${n} work${n === 1 ? '' : 's'}${k != null ? ` · ${k} with a picture` : ''}`, empty: 'Nothing matches.', showAll: (n) => `Show all (${n})`, noPic: 'No picture', nopicFree: 'Picture not shown',
+    footer: 'Every entry links to the museum\'s or Commons\' own page. Pictures of works by authors who died after 1955 (copyright in Azerbaijan runs for life plus 70 years) are not shown. Screen-sized copies are kept here, the originals at the source.', sources: 'Sources and licences',
+    item: 'Work', prev: 'Previous', next: 'Next', close: 'Close', loading: 'Loading…', date: 'Date', artist: 'Maker', medium2: 'Kind', place2: 'Place', held: 'Held by', inv: 'Inventory no.', licence: 'Licence', credit: 'Photo / credit', mat: 'Medium', period: 'Period',
+    atSource: 'At the source', commons: 'Commons page', wikidata: 'Wikidata', full: 'Full size', share: 'Share', copied: 'Link copied', undated: 'Undated', bce: 'BCE',
+    noImgProtected: 'The picture is not shown here: the work is in copyright (its author died after 1955 or it was made later). See it at the source.', noImgLicence: 'The picture is not under a free licence. See it at the source.', noImgNone: 'This entry has no picture. See the source.', nc: 'Non-commercial licence — picture not kept.' },
+};
+const PERIOD_INTRO = {
+  prehistory: { az: 'Qobustan, Gəmiqaya və mağara düşərgələri: qayaüstü rəsmlər, daş alətlər, ilk bəzəklər.', ru: 'Гобустан, Гямигая и пещерные стоянки: наскальные рисунки, каменные орудия, первые украшения.', en: 'Gobustan, Gamigaya and the cave sites: rock engravings, stone tools, the first ornaments.' },
+  'bronze-iron': { az: 'Kür-Araz mədəniyyəti, Xocalı-Gədəbəy mədəniyyəti, Mingəçevir və Naxçıvan tapıntıları.', ru: 'Куро-аракская культура, ходжалы-кедабекская культура, находки Мингечевира и Нахчывана.', en: 'The Kura–Araxes and Khojaly–Gadabay cultures, the finds of Mingachevir and Nakhchivan.' },
+  antiquity: { az: 'Qafqaz Albaniyası, antik şəhərlər, Sasani dövrü; Kiş və Qəbələ tapıntıları.', ru: 'Кавказская Албания, античные города, сасанидская эпоха; находки Киша и Габалы.', en: 'Caucasian Albania, ancient towns, the Sasanian era; the finds of Kish and Gabala.' },
+  medieval: { az: 'Şirvanşahlar sarayı və daş oymaçılığı, Bərdə, Gəncə və Beyləqan keramikası, Məsumə və Mömünə xatun, Elxani və Cəlairi Təbrizi.', ru: 'Дворец Ширваншахов и резьба по камню, керамика Барды, Гянджи и Бейлагана, Ильханидский и Джалаиридский Тебриз.', en: 'The Shirvanshahs\' palace and stone carving, ceramics of Barda, Ganja and Beylagan, Ilkhanid and Jalayirid Tabriz.' },
+  'early-modern': { az: 'Təbriz məktəbi və Səfəvilər, xanlıqlar dövrünün xalçası, metal və parçası.', ru: 'Тебризская школа и Сефевиды, ковры, металл и ткани эпохи ханств.', en: 'The Tabriz school and the Safavids; carpets, metal and textiles of the khanate era.' },
+  c19: { az: 'Mir Mövsüm Nəvvab, Şuşa, Üstad Qəmbər Qarabaği, Mirzə Qədim İrəvani; Şirvan, Quba, Qarabağ xalçaları.', ru: 'Мир Мовсум Навваб, Шуша, Уста Гамбар Карабаги, Мирза Кадим Иревани; ковры Ширвана, Губы, Карабаха.', en: 'Mir Mohsun Navvab, Shusha, Usta Gambar Garabaghi, Mirza Gadim Iravani; the carpets of Shirvan, Guba, Karabakh.' },
+  c20: { az: 'Əzim Əzimzadə, Bəhruz Kəngərli, Səttar Bəhlulzadə, Tahir Salahov, Toğrul Nərimanbəyov, Mikayıl Abdullayev, Cavad Mircavadov.', ru: 'Азим Азимзаде, Бахруз Кенгерли, Саттар Бахлулзаде, Таир Салахов, Тогрул Наримбеков, Микаил Абдуллаев, Джавад Мирджавадов.', en: 'Azim Azimzade, Bahruz Kangarli, Sattar Bahlulzade, Tahir Salahov, Togrul Narimanbekov, Mikayil Abdullayev, Javad Mirjavadov.' },
+  contemporary: { az: '1991-dən bəri: müstəqil Azərbaycanın rəssamları, diaspor və beynəlxalq sərgilər.', ru: 'С 1991 года: художники независимого Азербайджана, диаспора и международные выставки.', en: 'Since 1991: artists of independent Azerbaijan, the diaspora and international shows.' },
+};
+const t = (k) => T[lang][k];
+const KX = () => `https://kitabxana.az${lang === 'az' ? '' : '/' + lang}`;
+function applyLang() {
+  document.documentElement.lang = lang;
+  document.title = t('doc');
+  document.querySelectorAll('[data-i18n]').forEach((el) => el.textContent = t(el.dataset.i18n));
+  document.querySelectorAll('[data-i18n-label]').forEach((el) => el.setAttribute('aria-label', t(el.dataset.i18nLabel)));
+  document.querySelectorAll('[data-i18n-ph]').forEach((el) => el.setAttribute('placeholder', t(el.dataset.i18nPh)));
+  document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+  document.querySelectorAll('[data-keep-lang]').forEach((a) => { const u = new URL(a.getAttribute('href'), location.href); if (lang === 'az') u.searchParams.delete('lang'); else u.searchParams.set('lang', lang); a.href = u; });
+  document.getElementById('kx').href = KX();
+}
+applyLang();
+
+let data, view = [], at = -1;
+const state = { p: '', m: '', pl: '', inst: '', pic: false, q: '' };
+const params = new URLSearchParams(location.search);
+for (const k of ['p', 'm', 'pl', 'inst', 'q']) state[k] = params.get(k) ?? '';
+state.pic = params.get('pic') === '1';
+const SHOW = 48;
+const expanded = new Set();
+
+const pname = (p) => p[lang] ?? p.az;
+const mname = (m) => (data.media[m] ?? data.media.other)[lang];
+const titleOf = (x) => (lang === 'az' && x.title.az) || x.title.en || x.title.az || '';
+const yr = (y) => y < 0 ? `${-y}` : String(y);
+const when = (x) => x.dateText || (x.yearStart != null ? (x.yearEnd != null && x.yearEnd !== x.yearStart ? `${yr(x.yearStart)}–${yr(x.yearEnd)}` : yr(x.yearStart)) + (x.yearEnd < 0 || x.yearStart < 0 ? ' ' + t('bce') : '') : '');
+const hasPic = (x) => x.imageStatus === 'free';
+const thumbOf = (x) => `thumbs/${encodeURIComponent(x.id)}.jpg`;
+const largeOf = (x) => `large/${encodeURIComponent(x.id)}.jpg`;
+
+fetch('../data/art/catalogue.json').then((r) => r.json()).then((d) => {
+  data = d;
+  data.byId = new Map(d.items.map((x) => [x.id, x]));
+  data.items.forEach((x) => { x._s = [titleOf(x), x.title.az, x.title.en, x.artist, x.place, x.institution, x.dateText, x.medium].join(' ').toLowerCase(); });
+  drawTimeline(); drawFilters(); render();
+  const open = location.hash.slice(1);
+  if (open && data.byId.has(decodeURIComponent(open))) show(decodeURIComponent(open));
+});
+document.querySelectorAll('[data-lang]').forEach((b) => b.onclick = () => {
+  lang = b.dataset.lang;
+  try { localStorage.setItem('lang', lang); } catch {}
+  applyLang();
+  if (!data) return;
+  drawTimeline(); drawFilters(); render(true);
+  if (dlg.open && view[at]) show(view[at].id);
+});
+
+const FACET = { m: (x) => x.medium, pl: (x) => x.place, inst: (x) => x.institution?.replace(/ \(via .*\)$/, '') };
+const passes = (x, skip) => (skip === 'p' || !state.p || x.period === state.p) && (!state.pic || hasPic(x))
+  && Object.keys(FACET).every((f) => f === skip || !state[f] || FACET[f](x) === state[f])
+  && (!state.q || x._s.includes(state.q.toLowerCase()));
+function tally(f) { const n = {}; for (const x of data.items) if (passes(x, f)) { const v = f === 'p' ? x.period : FACET[f](x); if (v) n[v] = (n[v] ?? 0) + 1; } return n; }
+
+function drawTimeline() {
+  const n = tally('p');
+  const all = data.items.filter((x) => passes(x, 'p')).length;
+  const b = (id, span, name, c) => `<button type="button" data-p="${id}" aria-pressed="${state.p === id}"><span class="span">${esc(span)}</span><span class="nm">${esc(name)}<small>${c}</small></span></button>`;
+  document.getElementById('tl').innerHTML = b('', '', t('allP'), all)
+    + data.periods.map((p) => b(p.id, p.span, pname(p).split(':')[0], n[p.id] ?? 0)).join('');
+  document.querySelectorAll('#tl button').forEach((x) => x.onclick = () => { state.p = x.dataset.p; drawTimeline(); drawFilters(); render(true); window.scrollTo({ top: 0 }); });
+  const on = document.querySelector('#tl [aria-pressed="true"]'); const row = document.getElementById('tl');
+  if (on && row.scrollWidth > row.clientWidth) row.scrollLeft = Math.max(0, on.offsetLeft - row.offsetLeft - 24);
+}
+const opt = (v, label, n, cur) => `<option value="${esc(v)}"${v === cur ? ' selected' : ''}>${esc(label)} (${n})</option>`;
+function drawFilters() {
+  for (const f of Object.keys(FACET)) if (state[f] && !data.items.some((x) => (!state.p || x.period === state.p) && FACET[f](x) === state[f])) state[f] = '';
+  const sel = (id, html, any) => { const s = document.getElementById(id); s.innerHTML = html; s.hidden = !any; s.onchange = () => { state[id] = s.value; drawTimeline(); drawFilters(); render(true); }; };
+  const m = Object.entries(tally('m')).sort((a, b) => b[1] - a[1]);
+  sel('m', `<option value="">${t('allM')}</option>` + m.map(([v, n]) => opt(v, mname(v), n, state.m)).join(''), m.length);
+  const pl = Object.entries(tally('pl')).sort((a, b) => b[1] - a[1]);
+  sel('pl', `<option value="">${t('allPl')}</option>` + pl.map(([v, n]) => opt(v, v, n, state.pl)).join(''), pl.length);
+  const i = Object.entries(tally('inst')).sort((a, b) => b[1] - a[1]);
+  sel('inst', `<option value="">${t('allI')}</option>` + i.map(([v, n]) => opt(v, v, n, state.inst)).join(''), i.length);
+  const pic = document.getElementById('pic'); pic.checked = state.pic; pic.onchange = () => { state.pic = pic.checked; drawTimeline(); drawFilters(); render(true); };
+  const q = document.getElementById('q'); if (q.value !== state.q) q.value = state.q;
+  let tm; q.oninput = () => { clearTimeout(tm); tm = setTimeout(() => { state.q = q.value.trim(); drawTimeline(); drawFilters(); render(true); }, 200); };
+  const reset = document.getElementById('reset');
+  reset.hidden = !(state.m || state.pl || state.inst || state.pic || state.q);
+  reset.onclick = clearFilters;
+}
+function clearFilters() { state.m = state.pl = state.inst = state.q = ''; state.pic = false; document.getElementById('q').value = ''; drawTimeline(); drawFilters(); render(true); }
+function keepUrl() {
+  const p = new URLSearchParams();
+  for (const k of ['p', 'm', 'pl', 'inst', 'q']) if (state[k]) p.set(k, state[k]);
+  if (state.pic) p.set('pic', '1');
+  if (lang !== 'az') p.set('lang', lang);
+  const q = p.toString();
+  history.replaceState(null, '', (q ? `?${q}` : location.pathname) + location.hash);
+}
+
+function render(fromUser) {
+  if (fromUser) { keepUrl(); expanded.clear(); }
+  const items = data.items.filter((x) => passes(x));
+  const k = items.filter(hasPic).length;
+  document.getElementById('count').textContent = t('count')(items.length, k);
+  const el = document.getElementById('content');
+  if (!items.length) { el.innerHTML = `<p class="empty">${t('empty')} <button type="button" class="link" id="empty-reset">${t('reset')}</button></p>`; document.getElementById('empty-reset').onclick = clearFilters; view = []; return; }
+  // A chapter per period, those with a picture first, then oldest first
+  const chapters = data.periods.map((p) => ({ p, items: items.filter((x) => x.period === p.id).sort((a, b) => hasPic(b) - hasPic(a) || (a.yearStart ?? 9999) - (b.yearStart ?? 9999)) })).filter((c) => c.items.length);
+  const rest = items.filter((x) => !x.period);
+  if (rest.length) chapters.push({ p: { id: '_', az: t('undated'), ru: t('undated'), en: t('undated'), span: '' }, items: rest });
+  view = [];
+  el.innerHTML = chapters.map((c) => {
+    const shown = state.p || expanded.has(c.p.id) ? c.items : c.items.slice(0, SHOW);
+    view.push(...shown);
+    const intro = PERIOD_INTRO[c.p.id]?.[lang];
+    const link = (c.p.id === 'medieval' || c.p.id === 'early-modern') ? ` <a href="../${lang === 'az' ? '' : '?lang=' + lang}">${esc(t('miniatures'))}</a>` : '';
+    return `<section class="chapter" id="${c.p.id}"><div class="chapter-head"><span class="span">${esc(c.p.span)}</span><h2>${esc(pname(c.p))}</h2>${intro ? `<p>${esc(intro)}${link}</p>` : ''}</div>
+      <div class="grid">${shown.map(card).join('')}</div>
+      ${shown.length < c.items.length ? `<p class="more"><button type="button" class="link" data-more="${c.p.id}">${t('showAll')(c.items.length)}</button></p>` : ''}</section>`;
+  }).join('');
+  el.querySelectorAll('[data-more]').forEach((b) => b.onclick = () => { expanded.add(b.dataset.more); render(); });
+  wire(el);
+}
+function card(x) {
+  const meta = [when(x), x.artist || x.institution].filter(Boolean).join(' · ');
+  const frame = hasPic(x)
+    ? `<div class="frame"><img src="${thumbOf(x)}" alt="${esc(titleOf(x))}" loading="lazy" decoding="async"></div>`
+    : `<div class="frame noimg"><span>${esc(mname(x.medium))}<br>${esc(t('noPic'))}</span></div>`;
+  return `<button type="button" class="card" data-id="${esc(x.id)}" title="${esc(titleOf(x))}">${frame}<p class="t">${esc(titleOf(x))}</p><p class="m">${esc(meta)}</p></button>`;
+}
+function wire(el) {
+  el.querySelectorAll('.card').forEach((b) => {
+    b.onclick = () => show(b.dataset.id);
+    const img = b.querySelector('img'); if (!img) return;
+    const x = data.byId.get(b.dataset.id);
+    const ok = () => { img.classList.add('ok'); img.parentElement.classList.add('ok'); };
+    if (img.complete && img.naturalWidth) { ok(); return; }
+    img.onload = ok;
+    // Our copy failed: try the larger one, then the host's own file; then say so and keep the card
+    const tries = [largeOf(x), x.imageSrc].filter(Boolean);
+    img.onerror = () => { const n = tries.shift(); if (n) { img.src = n; return; } img.onerror = null; img.parentElement.classList.add('noimg'); img.remove(); };
+  });
+}
+
+const dlg = document.getElementById('viewer');
+function show(id) {
+  at = view.findIndex((x) => x.id === id);
+  if (at < 0) { view = [data.byId.get(id)]; at = 0; }
+  const x = view[at];
+  const img = document.getElementById('v-img'), stage = img.parentElement, nopic = document.getElementById('v-nopic');
+  if (hasPic(x)) {
+    nopic.hidden = true; img.hidden = false; img.src = thumbOf(x); img.alt = titleOf(x); stage.classList.add('busy');
+    const full = new Image();
+    full.onload = () => { if (view[at] === x) { img.src = full.src; stage.classList.remove('busy'); } };
+    full.onerror = () => { if (view[at] !== x) return; if (x.imageSrc && full.src !== x.imageSrc) full.src = x.imageSrc; else stage.classList.remove('busy'); };
+    full.src = largeOf(x);
+  } else {
+    img.hidden = true; img.removeAttribute('src'); stage.classList.remove('busy'); nopic.hidden = false;
+    nopic.textContent = x.imageStatus === 'protected' ? t('noImgProtected') : x.imageStatus === 'nc' ? t('nc') : x.license ? t('noImgLicence') : t('noImgNone');
+  }
+  const p = data.periods.find((q) => q.id === x.period);
+  const rows = [[t('date'), esc(when(x))], [t('artist'), esc(x.artist)], [t('period'), p ? esc(pname(p).split(':')[0]) : ''], [t('medium2'), esc(mname(x.medium))], [t('mat'), esc(x.mediumText)], [t('place2'), esc(x.placeText || x.place)],
+    [t('held'), esc(x.institution)], [t('inv'), esc(x.accession)], [t('credit'), esc(x.credit)]].filter(([, v]) => v);
+  const lic = x.license ? `<dt>${t('licence')}</dt><dd><span class="badge${hasPic(x) ? '' : ' nc'}">${esc(x.license)}</span></dd>` : '';
+  document.getElementById('v-info').innerHTML = `
+    <button type="button" class="close" id="v-close" autofocus>${t('close')} ✕</button>
+    <div><h2>${esc(titleOf(x))}</h2>${x.title.az && x.title.en && x.title.az !== x.title.en ? `<p class="sub">${esc(lang === 'az' ? x.title.en : x.title.az)}</p>` : ''}</div>
+    <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}${lic}</dl>
+    ${x.protectedReason && x.license ? `<p class="note">${esc(t('noImgProtected'))}</p>` : ''}
+    <div class="links">
+      <a href="${esc(x.url)}" target="_blank" rel="noopener">${t('atSource')} ↗</a>
+      ${x.commonsUrl ? `<a href="${esc(x.commonsUrl)}" target="_blank" rel="noopener">${t('commons')} ↗</a>` : ''}
+      ${hasPic(x) && x.imageOriginal ? `<a href="${esc(x.imageOriginal)}" target="_blank" rel="noopener">${t('full')} ↗</a>` : ''}
+      <button type="button" id="v-share">${t('share')}</button>
+    </div>
+    <p class="pos">${at + 1} / ${view.length}</p>`;
+  document.getElementById('v-close').onclick = () => dlg.close();
+  document.getElementById('v-share').onclick = async (e) => {
+    const url = new URL(`${lang === 'az' ? '' : '?lang=' + lang}#${encodeURIComponent(x.id)}`, location.href.split('#')[0].split('?')[0]).href;
+    if (navigator.share) { try { await navigator.share({ title: titleOf(x), url }); } catch {} return; }
+    try { await navigator.clipboard.writeText(url); e.target.textContent = t('copied'); } catch { prompt(t('share'), url); }
+  };
+  document.getElementById('v-prev').disabled = at <= 0;
+  document.getElementById('v-next').disabled = at >= view.length - 1;
+  if (!dlg.open) dlg.showModal();
+  history.replaceState(null, '', `${location.search || location.pathname}#${encodeURIComponent(x.id)}`);
+}
+document.getElementById('v-prev').onclick = () => at > 0 && show(view[at - 1].id);
+document.getElementById('v-next').onclick = () => at < view.length - 1 && show(view[at + 1].id);
+dlg.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft' && at > 0) show(view[at - 1].id);
+  if (e.key === 'ArrowRight' && at < view.length - 1) show(view[at + 1].id);
+});
+dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+dlg.addEventListener('close', () => history.replaceState(null, '', location.search || location.pathname));
+</script>
+</body>
+</html>

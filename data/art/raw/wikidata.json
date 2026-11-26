@@ -1,0 +1,2509 @@
+[
+ {
+  "id": "Q2790637",
+  "title": "Monument to Nizami Ganjavi in Baku",
+  "titleAz": "Nizami Gəncəvinin heykəli",
+  "creator": "Q622586",
+  "images": [
+   "Nizami Gəncəvinin Bakıdakı heykəli.JPG"
+  ],
+  "type": "monumental sculpture",
+  "material": "bronze"
+ },
+ {
+  "id": "Q12837953",
+  "title": "Statue of Bahram Gur",
+  "titleAz": "Bəhram Gurun heykəli",
+  "creator": "Q55698556",
+  "images": [
+   "4. Bakhram Gur.jpg"
+  ],
+  "inception": "1959-01-01T00:00:00Z",
+  "type": "monument",
+  "material": "bronze",
+  "location": "Azneft Square"
+ },
+ {
+  "id": "Q12841772",
+  "title": "Mehdi Huseynzade Monument",
+  "titleAz": "Mehdi Hüseynzadənin heykəli",
+  "creator": "Q622586",
+  "images": [
+   "Mehdi Hüseynzadənin heykəli (1).jpg"
+  ],
+  "inception": "1973-01-01T00:00:00Z",
+  "type": "monument",
+  "material": "granite"
+ },
+ {
+  "id": "Q16271055",
+  "title": "Monument to Nizami Ganjavi in Ganja",
+  "titleAz": "Nizami Gəncəvinin heykəli",
+  "creator": "Q622586",
+  "images": [],
+  "inception": "1946-01-01T00:00:00Z",
+  "type": "monument",
+  "material": "bronze"
+ },
+ {
+  "id": "Q16628779",
+  "title": "Göyçay bağlarında (rəsm əsəri)",
+  "titleAz": "Göyçay bağlarında (rəsm əsəri)",
+  "creator": "Q890423",
+  "images": [],
+  "collection": "Ministry of Culture (Azerbaijan)",
+  "inception": "1966-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Ministry of Culture (Azerbaijan)"
+ },
+ {
+  "id": "Q16630786",
+  "title": "Həyat naminə",
+  "titleAz": "Həyat naminə (rəsm əsəri)",
+  "creator": "Q890423",
+  "images": [],
+  "inception": "1965-01-01T00:00:00Z",
+  "type": "painting"
+ },
+ {
+  "id": "Q16674008",
+  "title": "Mama",
+  "titleAz": "Ana (rəsm əsəri)",
+  "creator": "Q890423",
+  "images": [],
+  "inception": "1966-01-01T00:00:00Z",
+  "type": "painting"
+ },
+ {
+  "id": "Q16678306",
+  "title": "Mugham",
+  "titleAz": "Muğam",
+  "creator": "Q890423",
+  "images": [],
+  "collection": "Ministry of Culture (Azerbaijan)",
+  "inception": "1966-01-01T00:00:00Z",
+  "type": "painting",
+  "material": "canvas",
+  "location": "Ministry of Culture (Azerbaijan)"
+ },
+ {
+  "id": "Q16679220",
+  "title": "Yaylaqda",
+  "titleAz": "Yaylaqda (rəsm əsəri)",
+  "creator": "Q890423",
+  "images": [],
+  "inception": "1967-01-01T00:00:00Z",
+  "type": "painting"
+ },
+ {
+  "id": "Q16685974",
+  "title": "Song (painting)",
+  "titleAz": "Mahnı",
+  "creator": "Q890423",
+  "images": [],
+  "collection": "Ministry of Culture of Russia",
+  "inception": "1970-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Moscow"
+ },
+ {
+  "id": "Q28665861",
+  "title": "Rəssam Səttar Bəhlulzadənin portreti (rəsm əsəri)",
+  "titleAz": "Rəssam Səttar Bəhlulzadənin portreti (rəsm əsəri)",
+  "creator": "Q890423",
+  "images": [],
+  "inception": "1959-01-01T00:00:00Z",
+  "type": "painting"
+ },
+ {
+  "id": "Q55701055",
+  "title": "Neftchilar",
+  "titleAz": "Neftçilər",
+  "creator": "Q16375131",
+  "images": [],
+  "inception": "1956-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Baku Museum of Modern Art"
+ },
+ {
+  "id": "Q110250786",
+  "title": "Kare Kaplumbağanın Şarkısı",
+  "creator": "Q16369763",
+  "images": [
+   "Kare Kaplumbağanın Şarkısı, Mahmud Rustamov - Hacettepe Üniversitesi Beytepe Kampüsü 08.jpg"
+  ],
+  "collection": "Sculptures at Beytepe Campus",
+  "inception": "2010-01-01T00:00:00Z",
+  "type": "sculpture",
+  "location": "Hacettepe University Beytepe Campus"
+ },
+ {
+  "id": "Q65276578",
+  "title": "Wolfgang Amadeus Mozart monument, Baku",
+  "titleAz": "Volfqanq Amadeus Motsartın heykəli",
+  "creator": "Q20561766",
+  "images": [],
+  "inception": "2011-10-12T00:00:00Z",
+  "type": "statue"
+ },
+ {
+  "id": "Q125590921",
+  "title": "Çingiz Aytmatovun abidəsi",
+  "titleAz": "Çingiz Aytmatovun abidəsi",
+  "creator": "Q20561766",
+  "images": [
+   "İlham Əliyev və Prezident Sadır Japarov Bakıda Çingiz Aytmatovun abidəsinin açılış mərasimində iştirak ediblər (1).jpg"
+  ],
+  "inception": "2024-01-01T00:00:00Z",
+  "type": "statue",
+  "material": "brass",
+  "location": "Binagadi raion"
+ },
+ {
+  "id": "Q130386002",
+  "title": "Ashiq Alasgar's monument",
+  "titleAz": "Aşıq Ələsgərin heykəli",
+  "creator": "Q20561766",
+  "images": [],
+  "inception": "2024-01-01T00:00:00Z",
+  "type": "statue",
+  "material": "granite",
+  "location": "Rashid Behbudov Street"
+ },
+ {
+  "id": "Q12843357",
+  "title": "Nizami işığında",
+  "titleAz": "Nizami işığında",
+  "creator": "Q16375531",
+  "images": [],
+  "inception": "1987-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Nizami Museum of Azerbaijani Literature"
+ },
+ {
+  "id": "Q15613891",
+  "title": "Portrait of Nizami",
+  "titleAz": "Nizaminin portreti",
+  "creator": "Q12844811",
+  "images": [],
+  "collection": "Nizami Museum of Azerbaijani Literature",
+  "inception": "1940-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Nizami Museum of Azerbaijani Literature"
+ },
+ {
+  "id": "Q16687609",
+  "title": "The Funeral of Ferdowsi",
+  "titleAz": "Firdovsinin dəfni",
+  "creator": "Q12844811",
+  "images": [],
+  "collection": "National Art Museum of Azerbaijan",
+  "inception": "1934-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "National Art Museum of Azerbaijan"
+ },
+ {
+  "id": "Q19910789",
+  "title": "Dream Land",
+  "titleAz": "Torpağın arzusu",
+  "creator": "Q1025163",
+  "images": [],
+  "collection": "National Art Museum of Azerbaijan",
+  "inception": "1963-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "National Art Museum of Azerbaijan"
+ },
+ {
+  "id": "Q19915493",
+  "title": "Yuxarı daşaltı",
+  "titleAz": "Yuxarı daşaltı",
+  "creator": "Q1025163",
+  "images": [],
+  "collection": "National Art Museum of Azerbaijan",
+  "inception": "1957-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "National Art Museum of Azerbaijan"
+ },
+ {
+  "id": "Q20564199",
+  "title": "Bust of Khurshidbanu Natavan",
+  "titleAz": "Xurşidbanu Natəvanın büstü",
+  "creator": "Q16369087",
+  "images": [
+   "Monument of Azerbaijani poetess Khurshidbanu Natavan in Shusha, Azerbaijan.JPG"
+  ],
+  "inception": "1982-01-01T00:00:00Z",
+  "type": "bust",
+  "material": "bronze",
+  "location": "Shusha"
+ },
+ {
+  "id": "Q25546860",
+  "title": "Monument to Dede Qorqud in Nakhchivan",
+  "titleAz": "Dədə Qоrqudun heykəli",
+  "creator": "Q133883238",
+  "images": [],
+  "inception": "1999-01-01T00:00:00Z",
+  "type": "monumental sculpture",
+  "material": "bronze"
+ },
+ {
+  "id": "Q122678631",
+  "title": "Statue of Khurshidbanu Natavan (Évian-les-Bains)",
+  "titleAz": "Xurşidbanu Natəvanın heykəli",
+  "creator": "Q12846204",
+  "images": [
+   "Xurşudbanu Natəvan.jpg"
+  ],
+  "type": "statue",
+  "material": "marble"
+ },
+ {
+  "id": "Q124588791",
+  "title": "Neon Sənət Muzeyi",
+  "titleAz": "Neon Sənət Muzeyi",
+  "creator": "Q124596493",
+  "images": [],
+  "inception": "2015-01-01T00:00:00Z",
+  "type": "art museum"
+ },
+ {
+  "id": "Q3663081",
+  "title": "Monument to Nizami Ganjavi in Chișinău",
+  "titleAz": "Nizami Gəncəvinin Kişinyovdakı heykəli",
+  "creator": "Q16364322",
+  "images": [],
+  "type": "monument",
+  "material": "bronze"
+ },
+ {
+  "id": "Q4343450",
+  "title": "Monument to the soldiers of the 77th Infantry Division",
+  "titleAz": "77-ci atıcı diviziyasının əsgərlərinin xatirə abidəsi",
+  "creator": "Q4531484",
+  "images": [],
+  "inception": "1974-01-01T00:00:00Z",
+  "type": "monument"
+ },
+ {
+  "id": "Q4822471",
+  "title": "Statue of Fuzuli (Baku)",
+  "titleAz": "Məhəmməd Füzulinin heykəli",
+  "creator": "Q4279873",
+  "images": [],
+  "inception": "1962-01-01T00:00:00Z",
+  "type": "monument",
+  "material": "granite"
+ },
+ {
+  "id": "Q12469962",
+  "title": "Khojaly Massacre Memorial in Berlin",
+  "titleAz": "Berlində Xocalı abidəsi heykəli",
+  "creator": "Q16364322",
+  "images": [
+   "Khojaly Massacre Memorial (Berlin) in Reading Garden.jpg"
+  ],
+  "inception": "2011-05-30T00:00:00Z",
+  "type": "monument",
+  "material": "bronze",
+  "location": "Berlin"
+ },
+ {
+  "id": "Q16271045",
+  "title": "Monument to Nikola Tesla (Baku)",
+  "titleAz": "Nikola Teslanın heykəli",
+  "creator": "Q4531484",
+  "images": [
+   "Nikola Teslanın heykəli.jpg"
+  ],
+  "inception": "2013-02-08T00:00:00Z",
+  "type": "monument",
+  "material": "brass"
+ },
+ {
+  "id": "Q16271048",
+  "title": "Huseyn Javid Monument",
+  "titleAz": "Hüseyn Cavidin heykəli",
+  "creator": "Q4531484",
+  "images": [
+   "HuseynCavidHeykeli.jpg"
+  ],
+  "inception": "1993-05-27T00:00:00Z",
+  "type": "sculpture",
+  "material": "bronze"
+ },
+ {
+  "id": "Q139153378",
+  "title": "Monument to Niyazi",
+  "titleAz": "Niyazinin heykəli",
+  "creator": "Q4531484",
+  "images": [
+   "Maestro Niyazinin heykəli (2).jpg"
+  ],
+  "type": "monument"
+ },
+ {
+  "id": "Q1964882",
+  "title": "For You",
+  "titleAz": "Sənə, bəşəriyyət!",
+  "creator": "Q2627373",
+  "images": [
+   "Stamps of Azerbaijan, 2011-944.jpg"
+  ],
+  "collection": "National Art Museum of Azerbaijan",
+  "inception": "1961-01-01T00:00:00Z",
+  "type": "painting",
+  "material": "canvas",
+  "location": "National Art Museum of Azerbaijan"
+ },
+ {
+  "id": "Q4343255",
+  "title": "Monument to Mirza Alakbar Sabir",
+  "titleAz": "Mirzə Ələkbər Sabirin heykəli",
+  "creator": "Q4216390",
+  "images": [
+   "Mirzə Ələkbər Sabirin heykəli.JPG"
+  ],
+  "inception": "1958-01-01T00:00:00Z",
+  "type": "sculpture",
+  "material": "bronze",
+  "location": "Old City of Baku"
+ },
+ {
+  "id": "Q4443325",
+  "title": "Land of Fire",
+  "titleAz": "Odlar Yurdu",
+  "creator": "Q2627373",
+  "images": [],
+  "collection": "National Art Museum of Azerbaijan",
+  "inception": "2007-01-01T00:00:00Z",
+  "type": "painting",
+  "material": "canvas",
+  "location": "National Art Museum of Azerbaijan"
+ },
+ {
+  "id": "Q16687291",
+  "title": "Portrait of Composer Gara Garayev",
+  "titleAz": "Bəstəkar Qara Qarayevin portreti",
+  "creator": "Q2627373",
+  "images": [
+   "Qara Qarayev picture.jpg"
+  ],
+  "collection": "Tretyakov Gallery",
+  "inception": "1960-01-01T00:00:00Z",
+  "type": "painting",
+  "material": "canvas",
+  "location": "Tretyakov Gallery"
+ },
+ {
+  "id": "Q16693474",
+  "title": "The Shift is Over",
+  "titleAz": "Növbədən qayıdanlar",
+  "creator": "Q2627373",
+  "images": [],
+  "collection": "Scientific-research Museum of the Russian Academy of Arts",
+  "inception": "1957-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Scientific-research Museum of the Russian Academy of Arts"
+ },
+ {
+  "id": "Q19916000",
+  "title": "Rəssam S. Bəhlulzadənin portreti",
+  "titleAz": "Rəssam S. Bəhlulzadənin portreti",
+  "creator": "Q12846459",
+  "images": [],
+  "collection": "National Art Museum of Azerbaijan",
+  "inception": "1955-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "National Art Museum of Azerbaijan"
+ },
+ {
+  "id": "Q20571545",
+  "title": "Atropates meeting Macedonian ruler",
+  "titleAz": "Atropatın Makedoniyalı İsgəndərlə görüşü",
+  "creator": "Q16379363",
+  "images": [],
+  "type": "painting",
+  "location": "National Museum of History of Azerbaijan"
+ },
+ {
+  "id": "Q24932936",
+  "title": "Absheron Women",
+  "titleAz": "Abşeron qadınları",
+  "creator": "Q2627373",
+  "images": [],
+  "collection": "Tretyakov Gallery",
+  "inception": "1967-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Tretyakov Gallery"
+ },
+ {
+  "id": "Q55703440",
+  "title": "Mosaics of Nizami metrostation",
+  "titleAz": "Nizami metrostansiyasının mozaikaları",
+  "creator": "Q2446612",
+  "images": [],
+  "type": "mosaic",
+  "location": "Nizami Gəncəvi"
+ },
+ {
+  "id": "Q77848229",
+  "title": "Monument to Shah Ismail Khatai",
+  "titleAz": "Şah İsmayıl Xətainin heykəli",
+  "creator": "Q44155526",
+  "images": [
+   "Şah İsmayıl Xətainin heykəli (Bakı) (2).jpg"
+  ],
+  "type": "monument",
+  "material": "granite",
+  "location": "Baku"
+ },
+ {
+  "id": "Q19921201",
+  "title": "Deportation",
+  "creator": "Q21995255",
+  "images": [],
+  "collection": "Metropolitan Museum of Art",
+  "inventory": "45.139",
+  "inception": "1936-01-01T00:00:00Z",
+  "type": "painting",
+  "material": "canvas",
+  "location": "Metropolitan Museum of Art"
+ },
+ {
+  "id": "Q20863114",
+  "title": "Clown",
+  "creator": "Q21995255",
+  "images": [],
+  "collection": "Pennsylvania Academy of the Fine Arts",
+  "inventory": "1950.24",
+  "inception": "1948-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Pennsylvania Academy of the Fine Arts"
+ },
+ {
+  "id": "Q27896578",
+  "title": "Alice in Wonderland (Figure with Symbols)",
+  "creator": "Q21995255",
+  "images": [],
+  "collection": "Художественный музей Индианаполиса",
+  "inventory": "72.40.81",
+  "inception": "1941-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Художественный музей Индианаполиса"
+ },
+ {
+  "id": "Q27897590",
+  "title": "Portrait of a Count",
+  "creator": "Q21995255",
+  "images": [],
+  "collection": "Художественный музей Индианаполиса",
+  "inventory": "72.40.10",
+  "inception": "1940-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Художественный музей Индианаполиса"
+ },
+ {
+  "id": "Q51285341",
+  "title": "Q51285341",
+  "creator": "Q2627373",
+  "images": [],
+  "collection": "Slovak National Gallery",
+  "inventory": "O 5866",
+  "inception": "1965-01-01T00:00:00Z",
+  "type": "painting",
+  "material": "cardboard",
+  "location": "Slovak National Gallery"
+ },
+ {
+  "id": "Q51300301",
+  "title": "Q51300301",
+  "creator": "Q2627373",
+  "images": [],
+  "collection": "Slovak National Gallery",
+  "inventory": "O 5933",
+  "inception": "1968-01-01T00:00:00Z",
+  "type": "painting",
+  "material": "cardboard",
+  "location": "Slovak National Gallery"
+ },
+ {
+  "id": "Q56478223",
+  "title": "Lenindenkmal",
+  "creator": "Q15060683",
+  "images": [
+   "Bundesarchiv B 145 Bild-F088677-0032, Dresden, Lenindenkmal im Stadtzentrum.jpg"
+  ],
+  "inception": "1974-01-01T00:00:00Z",
+  "type": "destroyed building or structure",
+  "material": "granite"
+ },
+ {
+  "id": "Q56753155",
+  "title": "Courtyard",
+  "creator": "Q2446612",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "7145",
+  "type": "painting",
+  "material": "cardboard",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q56753169",
+  "title": "Saryan",
+  "creator": "Q2446612",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "27461",
+  "type": "painting",
+  "material": "canvas",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q56753182",
+  "title": "Woman's portrait",
+  "creator": "Q2446612",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "10013",
+  "type": "drawing",
+  "material": "India ink",
+  "location": "Armenia"
+ },
+ {
+  "id": "Q64513631",
+  "title": "The Clown",
+  "creator": "Q21995255",
+  "images": [],
+  "collection": "Whitney Museum of American Art",
+  "inventory": "49.14",
+  "inception": "1948-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Whitney Museum of American Art"
+ },
+ {
+  "id": "Q64513839",
+  "title": "The Matriarch",
+  "creator": "Q21995255",
+  "images": [],
+  "collection": "Whitney Museum of American Art",
+  "inventory": "49.15",
+  "inception": "1949-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "Whitney Museum of American Art"
+ },
+ {
+  "id": "Q76456808",
+  "title": "Profile #2",
+  "creator": "Q21995255",
+  "images": [],
+  "collection": "Prints in the National Gallery of Art",
+  "inventory": "2008.115.4766",
+  "inception": "1953-01-01T00:00:00Z",
+  "type": "print",
+  "location": "Milli Sənət Qalereyası"
+ },
+ {
+  "id": "Q76552116",
+  "title": "Untitled (Two Women at the Shore)",
+  "creator": "Q21995255",
+  "images": [],
+  "collection": "Prints in the National Gallery of Art",
+  "inventory": "2008.115.4767",
+  "inception": "1947-01-01T00:00:00Z",
+  "type": "work of art",
+  "location": "Milli Sənət Qalereyası"
+ },
+ {
+  "id": "Q76552117",
+  "title": "Audrey Macmahon",
+  "creator": "Q21995255",
+  "images": [],
+  "collection": "Prints in the National Gallery of Art",
+  "inventory": "2008.115.4765",
+  "inception": "1947-01-01T00:00:00Z",
+  "type": "work of art",
+  "location": "Milli Sənət Qalereyası"
+ },
+ {
+  "id": "Q77597565",
+  "title": "Choir Boys",
+  "creator": "Q21995255",
+  "images": [],
+  "collection": "Georgia Museum of Art",
+  "inventory": "1948.200",
+  "type": "painting",
+  "location": "Georgia Museum of Art"
+ },
+ {
+  "id": "Q77939886",
+  "title": "Portrait of actress O. Gulazyan",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "10001",
+  "inception": "1953-01-01T00:00:00Z",
+  "type": "painting",
+  "material": "canvas",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77940571",
+  "title": "Q77940571",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "11213",
+  "inception": "1973-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "watercolor",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77940679",
+  "title": "Nurse Darbinyan",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "11278",
+  "type": "drawing",
+  "material": "red chalk",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77941327",
+  "title": "Q77941327",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "12078",
+  "type": "drawing",
+  "material": "pencil",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942470",
+  "title": "Q77942470",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15262",
+  "inception": "1972-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "red chalk",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942468",
+  "title": "Q77942468",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15261",
+  "inception": "1973-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "coal",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942475",
+  "title": "Q77942475",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15264",
+  "inception": "1973-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "coal",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942479",
+  "title": "Q77942479",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15266",
+  "inception": "1973-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "watercolor",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942481",
+  "title": "Q77942481",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15268",
+  "inception": "1954-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "watercolor",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942485",
+  "title": "Q77942485",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15270",
+  "type": "drawing",
+  "material": "watercolor",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942490",
+  "title": "Q77942490",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15271",
+  "inception": "1954-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "gouache painting",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942496",
+  "title": "Q77942496",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15272",
+  "inception": "1954-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "gouache painting",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942501",
+  "title": "Q77942501",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15273",
+  "inception": "1977-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "coal",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942504",
+  "title": "Q77942504",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15275",
+  "inception": "1972-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "gouache painting",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942509",
+  "title": "Q77942509",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15276",
+  "inception": "1972-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "watercolor",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77942512",
+  "title": "Q77942512",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "15278",
+  "inception": "1972-01-01T00:00:00Z",
+  "type": "drawing",
+  "material": "watercolor",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q77943296",
+  "title": "Q77943296",
+  "creator": "Q22966703",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "16319",
+  "inception": "1961-01-01T00:00:00Z",
+  "type": "engraving",
+  "material": "linocut technique",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q78218823",
+  "title": "Q78218823",
+  "creator": "Q20512084",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "9495",
+  "inception": "1934-01-01T00:00:00Z",
+  "type": "painting",
+  "material": "canvas",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q78218820",
+  "title": "Q78218820",
+  "creator": "Q20512084",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "9494",
+  "inception": "1943-01-01T00:00:00Z",
+  "type": "painting",
+  "material": "canvas",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q78220858",
+  "title": "Q78220858",
+  "creator": "Q20512084",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "21872",
+  "inception": "1932-01-01T00:00:00Z",
+  "type": "painting",
+  "material": "canvas",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q78221214",
+  "title": "Q78221214",
+  "creator": "Q20512084",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "28223",
+  "inception": "1953-01-01T00:00:00Z",
+  "type": "work of art",
+  "material": "gouache painting",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q78221218",
+  "title": "Q78221218",
+  "creator": "Q20512084",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "28225",
+  "type": "work of art",
+  "material": "gouache painting",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q78221216",
+  "title": "Q78221216",
+  "creator": "Q20512084",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "28224",
+  "inception": "1953-01-01T00:00:00Z",
+  "type": "work of art",
+  "material": "gouache painting",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q78221221",
+  "title": "Q78221221",
+  "creator": "Q20512084",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "28226",
+  "type": "work of art",
+  "material": "gouache painting",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q78221226",
+  "title": "Q78221226",
+  "creator": "Q20512084",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "28228",
+  "type": "work of art",
+  "material": "gouache painting",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q78221224",
+  "title": "Q78221224",
+  "creator": "Q20512084",
+  "images": [],
+  "collection": "National Gallery of Armenia",
+  "inventory": "28227",
+  "type": "work of art",
+  "material": "gouache painting",
+  "location": "National Gallery of Armenia"
+ },
+ {
+  "id": "Q105624202",
+  "title": "To the Alpinists of sieged Leningrad",
+  "creator": "Q15060683",
+  "images": [],
+  "type": "monument"
+ },
+ {
+  "id": "Q106262727",
+  "title": "Юность",
+  "creator": "Q19843988",
+  "images": [
+   "Петрозаводск, скульптура \"Юность\" (Л.К.Давидян, 1978).jpg"
+  ],
+  "inception": "1978-01-01T00:00:00Z",
+  "type": "monument",
+  "location": "Sovereign Garden"
+ },
+ {
+  "id": "Q106262736",
+  "title": "military memorial at Lenin Square, Petrozavodsk",
+  "creator": "Q19843988",
+  "images": [
+   "Петрозаводск.Братская могила.jpg"
+  ],
+  "inception": "1970-01-01T00:00:00Z",
+  "type": "memorial",
+  "location": "Lenina Square"
+ },
+ {
+  "id": "Q106396787",
+  "title": "bust of Mikhail Kalinin, Petrozavodsk",
+  "creator": "Q19843988",
+  "images": [
+   "БюстКалининМ.И.jpg"
+  ],
+  "inception": "1987-01-01T00:00:00Z",
+  "type": "monument"
+ },
+ {
+  "id": "Q106396784",
+  "title": "Gallery of Heroes, Petrozavodsk",
+  "creator": "Q19843988",
+  "images": [
+   "Галерея героев советского союза.петрозаводск.jpg"
+  ],
+  "inception": "1977-01-01T00:00:00Z",
+  "type": "memorial"
+ },
+ {
+  "id": "Q25541964",
+  "title": "Monument to Bulbul",
+  "titleAz": "Bülbülün abidəsi",
+  "creator": "Q109544490",
+  "images": [
+   "Bülbülün heykəli.jpg"
+  ],
+  "type": "monument"
+ },
+ {
+  "id": "Q4343463",
+  "title": "Monument to the heroes of the October Revolution and the Civil War",
+  "creator": "Q4245000",
+  "images": [
+   "Памятник героям Октябрьской революции и гражданской войны. Вид спереди-справа..jpg"
+  ],
+  "type": "monument"
+ },
+ {
+  "id": "Q104830903",
+  "title": "Statue of Pushkin in Simferopol",
+  "creator": "Q104817345",
+  "images": [
+   "Памятник А.С. Пушкину, Симферополь.jpg"
+  ],
+  "inception": "1967-11-10T00:00:00Z",
+  "type": "monument",
+  "material": "granite",
+  "location": "Simferopol"
+ },
+ {
+  "id": "Q124619772",
+  "title": "Q124619772",
+  "creator": "Q124467183",
+  "images": [
+   "Alexandre Evgrafov Selfportrait.jpg"
+  ],
+  "inception": "1975-07-07T00:00:00Z",
+  "type": "painting"
+ },
+ {
+  "id": "Q117844699",
+  "title": "Code name: \"VXA\"",
+  "titleAz": "Kod adı: \"V.X.A.”",
+  "images": [
+   "Kod adı V.X.A.jpg"
+  ],
+  "type": "literary work",
+  "origin": true
+ },
+ {
+  "id": "Q118645466",
+  "title": "Tarix, insan və cəmiyyət",
+  "titleAz": "Tarix, insan və cəmiyyət",
+  "images": [
+   "Tarix, insan və cəmiyyət (jurnal).jpg"
+  ],
+  "inception": "2005-01-01T00:00:00Z",
+  "type": "magazine",
+  "origin": true
+ },
+ {
+  "id": "Q121094525",
+  "title": "Müqayisəli ədəbiyyatşünaslıq",
+  "titleAz": "Müqayisəli ədəbiyyatşünaslıq",
+  "images": [
+   "Müqayisəli ədəbiyyatşünaslıq (jurnal).jpg"
+  ],
+  "inception": "2004-01-01T00:00:00Z",
+  "type": "magazine",
+  "origin": true
+ },
+ {
+  "id": "Q123291265",
+  "title": "Poetika.izm",
+  "titleAz": "Poetika.izm",
+  "images": [
+   "Poetika.izm.jpg"
+  ],
+  "inception": "2014-01-01T00:00:00Z",
+  "type": "magazine",
+  "origin": true
+ },
+ {
+  "id": "Q124849048",
+  "title": "Ahmedowsky Trio",
+  "titleAz": "Ahmedowsky Trio",
+  "images": [
+   "Ahmedowsky Trio.jpg"
+  ],
+  "inception": "2016-01-01T00:00:00Z",
+  "type": "musical group",
+  "origin": true
+ },
+ {
+  "id": "Q131683673",
+  "title": "Portrait of Haji Zeynalabdin Taghiyev",
+  "titleAz": "Hacı Zeynalabdin Tağıyevin portreti",
+  "images": [
+   "H.Z.Tağıyev.jpg"
+  ],
+  "collection": "National Museum of History of Azerbaijan",
+  "inventory": "IF 166",
+  "inception": "1912-01-01T00:00:00Z",
+  "type": "painting",
+  "location": "National Museum of History of Azerbaijan",
+  "origin": true
+ },
+ {
+  "id": "Q132141409",
+  "title": "Mamagama",
+  "titleAz": "Mamagama",
+  "images": [
+   "Mamagama at ESC2025 for Azerbaijan 7 (cropped).jpeg"
+  ],
+  "inception": "2021-01-01T00:00:00Z",
+  "type": "musical trio",
+  "origin": true
+ },
+ {
+  "id": "Q132544648",
+  "title": "Aşıq Ələsgər. (toplayanı Hümbət Əlizadə). Bakı, “Azərnəşr”, 1934. 184 səh.",
+  "titleAz": "Aşıq Ələsgər. (toplayanı Hümbət Əlizadə). Bakı, “Azərnəşr”, 1934. 184 səh.",
+  "images": [
+   "Aşıq Ələsgər. (toplayanı Hümbət Əlizadə). Bakı, “Azərnəşr”, 1934. 184 səh.pdf"
+  ],
+  "type": "literary work",
+  "origin": true
+ },
+ {
+  "id": "Q132744621",
+  "title": "Molla Nəsrəddin. 1929, № 1.",
+  "titleAz": "Molla Nəsrəddin. 1929, № 1.",
+  "images": [
+   "Molla Nəsrəddin. 1929, № 1.pdf"
+  ],
+  "inception": "1929-01-01T00:00:00Z",
+  "type": "magazine",
+  "origin": true
+ },
+ {
+  "id": "Q132744628",
+  "title": "Molla Nəsrəddin. 1906, № 1",
+  "titleAz": "Molla Nəsrəddin. 1906, № 1",
+  "images": [
+   "Molla Nəsrəddin. 1906, № 1.pdf"
+  ],
+  "inception": "1906-01-01T00:00:00Z",
+  "type": "magazine",
+  "origin": true
+ },
+ {
+  "id": "Q132745217",
+  "title": "Molla Nəsrəddin. 1906, № 2",
+  "titleAz": "Molla Nəsrəddin. 1906, № 2",
+  "images": [
+   "Molla Nəsrəddin. 1906, № 2.pdf"
+  ],
+  "inception": "1906-01-01T00:00:00Z",
+  "type": "magazine",
+  "origin": true
+ },
+ {
+  "id": "Q132746749",
+  "title": "Molla Nəsrəddin. 1906, № 3.",
+  "titleAz": "Molla Nəsrəddin. 1906, № 3.",
+  "images": [
+   "Molla Nəsrəddin. 1906, № 3.pdf"
+  ],
+  "inception": "1906-01-01T00:00:00Z",
+  "type": "magazine",
+  "origin": true
+ },
+ {
+  "id": "Q136385670",
+  "title": "Cavalry detachment and dance group of State Border Service of Azerbaijan",
+  "titleAz": "Azərbaycan Dövlət Sərhəd Xidmətinin süvarilər dəstəsi və rəqs ansamblı",
+  "images": [
+   "Скачки на Джыдыр-Дюзю Июль 2025 8.jpg"
+  ],
+  "type": "musical group",
+  "origin": true
+ },
+ {
+  "id": "Q678664",
+  "title": "Persian miniature",
+  "images": [
+   "Miraj by Sultan Muhammad.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q4822751",
+  "title": "Aush",
+  "images": [
+   "Ashe-jo.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q6445767",
+  "title": "Kurdish rug",
+  "images": [
+   "Kurdish Anatolian carpet, early 19th c.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q15720988",
+  "title": "Lor",
+  "images": [
+   "Lor Peyniri.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q116877487",
+  "title": "Kulturzentrum Aserbaidschan",
+  "images": [
+   "Tiergarten Klingelhöferstraße Kulturzentrum Aserbeidschan.jpg"
+  ],
+  "type": "cultural center",
+  "origin": true
+ },
+ {
+  "id": "Q124381585",
+  "title": "Chichi rug",
+  "images": [
+   "Chi-Chi ca. 1880.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q136513284",
+  "title": "Azerbaijan Pavilion",
+  "images": [
+   "アゼルバイジャン館expo2025.jpg"
+  ],
+  "type": "national pavillon",
+  "location": "Connecting Lives Zone",
+  "origin": true
+ },
+ {
+  "id": "Q19715379",
+  "title": "Gollu-chichi carpet",
+  "titleAz": "Qollu-çiçi xalçaları",
+  "images": [
+   "«Голлу чичи».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q19715437",
+  "title": "Gadim Minare carpet",
+  "titleAz": "Qədim Minarə xalçaları",
+  "images": [
+   "«Гадим минаре».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q19715533",
+  "title": "Salahi carpet",
+  "titleAz": "Salahlı xalçaları",
+  "images": [
+   "Salahli rug.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q19716025",
+  "title": "Khyrdagul Chi Chi",
+  "titleAz": "Xırdagülçiçi xalçaları",
+  "images": [
+   "Khyrdagul Chichi ca. 1900.jpg"
+  ],
+  "collection": "Victoria and Albert Museum",
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q20571255",
+  "title": "Alpan carpet",
+  "titleAz": "Alpan xalçaları",
+  "images": [
+   "Alpan Kuba Rug ca. late 19th century.jpeg"
+  ],
+  "collection": "Azerbaijan Carpet Museum",
+  "inception": "1901-01-01T00:00:00Z",
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q58402",
+  "title": "Azerbaijan State Choir Capella",
+  "titleAz": "Azərbaycan Dövlət Xor Kapellası",
+  "images": [
+   "Mugam 029.jpg"
+  ],
+  "inception": "1966-01-01T00:00:00Z",
+  "type": "musical group",
+  "origin": true
+ },
+ {
+  "id": "Q58409",
+  "title": "Azerbaijan State Orchestra of Folk Instruments",
+  "titleAz": "Azərbaycan Dövlət Xalq Çalğı Alətləri Orkestri",
+  "images": [
+   "Mugam 010.jpg"
+  ],
+  "inception": "1931-05-01T00:00:00Z",
+  "type": "orchestra",
+  "origin": true
+ },
+ {
+  "id": "Q58543",
+  "title": "Azerbaijan State Symphony Orchestra",
+  "titleAz": "Azərbaycan Dövlət Simfonik Orkestri",
+  "images": [
+   "Mugam 018.jpg"
+  ],
+  "inception": "1920-01-01T00:00:00Z",
+  "type": "musical group",
+  "origin": true
+ },
+ {
+  "id": "Q12223",
+  "title": "Kurds",
+  "titleAz": "Kürdlər",
+  "images": [
+   "Yezidi New Year in Lalish (18 April 2017) 21.jpg"
+  ],
+  "type": "ethnic group",
+  "origin": true
+ },
+ {
+  "id": "Q186413",
+  "title": "Azerbaijani rug",
+  "titleAz": "Azərbaycan xalçaları",
+  "images": [
+   "Dragon carpet from Azerbaijan, 17-18th century, 212 x 184 cm, T84-1909.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q290951",
+  "title": "kamancheh",
+  "titleAz": "kamança",
+  "images": [
+   "2 Kamānches, Persia, ca. 1880.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q483236",
+  "title": "Nowruz",
+  "titleAz": "Novruz bayramı",
+  "images": [
+   "White house haft seen.jpg"
+  ],
+  "type": "UN observance day",
+  "origin": true
+ },
+ {
+  "id": "Q546936",
+  "title": "tar",
+  "titleAz": "tar",
+  "images": [
+   "Tar Azerbaïdjan 2.JPG",
+   "Meshadi Jamil Amirov.jpg"
+  ],
+  "type": "type of musical instrument",
+  "origin": true
+ },
+ {
+  "id": "Q669996",
+  "title": "kuku",
+  "titleAz": "kükü",
+  "images": [
+   "Kookoo-sabzi.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q724010",
+  "title": "Ashiqs of Azerbaijan",
+  "titleAz": "aşıq musiqisi",
+  "images": [
+   "Nizami Ganjavi, Khamsa, Khosrow and Shirin, 70tn of the XVI century, SPL, Dorn 341. f. 70 b. (cropped, musicians detail).jpg"
+  ],
+  "type": "music genre",
+  "origin": true
+ },
+ {
+  "id": "Q1711348",
+  "title": "Goychay Pomegranate Festival",
+  "titleAz": "Nar bayramı",
+  "images": [
+   "Azerbaijan-Pomegranate Festival woman in national costumes (e-citizen).jpg"
+  ],
+  "inception": "2006-11-03T00:00:00Z",
+  "type": "festival",
+  "location": "Goychay District",
+  "origin": true
+ },
+ {
+  "id": "Q1898734",
+  "title": "Naqareh",
+  "titleAz": "Qoşanağara",
+  "images": [
+   "COLLECTIE TROPENMUSEUM Keteltrom van koper TMnr 3492-7a.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q1996684",
+  "title": "Azerbaijani cuisine",
+  "titleAz": "Azərbaycan mətbəxi",
+  "images": [
+   "Azerbaijan Light snack.jpg"
+  ],
+  "type": "national cuisine",
+  "origin": true
+ },
+ {
+  "id": "Q4249417",
+  "title": "qutab",
+  "titleAz": "Qutab",
+  "images": [
+   "Kükü-Gutab Azerbaijani.gif"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q4251295",
+  "title": "kofte bozbash",
+  "titleAz": "Küftəbozbaş",
+  "images": [
+   "Azerbaijani kufta-bozbash 2.jpg"
+  ],
+  "type": "food",
+  "origin": true
+ },
+ {
+  "id": "Q4363726",
+  "title": "Letters of Kamal-ud-dawla",
+  "titleAz": "Kəmalüddövlə məktubları",
+  "images": [
+   "Kəmalüddövlə məktubları.png"
+  ],
+  "inception": "1865-01-01T00:00:00Z",
+  "type": "literary work",
+  "origin": true
+ },
+ {
+  "id": "Q4494671",
+  "title": "Xəzri",
+  "titleAz": "Xəzri avtomatı",
+  "images": [
+   "Ak-74-withmagazine.jpg"
+  ],
+  "type": "firearm model",
+  "origin": true
+ },
+ {
+  "id": "Q4517024",
+  "title": "chovgan",
+  "titleAz": "Çovqan",
+  "images": [
+   "Puak Azeri bermain Chovgan di Piala All Union ke-12.png"
+  ],
+  "type": "traditional game",
+  "origin": true
+ },
+ {
+  "id": "Q4522507",
+  "title": "Shekerbura",
+  "titleAz": "Şəkərbura",
+  "images": [
+   "Şəkərbura Novruz şirniyyatı.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q2035157",
+  "title": "balaban",
+  "titleAz": "balaban",
+  "images": [
+   "Balaban Azerbaijani.JPG"
+  ],
+  "type": "type of musical instrument",
+  "origin": true
+ },
+ {
+  "id": "Q2078349",
+  "title": "Ajapsandali",
+  "titleAz": "Əcəbsəndəl",
+  "images": [
+   "Ajapsandali - Georgian eggplant stew.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q748655",
+  "title": "Karabakh horse",
+  "titleAz": "Qarabağ atı",
+  "images": [
+   "Ilham Aliyev attended opening of Qarabag Equestrian Complex 12.jpg"
+  ],
+  "inception": "1700-01-01T00:00:00Z",
+  "type": "horse breed",
+  "origin": true
+ },
+ {
+  "id": "Q804432",
+  "title": "Bakinski Rabochi",
+  "titleAz": "Bakinskiy raboçi",
+  "images": [
+   "The first issue of the Bakynskiy Rabochiy 1906.jpg"
+  ],
+  "inception": "1906-05-01T00:00:00Z",
+  "type": "newspaper",
+  "origin": true
+ },
+ {
+  "id": "Q864650",
+  "title": "sericulture",
+  "titleAz": "Baramaçılıq",
+  "images": [
+   "Soaking the cocoons and reeling the silk (Sericulture by Liang Kai, 1200s).jpg"
+  ],
+  "type": "economic concept",
+  "origin": true
+ },
+ {
+  "id": "Q903320",
+  "title": "Book of Dede Korkut",
+  "titleAz": "Kitabi Dədə Qorqud",
+  "images": [
+   "Page from the Vatican manuscript of Kitabi-Dede Qorqud.png",
+   "Kitab-ı Dede Korkut ala-lisan-i Ta'ife-i Oğuzhan, Dresden.jpg"
+  ],
+  "collection": "Saxon State and University Library, Dresden",
+  "type": "national epic",
+  "origin": true
+ },
+ {
+  "id": "Q1105512",
+  "title": "Lula kebab",
+  "titleAz": "Lülə kabab",
+  "images": [
+   "Lula kebab.jpg"
+  ],
+  "type": "dish",
+  "origin": true
+ },
+ {
+  "id": "Q1184220",
+  "title": "Deliboz",
+  "titleAz": "Dilbaz atı",
+  "images": [
+   "Stamps of Azerbaijan, 1997-452.jpg"
+  ],
+  "type": "horse breed",
+  "origin": true
+ },
+ {
+  "id": "Q1304225",
+  "title": "Guba",
+  "titleAz": "Quba yorğası",
+  "images": [
+   "(L) Atlar, Goygol 0934.JPG"
+  ],
+  "type": "horse breed",
+  "origin": true
+ },
+ {
+  "id": "Q1474372",
+  "title": "mugham",
+  "titleAz": "muğam",
+  "images": [
+   "Seyid Shushinski ansambl.jpg"
+  ],
+  "type": "modal system",
+  "origin": true
+ },
+ {
+  "id": "Q4808164",
+  "title": "Şəhər bağında xalq gəzintisi",
+  "titleAz": "Şəhər bağında xalq gəzintisi",
+  "images": [
+   "Şəhər Bağında Xalq Gəzintisi (1898).jpg"
+  ],
+  "type": "short film",
+  "origin": true
+ },
+ {
+  "id": "Q4812665",
+  "title": "Tutek",
+  "titleAz": "Tütək",
+  "images": [
+   "Azerbaijani folk instrument Tutek.JPG"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q6406382",
+  "title": "Lentil rice",
+  "titleAz": "Mərci plov",
+  "images": [
+   "Adas polo.JPG"
+  ],
+  "type": "human food",
+  "origin": true
+ },
+ {
+  "id": "Q6411049",
+  "title": "Gaitaghi",
+  "titleAz": "Qaytağı",
+  "images": [
+   "Azerbaijani dances, Eurovision Song Contest 2012, semi-final allocation draw.jpg"
+  ],
+  "type": "type of dance",
+  "origin": true
+ },
+ {
+  "id": "Q6441132",
+  "title": "Quba rug",
+  "titleAz": "Quba xalçaçılıq məktəbi",
+  "images": [
+   "Kuba Rug, Caucasus, ca. 1900.jpg"
+  ],
+  "type": "school of carpet weaving",
+  "origin": true
+ },
+ {
+  "id": "Q6577803",
+  "title": "Sevil",
+  "titleAz": "Sevil",
+  "images": [
+   "Sevil (1929)(afişa).jpg"
+  ],
+  "type": "film",
+  "origin": true
+ },
+ {
+  "id": "Q6665217",
+  "title": "Hedik",
+  "titleAz": "Hədik",
+  "images": [
+   "Hedik.JPG"
+  ],
+  "type": "food",
+  "origin": true
+ },
+ {
+  "id": "Q20576866",
+  "title": "Daghkasaman carpet",
+  "titleAz": "Dağkəsəmən xalçaları",
+  "images": [
+   "Dağkəsəmən xalçası, Gəncə məktəbi Qazax qrupu.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q20585044",
+  "title": "Tuti",
+  "titleAz": "Tuti",
+  "images": [
+   "Tuti məcmuəsi.jpg"
+  ],
+  "inception": "1915-01-09T00:00:00Z",
+  "type": "satire",
+  "origin": true
+ },
+ {
+  "id": "Q20585875",
+  "title": "Yarasa",
+  "titleAz": "Yarasa",
+  "images": [
+   "Yarasa, 1995.png"
+  ],
+  "type": "film",
+  "origin": true
+ },
+ {
+  "id": "Q20722944",
+  "title": "Mugham trio",
+  "titleAz": "Muğam üçlüyü",
+  "images": [
+   "Stamps of Azerbaijan, 2014-1143-souvenir sheet.jpg"
+  ],
+  "type": "musical ensemble",
+  "origin": true
+ },
+ {
+  "id": "Q21127551",
+  "title": "The Voice of Azerbaijan",
+  "titleAz": "Səs Azərbaycan",
+  "images": [
+   "The Voice of Azerbaijan, stage 4.jpg"
+  ],
+  "type": "television series",
+  "origin": true
+ },
+ {
+  "id": "Q25530716",
+  "title": "Kazakh carpet",
+  "titleAz": "Qazax xalçaları",
+  "images": [
+   "Kazak rug from Azerbaijan 911.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q25541279",
+  "title": "Oysuzlu carpet",
+  "titleAz": "Öysüzlü xalçaları",
+  "images": [
+   "«Ойсузлу».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q25543184",
+  "title": "Damgali carpet",
+  "titleAz": "Damğalı xalçaları",
+  "images": [
+   "Damğalı xalçası.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q25546332",
+  "title": "Alpagut (martial art)",
+  "titleAz": "Alpaqut",
+  "images": [
+   "Alpagutpatentlilogo.jpg"
+  ],
+  "inception": "2014-01-01T00:00:00Z",
+  "type": "martial arts",
+  "origin": true
+ },
+ {
+  "id": "Q31311811",
+  "title": "Naxçıvan tarixi",
+  "titleAz": "Naxçıvan tarixi",
+  "images": [
+   "Naxçıvan tarixi.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q47501693",
+  "title": "Metafizika",
+  "titleAz": "Metafizika",
+  "images": [
+   "MJ-2021-screen-1.jpg"
+  ],
+  "inception": "2017-01-01T00:00:00Z",
+  "type": "interdisciplinary research",
+  "origin": true
+ },
+ {
+  "id": "Q55700047",
+  "title": "Gaval Dash",
+  "titleAz": "Qaval daşı",
+  "images": [
+   "Qaval daşı.jpg"
+  ],
+  "type": "percussion plaque",
+  "location": "Gobustan State Historical and Cultural Reserve",
+  "origin": true
+ },
+ {
+  "id": "Q55700816",
+  "title": "Sheki halva",
+  "titleAz": "Şəki halvası",
+  "images": [
+   "Sheki halva 02.jpg"
+  ],
+  "type": "dessert",
+  "origin": true
+ },
+ {
+  "id": "Q2083418",
+  "title": "Azerbaijan horse",
+  "titleAz": "Azərbaycan atları",
+  "images": [
+   "Les races chevalines - avec une étude spéciale sur les chevaux russes (1894) (14774105144).jpg"
+  ],
+  "type": "Wikimedia disambiguation page",
+  "origin": true
+ },
+ {
+  "id": "Q2500197",
+  "title": "dovga",
+  "titleAz": "dovğa",
+  "images": [
+   "Dovga e-citizen.JPG"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q2974627",
+  "title": "Unformal",
+  "titleAz": "Unformal",
+  "images": [
+   "Unformal-2008.jpg"
+  ],
+  "inception": "2000-01-01T00:00:00Z",
+  "type": "musical group",
+  "origin": true
+ },
+ {
+  "id": "Q3038392",
+  "title": "dayereh",
+  "titleAz": "qaval",
+  "images": [
+   "Daf-Khalaj.jpg"
+  ],
+  "type": "type of musical instrument",
+  "origin": true
+ },
+ {
+  "id": "Q3608774",
+  "title": "Gasimushaghi carpet",
+  "titleAz": "Qasımuşağı xalçaları",
+  "images": [
+   "Gasimushagy carpets.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q4074557",
+  "title": "Grandmothers",
+  "titleAz": "Nənələr folklor və rəqs ansamblı",
+  "images": [
+   "Nənələr folklor və rəqs ansamblı.jpg"
+  ],
+  "inception": "1970-01-01T00:00:00Z",
+  "type": "musical ensemble",
+  "origin": true
+ },
+ {
+  "id": "Q4090235",
+  "title": "bozbash",
+  "titleAz": "bozbaş",
+  "images": [
+   "Bozbash from Iranian (Azeri) cuisine.jpg"
+  ],
+  "type": "stew",
+  "origin": true
+ },
+ {
+  "id": "Q7198960",
+  "title": "piti",
+  "titleAz": "Piti",
+  "images": [
+   "Piti 24.11.2013-01.jpg"
+  ],
+  "type": "food",
+  "origin": true
+ },
+ {
+  "id": "Q7723481",
+  "title": "The Cloth Peddler",
+  "titleAz": "Arşın mal alan (film, 1917)",
+  "images": [
+   "Arshin Mal Alan (آرشین مال آلان) film poster (1917).jpg"
+  ],
+  "type": "film",
+  "origin": true
+ },
+ {
+  "id": "Q8059400",
+  "title": "Youz bir",
+  "titleAz": "Yüz bir (Rəqs)",
+  "images": [
+   "Azerbaijan netional dances - Youz bir.jpg"
+  ],
+  "type": "type of dance",
+  "origin": true
+ },
+ {
+  "id": "Q10424932",
+  "title": "Baku carpet",
+  "titleAz": "Bakı xalçaları",
+  "images": [
+   "\"Baku\" rug.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12812820",
+  "title": "chigirtma",
+  "titleAz": "çığırtma",
+  "images": [
+   "Çığırtma.JPG"
+  ],
+  "type": "food",
+  "origin": true
+ },
+ {
+  "id": "Q12836525",
+  "title": "Azərbaycan Respublikası Xatirə Kitabı",
+  "titleAz": "Azərbaycan Respublikası Xatirə Kitabı",
+  "images": [
+   "Azərbaycan Respublikası Xatirə Kitabı.JPG"
+  ],
+  "type": "written work",
+  "origin": true
+ },
+ {
+  "id": "Q12836773",
+  "title": "Azərbaycan qadını",
+  "titleAz": "Azərbaycan qadını",
+  "images": [
+   "Azərbaycan Qadını (1938, N20).jpg"
+  ],
+  "inception": "1923-11-30T00:00:00Z",
+  "type": "magazine",
+  "origin": true
+ },
+ {
+  "id": "Q12837200",
+  "title": "badambura",
+  "titleAz": "Badambura",
+  "images": [
+   "Badambura Novruz şirniyyatı.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q12837214",
+  "title": "Bahadır and Sona",
+  "titleAz": "Bahadır və Sona",
+  "images": [
+   "Бахадур и Соня.jpg"
+  ],
+  "inception": "1896-01-01T00:00:00Z",
+  "type": "literary work",
+  "origin": true
+ },
+ {
+  "id": "Q12837569",
+  "title": "Bico carpet",
+  "titleAz": "Bico xalçaları",
+  "images": [
+   "Şəkil-Bico xalçası.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12837846",
+  "title": "buynuz carpet",
+  "titleAz": "Buynuz xalçası",
+  "images": [
+   "Buynuz carpet.jpg"
+  ],
+  "collection": "Azerbaijan Carpet Museum",
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12839667",
+  "title": "Fındığan xalçaları",
+  "titleAz": "Fındığan xalçaları",
+  "images": [
+   "«Фындыган».jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q12839754",
+  "title": "Fakhrali carpet",
+  "titleAz": "Fəxralı xalçaları",
+  "images": [
+   "Fakhrali rug.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12840346",
+  "title": "Himil carpet",
+  "titleAz": "Himil xalçası",
+  "images": [
+   "Gimil carpet 1902.gif"
+  ],
+  "inception": "1902-01-01T00:00:00Z",
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12840890",
+  "title": "Keçimemesi",
+  "titleAz": "Keçməməsi rəqsi",
+  "images": [
+   "Kechimemesi from Azerbaijani dances melodies.jpg"
+  ],
+  "type": "type of dance",
+  "origin": true
+ },
+ {
+  "id": "Q12841296",
+  "title": "Lampa carpet",
+  "titleAz": "Lampa xalçası",
+  "images": [
+   "«Лямпя».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12843407",
+  "title": "Novxanı xalçaları",
+  "titleAz": "Novxanı xalçaları",
+  "images": [
+   "«Новханы».jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q12844102",
+  "title": "Qabaqcıl (qəzet)",
+  "titleAz": "Qabaqcıl (qəzet)",
+  "images": [
+   "\"Qabaqcıl\" qəzeti.jpg"
+  ],
+  "inception": "1936-01-01T00:00:00Z",
+  "type": "newspaper",
+  "origin": true
+ },
+ {
+  "id": "Q12844711",
+  "title": "Ancient Ganja carpet",
+  "titleAz": "Qədim Gəncə xalçaları",
+  "images": [
+   "«Гадим Гянджа».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q55702639",
+  "title": "Şəhadət",
+  "titleAz": "Şəhadət (film, 2017)",
+  "images": [
+   "Şəhadət filmin təqdimatı - 9.jpg"
+  ],
+  "type": "film",
+  "origin": true
+ },
+ {
+  "id": "Q55703336",
+  "title": "Azerbaijan Journal of Educational Studies",
+  "titleAz": "Azərbaycan məktəbi (jurnal)",
+  "images": [
+   "Cild.jpg"
+  ],
+  "inception": "1924-01-01T00:00:00Z",
+  "type": "magazine",
+  "origin": true
+ },
+ {
+  "id": "Q60852822",
+  "title": "Molla Kamalli rug",
+  "titleAz": "Mollakamallı xalçaları",
+  "images": [
+   "«Молла Камаллы».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q61895801",
+  "title": "Yally",
+  "titleAz": "Yallı",
+  "images": [
+   "Stamps of Azerbaijan, 2015-1229.jpg"
+  ],
+  "type": "type of dance",
+  "origin": true
+ },
+ {
+  "id": "Q105217879",
+  "title": "Mirvari",
+  "titleAz": "Mirvari",
+  "images": [
+   "Баку катер.jpg"
+  ],
+  "type": "passenger vessel",
+  "origin": true
+ },
+ {
+  "id": "Q110821451",
+  "title": "Sevinj Stories",
+  "titleAz": "Sevincin hekayaləri",
+  "images": [
+   "SevinjStories.jpg"
+  ],
+  "type": "memorial",
+  "origin": true
+ },
+ {
+  "id": "Q117034761",
+  "title": "TuralTuranX",
+  "titleAz": "TuralTuranX",
+  "images": [
+   "TuralTuranX at Eurovision 2023 (cropped).jpg",
+   "Eurovision 2023 - Jury Semi-final 1 - Azerbaijan - TuralTuranX (01).jpg"
+  ],
+  "inception": "2023-01-01T00:00:00Z",
+  "type": "twins",
+  "origin": true
+ },
+ {
+  "id": "Q16417830",
+  "title": "Malibeyli carpet",
+  "titleAz": "Malıbəyli xalçası",
+  "images": [
+   "Malibeyli carpet XIXcentury.gif"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q16418363",
+  "title": "Mugan carpet",
+  "titleAz": "Muğan xalçası",
+  "images": [
+   "Muğan xalçası.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q16418578",
+  "title": "Lajadi carpet",
+  "titleAz": "Ləcədi xalçaları",
+  "images": [
+   "«Ляджади».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q16418594",
+  "title": "The Game of Love",
+  "titleAz": "Məhəbbət oyunu",
+  "images": [
+   "The game of love.jpg"
+  ],
+  "type": "film",
+  "origin": true
+ },
+ {
+  "id": "Q16666550",
+  "title": "Kochari",
+  "titleAz": "Köçəri",
+  "images": [
+   "Azerbaijani Kochari dance notes.jpg"
+  ],
+  "type": "type of dance",
+  "origin": true
+ },
+ {
+  "id": "Q19714073",
+  "title": "Goycheli carpet",
+  "titleAz": "Göyçəli xalçaları",
+  "images": [
+   "«Гейчели».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q19714182",
+  "title": "Hajigayib carpet",
+  "titleAz": "Hacıqayıb xalçaları",
+  "images": [
+   "«Гаджигайыб».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q19714566",
+  "title": "Kohna Kuba",
+  "titleAz": "Köhnə Quba xalçaları",
+  "images": [
+   "«Кёхна Куба».jpg"
+  ],
+  "collection": "Azerbaijan Carpet Museum",
+  "inception": "2000-01-01T00:00:00Z",
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q19715239",
+  "title": "Karagashli carpet",
+  "titleAz": "Qaraqaşlı xalçaları",
+  "images": [
+   "«Гарагашлы».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q19715292",
+  "title": "Gachagan carpet",
+  "titleAz": "Qaçağan xalçaları",
+  "images": [
+   "Gachagan carpet.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12845955",
+  "title": "soumak",
+  "titleAz": "Sumaq (Qarabağ) xalçası",
+  "images": [
+   "Soumak carpet 1880-1900.jpg",
+   "«Сумах».jpg"
+  ],
+  "inception": "1801-01-01T00:00:00Z",
+  "origin": true
+ },
+ {
+  "id": "Q12846378",
+  "title": "Talis carpet",
+  "titleAz": "Talış xalçası",
+  "images": [
+   "«Талыш» 2.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12846975",
+  "title": "star Kazak",
+  "titleAz": "Ulduzlu xalça",
+  "images": [
+   "Star Kazak Carpet MET wb-22.100.17b.jpeg"
+  ],
+  "inception": "1801-01-01T00:00:00Z",
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12847054",
+  "title": "Uzun dere rug",
+  "titleAz": "Uzundərə xalçası",
+  "images": [
+   "Kuba rug Uzun dere.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12847203",
+  "title": "Vaghzali",
+  "titleAz": "Vağzalı",
+  "images": [
+   "Azerbaijan netional dances - Vaghzali.jpg"
+  ],
+  "type": "type of dance",
+  "origin": true
+ },
+ {
+  "id": "Q12847578",
+  "title": "Khila-Afshan rugs",
+  "titleAz": "Xilə-əfşan xalçaları",
+  "images": [
+   "«Хила-афшан».jpg"
+  ],
+  "type": "carpet",
+  "origin": true
+ },
+ {
+  "id": "Q12847576",
+  "title": "Xilə-buta xalçaları",
+  "titleAz": "Xilə-buta xalçaları",
+  "images": [
+   "«Хила-бута».jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q12848328",
+  "title": "Zeiva carpet",
+  "titleAz": "Zeyvə xalçaları",
+  "images": [
+   "«Зейва».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12848505",
+  "title": "Chajli carpet",
+  "titleAz": "Çaylı xalçaları",
+  "images": [
+   "«Чайлы».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12848633",
+  "title": "Chiragli carpet",
+  "titleAz": "Çıraqlı xalçaları",
+  "images": [
+   "«Чирахлы».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12849377",
+  "title": "Shadli carpet",
+  "titleAz": "Şadılı xalçaları",
+  "images": [
+   "«Шадлы».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q12849685",
+  "title": "Shikhli carpet",
+  "titleAz": "Şıxlı xalçası",
+  "images": [
+   "«Шихлы».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q13970438",
+  "title": "Aghajly",
+  "titleAz": "Ağaclı xalçası",
+  "images": [
+   "Azeri rug Agajli.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q14126682",
+  "title": "Suraxanı xalçaları",
+  "titleAz": "Suraxanı xalçaları",
+  "images": [
+   "Azerbaijanian carpet from Surakhani.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q16364045",
+  "title": "president.az",
+  "titleAz": "president.az",
+  "images": [
+   "President.az screen Russian full page 2024-04-28.png"
+  ],
+  "inception": "1998-01-01T00:00:00Z",
+  "type": "website",
+  "origin": true
+ },
+ {
+  "id": "Q16364053",
+  "title": "5:59",
+  "titleAz": "5:59",
+  "images": [
+   "5.59 Azerbaijani RockBand.jpg"
+  ],
+  "inception": "2011-01-01T00:00:00Z",
+  "type": "musical group",
+  "origin": true
+ },
+ {
+  "id": "Q16366430",
+  "title": "Daşkənd aşıqları və şairləri",
+  "titleAz": "Daşkənd aşıqları və şairləri",
+  "images": [
+   "Araz Yaquboğlu. Daşkənd aşıqları və şairləri. Bakı, Nurlan, 2008, 416 səh.pdf"
+  ],
+  "type": "written work",
+  "origin": true
+ },
+ {
+  "id": "Q16414515",
+  "title": "Pirabadil carpet",
+  "titleAz": "Pirəbədil xalçası",
+  "images": [
+   "Azerbaijanian carpet from Pirabadil.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q16415372",
+  "title": "Darchini",
+  "titleAz": "Darçını",
+  "images": [
+   "Darchini from Azerbaijani dances melodies.jpg"
+  ],
+  "type": "type of dance",
+  "origin": true
+ },
+ {
+  "id": "Q16415760",
+  "title": "Konakend carpet",
+  "titleAz": "Qonaqkənd xalçaları",
+  "images": [
+   "Konakend carpet, Caucasus, late 19th century.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q16416423",
+  "title": "Azerbaijan Journal of Agrarian Sciences",
+  "titleAz": "Azərbaycan aqrar elmi",
+  "images": [
+   "Azerbaijan Journal of Agrarian Sciences.jpg"
+  ],
+  "inception": "1968-01-01T00:00:00Z",
+  "type": "magazine",
+  "origin": true
+ },
+ {
+  "id": "Q16416506",
+  "title": "Samukh carpet",
+  "titleAz": "Samux xalçaları",
+  "images": [
+   "«Самух».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q16416519",
+  "title": "Görədil xalçaları",
+  "titleAz": "Görədil xalçaları",
+  "images": [
+   "«Герадиль» 1.jpg"
+  ],
+  "origin": true
+ },
+ {
+  "id": "Q16416773",
+  "title": "Gedebey carpet",
+  "titleAz": "Gədəbəy xalçaları",
+  "images": [
+   "«Кедабек».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q16416909",
+  "title": "Ganja rug",
+  "titleAz": "Gəncə xalçaları",
+  "images": [
+   "«Чирахлы».jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ },
+ {
+  "id": "Q16417033",
+  "title": "Haji Gara",
+  "titleAz": "Hacı Qara",
+  "images": [
+   "Film Haji Qara.jpg"
+  ],
+  "type": "film",
+  "origin": true
+ },
+ {
+  "id": "Q16417236",
+  "title": "Açıq söz",
+  "titleAz": "Açıq söz",
+  "images": [
+   "Açıq söz qəzeti.jpg"
+  ],
+  "inception": "1915-10-15T00:00:00Z",
+  "type": "newspaper",
+  "origin": true
+ },
+ {
+  "id": "Q16417244",
+  "title": "achma-yumma carpet",
+  "titleAz": "Açma-yumma xalçası",
+  "images": [
+   "Achma-Yumma Carpet, Azerbaijani National Carpet Museum.jpg"
+  ],
+  "type": "rug style",
+  "origin": true
+ }
+]
