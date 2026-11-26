@@ -15,14 +15,14 @@ const exSrc = new Set(existing.map((x) => x.source));
 
 // ---------- periods ----------
 export const PERIODS = [
-  { id: 'prehistory', from: -Infinity, to: -3000, az: 'Qədim dövr və qayaüstü rəsmlər', ru: 'Первобытность и наскальное искусство', en: 'Prehistory and rock art', span: 'to 3000 BCE' },
-  { id: 'bronze-iron', from: -3000, to: -330, az: 'Tunc və dəmir dövrü', ru: 'Бронзовый и железный век', en: 'Bronze and Iron Age', span: '3000–330 BCE' },
-  { id: 'antiquity', from: -330, to: 650, az: 'Qafqaz Albaniyası və antik dövr', ru: 'Кавказская Албания и античность', en: 'Caucasian Albania and antiquity', span: '330 BCE–650 CE' },
-  { id: 'medieval', from: 650, to: 1500, az: 'Orta əsrlər: Şirvanşahlar, Elxanilər, Cəlairilər', ru: 'Средневековье: Ширваншахи, Хулагуиды, Джалаириды', en: 'Middle Ages: Shirvanshahs, Ilkhanids, Jalayirids', span: '650–1500' },
-  { id: 'early-modern', from: 1500, to: 1800, az: 'Səfəvilər, Təbriz məktəbi və xanlıqlar', ru: 'Сефевиды, тебризская школа и ханства', en: 'Safavids, the Tabriz school and the khanates', span: '1500–1800' },
-  { id: 'c19', from: 1800, to: 1900, az: 'XIX əsr', ru: 'XIX век', en: 'The 19th century', span: '1800–1900' },
-  { id: 'c20', from: 1900, to: 1991, az: 'XX əsr', ru: 'XX век', en: 'The 20th century', span: '1900–1991' },
-  { id: 'contemporary', from: 1991, to: Infinity, az: 'Müasir dövr', ru: 'Современность', en: 'Contemporary', span: 'since 1991' },
+  { id: 'prehistory', from: -Infinity, to: -3000, az: 'Qədim dövr və qayaüstü rəsmlər', ru: 'Первобытность и наскальное искусство', en: 'Prehistory and rock art', span: 'to 3000 BCE', spanAz: 'e.ə. 3000-ə qədər', spanRu: 'до 3000 г. до н. э.' },
+  { id: 'bronze-iron', from: -3000, to: -330, az: 'Tunc və dəmir dövrü', ru: 'Бронзовый и железный век', en: 'Bronze and Iron Age', span: '3000–330 BCE', spanAz: 'e.ə. 3000 – 330', spanRu: '3000–330 гг. до н. э.' },
+  { id: 'antiquity', from: -330, to: 650, az: 'Qafqaz Albaniyası və antik dövr', ru: 'Кавказская Албания и античность', en: 'Caucasian Albania and antiquity', span: '330 BCE–650 CE', spanAz: 'e.ə. 330 – b.e. 650', spanRu: '330 г. до н. э. – 650 г. н. э.' },
+  { id: 'medieval', from: 650, to: 1500, az: 'Orta əsrlər: Şirvanşahlar, Elxanilər, Cəlairilər', ru: 'Средневековье: Ширваншахи, Хулагуиды, Джалаириды', en: 'Middle Ages: Shirvanshahs, Ilkhanids, Jalayirids', span: '650–1500', spanAz: '650–1500', spanRu: '650–1500 гг.' },
+  { id: 'early-modern', from: 1500, to: 1800, az: 'Səfəvilər, Təbriz məktəbi və xanlıqlar', ru: 'Сефевиды, тебризская школа и ханства', en: 'Safavids, the Tabriz school and the khanates', span: '1500–1800', spanAz: '1500–1800', spanRu: '1500–1800 гг.' },
+  { id: 'c19', from: 1800, to: 1900, az: 'XIX əsr', ru: 'XIX век', en: 'The 19th century', span: '1800–1900', spanAz: '1800–1900', spanRu: '1800–1900 гг.' },
+  { id: 'c20', from: 1900, to: 1991, az: 'XX əsr', ru: 'XX век', en: 'The 20th century', span: '1900–1991', spanAz: '1900–1991', spanRu: '1900–1991 гг.' },
+  { id: 'contemporary', from: 1991, to: Infinity, az: 'Müasir dövr', ru: 'Современность', en: 'Contemporary', span: 'since 1991', spanAz: '1991-dən', spanRu: 'с 1991 г.' },
 ];
 const THEME_PERIOD = { prehistory: 'prehistory', antiquity: 'antiquity', medieval: 'medieval', tabriz: 'early-modern', textile: 'c19', modern: 'c20' };
 const periodOf = (y0, y1) => {
@@ -163,6 +163,8 @@ for (const x of vam) {
 
 // ---------- Commons + Wikidata ----------
 const PLACE_AZ = { Gobustan: 'Qobustan', Nakhchivan: 'Naxçıvan', Shirvan: 'Şirvan', Quba: 'Quba', Karabakh: 'Qarabağ', Ganja: 'Gəncə', Baku: 'Bakı', Tabriz: 'Təbriz', Sheki: 'Şəki', Gazakh: 'Qazax', Mingachevir: 'Mingəçevir', Beylagan: 'Beyləqan', Barda: 'Bərdə', Lahij: 'Lahıc', Gabala: 'Qəbələ' };
+const PLACE_RU = { Gobustan: 'Гобустан', Nakhchivan: 'Нахчыван', Shirvan: 'Ширван', Quba: 'Губа', Karabakh: 'Карабах', Ganja: 'Гянджа', Baku: 'Баку', Tabriz: 'Тебриз', Sheki: 'Шеки', Gazakh: 'Газах', Mingachevir: 'Мингечевир', Beylagan: 'Бейлаган', Barda: 'Барда', Lahij: 'Лагич', Gabala: 'Габала' };
+const KIND_RU = { khachkar: 'Хачкар', gravestone: 'Надгробие' };
 const KIND_AZ = { khachkar: 'Xaçdaş', gravestone: 'Məzar daşı' };
 const looksFile = (t) => /^(?:file:)?(?:img|dsc|dscn|p\d|_dsc|screenshot|photo|image|pict|dscf|\d{6,})/i.test(t.replace(/^File:/, ''));
 const titleFrom = (c) => { const base = c.title.replace(/^File:/, '').replace(/\.\w+$/, '').replace(/_/g, ' '); const d = c.objectName || (looksFile(c.title) ? c.description.slice(0, 120) : ''); return clean(d || base); };
@@ -184,7 +186,8 @@ const MILL = /(\d)(?:st|nd|rd|th)?[\s-]*(?:millennium|тысячелетие)[\s
 function commonsYears(c) {
   const mm = (c.title + ' ' + c.description).match(MILL);
   if (mm) return [-(+mm[1] * 1000), -((+mm[1] - 1) * 1000)];
-  let r = parseYears(c.title + ' ' + c.description.slice(0, 200));
+  const cue = /century|əsr|век|\bBC\b|BCE|e\.ə|dated|\bca?\.|circa|\bAD\b|\bCE\b|[–-]\d{3,4}/i.test(c.title);
+  let r = parseYears((cue ? c.title + ' ' : '') + c.description.slice(0, 200));
   if (r[0] != null && r[0] > 1990 && !/(?:19|20)\d\d\s*(?:paintings?|rəsm|il)/i.test(c.title)) r = [null, null]; // a photo's year, not the work's
   if (r[0] == null) for (const k of c.cats) { const m = k.match(/^(\d{3,4}) (?:paintings|works|textiles)/) || k.match(/^(\d{1,2})(?:st|nd|rd|th)[- ]century/); if (m) { r = parseYears(m[0]); break; } }
   return r;
@@ -252,17 +255,37 @@ for (const c of commons) {
   if (foreignHit && med === 'manuscript') { dropped.notArt++; continue; }
   const dflt = CAT_PERIOD.find(([re]) => re.test(catsText + ' ' + c.title))?.[1];
   const artistName = c.artist && c.artist.length < 80 ? c.artist : '';
-  push({ id: 'commons-' + slug(c.title.replace(/^File:/, '').replace(/\.\w+$/, '')) + '-' + hash(c.title), source: 'commons', title: foreignHit ? neutralTitle(c, med, place, y0) : { en: titleFrom(c) }, artist: ma && !/^[a-zəıöüçşğ]+$/.test(ma.name) ? ma.name : '', artistId: ma?.id, artistDied: ma?.died, unknownModernMaker: gated && !ma?.died && (y1 == null || y1 > LIMIT) && !/^(public domain|pd)/i.test(c.license ?? '') || undefined, credit: foreignHit && /^(public domain|pd)/i.test(c.license ?? '') ? undefined : artistName || 'Wikimedia Commons contributors', dateText: '', yearStart: y0, yearEnd: y1, medium: med, place: place ?? '',
+  push({ id: 'commons-' + slug(c.title.replace(/^File:/, '').replace(/\.\w+$/, '')) + '-' + hash(c.title), source: 'commons', title: foreignHit ? neutralTitle(c, med, place, y0) : (() => { const r = readableTitle(c.title); const o = c.objectName && readableTitle(c.objectName); const d = looksFile(c.title) && c.description ? readableTitle(c.description.slice(0, 100)) : null; return o ? { en: o } : r ? { en: r } : d ? { en: d } : neutralTitle(c, med, place, y0); })(), file: c.title.replace(/^File:/, ''), artist: ma && !/^[a-zəıöüçşğ]+$/.test(ma.name) ? ma.name : '', artistId: ma?.id, artistDied: ma?.died, unknownModernMaker: gated && !ma?.died && (y1 == null || y1 > LIMIT) && !/^(public domain|pd)/i.test(c.license ?? '') || undefined, credit: foreignHit && /^(public domain|pd)/i.test(c.license ?? '') ? undefined : artistName || 'Wikimedia Commons contributors', dateText: '', yearStart: y0, yearEnd: y1, medium: med, place: place ?? '',
     period: y0 == null ? dflt : undefined, periodGuess: y0 == null || undefined, institution: collectionOf(catsText), accession: '', url: 'https://commons.wikimedia.org/wiki/' + encodeURIComponent(c.title.replace(/ /g, '_')), license: c.license, image: c.thumb || c.url, imageOriginal: c.url, width: c.width, height: c.height, theme: dflt ? undefined : c.themes[0] });
 }
 // A title for an object whose own file title is a catalogue label or in another script: what it is and where, from the file's own data
 function neutralTitle(c, med, place, y0) {
   const t = [c.title, c.objectName, c.description].join(' ');
+  const stone = t.match(/(\d+)\s*(?:nömrəli|saylı)\s*daş|stone (?:number )?(\d+)/i);
   const kind = /khachkar/i.test(t) ? 'khachkar' : /tombstone|gravestone|headstone/i.test(t) ? 'gravestone' : null;
-  const en = kind === 'khachkar' ? 'Khachkar' : kind === 'gravestone' ? 'Gravestone' : (MEDIUM_LABEL[med] ?? MEDIUM_LABEL.other).en.replace(/ and .*$/, '').replace(/s$/, '');
-  const az = KIND_AZ[kind] ?? (MEDIUM_LABEL[med] ?? MEDIUM_LABEL.other).az;
-  const yr = y0 != null && y0 > 0 ? ` (${y0})` : '';
-  return { en: en + (place ? ', ' + place : '') + yr, az: az + (place ? ', ' + (PLACE_AZ[place] ?? place) : '') + yr };
+  const L = MEDIUM_LABEL[med] ?? MEDIUM_LABEL.other;
+  const en = kind === 'khachkar' ? 'Khachkar' : kind === 'gravestone' ? 'Gravestone' : med === 'rock-art' ? 'Rock engravings' : L.en.replace(/ and .*$/, '').replace(/s$/, '');
+  const az = KIND_AZ[kind] ?? L.az;
+  const ru = KIND_RU[kind] ?? (med === 'rock-art' ? 'Наскальные изображения' : L.ru.replace(/ и .*$/, ''));
+  const yr = '';
+  const st = stone ? [`, stone ${stone[1] ?? stone[2]}`, `, ${stone[1] ?? stone[2]} saylı daş`, `, камень ${stone[1] ?? stone[2]}`] : ['', '', ''];
+  return { en: en + (place ? ', ' + place : '') + st[0] + yr, az: az + (place ? ', ' + (PLACE_AZ[place] ?? place) : '') + st[1] + yr, ru: ru + (place ? ', ' + (PLACE_RU[place] ?? place) : '') + st[2] + yr };
+}
+// A Commons file name made readable, or null when nothing meaningful is left (camera names, ids, slugs)
+function readableTitle(raw) {
+  let t = raw.replace(/^File:/, '').replace(/\.(jpe?g|png|tiff?|webp)$/i, '').replace(/_/g, ' ');
+  t = t.replace(/[\s-]*panoramio(\s*\(\d+\))?/ig, '').replace(/\b(?:IMG|DSC[NF]?|DSCN|PXL|MVIMG|P)[ -]?\d{3,}\b/gi, '').replace(/^\d{5,}\s*/, '').replace(/\(\d{6,}\)/g, '').replace(/\s*\bby [A-Z][\w .]+?(?=\s+CC\b|$)/, '').replace(/\s*\bCC[- ]?(?:BY|0|ZERO)\b.*$/i, '').replace(/[,\s]*\b[A-Z]{1,3}-\d{4}-\d+[\w-]*\s*$/, '').replace(/\bPage\d+-\d+px-/, '').replace(/DSC\d*\s*$/, '').replace(/\b[A-Z]{2,4}\d{3,}\b/g, '').replace(/^(\S+)$/, (m) => m.replace(/([a-zəıöüçşğ])([A-ZƏİÖÜÇŞĞ])/g, '$1 $2')).replace(/\b\d+X\d+\b/g, '').replace(/-\d{3,4}\b/g, '');
+  for (let i = 0; i < 3; i++) t = t.replace(/[\s,-]*[(\[]?\d{1,3}[)\]]?\s*$/, '').replace(/[\s,-]*(?:19|20)\d{2}[ -]?\d{0,2}[ -]?\d{0,2}\s*$/, '').replace(/[\s,-]*\(\d+\)\s*$/, '');
+  t = clean(t.replace(/\s*-\s*$/, '').replace(/[\s.]+\d\.?$/, ''));
+  if (t === t.toUpperCase() && /[A-Z]{4}/.test(t)) t = t.charAt(0) + t.slice(1).toLowerCase();
+  if (t.length > 110) t = t.slice(0, 110).replace(/\s+\S*$/, '') + '…';
+  const words = t.split(' ').filter((w) => /\p{L}{3,}/u.test(w));
+  if (words.length < 2 && !/^\p{L}{6,}$/u.test(t)) return null;
+  if (!/\s/.test(t) && /-/.test(t)) return null; // slug
+  if (/^[a-z0-9 -]+$/.test(t) && /\d/.test(t) && /-/.test(t)) return null;
+  if (/^(?:taken|file|image|photo|picture|untitled|new|test|scan|copy|screenshot)\b/i.test(t)) return null;
+  if (/^\d+\s*(?:nömrəli|saylı)\s*daş/i.test(t)) return null; // numbered Gobustan stones get a generated title
+  return t;
 }
 function slugless(s) { return s.toLowerCase(); }
 function collectionOf(cats) {
@@ -277,9 +300,9 @@ function hash(s) { let h = 0; for (const ch of s) h = (h * 31 + ch.charCodeAt(0)
 console.error('commons dropped', dropped);
 
 // ---------- finish ----------
-// Identical generated titles ("Carpet, Karabakh") get a running number so cards can be told apart
-{ const seenT = {}; for (const x of items) if (x.source === 'commons' && x.title.az && /^[A-Z][\w ]+(, [\w ]+)?( \(\d+\))?$/.test(x.title.en)) { const k = x.title.en; seenT[k] = (seenT[k] ?? 0) + 1; }
-  const idx = {}; for (const x of items) if (x.source === 'commons' && x.title.az && seenT[x.title.en] > 1) { idx[x.title.en] = (idx[x.title.en] ?? 0) + 1; x.title = { en: `${x.title.en} · ${idx[x.title.en]}`, az: `${x.title.az} · ${idx[x.title.en]}` }; } }
+// Identical titles among Commons items get a running number so cards can be told apart
+{ const cnt = {}; for (const x of items) if (x.source === 'commons') cnt[x.title.en] = (cnt[x.title.en] ?? 0) + 1;
+  const idx = {}; for (const x of items) if (x.source === 'commons' && cnt[x.title.en] > 1) { const k = x.title.en; idx[k] = (idx[k] ?? 0) + 1; const n = ` · ${idx[k]}`; x.title = { en: x.title.en + n, ...(x.title.az ? { az: x.title.az + n } : {}), ...(x.title.ru ? { ru: x.title.ru + n } : {}) }; } }
 const seen = new Set();
 const out = items.filter((x) => (seen.has(x.id) ? false : seen.add(x.id)));
 for (const x of out) for (const k of Object.keys(x)) if (x[k] == null || x[k] === '' || (Array.isArray(x[k]) && !x[k].length)) delete x[k];

@@ -274,7 +274,8 @@ const expanded = new Set();
 
 const pname = (p) => p[lang] ?? p.az;
 const mname = (m) => (data.media[m] ?? data.media.other)[lang];
-const titleOf = (x) => (lang === 'az' && x.title.az) || x.title.en || x.title.az || '';
+const titleOf = (x) => (x.title[lang] && lang !== 'en' ? x.title[lang] : '') || x.title.en || x.title.az || '';
+const pspan = (p) => (lang === 'az' ? p.spanAz : lang === 'ru' ? p.spanRu : '') || p.span;
 const yr = (y) => y < 0 ? `${-y}` : String(y);
 const when = (x) => x.dateText || (x.yearStart != null ? (x.yearEnd != null && x.yearEnd !== x.yearStart ? `${yr(x.yearStart)}–${yr(x.yearEnd)}` : yr(x.yearStart)) + (x.yearEnd < 0 || x.yearStart < 0 ? ' ' + t('bce') : '') : '');
 const hasPic = (x) => x.imageStatus === 'free';
@@ -309,7 +310,7 @@ function drawTimeline() {
   const all = data.items.filter((x) => passes(x, 'p')).length;
   const b = (id, span, name, c) => `<button type="button" data-p="${id}" aria-pressed="${state.p === id}"><span class="span">${esc(span)}</span><span class="nm">${esc(name)}<small>${c}</small></span></button>`;
   document.getElementById('tl').innerHTML = b('', '', t('allP'), all)
-    + data.periods.map((p) => b(p.id, p.span, pname(p).split(':')[0], n[p.id] ?? 0)).join('');
+    + data.periods.map((p) => b(p.id, pspan(p), pname(p).split(':')[0], n[p.id] ?? 0)).join('');
   document.querySelectorAll('#tl button').forEach((x) => x.onclick = () => { state.p = x.dataset.p; drawTimeline(); drawFilters(); render(true); window.scrollTo({ top: 0 }); });
   const on = document.querySelector('#tl [aria-pressed="true"]'); const row = document.getElementById('tl');
   if (on && row.scrollWidth > row.clientWidth) row.scrollLeft = Math.max(0, on.offsetLeft - row.offsetLeft - 24);
@@ -358,7 +359,7 @@ function render(fromUser) {
     view.push(...shown);
     const intro = PERIOD_INTRO[c.p.id]?.[lang];
     const link = (c.p.id === 'medieval' || c.p.id === 'early-modern') ? ` <a href="../${lang === 'az' ? '' : '?lang=' + lang}">${esc(t('miniatures'))}</a>` : '';
-    return `<section class="chapter" id="${c.p.id}"><div class="chapter-head"><span class="span">${esc(c.p.span)}</span><h2>${esc(pname(c.p))}</h2>${intro ? `<p>${esc(intro)}${link}</p>` : ''}</div>
+    return `<section class="chapter" id="${c.p.id}"><div class="chapter-head"><span class="span">${esc(pspan(c.p))}</span><h2>${esc(pname(c.p))}</h2>${intro ? `<p>${esc(intro)}${link}</p>` : ''}</div>
       <div class="grid">${shown.map(card).join('')}</div>
       ${shown.length < c.items.length ? `<p class="more"><button type="button" class="link" data-more="${c.p.id}">${t('showAll')(c.items.length)}</button></p>` : ''}</section>`;
   }).join('');
@@ -408,11 +409,11 @@ function show(id) {
   const lic = x.license ? `<dt>${t('licence')}</dt><dd><span class="badge${hasPic(x) ? '' : ' nc'}">${esc(x.license)}</span></dd>` : '';
   document.getElementById('v-info').innerHTML = `
     <button type="button" class="close" id="v-close" autofocus>${t('close')} ✕</button>
-    <div><h2>${esc(titleOf(x))}</h2>${x.title.az && x.title.en && x.title.az !== x.title.en ? `<p class="sub">${esc(lang === 'az' ? x.title.en : x.title.az)}</p>` : ''}</div>
+    <div><h2>${esc(titleOf(x))}</h2>${x.title.az && x.title.en && x.title.az !== x.title.en ? `<p class="sub">${esc(lang === 'en' ? x.title.az : x.title.en)}</p>` : ''}</div>
     <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}${lic}</dl>
     ${x.protectedReason && x.license ? `<p class="note">${esc(t('noImgProtected'))}</p>` : ''}
     <div class="links">
-      <a href="${esc(x.url)}" target="_blank" rel="noopener">${t('atSource')} ↗</a>
+      <a href="${esc(x.url)}" target="_blank" rel="noopener">${x.file && x.source === 'commons' ? esc(x.file) : t('atSource')} ↗</a>
       ${x.commonsUrl ? `<a href="${esc(x.commonsUrl)}" target="_blank" rel="noopener">${t('commons')} ↗</a>` : ''}
       ${hasPic(x) && x.imageOriginal ? `<a href="${esc(x.imageOriginal)}" target="_blank" rel="noopener">${t('full')} ↗</a>` : ''}
       <button type="button" id="v-share">${t('share')}</button>
