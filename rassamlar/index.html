@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rəssamlar şəbəkəsi · Azad Bilik</title>
+<meta name="description" content="Nizami və Füzulinin miniatürlərini kim kiminlə, kimin üçün və harada çəkib; hansı səhnələr emalatxanadan emalatxanaya gedib. Who painted with whom, for whom and where; which scenes travelled between workshops.">
+<meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14100D" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://azadbilik.org/qalereya/rassamlar/">
+<meta property="og:title" content="Rəssamlar şəbəkəsi · Who painted Nizami with whom">
+<meta property="og:description" content="Rəssamlar, əlyazmalar, hamilər, şəhərlər və səhnələr bir şəbəkədə.">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+  :root {
+    --paper: #F4EFE6; --ink: #1A1410; --muted: #675E55; --rule: rgb(26 20 16 / .14); --frame: #E9E2D6;
+    --accent: #A81E28; --second: #1F5C73; --third: #5B6B2E; --ms: #8A7F73;
+    --serif: 'Literata', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #14100D; --ink: #F1EBE1; --muted: #A0968B; --rule: rgb(241 235 225 / .14); --frame: #1F1914;
+      --accent: #DA5A61; --second: #6FB3CC; --third: #A9BC6A; --ms: #8F857A; }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--paper); color: var(--ink); font: 400 .9375rem/1.5 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1px; text-decoration-color: var(--rule); }
+  a:hover { text-decoration-color: currentColor; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  [hidden] { display: none !important; }
+  .wrap { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.25rem 0 0; }
+  .top nav { display: flex; align-items: center; gap: 1rem; font-size: .8125rem; color: var(--muted); flex-wrap: wrap; justify-content: flex-end; }
+  .brand { display: inline-flex; align-items: center; gap: .5rem; font-size: .8125rem; font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .brand svg { width: 1rem; height: 1rem; } .star { fill: currentColor; } .gem { fill: var(--accent); }
+  .langs { display: inline-flex; gap: .15rem; }
+  .langs button { font-size: .6875rem; letter-spacing: .04em; padding: .1rem .3rem; border-radius: 2px; }
+  .langs button[aria-pressed="true"] { color: var(--ink); box-shadow: inset 0 -1px currentColor; }
+  header.head { padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+  h1 { margin-top: 1.25rem; font: 400 clamp(2rem, 6vw, 3rem)/1.1 var(--serif); letter-spacing: -.02em; }
+  .sub { margin-top: .35rem; font: italic 300 1.0625rem/1.35 var(--serif); }
+  .lede { margin-top: .75rem; max-width: 40rem; font: 400 1.0625rem/1.55 var(--serif); }
+  section { padding: 1.5rem 0; border-bottom: 1px solid var(--rule); }
+  h2 { font: 400 1.5rem/1.2 var(--serif); letter-spacing: -.01em; }
+  .muted, .hint { color: var(--muted); } .hint { font-size: .75rem; margin-top: .35rem; }
+
+  .bar { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; align-items: center; justify-content: space-between; margin-bottom: .75rem; }
+  .seg { display: inline-grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); border-radius: 3px; padding: 2px; }
+  .seg button { padding: .35rem .75rem; border-radius: 2px; font-size: .8125rem; color: var(--muted); }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  .legend { display: flex; flex-wrap: wrap; gap: .25rem 1rem; font-size: .75rem; color: var(--muted); }
+  .legend i { display: inline-block; width: .65rem; height: .65rem; border-radius: 50%; background: var(--c); margin-right: .35rem; vertical-align: -.05em; }
+  .legend i.sq { border-radius: 1px; } .legend i.dia { border-radius: 0; transform: rotate(45deg) scale(.85); }
+
+  #net { display: block; width: 100%; height: auto; touch-action: manipulation; user-select: none; -webkit-user-select: none; background: var(--frame); border-radius: 4px; }
+  #net .edge { stroke: var(--muted); stroke-opacity: .45; fill: none; }
+  #net .edge.probable { stroke-dasharray: 3 3; }
+  #net .edge.dim, #net .node.dim { opacity: .12; }
+  #net .node { cursor: pointer; } #net .node.on .shape { stroke: var(--ink); stroke-width: 2.5; }
+  #net .shape { fill: var(--c); stroke: var(--paper); stroke-width: 1.5; }
+  #net .node.ms .shape { fill: var(--paper); stroke: var(--c); stroke-width: 2; }
+  #net .lab { font: 500 .6875rem var(--sans); fill: var(--ink); paint-order: stroke; stroke: var(--frame); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+  #net .lab.big { font-weight: 600; font-size: .75rem; }
+  #net .lab.fade { opacity: 0; transition: opacity .15s; } #net .node:hover .lab.fade, #net .node.on .lab.fade, #net .node:focus .lab.fade, #net .node.near .lab.fade { opacity: 1; }
+  .info { min-height: 7rem; margin-top: .9rem; padding: .9rem 1rem; border: 1px solid var(--rule); border-radius: 4px; font-size: .875rem; }
+  .info h3 { font: 400 1.25rem/1.25 var(--serif); }
+  .info .k { font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .info dl { display: grid; grid-template-columns: 6.5rem 1fr; gap: .2rem .75rem; margin-top: .5rem; }
+  .info dt { color: var(--muted); } .info dd { margin: 0; }
+  .info ul { padding-left: 1rem; } .info a.go { display: inline-block; margin-top: .5rem; font-weight: 500; }
+  .info .empty { color: var(--muted); }
+
+  .pairs, .travels { list-style: none; padding: 0; margin-top: .75rem; }
+  .pairs li, .travels li { padding: .5rem 0; border-bottom: 1px solid var(--rule); font-size: .875rem; }
+  .pairs .ms { color: var(--muted); font-size: .8125rem; }
+  .travels .nm { font-weight: 500; } .travels .poem { color: var(--muted); font-size: .8125rem; }
+  .chain { display: flex; flex-wrap: wrap; gap: .2rem .35rem; align-items: center; margin-top: .25rem; font-size: .8125rem; }
+  .chain span { padding: .05rem .45rem; border: 1px solid var(--rule); border-radius: 999px; }
+  .chain span small { color: var(--muted); font-variant-numeric: tabular-nums; } .chain .arr { border: 0; color: var(--muted); padding: 0; }
+  .more { margin-top: .75rem; font-size: .8125rem; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: .2em; }
+  .method { max-width: 42rem; display: grid; gap: .6rem; font-size: .9375rem; margin-top: .75rem; }
+  .method ul { padding-left: 1.25rem; display: grid; gap: .35rem; }
+  footer { padding: 1.5rem 0 2.5rem; font-size: .75rem; color: var(--muted); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @media (max-width: 48rem) {
+    .wrap { padding: 0 1rem; }
+    .info dl { grid-template-columns: 5.5rem 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="head">
+    <div class="top"><a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a><nav><a href="/xeriteler/" data-i18n="maps" data-keep-lang>Xəritələr</a><a href="../" data-i18n="gallery" data-keep-lang>Qalereya</a><a href="../emalatxana/" data-i18n="workshops" data-keep-lang>Emalatxanalar</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav></div>
+    <h1 data-i18n="title">Rəssamlar şəbəkəsi</h1>
+    <p class="sub" data-i18n="sub">Kim kiminlə, kimin üçün və harada çəkib</p>
+    <p class="lede" id="lede"></p>
+  </header>
+
+  <main>
+    <section aria-labelledby="h-net">
+      <h2 id="h-net" class="sr" data-i18n="title">Rəssamlar şəbəkəsi</h2>
+      <div class="bar">
+        <div class="seg" role="group" id="views"><button type="button" data-view="people" data-i18n="vPeople">Rəssamlar və hamilər</button><button type="button" data-view="scenes" data-i18n="vScenes">Gəzən səhnələr</button></div>
+        <div class="legend" id="legend"></div>
+      </div>
+      <svg id="net" role="img"></svg>
+      <p class="hint" id="hint"></p>
+      <div class="info" id="info" aria-live="polite"></div>
+    </section>
+
+    <section aria-labelledby="h-list" id="s-people">
+      <h2 id="h-list" data-i18n="pairsH">Birlikdə işləyənlər</h2>
+      <p class="hint" data-i18n="pairsNote" style="max-width:42rem"></p>
+      <ul class="pairs" id="pairs"></ul>
+    </section>
+    <section aria-labelledby="h-trav" id="s-scenes" hidden>
+      <h2 id="h-trav" data-i18n="travH">Səhnələrin yolu</h2>
+      <p class="hint" data-i18n="travNote" style="max-width:42rem"></p>
+      <ul class="travels" id="travels"></ul>
+      <button type="button" class="more" id="more"></button>
+    </section>
+
+    <section aria-labelledby="h-method">
+      <h2 id="h-method" data-i18n="methodH">Necə qurulub</h2>
+      <div class="method" id="method"></div>
+    </section>
+  </main>
+  <footer id="foot"></footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script>
+(() => {
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const still = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+const LANGS = ['az', 'ru', 'en'];
+let lang = (() => {
+  const q = new URLSearchParams(location.search).get('lang');
+  if (LANGS.includes(q)) return q;
+  try { const s = localStorage.getItem('lang'); if (LANGS.includes(s)) return s; } catch {}
+  return 'az';
+})();
+const plural = (n, one, few, many) => { const r = new Intl.PluralRules('ru').select(n); return r === 'one' ? one : r === 'few' ? few : many; };
+
+const T = {
+  az: { doc: 'Rəssamlar şəbəkəsi · Azad Bilik', title: 'Rəssamlar şəbəkəsi', sub: 'Kim kiminlə, kimin üçün və harada çəkib', maps: 'Xəritələr', gallery: 'Qalereya', workshops: 'Emalatxanalar',
+    lede: (s) => `Nizami və Füzulinin əlyazmalarının ${s.manuscripts} qeydindən yalnız ${s.inGraph}-də rəssamın və ya hami adı bəllidir: onlar bu şəbəkədədir (${s.painters} rəssam). İkinci görünüşdə isə şəhəri bilinən ${s.withCity} miniatürdən hansı səhnələrin bir neçə şəhərdə çəkildiyi göstərilir.`,
+    vPeople: 'Rəssamlar və hamilər', vScenes: 'Gəzən səhnələr',
+    lPainter: 'Rəssam', lMs: 'Əlyazma', lPlace: 'Şəhər', lDyn: 'Sülalə', lPatron: 'Hami', lScene: 'Səhnə',
+    hintPeople: 'Düyünə toxunun və ya üstünə gəlin; sürükləyə bilərsiniz. Qırıq xətt: ehtimal olunan atribusiya.',
+    hintScenes: 'Şəhər düyünləri sol-sağ əsrə görə düzülməyib, yalnız bağlıdır. Xəttin qalınlığı: şəhərdə həmin səhnənin miniatürlərinin sayı.',
+    pick: 'Düyün seçin: rəssam, əlyazma, hami, şəhər və ya səhnə.',
+    year: 'İl', place: 'Yer', patron: 'Hami', painters: 'Rəssamlar', held: 'Saxlanılır', pics: 'Miniatür', conf: 'Əminlik', ms: 'Əlyazmalar', peers: 'Birlikdə', poem: 'Poema', cities: 'Şəhərlər', scenes: 'Səhnələr',
+    openG: 'Qalereyada aç', openP: 'Poemanın miniatürləri', probable: 'ehtimal', n: (k) => `${k} miniatür`, nm: (k) => `${k} əlyazma`, nc: (k) => `${k} şəhər`, ns: (k) => `${k} səhnə`,
+    pairsH: 'Birlikdə işləyənlər', pairsNote: 'Eyni əlyazmanın kataloq qeydində adı çəkilən rəssamlar. Bu, eyni vərəqdə işləmələri demək deyil.',
+    travH: 'Səhnələrin yolu', travNote: 'Şəhərləri həmin səhnənin ən qədim əlyazmasının ilinə görə düzülüb; hər şəhər üçün ən erkən il yazılıb. Yalnız iki və ya daha çox şəhərdə çəkilmiş səhnələr.',
+    more: (k) => `Hamısını göstər (${k})`, less: 'Azalt',
+    methodH: 'Necə qurulub',
+    method: (s) => `<ul><li><b>Rəssamlar, hamilər, şəhərlər:</b> <code>data/manuscripts.json</code>-dan, əl ilə aparılan kataloqdan; hər qeyddə mənbə və əminlik var. ${s.manuscripts} əlyazma və əşyadan yalnız rəssamı və ya hamisi göstərilənlər daxil edilib. Şəhər bilinmirsə (Mogol əlyazması), sülalə göstərilir.</li>
+<li><b>Bir adam:</b> «Bihzad (attributed)» və «Bihzad (ascribed)» bir rəssamdır, xətt qırıqdır. «Mirak» və «Aqa Mirak» ayrı saxlanılıb: eyni adam olub-olmaması yoxlanmayıb.</li>
+<li><b>Birlikdə işləmə</b> yalnız eyni əlyazmanın qeydindən çıxarılıb; vərəq səviyyəsində atribusiya yoxdur. Rəssam adı qeyd edilməyən əlyazmalar çoxdur, ona görə şəbəkə rəssamların tam şəbəkəsi yox, qeydlərin göstərdiyi hissədir.</li>
+<li><b>Gəzən səhnələr:</b> səhnə kataloqundan (<code>data/tags</code>) və əlyazmanın şəhərindən. ${s.pictures} miniatürdən ${s.withCity}-nin şəhəri bilinir; qalanları göstərilmir. İl əlyazmanın başlanğıc ilidir.</li></ul>`,
+    foot: (d) => `Məlumat: qalereya, ${d}. Fayl: <a href="../data/network.json">network.json</a>. Miniatürlər muzeylərin açıq kolleksiyalarındandır. Kataloq CC0.` },
+  ru: { doc: 'Сеть художников · Azad Bilik', title: 'Сеть художников', sub: 'Кто с кем, для кого и где писал', maps: 'Карты', gallery: 'Галерея', workshops: 'Мастерские',
+    lede: (s) => `Из ${s.manuscripts} записей о рукописях Низами и Физули художник или заказчик назван лишь в ${s.inGraph}: они и образуют сеть (${s.painters} ${plural(s.painters, 'художник', 'художника', 'художников')}). Второй вид показывает, какие сцены писали в нескольких городах, по ${s.withCity} миниатюрам с известным городом.`,
+    vPeople: 'Художники и заказчики', vScenes: 'Путешествующие сцены',
+    lPainter: 'Художник', lMs: 'Рукопись', lPlace: 'Город', lDyn: 'Династия', lPatron: 'Заказчик', lScene: 'Сцена',
+    hintPeople: 'Наведите на узел или нажмите; узлы можно двигать. Пунктир: предположительная атрибуция.',
+    hintScenes: 'Города на экране не упорядочены по времени, они только связаны. Толщина линии: число миниатюр этой сцены в городе.',
+    pick: 'Выберите узел: художника, рукопись, заказчика, город или сцену.',
+    year: 'Год', place: 'Место', patron: 'Заказчик', painters: 'Художники', held: 'Хранится', pics: 'Миниатюр', conf: 'Достоверность', ms: 'Рукописи', peers: 'Вместе с', poem: 'Поэма', cities: 'Города', scenes: 'Сцены',
+    openG: 'Открыть в галерее', openP: 'Миниатюры поэмы', probable: 'предположительно', n: (k) => `${k} ${plural(k, 'миниатюра', 'миниатюры', 'миниатюр')}`, nm: (k) => `${k} ${plural(k, 'рукопись', 'рукописи', 'рукописей')}`, nc: (k) => `${k} ${plural(k, 'город', 'города', 'городов')}`, ns: (k) => `${k} ${plural(k, 'сцена', 'сцены', 'сцен')}`,
+    pairsH: 'Кто работал вместе', pairsNote: 'Художники, названные в каталожной записи одной и той же рукописи. Это не значит, что они работали над одним листом.',
+    pairsOne: (a, b) => `${a} и ${b}`,
+    travH: 'Путь сцен', travNote: 'Города расставлены по году самой ранней рукописи с этой сценой; для каждого города указан самый ранний год. Только сцены, написанные минимум в двух городах.',
+    more: (k) => `Показать все (${k})`, less: 'Свернуть',
+    methodH: 'Как построено',
+    method: (s) => `<ul><li><b>Художники, заказчики, города:</b> из <code>data/manuscripts.json</code>, каталога, который ведётся вручную; у каждой записи есть источники и степень достоверности. Из ${s.manuscripts} рукописей и предметов включены те, где назван художник или заказчик. Если города нет (могольская рукопись), указана династия.</li>
+<li><b>Один человек:</b> «Bihzad (attributed)» и «Bihzad (ascribed)» — один художник, линия пунктирная. «Mirak» и «Aqa Mirak» оставлены раздельно: тождество не проверено.</li>
+<li><b>Работа вместе</b> выведена только из записи одной рукописи; атрибуции по листам нет. У многих рукописей художник не назван, поэтому сеть показывает не всех художников, а то, что есть в записях.</li>
+<li><b>Путешествующие сцены:</b> из каталога сцен (<code>data/tags</code>) и города рукописи. Город известен у ${s.withCity} из ${s.pictures} миниатюр, остальные не показаны. Год — начало датировки рукописи.</li></ul>`,
+    foot: (d) => `Данные: галерея, ${d}. Файл: <a href="../data/network.json">network.json</a>. Миниатюры — из открытых коллекций музеев. Каталог CC0.` },
+  en: { doc: 'Painters’ network · Azad Bilik', title: 'Painters’ network', sub: 'Who painted with whom, for whom and where', maps: 'Maps', gallery: 'Gallery', workshops: 'Workshops',
+    lede: (s) => `Of the ${s.manuscripts} catalogue entries for manuscripts of Nizami and Fuzuli, only ${s.inGraph} name a painter or a patron; they make up this network (${s.painters} painters). The second view shows, from the ${s.withCity} miniatures whose city is known, which scenes were painted in several cities.`,
+    vPeople: 'Painters and patrons', vScenes: 'Scenes that travelled',
+    lPainter: 'Painter', lMs: 'Manuscript', lPlace: 'City', lDyn: 'Dynasty', lPatron: 'Patron', lScene: 'Scene',
+    hintPeople: 'Hover or tap a node; nodes can be dragged. Dashed line: probable attribution.',
+    hintScenes: 'Cities are not placed by time on screen, only linked. Line width: the number of miniatures of the scene in the city.',
+    pick: 'Pick a node: a painter, manuscript, patron, city or scene.',
+    year: 'Year', place: 'Place', patron: 'Patron', painters: 'Painters', held: 'Held by', pics: 'Miniatures', conf: 'Confidence', ms: 'Manuscripts', peers: 'Together with', poem: 'Poem', cities: 'Cities', scenes: 'Scenes',
+    openG: 'Open in the gallery', openP: 'The poem’s miniatures', probable: 'probable', n: (k) => `${k} miniature${k === 1 ? '' : 's'}`, nm: (k) => `${k} manuscript${k === 1 ? '' : 's'}`, nc: (k) => `${k} cit${k === 1 ? 'y' : 'ies'}`, ns: (k) => `${k} scene${k === 1 ? '' : 's'}`,
+    pairsH: 'Who worked together', pairsNote: 'Painters named in the catalogue entry of the same manuscript. That does not mean they painted the same folio.',
+    pairsOne: (a, b) => `${a} and ${b}`,
+    travH: 'The scenes’ routes', travNote: 'Cities in the order of the year of their earliest manuscript with the scene, each with that year. Only scenes painted in two or more cities.',
+    more: (k) => `Show all (${k})`, less: 'Show fewer',
+    methodH: 'How it is built',
+    method: (s) => `<ul><li><b>Painters, patrons, cities:</b> from <code>data/manuscripts.json</code>, a catalogue kept by hand; each entry carries sources and a confidence. Of ${s.manuscripts} manuscripts and objects, those naming a painter or a patron are included. Where there is no city (a Mughal manuscript), the dynasty stands in.</li>
+<li><b>One person:</b> “Bihzad (attributed)” and “Bihzad (ascribed)” are one painter, the line dashed. “Mirak” and “Aqa Mirak” are kept apart: whether they are one person has not been checked.</li>
+<li><b>Working together</b> is inferred only from one manuscript's entry; there is no folio-level attribution. Most manuscripts name no painter, so the network is what the entries say, not all the painters.</li>
+<li><b>Scenes that travelled:</b> from the scene catalogue (<code>data/tags</code>) and the manuscript's city. ${s.withCity} of ${s.pictures} miniatures have a known city; the rest are left out. The year is the start of the manuscript's dating.</li></ul>`,
+    foot: (d) => `Data: the gallery, ${d}. File: <a href="../data/network.json">network.json</a>. Miniatures are from museums' open collections. Catalogue CC0.` },
+};
+const t = (k) => T[lang][k];
+let net = null, view = 'people', sel = null, all = false, sim = null;
+const svg = d3.select('#net'), info = document.getElementById('info');
+const place = (n) => { const x = net.names.places[n] ?? net.names.dynasties[n]; return x ? ({ az: x[0], ru: x[1], en: n })[lang] : n; };
+const dyn = (n) => { const x = net.names.dynasties[n]; return x ? ({ az: x[0], ru: x[1], en: n })[lang] : n; };
+const nodeLabel = (n) => n.type === 'place' ? place(n.label) : n.label;
+const KIND = { painter: ['lPainter', 'circle'], ms: ['lMs', 'sq'], place: ['lPlace', 'dia'], patron: ['lPatron', 'tri'], scene: ['lScene', 'circle'] };
+const COL = { painter: 'var(--accent)', ms: 'var(--ms)', place: 'var(--second)', patron: 'var(--third)', scene: 'var(--accent)' };
+
+// Two graphs from the same data
+function graph() {
+  if (view === 'people') {
+    const nodes = net.nodes.map((n) => ({ ...n })), by = new Map(nodes.map((n) => [n.id, n]));
+    const links = net.links.map((l) => ({ ...l, source: by.get(l.source), target: by.get(l.target) }));
+    for (const n of nodes) n.deg = links.filter((l) => l.source === n || l.target === n).length;
+    return { nodes, links };
+  }
+  const nodes = [], links = [], cities = new Map();
+  for (const s of net.scenes) {
+    const sn = { id: s.id, type: 'scene', label: s[lang] || s.az, s, deg: s.cities.length };
+    nodes.push(sn);
+    for (const c of s.cities) {
+      if (!cities.has(c.city)) { const cn = { id: `w:${c.city}`, type: 'place', label: c.city, deg: 0, city: true }; cities.set(c.city, cn); nodes.push(cn); }
+      cities.get(c.city).deg++;
+      links.push({ source: sn, target: cities.get(c.city), kind: 'scene', n: c.n, year: c.year });
+    }
+  }
+  return { nodes, links };
+}
+
+function draw() {
+  if (!net) return;
+  const W = Math.max(280, svg.node().parentNode.clientWidth), small = W < 560, H = small ? 560 : 600;
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+  svg.selectAll('*').remove();
+  svg.attr('aria-label', t('title'));
+  const g = graph();
+  const R = (n) => n.type === 'scene' ? 4 + Math.sqrt(n.deg) * 2 : n.type === 'ms' ? 5 + Math.min(6, Math.sqrt(n.n || 1)) : 7 + Math.sqrt(n.deg) * 2.2;
+  sim?.stop();
+  sim = d3.forceSimulation(g.nodes)
+    .force('link', d3.forceLink(g.links).distance(view === 'people' ? (small ? 38 : 55) : (small ? 90 : 140)).strength(.7))
+    .force('charge', d3.forceManyBody().strength(view === 'people' ? -230 : -420))
+    .force('collide', d3.forceCollide((n) => R(n) + (small ? 7 : 10)))
+    .force('x', d3.forceX(W / 2).strength(view === 'people' ? .12 : .04)).force('y', d3.forceY(H / 2).strength(view === 'people' ? .16 : .06))
+    .stop();
+  // Settled before the first paint (no motion for those who ask for none); only a drag wakes it
+  for (let i = 0; i < 400; i++) sim.tick();
+  const clamp = () => g.nodes.forEach((n) => { n.x = Math.max(R(n) + 4, Math.min(W - R(n) - 4, n.x)); n.y = Math.max(R(n) + 16, Math.min(H - R(n) - 4, n.y)); });
+  clamp();
+  const wScale = d3.scaleSqrt().domain([1, Math.max(1, ...g.links.map((l) => l.n || 1))]).range([1, 5]);
+  const edge = svg.append('g').selectAll('line').data(g.links).join('line')
+    .attr('class', (l) => `edge${l.probable ? ' probable' : ''}`).attr('stroke-width', (l) => view === 'scenes' ? wScale(l.n) : 1.5);
+  const node = svg.append('g').selectAll('g').data(g.nodes).join('g')
+    .attr('class', (n) => `node ${n.type}`).attr('tabindex', 0).attr('role', 'button')
+    .attr('aria-label', (n) => `${t(KIND[n.type][0])}: ${nodeLabel(n)}`).style('--c', (n) => COL[n.type]);
+  node.each(function (n) {
+    const s = d3.select(this), r = R(n);
+    if (n.type === 'ms') s.append('rect').attr('class', 'shape').attr('x', -r).attr('y', -r).attr('width', 2 * r).attr('height', 2 * r).attr('rx', 1.5);
+    else if (n.type === 'place') s.append('rect').attr('class', 'shape').attr('x', -r).attr('y', -r).attr('width', 2 * r).attr('height', 2 * r).attr('transform', 'rotate(45)');
+    else if (n.type === 'patron') s.append('path').attr('class', 'shape').attr('d', d3.symbol(d3.symbolTriangle, r * r * 3.2)());
+    else s.append('circle').attr('class', 'shape').attr('r', r);
+    // Names of painters, cities and patrons always; a manuscript's or scene's name on touch
+    const always = n.type === 'painter' || n.type === 'place' || n.type === 'patron';
+    s.append('text').attr('class', `lab${always ? ' big' : ' fade'}`).attr('x', 0).attr('y', -R(n) - 5).attr('text-anchor', 'middle').text(nodeLabel(n).replace(/^(Sultan|Shah) /, '$1 '));
+  });
+  const place_ = () => {
+    edge.attr('x1', (l) => l.source.x).attr('y1', (l) => l.source.y).attr('x2', (l) => l.target.x).attr('y2', (l) => l.target.y);
+    node.attr('transform', (n) => `translate(${n.x},${n.y})`);
+  };
+  place_();
+  // Keep the end labels inside the picture
+  node.select('text.lab').each(function (n) { const w = this.getComputedTextLength(); if (n.x - w / 2 < 2) this.setAttribute('dx', 2 - (n.x - w / 2)); else if (n.x + w / 2 > W - 2) this.setAttribute('dx', W - 2 - (n.x + w / 2)); });
+  const choose = (n) => { sel = sel === n.id ? null : n.id; mark(g); describe(g); };
+  node.on('click', (e, n) => choose(n)).on('keydown', (e, n) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(n); } })
+    .on('pointerenter', (e, n) => { if (e.pointerType !== 'touch' && !sel) light(g, n); })
+    .on('pointerleave', () => { if (!sel) light(g, null); });
+  node.call(d3.drag().on('start', (e, n) => { if (!e.active) sim.alphaTarget(.2).restart(); n.fx = n.x; n.fy = n.y; })
+    .on('drag', (e, n) => { n.fx = e.x; n.fy = e.y; })
+    .on('end', (e, n) => { if (!e.active) sim.alphaTarget(0); n.fx = n.fy = null; }));
+  if (!still()) sim.on('tick', () => { clamp(); place_(); });
+  svg.on('click', (e) => { if (e.target === svg.node()) { sel = null; mark(g); describe(g); } });
+  g.dom = { node, edge };
+  svg.node().__g = g;
+  mark(g); describe(g);
+}
+
+const neighbours = (g, n) => new Set([n, ...g.links.filter((l) => l.source === n || l.target === n).flatMap((l) => [l.source, l.target])]);
+function light(g, n) {
+  const near = n ? neighbours(g, n) : null;
+  g.dom.node.classed('dim', (d) => !!near && !near.has(d)).classed('near', (d) => !!near && near.has(d) && d !== n);
+  g.dom.edge.classed('dim', (l) => !!n && l.source !== n && l.target !== n);
+}
+function mark(g) {
+  const n = g.nodes.find((x) => x.id === sel) ?? null;
+  g.dom.node.classed('on', (d) => d === n);
+  light(g, n);
+}
+
+const gal = (m) => `../?ms=${encodeURIComponent(m)}${lang === 'az' ? '' : `&lang=${lang}`}`;
+const dl = (rows) => `<dl>${rows.filter((r) => r[1]).map(([k, v]) => `<dt>${esc(t(k))}</dt><dd>${v}</dd>`).join('')}</dl>`;
+function describe(g) {
+  const n = g.nodes.find((x) => x.id === sel);
+  if (!n) { info.innerHTML = `<p class="empty">${esc(t('pick'))}</p>`; return; }
+  const link = (x) => g.links.filter((l) => l.source === n || l.target === n).map((l) => ({ o: l.source === n ? l.target : l.source, l }));
+  const head = `<div class="k">${esc(t(KIND[n.type][0]))}</div><h3>${esc(nodeLabel(n))}</h3>`;
+  const msLine = (m) => `<a href="${gal(m.ms)}">${esc(m.title || m.label)}</a> <span class="muted">(${m.year ?? '?'}${m.place ? ', ' + esc(place(m.place)) : ''})</span>`;
+  if (n.type === 'painter') {
+    const ms = link().map(({ o, l }) => ({ ...o, probable: l.probable })).sort((a, b) => a.year - b.year);
+    const peers = [...new Set(net.together.filter((p) => p.a === n.label || p.b === n.label).map((p) => (p.a === n.label ? p.b : p.a)))];
+    info.innerHTML = head + dl([['ms', `<ul>${ms.map((m) => `<li>${msLine(m)}${m.probable ? ` <em>(${esc(t('probable'))})</em>` : ''}</li>`).join('')}</ul>`], ['peers', peers.map(esc).join(', ')]]);
+  } else if (n.type === 'ms') {
+    const rel = link();
+    info.innerHTML = head + `<div class="muted">${esc(n.title)}</div>` + dl([
+      ['year', `${n.year}${n.yearEnd && n.yearEnd !== n.year ? '–' + n.yearEnd : ''}`],
+      ['place', [n.place && esc(place(n.place)), n.dynasty && esc(dyn(n.dynasty))].filter(Boolean).join(', ')],
+      ['patron', esc(rel.filter((r) => r.o.type === 'patron').map((r) => r.o.full).join(', '))],
+      ['painters', esc(rel.filter((r) => r.o.type === 'painter').map((r) => r.o.label + (r.l.probable ? ` (${t('probable')})` : '')).join(', '))],
+      ['held', esc(n.holding)], ['pics', n.n ? esc(t('n')(n.n)) : ''], ['conf', esc(n.confidence)]]) + (n.n ? `<a class="go" href="${gal(n.ms)}">${esc(t('openG'))} →</a>` : '');
+  } else if (n.type === 'place' || n.type === 'patron') {
+    if (view === 'scenes') {
+      const rel = link().map(({ o, l }) => ({ s: o.s, l })).sort((a, b) => b.l.n - a.l.n);
+      info.innerHTML = head + dl([['scenes', `<ul>${rel.slice(0, 12).map(({ s, l }) => `<li>${esc(s[lang] || s.az)} <span class="muted">(${esc(t('n')(l.n))}, ${l.year})</span></li>`).join('')}</ul>${rel.length > 12 ? `<span class="muted">+ ${rel.length - 12}</span>` : ''}`]]);
+    } else {
+      const ms = link().map(({ o }) => o).sort((a, b) => a.year - b.year);
+      info.innerHTML = head + dl([['ms', `<ul>${ms.map((m) => `<li>${msLine(m)}</li>`).join('')}</ul>`]]);
+    }
+  } else {
+    const s = n.s;
+    info.innerHTML = head + dl([['poem', esc(s.poemName[lang] || s.poemName.az)],
+      ['cities', `<ul>${s.cities.map((c) => `<li>${esc(place(c.city))} <span class="muted">(${c.year}, ${esc(t('n')(c.n))})</span></li>`).join('')}</ul>`]])
+      + `<a class="go" href="../?p=${encodeURIComponent(s.poem)}${lang === 'az' ? '' : `&lang=${lang}`}">${esc(t('openP'))} →</a>`;
+  }
+}
+
+function legend() {
+  const kinds = view === 'people' ? ['painter', 'ms', 'patron', 'place'] : ['scene', 'place'];
+  document.getElementById('legend').innerHTML = kinds.map((k) => `<span><i class="${KIND[k][1]}" style="--c:${COL[k]}"></i>${esc(t(KIND[k][0]))}</span>`).join('');
+}
+function lists() {
+  document.getElementById('s-people').hidden = view !== 'people';
+  document.getElementById('s-scenes').hidden = view !== 'scenes';
+  // One line per manuscript that names two or more painters
+  const byMs = new Map();
+  for (const l of net.links) if (l.kind === 'painted') byMs.set(l.target, [...(byMs.get(l.target) ?? []), l.source]);
+  document.getElementById('pairs').innerHTML = [...byMs].filter(([, ps]) => ps.length >= 2).map(([m, ps]) => {
+    const mn = net.nodes.find((n) => n.id === m), names = ps.map((id) => net.nodes.find((n) => n.id === id).label);
+    return `<li><a href="${gal(mn.ms)}">${esc(mn.label)}</a> <span class="ms">(${mn.year}${mn.place ? ', ' + esc(place(mn.place)) : ''})</span><br>${names.map(esc).join(', ')}</li>`;
+  }).join('');
+  const rows = all ? net.scenes : net.scenes.slice(0, 12);
+  document.getElementById('travels').innerHTML = rows.map((s) => `<li><span class="nm">${esc(s[lang] || s.az)}</span> <span class="poem">· ${esc(s.poemName[lang] || s.poemName.az)} · ${esc(t('nc')(s.cities.length))}</span>
+    <div class="chain">${s.cities.map((c) => `<span>${esc(place(c.city))} <small>${c.year}</small></span>`).join('<span class="arr" aria-hidden="true">→</span>')}</div></li>`).join('');
+  const more = document.getElementById('more');
+  more.hidden = net.scenes.length <= 12;
+  more.textContent = all ? t('less') : t('more')(net.scenes.length);
+}
+document.getElementById('more').onclick = () => { all = !all; lists(); };
+
+function applyLang() {
+  document.documentElement.lang = lang;
+  document.title = t('doc');
+  document.querySelectorAll('[data-i18n]').forEach((e) => e.textContent = t(e.dataset.i18n));
+  document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+  document.querySelectorAll('[data-keep-lang]').forEach((a) => { const u = new URL(a.getAttribute('href'), location.href); if (lang === 'az') u.searchParams.delete('lang'); else u.searchParams.set('lang', lang); a.href = u.pathname + u.search; });
+  if (!net) return;
+  document.getElementById('lede').textContent = t('lede')(net.stats);
+  document.getElementById('hint').textContent = t(view === 'people' ? 'hintPeople' : 'hintScenes');
+  document.getElementById('method').innerHTML = t('method')(net.stats);
+  document.getElementById('foot').innerHTML = t('foot')(net.built);
+  document.querySelectorAll('[data-view]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.view === view));
+  legend(); lists(); draw();
+}
+document.querySelectorAll('[data-view]').forEach((b) => b.onclick = () => {
+  view = b.dataset.view; sel = null;
+  const u = new URL(location.href); if (view === 'people') u.searchParams.delete('view'); else u.searchParams.set('view', view); history.replaceState(null, '', u);
+  applyLang();
+});
+document.querySelectorAll('[data-lang]').forEach((b) => b.onclick = () => {
+  lang = b.dataset.lang;
+  try { localStorage.setItem('lang', lang); } catch {}
+  const u = new URL(location.href); if (lang === 'az') u.searchParams.delete('lang'); else u.searchParams.set('lang', lang); history.replaceState(null, '', u);
+  applyLang();
+});
+let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(draw, 150); });
+if (new URLSearchParams(location.search).get('view') === 'scenes') view = 'scenes';
+applyLang();
+document.fonts?.ready.then(() => net && draw());
+fetch('../data/network.json').then((r) => r.json()).then((d) => { net = d; applyLang(); });
+})();
+</script>
+</body>
+</html>
