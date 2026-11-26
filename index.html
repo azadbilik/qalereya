@@ -164,6 +164,8 @@
   .stage img { transition: filter .3s; }
   .stage.busy img { filter: blur(2px); }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } .card .frame::after { animation: none; } }
+  /* Phones: the language switch on the brand's line, the sections on the line below */
+  @media (max-width: 40rem) { header.top { position: relative; } header.top .langs { position: absolute; top: calc(1.5rem - .375rem); right: 0; margin: 0; } }
 </style>
 </head>
 <body>
@@ -315,7 +317,9 @@ function drawPoems() {
   const edge = () => row.classList.toggle('end', row.scrollLeft + row.clientWidth >= row.scrollWidth - 4);
   row.onscroll = edge; edge();
   // The chosen poem's tab in view, on a phone where the row scrolls
-  document.querySelector('#poems [aria-pressed="true"]')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  // (sideways only: scrollIntoView would also scroll the page down to the bar on a short screen)
+  const on = row.querySelector('[aria-pressed="true"]');
+  if (on && row.scrollWidth > row.clientWidth) row.scrollLeft = Math.max(0, on.offsetLeft - row.offsetLeft - 24);
 }
 
 function inPoem(x) { return state.poem == null || (state.poem === OTHER ? isOther(x) : x.poem === state.poem); }
