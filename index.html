@@ -42,7 +42,14 @@
   .brand { white-space: nowrap; display: inline-flex; align-items: center; gap: .5rem; font-size: .8125rem; font-weight: 600; text-decoration: none; }
   .brand svg { width: 1rem; height: 1rem; }
   .star { fill: currentColor; } .gem { fill: var(--accent); }
-  header.top nav { font-size: .8125rem; color: var(--muted); display: flex; gap: 1.25rem; }
+  header.top nav { font-size: .8125rem; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: .25rem 1.25rem; }
+  header.top nav a { text-decoration: none; }
+  header.top nav a:hover, header.top nav a[aria-current] { color: var(--ink); }
+  header.top nav a[aria-current] { box-shadow: inset 0 -1px currentColor; }
+  .langs button { min-height: 1.75rem; min-width: 1.75rem; }
+  .lead .more { font: 400 .875rem var(--sans); white-space: nowrap; color: var(--accent); text-decoration: none; }
+  .lead .more::after { content: ' →'; }
+  .lead .more:hover { text-decoration: underline; }
 
   .hero { padding: 3.5rem 0 2.5rem; max-width: 46rem; }
   h1 { font: 400 clamp(2.5rem, 2rem + 2.5vw, 4rem)/1 var(--serif); letter-spacing: -.03em; }
@@ -50,16 +57,21 @@
 
   .bar { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
   .bar .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; padding-top: .75rem; padding-bottom: .75rem; }
-  .poems { display: flex; gap: .25rem; overflow-x: auto; scrollbar-width: none; flex: 1 1 32rem; margin: -.25rem; padding: .25rem; }
+  .poems { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; flex: 1 1 40rem; margin: -.25rem; padding: .25rem; }
+  .poems .poet { font-size: .75rem; color: var(--muted); padding: 0 .1rem 0 .9rem; white-space: nowrap; }
+  .poems .poet:empty { padding-left: .5rem; }
   .poems::-webkit-scrollbar { display: none; }
   .poems button { white-space: nowrap; padding: .4rem .75rem; border-radius: 999px; font-size: .8125rem; color: var(--muted); }
   .poems button:hover { color: var(--ink); background: var(--tint); }
   .poems button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
-  .poems small { opacity: .65; margin-left: .3rem; font-variant-numeric: tabular-nums; }
+  .poems small { margin-left: .3rem; font-variant-numeric: tabular-nums; }
   .filters { display: flex; align-items: center; gap: 1rem; font-size: .8125rem; color: var(--muted); }
   .filters select { background: transparent; border: 1px solid var(--rule); border-radius: 3px; padding: .3rem .5rem; max-width: 14rem; }
   .filters label { display: inline-flex; gap: .4rem; align-items: center; cursor: pointer; white-space: nowrap; }
   .filters input { accent-color: var(--accent); }
+  .filters select:has(option:checked:not([value=""])) { border-color: var(--ink); color: var(--ink); }
+  .link { color: var(--accent); text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: 1px; white-space: nowrap; }
+  .link:hover { text-decoration-thickness: 2px; }
 
   main { padding: 2rem 0 4rem; }
   .count { font-size: .8125rem; color: var(--muted); margin-bottom: 1.5rem; }
@@ -81,6 +93,9 @@
     background: linear-gradient(100deg, transparent 30%, var(--sheen) 50%, transparent 70%) 0 0 / 250% 100%;
     animation: sheen 1.6s ease-in-out infinite; transition: opacity .3s; }
   .card .frame.ok::after { opacity: 0; animation: none; }
+  .card .frame.failed { display: grid; place-items: center; min-height: 8rem; }
+  .card .frame.failed img { visibility: hidden; }
+  .card .frame.failed::before { content: attr(data-msg); position: absolute; inset: 0; display: grid; place-items: center; padding: 1rem; text-align: center; font-size: .75rem; color: var(--muted); }
   @keyframes sheen { from { background-position: 100% 0; } to { background-position: -150% 0; } }
   .card img { width: 100%; height: auto; transition: opacity .4s, transform .4s; opacity: 0; }
   .card img.ok { opacity: 1; }
@@ -122,10 +137,17 @@
     .hero { padding: 2rem 0 1.5rem; }
     .grid { columns: 2; column-gap: .75rem; }
     .strip { gap: 1rem .75rem; }
-    .strip .card img { height: 11rem; min-width: 5rem; }
+    .strip .card img:not([width]) { height: 11rem; min-width: 5rem; }
     .card { margin-bottom: 1rem; }
-    .filters { width: 100%; justify-content: space-between; gap: .5rem; }
-    .filters select { min-width: 0; flex: 1; }
+    /* On a phone the tabs scroll in one row, fading at the edge that has more */
+    .poems { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; flex-basis: 100%;
+      mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent); }
+    .poems.end { mask-image: none; }
+    .strip .card img { height: auto; width: auto; max-height: 11rem; max-width: calc(100vw - 2rem); }
+    .strip .card { max-width: 100%; }
+    .filters { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+    .filters select { min-width: 0; max-width: none; }
+    .filters label, .filters .link { grid-column: span 1; }
     .filters label { white-space: normal; }
     header.top nav { gap: .75rem; flex-wrap: wrap; justify-content: flex-end; }
     .viewer { grid-template-columns: 1fr; grid-template-rows: 62vh auto; height: auto; min-height: 100%; }
@@ -148,11 +170,11 @@
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a>
-    <nav><a href="emalatxana/" data-i18n="workshops" data-keep-lang>Emalatxanalar</a><a href="/xeriteler/" data-i18n="maps" data-keep-lang>Xəritələr</a><a href="https://kitabxana.az" data-i18n="library" id="kx">Kitabxana</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
+    <nav aria-label="Azad Bilik"><a href="https://kitabxana.az" data-i18n="library" id="kx">Kitabxana</a><a href="./" data-i18n="title" aria-current="page" data-keep-lang>Qalereya</a><a href="/xeriteler/" data-i18n="maps" data-keep-lang>Ədəbi xəritələr</a><a href="/atlas/" data-i18n="atlas" data-keep-lang>Atlas</a><a href="/musiqi/" data-i18n="music" data-keep-lang>Musiqi</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
   </header>
   <div class="hero">
     <h1 data-i18n="title">Qalereya</h1>
-    <p class="lead" data-i18n="lead">Nizami və Füzulinin poemalarına beş əsr ərzində çəkilmiş miniatürlər: Təbriz, Herat, Şiraz, İstanbul əlyazmalarından, muzeylərin açıq kolleksiyalarından.</p>
+    <p class="lead"><span data-i18n="lead">Nizami və Füzulinin poemalarına beş əsr ərzində çəkilmiş miniatürlər: Təbriz, Herat, Şiraz, İstanbul əlyazmalarından, muzeylərin açıq kolleksiyalarından.</span> <a class="more" href="emalatxana/" data-i18n="workshops" data-keep-lang>Emalatxanaların xəritəsi</a></p>
   </div>
 </div>
 
@@ -161,7 +183,10 @@
     <div class="poems" id="poems" role="group" data-i18n-label="poem"></div>
     <div class="filters">
       <select id="ms" data-i18n-label="manuscript"></select>
+      <select id="c" data-i18n-label="century"></select>
+      <select id="pl" data-i18n-label="school"></select>
       <label><input type="checkbox" id="free"> <span data-i18n="freeOnly">Yalnız sərbəst lisenziya</span></label>
+      <button type="button" class="link" id="reset" data-i18n="reset" hidden>Sıfırla</button>
     </div>
   </div>
 </div>
@@ -203,28 +228,28 @@ const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 
 function plural(n, one, few, many) { const r = new Intl.PluralRules('ru').select(n); return r === 'one' ? one : r === 'few' ? few : many; }
 const T = {
   az: { doc: 'Qalereya · Azad Bilik', title: 'Qalereya', lead: 'Nizami və Füzulinin poemalarına beş əsr ərzində çəkilmiş miniatürlər: Təbriz, Herat, Şiraz, İstanbul əlyazmalarından, muzeylərin açıq kolleksiyalarından.',
-    workshops: 'Emalatxanalar', maps: 'Xəritələr', library: 'Kitabxana', poem: 'Poema', manuscript: 'Əlyazma', allMs: 'Bütün əlyazmalar', freeOnly: 'Yalnız sərbəst lisenziya',
+    workshops: 'Emalatxanaların xəritəsi', maps: 'Ədəbi xəritələr', atlas: 'Atlas', music: 'Musiqi', library: 'Kitabxana', poem: 'Poema', manuscript: 'Əlyazma', allMs: 'Bütün əlyazmalar', century: 'Əsr', allC: 'Bütün əsrlər', school: 'Harada çəkilib', allPl: 'Bütün məktəblər', cities: 'Şəhər', dynasties: 'Sülalə', reset: 'Sıfırla', freeOnly: 'Yalnız sərbəst lisenziya',
     footer: 'Şəkillər muzeylərin açıq kolleksiyalarından və Wikimedia Commons-dandır; ekrana uyğun surətləri burada saxlanılır, əsli mənbədədir. Hər birinin mənbəyi və lisenziyası yanındadır.',
     miniature: 'Miniatür', prev: 'Əvvəlki', next: 'Sonrakı', all: 'Hamısı', other: 'Digər', count: (n) => `${n} miniatür`, empty: 'Heç nə tapılmadı.', noScene: 'Səhnəsi müəyyənləşdirilməyənlər',
     readChapter: 'Fəsli oxu', undated: 'Tarixsiz', cent: (c) => `${ROMAN[c]} əsr`,
     date: 'Tarix', painted: 'Çəkilib', artist: 'Rəssam', ms: 'Əlyazma', medium: 'Material', held: 'Mənbə', credit: 'Kredit', licence: 'Lisenziya', close: 'Bağla',
-    loading: 'Yüklənir…',
+    loading: 'Yüklənir…', noImage: 'Şəkil yüklənmədi — açıb mənbədə baxın',
     readScene: 'Bu səhnəni kitabxana.az-da oxu', readPoem: 'Poemanı kitabxana.az-da oxu', atSource: 'Mənbədə bax', full: 'Tam ölçüdə', share: 'Linki paylaş', copied: 'Link köçürüldü' },
   ru: { doc: 'Галерея · Azad Bilik', title: 'Галерея', lead: 'Пять веков миниатюр к поэмам Низами и Физули — из рукописей, созданных в Тебризе, Герате, Ширазе и Стамбуле, из открытых коллекций музеев.',
-    workshops: 'Мастерские', maps: 'Карты', library: 'Библиотека', poem: 'Поэма', manuscript: 'Рукопись', allMs: 'Все рукописи', freeOnly: 'Только свободная лицензия',
+    workshops: 'Карта мастерских', maps: 'Литературные карты', atlas: 'Атлас', music: 'Музыка', library: 'Библиотека', poem: 'Поэма', manuscript: 'Рукопись', allMs: 'Все рукописи', century: 'Век', allC: 'Все века', school: 'Где написана', allPl: 'Все школы', cities: 'Город', dynasties: 'Династия', reset: 'Сбросить', freeOnly: 'Только свободная лицензия',
     footer: 'Изображения — из открытых коллекций музеев и Викисклада; копии для экрана хранятся здесь, оригиналы — у источника. У каждого указаны источник и лицензия.',
     miniature: 'Миниатюра', prev: 'Предыдущая', next: 'Следующая', all: 'Все', other: 'Другое', count: (n) => `${n} ${plural(n, 'миниатюра', 'миниатюры', 'миниатюр')}`, empty: 'Ничего не найдено.', noScene: 'Сцена не определена',
     readChapter: 'Читать главу', undated: 'Без даты', cent: (c) => `${ROMAN[c]} век`,
     date: 'Дата', painted: 'Создана', artist: 'Художник', ms: 'Рукопись', medium: 'Материал', held: 'Собрание', credit: 'Авторство', licence: 'Лицензия', close: 'Закрыть',
-    loading: 'Загрузка…',
+    loading: 'Загрузка…', noImage: 'Изображение не загрузилось — откройте, чтобы посмотреть в источнике',
     readScene: 'Читать эту сцену на kitabxana.az', readPoem: 'Читать поэму на kitabxana.az', atSource: 'В источнике', full: 'Полный размер', share: 'Поделиться', copied: 'Ссылка скопирована' },
   en: { doc: 'Gallery · Azad Bilik', title: 'Gallery', lead: 'Five centuries of miniatures painted for the poems of Nizami and Fuzuli, from manuscripts made in Tabriz, Herat, Shiraz and Istanbul, out of museums\' open collections.',
-    workshops: 'Workshops', maps: 'Maps', library: 'Library', poem: 'Poem', manuscript: 'Manuscript', allMs: 'All manuscripts', freeOnly: 'Free to reuse only',
+    workshops: 'Map of the workshops', maps: 'Literary maps', atlas: 'Atlas', music: 'Music', library: 'Library', poem: 'Poem', manuscript: 'Manuscript', allMs: 'All manuscripts', century: 'Century', allC: 'All centuries', school: 'Where painted', allPl: 'All schools', cities: 'City', dynasties: 'Dynasty', reset: 'Clear filters', freeOnly: 'Free to reuse only',
     footer: 'The pictures come from museums\' open collections and Wikimedia Commons; screen-sized copies are kept here, the originals at the source. Each comes with its source and licence.',
     miniature: 'Miniature', prev: 'Previous', next: 'Next', all: 'All', other: 'Other', count: (n) => `${n} miniature${n === 1 ? '' : 's'}`, empty: 'Nothing matches.', noScene: 'Scene not identified',
     readChapter: 'Read the chapter', undated: 'Undated', cent: (c) => `${c}${[, 'st', 'nd', 'rd'][c % 10 * (c % 100 > 3 && c % 100 < 21 ? 0 : 1)] ?? 'th'} century`,
     date: 'Date', painted: 'Painted in', artist: 'Artist', ms: 'Manuscript', medium: 'Medium', held: 'Held by', credit: 'Credit', licence: 'Licence', close: 'Close',
-    loading: 'Loading…',
+    loading: 'Loading…', noImage: 'The picture didn’t load — open it to see it at the source',
     readScene: 'Read this passage on kitabxana.az', readPoem: 'Read the poem on kitabxana.az', atSource: 'At the source', full: 'Full size', share: 'Share', copied: 'Link copied' },
 };
 const t = (k) => T[lang][k];
@@ -250,11 +275,12 @@ document.querySelectorAll('[data-lang]').forEach((b) => b.onclick = () => {
   if (dlg.open && view[at]) show(view[at].id);
 });
 const OTHER = '_';
+const POETS = { nizami: { az: 'Nizami', ru: 'Низами', en: 'Nizami' }, fuzuli: { az: 'Füzuli', ru: 'Физули', en: 'Fuzuli' } };
 let data, view = [], at = -1;
-const state = { poem: null, ms: '', free: false };
+const state = { poem: null, ms: '', c: '', pl: '', free: false };
 
 const params = new URLSearchParams(location.search);
-state.poem = params.get('p'); state.ms = params.get('ms') ?? ''; state.free = params.get('free') === '1';
+state.poem = params.get('p'); state.ms = params.get('ms') ?? ''; state.c = params.get('c') ?? ''; state.pl = params.get('pl') ?? ''; state.free = params.get('free') === '1';
 
 fetch('data/gallery.json').then((r) => r.json()).then((d) => {
   data = d;
@@ -270,40 +296,84 @@ const isOther = (x) => !x.poem || !data.poemOf.has(x.poem);
 function drawPoems() {
   const other = data.items.filter(isOther).length;
   const btn = (slug, label, n) => `<button type="button" data-p="${slug ?? ''}" aria-pressed="${(state.poem ?? '') === (slug ?? '')}">${label}<small>${n}</small></button>`;
+  // Poems under their poet, so two «Leyli və Məcnun» read apart without a prefix
+  const groups = [];
+  for (const p of data.poems) {
+    const a = p.slug.split('-')[0];
+    (groups.find((g) => g.a === a) ?? groups[groups.push({ a, poems: [] }) - 1]).poems.push(p);
+  }
   document.getElementById('poems').innerHTML = btn(null, t('all'), data.items.length)
-    + data.poems.map((p) => btn(p.slug, esc(tr(p)), p.count)).join('')
-    + (other ? btn(OTHER, t('other'), other) : '');
+    + groups.map((g) => `<span class="poet">${esc(tr(POETS[g.a]) || g.a)}</span>`
+      + g.poems.map((p) => btn(p.slug, esc(tr(p).replace(/^[^:]+:\s*/, (m) => tr(POETS[g.a]) && m.startsWith(tr(POETS[g.a])) ? '' : m)), p.count)).join('')).join('')
+    + (other ? `<span class="poet" aria-hidden="true"></span>` + btn(OTHER, t('other'), other) : '');
   document.querySelectorAll('#poems button').forEach((b) => b.onclick = () => {
     state.poem = b.dataset.p || null;
     document.querySelectorAll('#poems button').forEach((x) => x.setAttribute('aria-pressed', x === b));
-    state.ms = ''; drawFilters(); render(true);
+    drawFilters(); render(true);
   });
+  const row = document.getElementById('poems');
+  const edge = () => row.classList.toggle('end', row.scrollLeft + row.clientWidth >= row.scrollWidth - 4);
+  row.onscroll = edge; edge();
   // The chosen poem's tab in view, on a phone where the row scrolls
   document.querySelector('#poems [aria-pressed="true"]')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 }
 
 function inPoem(x) { return state.poem == null || (state.poem === OTHER ? isOther(x) : x.poem === state.poem); }
 
+// The filters narrow one another: each list counts the pictures the other filters leave
+const FACETS = {
+  ms: (x) => x.manuscript ? [x.manuscript] : [],
+  c: (x) => x.century ? [String(x.century)] : [],
+  // Where it was painted: a city, or the dynasty whose workshop it was (a picture can match both)
+  pl: (x) => [x.place?.city && `c:${x.place.city.en}`, x.place?.dynasty && `d:${x.place.dynasty.en}`].filter(Boolean),
+};
+const passes = (x, skip) => inPoem(x) && (!state.free || x.free)
+  && Object.keys(FACETS).every((f) => f === skip || !state[f] || FACETS[f](x).includes(state[f]));
+function tally(f) {
+  const n = {};
+  for (const x of data.items) if (passes(x, f)) for (const v of FACETS[f](x)) n[v] = (n[v] ?? 0) + 1;
+  return n;
+}
+const opt = (v, label, n, cur) => `<option value="${esc(v)}"${v === cur ? ' selected' : ''}>${esc(label)} (${n})</option>`;
 function drawFilters() {
-  const counts = {};
-  for (const x of data.items) if (inPoem(x) && x.manuscript) counts[x.manuscript] = (counts[x.manuscript] ?? 0) + 1;
-  const ms = Object.entries(counts).sort((a, b) => b[1] - a[1]);
-  if (state.ms && !counts[state.ms]) state.ms = '';
-  const sel = document.getElementById('ms');
-  sel.innerHTML = `<option value="">${t('allMs')}</option>` + ms.map(([m, n]) => `<option value="${esc(m)}"${m === state.ms ? ' selected' : ''}>${esc(m)} (${n})</option>`).join('');
-  sel.hidden = ms.length === 0;
-  sel.onchange = () => { state.ms = sel.value; render(true); };
+  // Drop a choice the current poem doesn't have, before counting the rest against it
+  for (const f of Object.keys(FACETS)) if (state[f] && !data.items.some((x) => inPoem(x) && FACETS[f](x).includes(state[f]))) state[f] = '';
+  const sel = (id, html, any) => { const s = document.getElementById(id); s.innerHTML = html; s.hidden = !any; s.onchange = () => { state[id] = s.value; drawFilters(); render(true); }; };
+
+  const ms = Object.entries(tally('ms')).sort((a, b) => b[1] - a[1]);
+  sel('ms', `<option value="">${t('allMs')}</option>` + ms.map(([m, n]) => opt(m, m, n, state.ms)).join(''), ms.length);
+
+  const cs = Object.entries(tally('c')).sort((a, b) => a[0] - b[0]);
+  sel('c', `<option value="">${t('allC')}</option>` + cs.map(([c, n]) => opt(c, t('cent')(+c), n, state.c)).join(''), cs.length > 1 || state.c);
+
+  // Cities and dynasties, each by number of pictures; labels in the reader's language
+  const names = {};
+  for (const x of data.items) { if (x.place?.city) names[`c:${x.place.city.en}`] = x.place.city; if (x.place?.dynasty) names[`d:${x.place.dynasty.en}`] = x.place.dynasty; }
+  const pl = Object.entries(tally('pl')).sort((a, b) => b[1] - a[1]);
+  const group = (k, label) => { const o = pl.filter(([v]) => v.startsWith(k)); return o.length ? `<optgroup label="${esc(label)}">${o.map(([v, n]) => opt(v, tr(names[v]), n, state.pl)).join('')}</optgroup>` : ''; };
+  sel('pl', `<option value="">${t('allPl')}</option>` + group('c:', t('cities')) + group('d:', t('dynasties')), pl.length);
+
   const free = document.getElementById('free');
   // Only worth offering when some images are under a restrictive licence
   free.closest('label').hidden = data.items.every((x) => x.free);
   free.checked = state.free;
-  free.onchange = () => { state.free = free.checked; render(true); };
+  free.onchange = () => { state.free = free.checked; drawFilters(); render(true); };
+
+  const reset = document.getElementById('reset');
+  reset.hidden = !(state.ms || state.c || state.pl || state.free);
+  reset.onclick = clearFilters;
+}
+function clearFilters() {
+  state.ms = state.c = state.pl = ''; state.free = false;
+  drawFilters(); render(true);
 }
 
 function keepUrl() {
   const p = new URLSearchParams();
   if (state.poem) p.set('p', state.poem);
   if (state.ms) p.set('ms', state.ms);
+  if (state.c) p.set('c', state.c);
+  if (state.pl) p.set('pl', state.pl);
   if (state.free) p.set('free', '1');
   if (lang !== 'az') p.set('lang', lang);
   const q = p.toString();
@@ -312,11 +382,15 @@ function keepUrl() {
 
 function render(fromUser) {
   if (fromUser) keepUrl();
-  const items = data.items.filter((x) => inPoem(x) && (!state.ms || x.manuscript === state.ms) && (!state.free || x.free));
+  const items = data.items.filter((x) => passes(x));
   const poem = data.poemOf.get(state.poem);
   const el = document.getElementById('content');
   document.getElementById('count').textContent = `${t('count')(items.length)}${poem ? ` · ${tr(poem)}` : ''}`;
-  if (!items.length) { el.innerHTML = `<p class="empty">${t('empty')}</p>`; view = []; return; }
+  if (!items.length) {
+    el.innerHTML = `<p class="empty">${t('empty')} <button type="button" class="link" id="empty-reset">${t('reset')}</button></p>`;
+    document.getElementById('empty-reset').onclick = clearFilters;
+    view = []; return;
+  }
 
   // A poem with a scene catalogue reads in story order, scene by scene, each linked to its chapter
   const scenes = poem?.scenes?.filter((s) => items.some((x) => x.scene === s.id)) ?? [];
@@ -350,7 +424,20 @@ function wire(el) {
     b.onclick = () => show(b.dataset.id);
     const img = b.querySelector('img');
     const ok = () => { img.classList.add('ok'); img.parentElement.classList.add('ok'); };
-    if (img.complete && img.naturalWidth) ok(); else { img.onload = ok; img.onerror = () => b.remove(); }
+    if (img.complete && img.naturalWidth) { ok(); return; }
+    img.onload = ok;
+    // A picture that fails to arrive keeps its place: once more (a busy moment), then our larger
+    // copy, then the museum's own file; failing all three, the frame says so and still opens
+    const x = data.byId.get(b.dataset.id);
+    const tries = [`${x.thumb}?r=1`, x.large, x.image].filter(Boolean);
+    img.onerror = () => {
+      if (!b.isConnected) return;
+      const next = tries.shift();
+      if (next) { img.src = next; return; }
+      img.onerror = null;
+      img.parentElement.classList.add('ok', 'failed');
+      img.parentElement.dataset.msg = t('noImage');
+    };
   });
 }
 
