@@ -14,6 +14,7 @@
 <meta property="og:image" content="https://azadbilik.org/qalereya/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/shared/hub.css">
 <style>
   :root {
     --paper: #F4EFE6; --ink: #1A1410; --muted: #675E55; --rule: rgb(26 20 16 / .14); --tint: rgb(26 20 16 / .05);
@@ -53,6 +54,7 @@
   .langs button { min-height: 1.75rem; min-width: 1.75rem; }
   .lead .more { font: 400 .875rem var(--sans); white-space: nowrap; color: var(--accent); text-decoration: none; }
   .lead .more::after { content: ' →'; }
+  .lead .more + .more { margin-left: 1rem; }
   .lead .more:hover { text-decoration: underline; }
 
   .hero { padding: 3.5rem 0 2.5rem; max-width: 46rem; }
@@ -173,14 +175,14 @@
 </style>
 </head>
 <body>
+<header class="hub-header">
+  <a class="brand" data-keep-lang href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a>
+  <nav aria-label="Azad Bilik"><a href="https://kitabxana.az" id="kx"><span data-l="az">Kitabxana</span><span data-l="ru">Библиотека</span><span data-l="en">Library</span></a><a href="/qalereya/" data-keep-lang aria-current="page"><span data-l="az">Qalereya</span><span data-l="ru">Галерея</span><span data-l="en">Gallery</span></a><a href="/xeriteler/" data-keep-lang><span data-l="az">Ədəbi xəritələr</span><span data-l="ru">Литературные карты</span><span data-l="en">Literary maps</span></a><a href="/atlas/" data-keep-lang><span data-l="az">Atlas</span><span data-l="ru">Атлас</span><span data-l="en">Atlas</span></a><a href="/musiqi/" data-keep-lang><span data-l="az">Musiqi</span><span data-l="ru">Музыка</span><span data-l="en">Music</span></a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
+</header>
 <div class="wrap">
-  <header class="top">
-    <a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a>
-    <nav aria-label="Azad Bilik"><a href="https://kitabxana.az" data-i18n="library" id="kx">Kitabxana</a><a href="./" data-i18n="title" aria-current="page" data-keep-lang>Qalereya</a><a href="tarix/" data-i18n="art" data-keep-lang>İncəsənət</a><a href="/xeriteler/" data-i18n="maps" data-keep-lang>Ədəbi xəritələr</a><a href="/atlas/" data-i18n="atlas" data-keep-lang>Atlas</a><a href="/musiqi/" data-i18n="music" data-keep-lang>Musiqi</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
-  </header>
   <div class="hero">
     <h1 data-i18n="title">Qalereya</h1>
-    <p class="lead"><span data-i18n="lead">Nizami və Füzulinin poemalarına beş əsr ərzində çəkilmiş miniatürlər: Təbriz, Herat, Şiraz, İstanbul əlyazmalarından, muzeylərin açıq kolleksiyalarından.</span> <a class="more" href="emalatxana/" data-i18n="workshops" data-keep-lang>Emalatxanaların xəritəsi</a></p>
+    <p class="lead"><span data-i18n="lead">Nizami və Füzulinin poemalarına beş əsr ərzində çəkilmiş miniatürlər: Təbriz, Herat, Şiraz, İstanbul əlyazmalarından, muzeylərin açıq kolleksiyalarından.</span> <a class="more" href="emalatxana/" data-i18n="workshops" data-keep-lang>Emalatxanaların xəritəsi</a> <a class="more" href="tarix/" data-i18n="art" data-keep-lang>İncəsənət</a></p>
   </div>
 </div>
 

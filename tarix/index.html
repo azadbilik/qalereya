@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/shared/theme.js"></script>
 <title>Azərbaycan incəsənəti · Azad Bilik</title>
 <meta name="description" content="Azərbaycan incəsənətinin qədimdən bu günə mənbələrlə kataloqu: Qobustan qayaüstü rəsmləri, xalça, keramika, miniatür, rəngkarlıq. A sourced catalogue of Azerbaijani art from prehistory to today.">
 <meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
@@ -12,6 +13,7 @@
 <meta property="og:description" content="Qobustandan müasir dövrə qədər: mənbəli kataloq.">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/shared/hub.css">
 <style>
   :root {
     --paper: #F4EFE6; --ink: #1A1410; --muted: #675E55; --rule: rgb(26 20 16 / .14); --tint: rgb(26 20 16 / .05);
@@ -20,9 +22,12 @@
     color-scheme: light dark;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --paper: #14100D; --ink: #F1EBE1; --muted: #A0968B; --rule: rgb(241 235 225 / .14); --tint: rgb(241 235 225 / .05);
+    :root:not([data-theme="light"]) { --paper: #14100D; --ink: #F1EBE1; --muted: #A0968B; --rule: rgb(241 235 225 / .14); --tint: rgb(241 235 225 / .05);
       --accent: #DA5A61; --frame: #1F1914; --sheen: rgb(255 255 255 / .05); }
   }
+  :root[data-theme="dark"] { --paper: #14100D; --ink: #F1EBE1; --muted: #A0968B; --rule: rgb(241 235 225 / .14); --tint: rgb(241 235 225 / .05);
+      --accent: #DA5A61; --frame: #1F1914; --sheen: rgb(255 255 255 / .05); }
+
   * { box-sizing: border-box; margin: 0; }
   body { background: var(--paper); color: var(--ink); font: 400 .9375rem/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1px; text-decoration-color: var(--rule); }
@@ -151,11 +156,11 @@
 </style>
 </head>
 <body>
+<header class="hub-header">
+  <a class="brand" data-keep-lang href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a>
+  <nav aria-label="Azad Bilik"><a href="https://kitabxana.az" id="kx"><span data-l="az">Kitabxana</span><span data-l="ru">Библиотека</span><span data-l="en">Library</span></a><a href="/qalereya/" data-keep-lang aria-current="page"><span data-l="az">Qalereya</span><span data-l="ru">Галерея</span><span data-l="en">Gallery</span></a><a href="/xeriteler/" data-keep-lang><span data-l="az">Ədəbi xəritələr</span><span data-l="ru">Литературные карты</span><span data-l="en">Literary maps</span></a><a href="/atlas/" data-keep-lang><span data-l="az">Atlas</span><span data-l="ru">Атлас</span><span data-l="en">Atlas</span></a><a href="/musiqi/" data-keep-lang><span data-l="az">Musiqi</span><span data-l="ru">Музыка</span><span data-l="en">Music</span></a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
+</header>
 <div class="wrap">
-  <header class="top">
-    <a class="brand" href="/"><svg viewBox="0 0 512 512" aria-hidden="true"><g class="star"><rect x="126" y="126" width="260" height="260"/><polygon points="256,72 440,256 256,440 72,256"/></g><polygon class="gem" points="256,196 316,256 256,316 196,256"/></svg>Azad Bilik</a>
-    <nav aria-label="Azad Bilik"><a href="https://kitabxana.az" data-i18n="library" id="kx">Kitabxana</a><a href="../" data-i18n="gallery" data-keep-lang>Qalereya</a><a href="./" data-i18n="title" aria-current="page" data-keep-lang>İncəsənət</a><a href="/xeriteler/" data-i18n="maps" data-keep-lang>Ədəbi xəritələr</a><a href="/atlas/" data-i18n="atlas" data-keep-lang>Atlas</a><a href="/musiqi/" data-i18n="music" data-keep-lang>Musiqi</a><span class="langs" role="group" aria-label="Dil · Язык · Language"><button type="button" data-lang="az">AZ</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="en">EN</button></span></nav>
-  </header>
   <div class="hero">
     <h1 data-i18n="h1">Azərbaycan incəsənəti</h1>
     <p class="lead"><span data-i18n="lead"></span> <a href="../" data-i18n="miniatures" data-keep-lang>Nizami və Füzulinin miniatürləri</a></p>
