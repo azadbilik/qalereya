@@ -154,6 +154,15 @@ for (const x of eur) {
   push({ id: x.sourceId, source: 'europeana', title: { en: clean(x.title) }, artist: clean(x.artist), dateText: x.dateText, yearStart: y0, yearEnd: y1, medium: mediumOf(x.objectName, x.title, x.hitText), place: placeOf(x.place, x.hitText, x.title) ?? clean(x.place), placeText: x.place,
     institution: x.institution + (x.provider && x.provider !== x.institution ? ` (via ${x.provider})` : ''), accession: x.accession, url: x.sourceUrl, license: x.license, image: x.image });
 }
+// ---------- Dmitri Ermakov's photographs (National Library of Georgia, «Iverieli») ----------
+// data/art/raw/ermakov.json: the library's records of his views of Baku, Shamakhi, Ganja, Shaki, Shusha,
+// Derbent, Julfa and Tabriz (titles tidied and translated, place assigned); pictures made from the
+// library's files (no fetch: tarix/thumbs and tarix/large hold them). Ermakov died in 1916.
+for (const x of await rd('ermakov.json')) {
+  push({ id: x.id, source: 'iverieli', title: x.title, artist: 'Dmitri Ermakov (1846–1916)', artistDied: 1916, dateText: x.dateText, yearStart: x.yearStart, yearEnd: x.yearEnd,
+    medium: 'photo', place: x.place, placeText: x.placeText, institution: 'National Library of Georgia (Iverieli)', accession: x.accession, credit: x.credit, url: x.url,
+    license: 'Public domain (author died 1916)', image: x.image, imageOriginal: x.image });
+}
 // ---------- V&A (metadata only) ----------
 for (const x of vam) {
   const [y0, y1] = parseYears(x.dateText);
