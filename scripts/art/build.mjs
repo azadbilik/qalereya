@@ -163,6 +163,17 @@ for (const x of await rd('ermakov.json')) {
     medium: 'photo', place: x.place, placeText: x.placeText, institution: 'National Library of Georgia (Iverieli)', accession: x.accession, credit: x.credit, url: x.url,
     license: 'Public domain (author died 1916)', image: x.image, imageOriginal: x.image });
 }
+// ---------- Molla Nəsrəddin's caricatures, 1906–1914 (National Library of Azerbaijan) ----------
+// data/art/raw/molla-nasreddin.json: the coloured pages (covers, back pages, centre spreads) of the
+// Tiflis issues, found by colour in the library's PDFs; pictures made from them (no fetch). The artists
+// of those years were Oskar Schmerling (†1938), Əzim Əzimzadə (†1943) and Joseph Rotter (dates not known
+// to us); a page is not attributed to one of them, so no artist is named and the catalogue's rule for
+// anonymous work dated before 1956 applies (sources.md).
+for (const x of await rd('molla-nasreddin.json')) {
+  push({ id: x.id, source: 'anl', title: x.title, dateText: x.dateText, yearStart: x.year, yearEnd: x.year, medium: 'graphics', mediumText: x.mediumText,
+    place: 'Tiflis', placeText: 'Tiflis', institution: 'National Library of Azerbaijan', accession: x.accession, credit: x.credit, url: x.url,
+    license: 'Public domain (artists died before 1956)', image: x.pdf, imageOriginal: x.pdf });
+}
 // ---------- V&A (metadata only) ----------
 for (const x of vam) {
   const [y0, y1] = parseYears(x.dateText);
