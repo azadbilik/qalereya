@@ -12995,6 +12995,32 @@
    "imageStatus": "none"
   },
   {
+   "id": "loc-2018689003",
+   "source": "loc",
+   "title": {
+    "az": "Hindlilər: Bakı ətrafının atəşpərəstləri (Q. Qaqarin, «Le Caucase pittoresque»)",
+    "ru": "Индусы: огнепоклонники из окрестностей Баку (Г. Гагарин, «Le Caucase pittoresque»)",
+    "en": "Indians: fire-worshippers from around Baku (G. Gagarin, «Le Caucase pittoresque»)"
+   },
+   "artist": "Prince Grigory Gagarin (originals), Zakharov (drawing), Jules Laurens (lithograph)",
+   "dateText": "c. 1847",
+   "yearStart": 1847,
+   "yearEnd": 1847,
+   "medium": "graphics",
+   "mediumText": "colour lithograph, Imp. Lemercier, Paris",
+   "place": "Baku",
+   "placeText": "Baku",
+   "institution": "Library of Congress",
+   "accession": "LCCN 2018689003",
+   "credit": "Library of Congress, Prints and Photographs",
+   "url": "https://www.loc.gov/item/2018689003/",
+   "license": "Public domain (no known restrictions)",
+   "imageOriginal": "https://www.loc.gov/item/2018689003/",
+   "period": "c19",
+   "imageStatus": "free",
+   "imageSrc": "https://www.loc.gov/item/2018689003/"
+  },
+  {
    "id": "commons-carpet-of-karabakh-group-of-azerbaijan-carpets-in-heydar-ali-zx658m",
    "source": "commons",
    "title": {

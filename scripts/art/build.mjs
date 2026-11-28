@@ -163,6 +163,13 @@ for (const x of await rd('ermakov.json')) {
     medium: 'photo', place: x.place, placeText: x.placeText, institution: 'National Library of Georgia (Iverieli)', accession: x.accession, credit: x.credit, url: x.url,
     license: 'Public domain (author died 1916)', image: x.image, imageOriginal: x.image });
 }
+// ---------- Library of Congress: single prints chosen by hand (data/art/raw/loc.json) ----------
+// pictures made from the LoC's own files (no fetch); each record names its makers and the last one's death
+for (const x of await rd('loc.json')) {
+  push({ id: x.id, source: 'loc', title: x.title, artist: x.artist, artistDied: x.artistDied, dateText: x.dateText, yearStart: x.year, yearEnd: x.year, medium: 'graphics',
+    mediumText: x.mediumText, place: x.place, placeText: x.place, institution: 'Library of Congress', accession: x.accession, credit: x.credit, url: x.url,
+    license: 'Public domain (no known restrictions)', image: x.url, imageOriginal: x.url });
+}
 // ---------- Molla Nəsrəddin's caricatures, 1906–1914 and 1922–1923 (National Library of Azerbaijan) ----------
 // data/art/raw/molla-nasreddin.json: the coloured pages (covers, back pages, centre spreads) of the
 // Tiflis issues and the Baku issues of 1922–1923 (1929 left out: Hüseyn Əliyev, †1991, drew for it), found by colour in the library's PDFs; pictures made from them (no fetch). The artists
